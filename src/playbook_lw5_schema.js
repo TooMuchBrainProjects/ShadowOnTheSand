@@ -71,15 +71,21 @@ db.createCollection("lw5", {
                                 "CONTINENT",
                                 "EVIL_TEMPLE",
                                 "GRAVEYARD",
+                                "HARBOUR",
+                                "ISLAND",
                                 "KINGDOM",
                                 "LAKE",
+                                "OASIS",
                                 "PLACES_OF_WORSHIP",
                                 "MARSH",
+                                "MOUNTAIN",
+                                "RIVER",
                                 "RIVER_BANK",
                                 "RIVER_VALLEY",
                                 "ROAD",
                                 "STONE_BUILDING",
                                 "TEMPLE_RUIN",
+                                "TOWN",
                                 "VILLAGE",
                                 "WOOD_BUILDING",
                                 "WOODS",
@@ -603,206 +609,229 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
-        content: "... ",
+        content:
+            "The Empire of Vassagonia is a vast desert realm. The northern coast runs roughly east for several hundred miles before it turns in a lazy, rugged arc to the south. Roughly at the apex of this arc is the city of Barrakeesh, the capital city of Vassagonia. The six other cities of this vast arid country are mainly to be found in the thin coastal strip, such as Ferufezan in the northwest, and Bisutan in the south. Barrakeesh is cut off from most of the rest of Vassagonia by the semicircle of the Kabar Range. These mountains meet the sea on the eastern coast at Cape Kabar, which overlooks a trio of islands. For all its magnificent coastline, Vassagonia lacks fresh water, with only six major oases in the entire realm, half of which line the trail to the south of the Dahir Mountains between Ikaresh and Bir Rabalou.",
         regionTree: {
-            name: "Magnamund",
+            name: "Vassagonia",
             regionType: "CONTINENT",
-            description:
-                "Originally Magnamund comprised one land mass. During the Age of Chaos, when Naar sought to destroy the wise dragon Nyxator, Magnamund was torn asunder, and the Tentarias strait split the land into the two continents of Northern Magnamund and Southern Magnamund. There are many notable geographic features on Magnamund. Features of other worlds and places can also be found here. The northwestern quarter of Northern Magnamund is the Darklands, a hellish wasteland ruled by the Darklords. It is in this terrible land that the Darklords create their armies and breed creatures of darkness. The northeastern quarter of Northern Magnamund is the Lastlands, giving rise to the human nations of Sommerlund and Durenor. It is against these bastions of hope that the full might of the Darklords is directed, for if Sommerlund and Durenor should fall, the rest of Magnamund would fall in their wake. The eastern third of Southern Magnamund is characterized by the Sadi desert and the Shadakine Empire. The tyrannical Shadakine Empire arose under the rulership of Shasarak the Wytch-king to conquer the free states of the south.",
-            imageUrl: "images/shadow/regions/magnamund.png",
+            description: "",
+            imageUrl: "images/shadow/regions/vassagonia.png",
             regions: [
                 {
-                    name: "Sommerlund",
-                    regionType: "KINGDOM",
-                    description:
-                        "The country is situated on the Northern continent of Magnamund in the Northeastern corner. It is a sunlit land of verdant hills, deep forests and rich farmland. Its principal cities are Holmgard, Toran, Anskaven, Tyso, and Ruanon. It has been the Darklords bane since the time of King Kian.",
-                    imageUrl: "images/shadow/regions/sommerlund.png",
+                    name: "Barrakeesh",
+                    regionType: "CITY",
+                    description: "",
+                    imageUrl: "images/shadow/regions/barrakeesh.png",
                     regions: [
                         {
-                            name: "Kai Monastary",
-                            regionType: "BUILDING",
-                            description:
-                                "Kai Monastery is spiritual home and training ground of the Order of the Kai. The Tower of the Sun is the tallest tower in the Monastery. It contains the Lore Halls, the Kai Masters Hall and the Grandmasters Hall. The Kai Masters Hall is a chamber in the Tower of the Sun, positioned above the Lore Hall of the Spirit and below the Grandmasters Hall. It contains a plain, wooden throne and green pillars. The Grandmasters Hall is located in the topmost part of the Tower of the Sun. The order was founded in MS 3810 by a Baron of Sommerlund who later renamed himself Sun Eagle. He set out on a quest to find all the Lorestones of Nyxator and cultivate his inner talents, to the point where he became a Kai, with many superhuman abilities in fighting, his senses, and the ability to cure himself and others. He founded his monastery at the northwestern corner of Sommerlund near the Durcrag Mountains. During their long history, the First Order was renowned for their defense of Sommerlund, a vastly smaller country against the Darklords vaste hordes. During their time, it became almost a cyclical event of the Darklords attack and their repulsion from Sommerlund, thanks to the Kai. During Darklord Zagarnas war, the first order of the Kai was wiped out. And even after Lone Wolf successfully killed Archlord Zagarna and helped eject his armies from his country, he did not have time to attend to the creation of a new order. While Lone Wolf was sent to defeat the Deathlord of Ixia, other troubles were stirring far away in Sommerlund.",
-                            imageUrl: "images/shadow/regions/kaimonastary.png",
+                            name: "Habour of Barrakeesh",
+                            regionType: "HARBOUR",
+                            description: "",
+                            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
                         },
                         {
-                            name: "Sommerlund Woodlands",
-                            regionType: "WOODS",
-                            description: "Deep Woods in Summerlund",
-                            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
-                            regions: [
-                                {
-                                    name: "River Valley",
-                                    regionType: "RIVER_VALLEY",
-                                    description: "River Valley",
-                                    imageUrl: "images/shadow/regions/sommerlundrivervalley.png",
-                                },
-                                {
-                                    name: "River Bridge",
-                                    regionType: "BRIDGE",
-                                    description: "Wooden bridge in the Summerlund Woodlands.",
-                                    imageUrl: "images/shadow/regions/woodenbridge.png",
-                                },
-                                {
-                                    name: "Graveyard of the Ancients",
-                                    regionType: "GRAVEYARD",
-                                    description:
-                                        "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-                                    imageUrl: "images/shadow/regions/graveyardofancients.png",
-                                },
-                                {
-                                    name: "Treehouse",
-                                    regionType: "WOOD_BUILDING",
-                                    description:
-                                        "Looking up through the massive branches you can see a large treehouse some twhety-five feet above teh ground. There is no ladder, but the ganreld bark of teh tree offers many footholds.",
-                                    imageUrl: "images/shadow/regions/treehouse.png",
-                                },
-                                {
-                                    name: "Stoneclearing",
-                                    regionType: "PLACES_OF_WORSHIP",
-                                    description:
-                                        "Your reach the top of a small wooded hill on which several large boulders form a rough circle.",
-                                    imageUrl: "images/shadow/regions/stoneclearing.png",
-                                },
-                                {
-                                    name: "Clearing",
-                                    regionType: "CLEARING",
-                                    description:
-                                        "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-                                    imageUrl: "images/shadow/regions/clearing.png",
-                                },
-                                {
-                                    name: "Main Road",
-                                    regionType: "ROAD",
-                                    description:
-                                        "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-                                    imageUrl: "images/shadow/regions/sommerlundmainroad.png",
-                                },
-                                {
-                                    name: "Silvermoon Lake",
-                                    regionType: "LAKE",
-                                    description: "The Silvermoon Lake is a ...",
-                                    imageUrl: "images/shadow/regions/silvermoonlake.png",
-                                },
-                                {
-                                    name: "Village",
-                                    regionType: "VILLAGE",
-                                    description:
-                                        "A small Village in the middle of the Summerlund Woodland.",
-                                    imageUrl: "images/shadow/regions/sommerlundvillage.png",
-                                },
-                                {
-                                    name: "Wafford Clearing",
-                                    regionType: "CLEARING",
-                                    description: "You soon reach a small clearing in the woods.",
-                                    imageUrl: "images/shadow/regions/waffordclearing.png",
-                                },
-                                {
-                                    name: "Cave",
-                                    regionType: "CAVE",
-                                    description:
-                                        "The floor of the cave is quite dry and dusty. As you explore deeper in the half-light, you detect the stale odour of rotting flesh.",
-                                    imageUrl: "images/shadow/regions/cave.png",
-                                },
-                                {
-                                    name: "Old Watch Tower",
-                                    regionType: "WOOD_BUILDING",
-                                    description: "The old Watchtower is ...",
-                                    imageUrl: "images/shadow/regions/ruinwatchtower.png",
-                                },
-                                {
-                                    name: "Dragon Bridge",
-                                    regionType: "BRIDGE",
-                                    description:
-                                        "The Dragon Bridge connects the northern and southern part of Summerlund.",
-                                    imageUrl: "images/shadow/regions/dragonbridge.png",
-                                },
-                                {
-                                    name: "Ruins of Raumas",
-                                    regionType: "TEMPLE_RUIN",
-                                    description:
-                                        "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-                                    imageUrl: "images/shadow/regions/runinsofraumas.png",
-                                },
-                                {
-                                    name: "Fogwood",
-                                    regionType: "VILLAGE",
-                                    description:
-                                        "A little path through the wood leads to Gogwood, a small cluster of huts that have beein used by a family of charcoal burnder for nearly fifty years.",
-                                    imageUrl: "images/shadow/regions/fogwood.png",
-                                },
-                                {
-                                    name: "Darkstone Temple",
-                                    regionType: "EVIL_TEMPLE",
-                                    description:
-                                        "It was only by an unlucky chance you discovered teh secret temple of a sect of evil druids",
-                                    imageUrl: "images/shadow/regions/darkstonetemple.png",
-                                },
-                                {
-                                    name: "Yellow Marsh",
-                                    regionType: "MARSH",
-                                    description:
-                                        "You soon realize that you are walking deeper into a wooded marsh.",
-                                    imageUrl: "images/shadow/regions/yellowmarch.png",
-                                },
-                            ],
+                            name: "Chiras",
+                            regionType: "TOWN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/chiras.png",
                         },
                         {
-                            name: "Holmgard",
+                            name: "Lake Inrahim",
+                            regionType: "LAKE",
+                            description: "",
+                            imageUrl: "images/shadow/regions/lake_inrahim.png",
+                        },
+                        {
+                            name: "Chula",
+                            regionType: "TOWN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/chula.png",
+                        },
+                        {
+                            name: "River Da",
+                            regionType: "RIVER",
+                            description: "",
+                            imageUrl: "images/shadow/regions/river_da.png",
+                        },
+                    ],
+                },
+                {
+                    name: "Dahir Mountains",
+                    regionType: "MOUNTAIN",
+                    description: "",
+                    imageUrl: "images/shadow/regions/dahir_mountains.png",
+                    regions: [
+                        {
+                            name: "Ikaresh",
+                            regionType: "TOWN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/ikaresh.png",
+                        },
+                        {
+                            name: "The Koos",
+                            regionType: "OASIS",
+                            description: "",
+                            imageUrl: "images/shadow/regions/the_koos.png",
+                        },
+                        {
+                            name: "Dahir Pass",
+                            regionType: "ROAD",
+                            description: "",
+                            imageUrl: "images/shadow/regions/dahir_pass.png",
+                        },
+                        {
+                            name: "Kabar Range",
+                            regionType: "OASIS",
+                            description: "",
+                            imageUrl: "images/shadow/regions/kabar_range.png",
+                        },
+                        {
+                            name: "Benoi Hills",
+                            regionType: "MOUNTAIN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/benoi_hills.png",
+                        },
+                        {
+                            name: "Cape Kabar",
+                            regionType: "TOWN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/cape_kabar.png",
+                        },
+                    ],
+                },
+                {
+                    name: "The Dry Main",
+                    regionType: "KINGDOM",
+                    description: "",
+                    imageUrl: "images/shadow/regions/the_dry_main.png",
+                    regions: [
+                        {
+                            name: "Kara Kala",
                             regionType: "CITY",
-                            description:
-                                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-                            imageUrl: "images/shadow/regions/holmguard.png",
+                            description: "",
+                            imageUrl: "images/shadow/regions/kara_kala.png",
                             regions: [
                                 {
-                                    name: "Kings Citadel",
-                                    regionType: "CITADEL",
-                                    description:
-                                        "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-                                    imageUrl: "images/shadow/regions/holmguardcitadel.png",
+                                    name: "Lyam",
+                                    regionType: "ISLAND",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/lyam.png",
                                 },
                                 {
-                                    name: "Boat Crossing",
-                                    regionType: "CITY_OUTSKIRTS",
-                                    description: "The outer fildworks of the city can now be seen.",
-                                    imageUrl: "images/shadow/regions/holmguardoutskirts.png",
-                                    regions: [
-                                        {
-                                            name: "Riverbank",
-                                            regionType: "RIVER_BANK",
-                                            description:
-                                                "Peering over the steep undercut of the riverbank, you can see a tanble of driftwood along the waters edge.",
-                                            imageUrl: "images/shadow/regions/riverbank.png",
-                                        },
-                                    ],
-                                },
-                                {
-                                    name: "Homgard Robbers Lane",
-                                    regionType: "CITY",
-                                    description: "The Homgard Robbers Lane is...",
-                                    imageUrl: "images/shadow/regions/holmguardupperlane.png",
-                                },
-                                {
-                                    name: "Inner Courtyard",
-                                    regionType: "STONE_BUILDING",
-                                    description:
-                                        "The inner courtyard is a bustle of activity. Cavalry scouts are waiting beside their nervous horses for messages from their unit commanders inside the  Great Hall. They  take orders with great speed to the defenders of the outer fieldworks.",
-                                    imageUrl: "images/shadow/regions/stonebuilding.png",
-                                },
-                                {
-                                    name: "Holmgard - City Outscirts",
-                                    regionType: "CITY_OUTSKIRTS",
-                                    description:
-                                        "You climb the wooded bank of the river and see the log walls of the fieldworks disappeiring into the distance. The log wall ahead of you has collapsed in several places.",
-                                    imageUrl: "images/shadow/regions/holmguardoutskirts.png",
-                                },
-                                {
-                                    name: "Great Hall",
-                                    regionType: "STONE_BUILDING",
-                                    description: "The Great Hall is",
-                                    imageUrl: "images/shadow/regions/greathall.png",
+                                    name: "Tefa",
+                                    regionType: "TOWN",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/tefa.png",
                                 },
                             ],
+                        },
+                        {
+                            name: "Teph",
+                            regionType: "CITY",
+                            description: "",
+                            imageUrl: "images/shadow/regions/teph.png",
+                        },
+                        {
+                            name: "Mount Dhanamet",
+                            regionType: "MOUNTAIN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/mount_dhanamet.png",
+                        },
+                        {
+                            name: "Chah Mountains",
+                            regionType: "MOUNTAIN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/chah_mountains.png",
+                            regions: [
+                                {
+                                    name: "Chahdan",
+                                    regionType: "TOWN",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/chahdan.png",
+                                },
+                                {
+                                    name: "Chahdan Pass",
+                                    regionType: "ROAD",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/chahdan_pass.png",
+                                },
+                                {
+                                    name: "Omonai Pass",
+                                    regionType: "ROAD",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/omonai_pass.png",
+                                },
+                            ],
+                        },
+                        {
+                            name: "Ferufezan",
+                            regionType: "CITY",
+                            description: "",
+                            imageUrl: "images/shadow/regions/ferufezan.png",
+                            regions: [
+                                {
+                                    name: "Kuchek",
+                                    regionType: "TOWN",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/kuchek.png",
+                                },
+                                {
+                                    name: "Lohn",
+                                    regionType: "TOWN",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/lohn.png",
+                                },
+                                {
+                                    name: "Samiz",
+                                    regionType: "ISLAND",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/samiz.png",
+                                },
+                            ],
+                        },
+                        {
+                            name: "Bir Rabalou",
+                            regionType: "CITY",
+                            description: "",
+                            imageUrl: "images/shadow/regions/bir_rabalou.png",
+                        },
+                        {
+                            name: "Koneshi Mountains",
+                            regionType: "MOUNTAIN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/koneshi_mountains.png",
+                        },
+                        {
+                            name: "Vale of Tears",
+                            regionType: "ROAD",
+                            description: "",
+                            imageUrl: "images/shadow/regions/vale_of_tears.png",
+                        },
+                    ],
+                },
+                {
+                    name: "Bisutan",
+                    regionType: "CITY",
+                    description: "",
+                    imageUrl: "images/shadow/regions/bisutan.png",
+                    regions: [
+                        {
+                            name: "Khordaim Islands",
+                            regionType: "ISLAND",
+                            description: "",
+                            imageUrl: "images/shadow/regions/khordaim_islands.png",
+                        },
+                        {
+                            name: "Khakea",
+                            regionType: "RIVER",
+                            description: "",
+                            imageUrl: "images/shadow/regions/khakea.png",
+                        },
+                        {
+                            name: "Khor",
+                            regionType: "TOWN",
+                            description: "",
+                            imageUrl: "images/shadow/regions/khor.png",
                         },
                     ],
                 },

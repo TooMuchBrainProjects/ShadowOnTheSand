@@ -4,9 +4,9 @@
     {
         static async Task Main(string[] args)
         {
-            var baseUrl = "https://www.projectaon.org/en/xhtml/lw/01fftd"; // + /sect1.htm
+            var baseUrl = "https://www.projectaon.org/en/xhtml/lw/05sots"; // + /sect1.htm
             const string directory = @"D:\repos\ShadowOnTheSand\Converter";
-            const string fileName = "fftd.md";
+            const string fileName = "sots.md";
             
             var filePath = Path.Combine(directory, fileName);
             File.Delete(filePath);
