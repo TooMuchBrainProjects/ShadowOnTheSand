@@ -419,19 +419,19 @@ db.getCollection("lw5").insertMany([
             {
                 abilityType: "CAMOUFLAGE",
                 description:
-                    "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
+                    "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
                 imageUrl: "images/shadow/abilities/camouflage.png",
             },
             {
                 abilityType: "HUNTING",
                 description:
-                    "This skill ensures that a Kai Lord will never starve in the wild. He will always be able to hunt for food for himself except in areas of wasteland and desert. The skill also enables a Kai Lord to be able to move stealthily when stalking his prey.",
+                    "This skill ensures that a Kai Lord will never starve in the wild. He will always be able to hunt for food for himself except in areas of wasteland and desert. You are aware that most of Vassagonia is arid desert; should your adventure lead you into this desert, the opportunities for successful hunting may not arise. But this skill is still very useful for it also enables a Kai Lord to move with great speed and dexterity.",
                 imageUrl: "images/shadow/abilities/hunting.png",
             },
             {
                 abilityType: "SIXTH_SENSE",
                 description:
-                    "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
+                    "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
                 imageUrl: "images/shadow/abilities/sixthsense.png",
             },
             {
@@ -443,7 +443,7 @@ db.getCollection("lw5").insertMany([
             {
                 abilityType: "HEALING",
                 description:
-                    "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level.",
+                    "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are not involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level.",
                 imageUrl: "images/shadow/abilities/healing.png",
             },
             {
@@ -614,43 +614,56 @@ db.getCollection("lw5").insertMany([
         regionTree: {
             name: "Vassagonia",
             regionType: "CONTINENT",
-            description: "",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
             imageUrl: "images/shadow/regions/vassagonia.png",
             regions: [
                 {
                     name: "Barrakeesh",
                     regionType: "CITY",
-                    description: "",
+                    description:
+                        "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
                     imageUrl: "images/shadow/regions/barrakeesh.png",
                     regions: [
                         {
                             name: "Habour of Barrakeesh",
                             regionType: "HARBOUR",
-                            description: "",
+                            description:
+                                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
                             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
                         },
                         {
                             name: "Chiras",
                             regionType: "TOWN",
-                            description: "",
+                            description:
+                                "A small village northwest of the capital. The splendour of the Grand Palace dominates this city.",
                             imageUrl: "images/shadow/regions/chiras.png",
                         },
                         {
                             name: "Lake Inrahim",
                             regionType: "LAKE",
-                            description: "",
+                            description:
+                                "The lake is an immense salt-water plain that is completely dry and cracked.",
                             imageUrl: "images/shadow/regions/lake_inrahim.png",
+                        },
+                        {
+                            name: "Grand Palace",
+                            regionType: "STONE_BUILDING",
+                            description: "The biggest building in Barrakeesh. ",
+                            imageUrl: "images/shadow/regions/chula.png",
                         },
                         {
                             name: "Chula",
                             regionType: "TOWN",
-                            description: "",
+                            description:
+                                "This village is connected to the capital with a small road stretched across the causeway.",
                             imageUrl: "images/shadow/regions/chula.png",
                         },
                         {
                             name: "River Da",
                             regionType: "RIVER",
-                            description: "",
+                            description:
+                                "A great aqueduct over forty miles long, which channels freshwater from the River Da into the city.",
                             imageUrl: "images/shadow/regions/river_da.png",
                         },
                     ],
@@ -658,43 +671,49 @@ db.getCollection("lw5").insertMany([
                 {
                     name: "Dahir Mountains",
                     regionType: "MOUNTAIN",
-                    description: "",
+                    description:
+                        "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
                     imageUrl: "images/shadow/regions/dahir_mountains.png",
                     regions: [
                         {
                             name: "Ikaresh",
                             regionType: "TOWN",
-                            description: "",
+                            description:
+                                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
                             imageUrl: "images/shadow/regions/ikaresh.png",
                         },
                         {
                             name: "The Koos",
-                            regionType: "OASIS",
-                            description: "",
+                            regionType: "MOUNTAIN",
+                            description:
+                                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
                             imageUrl: "images/shadow/regions/the_koos.png",
                         },
                         {
                             name: "Dahir Pass",
                             regionType: "ROAD",
-                            description: "",
+                            description: "A long road on the south border of the Dahir Mountains.",
                             imageUrl: "images/shadow/regions/dahir_pass.png",
                         },
                         {
                             name: "Kabar Range",
-                            regionType: "OASIS",
-                            description: "",
+                            regionType: "MOUNTAIN",
+                            description:
+                                "The Kabar Range is a isolated mountain range in the south of Dahir Mountains.",
                             imageUrl: "images/shadow/regions/kabar_range.png",
                         },
                         {
                             name: "Benoi Hills",
                             regionType: "MOUNTAIN",
-                            description: "",
+                            description:
+                                "The Benoi Hills are part of the Dahir Mountains. However, the are very low hills and located at the east of Dahir, nearby the coast.",
                             imageUrl: "images/shadow/regions/benoi_hills.png",
                         },
                         {
                             name: "Cape Kabar",
                             regionType: "TOWN",
-                            description: "",
+                            description:
+                                "This is the easternmost northern town in Vassagonia. The town overlooks a tria of islands.",
                             imageUrl: "images/shadow/regions/cape_kabar.png",
                         },
                     ],
@@ -702,25 +721,28 @@ db.getCollection("lw5").insertMany([
                 {
                     name: "The Dry Main",
                     regionType: "KINGDOM",
-                    description: "",
+                    description:
+                        "An endless desert - the shifting ocean of sand - is protected by Kimah, Emir of Ferufezan. ",
                     imageUrl: "images/shadow/regions/the_dry_main.png",
                     regions: [
                         {
                             name: "Kara Kala",
                             regionType: "CITY",
-                            description: "",
+                            description: "Kara Kala is a northen city in the dry main.",
                             imageUrl: "images/shadow/regions/kara_kala.png",
                             regions: [
                                 {
                                     name: "Lyam",
                                     regionType: "ISLAND",
-                                    description: "",
+                                    description:
+                                        "Lyam is a little island far away from the coast of kara kala. Nevertheless, the whole island belongs to the area of Kara Kala.",
                                     imageUrl: "images/shadow/regions/lyam.png",
                                 },
                                 {
                                     name: "Tefa",
                                     regionType: "TOWN",
-                                    description: "",
+                                    description:
+                                        "Tefa is a little village near the Dahir Mountains which has a constructed highway to Kara Kala which allows safe passage through the town and to Kara Kala.",
                                     imageUrl: "images/shadow/regions/tefa.png",
                                 },
                             ],
@@ -728,37 +750,42 @@ db.getCollection("lw5").insertMany([
                         {
                             name: "Teph",
                             regionType: "CITY",
-                            description: "",
+                            description:
+                                "Although Teph is a hugh city on the western border of Vassagonia, it is very dry because it lies in the middle of the Dry Main. Trading with this city is very rare because it's far from other cities and villages.",
                             imageUrl: "images/shadow/regions/teph.png",
                         },
                         {
                             name: "Mount Dhanamet",
                             regionType: "MOUNTAIN",
-                            description: "",
+                            description:
+                                "The Mount Dhanamet is a lonely mountain in the middle of nothing - the Dry Main. Fortunately, in the near western of Mount Dhanamet lies a oasis.",
                             imageUrl: "images/shadow/regions/mount_dhanamet.png",
                         },
                         {
                             name: "Chah Mountains",
                             regionType: "MOUNTAIN",
-                            description: "",
+                            description:
+                                "The second biggest mountain range in the empire of Vassagonia are the Chah Mountains in the southwest. The only oasis nearby is the one in the south of Chah Mountains.",
                             imageUrl: "images/shadow/regions/chah_mountains.png",
                             regions: [
                                 {
                                     name: "Chahdan",
                                     regionType: "TOWN",
-                                    description: "",
+                                    description: "Chahdan is the biggest town near Chah Mountains.",
                                     imageUrl: "images/shadow/regions/chahdan.png",
                                 },
                                 {
                                     name: "Chahdan Pass",
                                     regionType: "ROAD",
-                                    description: "",
+                                    description:
+                                        "The western road through Chah Mountains is called Chahdan pass.",
                                     imageUrl: "images/shadow/regions/chahdan_pass.png",
                                 },
                                 {
                                     name: "Omonai Pass",
                                     regionType: "ROAD",
-                                    description: "",
+                                    description:
+                                        "The eastern road through Chah Mountains is called Omonai Pass.",
                                     imageUrl: "images/shadow/regions/omonai_pass.png",
                                 },
                             ],
@@ -766,25 +793,29 @@ db.getCollection("lw5").insertMany([
                         {
                             name: "Ferufezan",
                             regionType: "CITY",
-                            description: "",
+                            description:
+                                "This city lies in the only area of Vassagonia which is not as dry as all the others. Ferufezan is led by a emir called Kimah.",
                             imageUrl: "images/shadow/regions/ferufezan.png",
                             regions: [
                                 {
                                     name: "Kuchek",
                                     regionType: "TOWN",
-                                    description: "",
+                                    description:
+                                        "This town is near the northwest border of Vassagonia and belongs to the city Ferufezan.",
                                     imageUrl: "images/shadow/regions/kuchek.png",
                                 },
                                 {
                                     name: "Lohn",
                                     regionType: "TOWN",
-                                    description: "",
+                                    description:
+                                        "Nearby Ferufezan lies Lohn, a small town on the northern coast.",
                                     imageUrl: "images/shadow/regions/lohn.png",
                                 },
                                 {
                                     name: "Samiz",
-                                    regionType: "ISLAND",
-                                    description: "",
+                                    regionType: "TOWN",
+                                    description:
+                                        "Although the small town Samiz on an island northern the coast belongs to Ferufezan, it has been occupied by the Lakuri pirates who travell around in the wild sea.",
                                     imageUrl: "images/shadow/regions/samiz.png",
                                 },
                             ],
@@ -792,19 +823,22 @@ db.getCollection("lw5").insertMany([
                         {
                             name: "Bir Rabalou",
                             regionType: "CITY",
-                            description: "",
+                            description:
+                                "On the eastern coast of Vassagonia lies a hugh city called Bir Rabalou. However, there are no nearby towns belonging to this city.",
                             imageUrl: "images/shadow/regions/bir_rabalou.png",
                         },
                         {
                             name: "Koneshi Mountains",
                             regionType: "MOUNTAIN",
-                            description: "",
+                            description:
+                                "The Koneshi Mountains stretch from the southeast to the middle of the Dry Main in Vassagonia. At the western end of this high mountains lies one of the six oasis.",
                             imageUrl: "images/shadow/regions/koneshi_mountains.png",
                         },
                         {
                             name: "Vale of Tears",
                             regionType: "ROAD",
-                            description: "",
+                            description:
+                                "The Valley of Tears is the longest pass in Vassagonia and goes from the southwest of the country to the northeast. Along this path are three oases.",
                             imageUrl: "images/shadow/regions/vale_of_tears.png",
                         },
                     ],
@@ -812,25 +846,29 @@ db.getCollection("lw5").insertMany([
                 {
                     name: "Bisutan",
                     regionType: "CITY",
-                    description: "",
+                    description:
+                        "Bisutan is the southeasternmost city of Vassagonia and lies on an island connected to the Dry Main with two bridges.",
                     imageUrl: "images/shadow/regions/bisutan.png",
                     regions: [
                         {
                             name: "Khordaim Islands",
                             regionType: "ISLAND",
-                            description: "",
+                            description:
+                                "The island group Khordaim Islands are beyond the eastern coast. In sum there are twelve islands.",
                             imageUrl: "images/shadow/regions/khordaim_islands.png",
                         },
                         {
                             name: "Khakea",
                             regionType: "RIVER",
-                            description: "",
+                            description:
+                                "The flow of the Khakea River goes from the eastern coast to the south border of the gigantic empire and it surrounds Bisutan.",
                             imageUrl: "images/shadow/regions/khakea.png",
                         },
                         {
                             name: "Khor",
                             regionType: "TOWN",
-                            description: "",
+                            description:
+                                "A small town eastern of the Koneshi Mountains is named Khor.",
                             imageUrl: "images/shadow/regions/khor.png",
                         },
                     ],
