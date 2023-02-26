@@ -5935,6 +5935,7 @@ db.getCollection("lw5").insertMany([
          * --  Storysection 135
          * -- --------------------------------------------------------
          */
+        // Erste Section nicht fertig !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         sectionType: "STORY_SECTION",
         sectionNr: 135,
         book: {
@@ -5951,12 +5952,26 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/riverbank.png",
         },
         content:
-            "Peering over the steep undercut of the river bank, you can see a tangle of driftwood along the water’s edge. A large tree trunk has grounded on the clay bank next to a small canoe.",
+            "The air of the new tunnel is hot and humid, and as you press on, the putrid gas makes you increasingly nauseous. You are forced to stop—the vapour is burning your throat and causing painful stomach cramps. Suddenly a noise makes you forget your discomfort; you turn to see that one of Maouk’s men has caught up with you. He looms out of the darkness, his face covered by a pad of herbs.",
+        events : [
+            {
+                eventType : "COMBAT",
+                ranking 1:,
+                creature : {
+                    name : "Sharnazim Warrior",
+                    combatSkill : 17,
+                    endurance : 22,
+                    imageUrl : "images/flight/creatures/sharnazimwarrior.png"
+                },{
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 2,
+                amount :
+            }
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 223,
-                content: "If you wish to use the log to float down the river, turn to ",
+                targetNr: 161,
+                content: "If you lose this combat, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
@@ -5980,41 +5995,34 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "The Giaks get nearer and then crouch down as if preparing themselves to pounce. You can see the sharp serrated points of their spears and hear their low guttural speech. The larger of the two creatures screams, ‘Orgadak taag! Nogjat aga ok!’ and attacks you. You must fight each of the Giaks in turn. Add 1 point to your COMBAT SKILL during this fight, as you have the advantage of the higher ground in your favour.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 9,
-                    endurance: 10,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 8,
-                    endurance: 12,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-        ],
+            "Once you have unlocked the door, you twist the handle and open it a few inches. You see a stair descending to a small chamber where a black-robed soldier is guarding a pair of iron gates. Through the bars you can see rows of weapons and suits of armour stacked in long racks. A sign fixed to the bars says: GRAND PALACE ARMOURY",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 313,
-                content: "If you win, turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 186,
+                ability : {
+                    abilityType : "CAMOUFLAGE",
+                    description : "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place."
+                },
+                content : "If you have the Kai Discipline of Camouflage, turn to"
             },
+            ,
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 178,
+                content: "If you wish to use the canoe, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 93,
+                content: "If you wish to use the canoe, turn to ",
+            }
         ],
     },
     {
@@ -6032,25 +6040,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "As the last of the foul creatures die, so the greenish light starts to fade. You notice that in each of the broken skulls lies a Gem. You take these 20 Tomb Guardian Gems before darkness engulfs the chamber. Remember to mark these on your Action Chart as a single Backpack Item. You quickly leave the dead Crypt spawn and press on.",
+            "Suddenly you realize just how hungry you are. You must now eat a Meal or lose 3 ENDURANCE points. You pass unseen through the exotic plants that grow everywhere in abundance. The gravelled path divides a lawn of strange, luxuriant, purple grass and leads to a magnificent fountain. A jet of clear blue water catches the sun, reflecting and refracting an eye-dazzling rainbow of colour. You gaze beyond the fountain to where the vaulting towers of the palace soar into the sky, and carefully note the positions of the doors and windows. There are two entrances to the Grand Palace from the gardens; you can either go through the palace kitchens or through the Vizu-diar—the Zakhan’s trophy hall. However, only one of these entrances will lead to the Imperial Apothecary, and to the precious Oede herb stored there.",
         events: [
             {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Guardian Gems",
-                    itemType: "GEM",
-                    description: "Guardian Gems from crypt ...",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/guardiangem.png",
-                },
+                eventType : "CHANGE_RATION_AMOUNT_EVENT",
+                ranking : 1,
+                amount : 1
+            },
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 2,
+                amount : -3
             },
         ],
         outcomes: [
