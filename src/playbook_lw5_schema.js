@@ -5935,7 +5935,8 @@ db.getCollection("lw5").insertMany([
          * --  Storysection 135
          * -- --------------------------------------------------------
          */
-        // Erste Section nicht fertig !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // Section Outcome changed, because there was no possibility to map it
+        //Still no correct Region
         sectionType: "STORY_SECTION",
         sectionNr: 135,
         book: {
@@ -5956,17 +5957,21 @@ db.getCollection("lw5").insertMany([
         events : [
             {
                 eventType : "COMBAT",
-                ranking 1:,
+                ranking : 1,
                 creature : {
                     name : "Sharnazim Warrior",
                     combatSkill : 17,
                     endurance : 22,
                     imageUrl : "images/flight/creatures/sharnazimwarrior.png"
-                },{
+                },
+            },
+            {
                 eventType : "CHANGE_ENDURANCE_EVENT",
                 ranking : 2,
-                amount :
+                amount : 3,
             }
+            
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -5975,8 +5980,8 @@ db.getCollection("lw5").insertMany([
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 4,
-                content: "If you wish to use the canoe, turn to ",
+                targetNr: 130,
+                content: "If you win this combat, restore 3 of any ENDURANCE points and turn to",
             },
         ],
     },
@@ -6061,9 +6066,27 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
+                outcomeType : "ABILITY",
+                targetNr : 37,
+                ability : {
+                    abilityType : "TRACKING",
+                    description : "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks."
+                },
+                content : "If you have the Kai Discipline of Tracking, turn to "
+            },
+            {
+                outcomeType : "ABILITY",
+                targetNr : 37,
+                ability : {
+                    abilityType : "SIXTH_SENSE",
+                    description : "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure."
+                },
+                content : "If you have the Kai Discipline of Sixth Sense, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 23,
-                content: "Turn to",
+                targetNr: 49,
+                content: "If you wish to enter through the Vizu-diar, turn to",
             },
         ],
     },
