@@ -5936,7 +5936,7 @@ db.getCollection("lw5").insertMany([
          * -- --------------------------------------------------------
          */
         // Section Outcome changed, because there was no possibility to map it
-        //Still no correct Region
+        // Region could be Baga-darooz instead of Barrakeesh because it's in the sewers of Barrakeesh
         sectionType: "STORY_SECTION",
         sectionNr: 135,
         book: {
@@ -5946,11 +5946,11 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Riverbank",
-            regionType: "RIVER_BANK",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "Peering over the steep undercut of the riverbank, you can see a tanble of driftwood along the waters edge.",
-            imageUrl: "images/shadow/regions/riverbank.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
             "The air of the new tunnel is hot and humid, and as you press on, the putrid gas makes you increasingly nauseous. You are forced to stop—the vapour is burning your throat and causing painful stomach cramps. Suddenly a noise makes you forget your discomfort; you turn to see that one of Maouk’s men has caught up with you. He looms out of the darkness, his face covered by a pad of herbs.",
@@ -6085,6 +6085,11 @@ db.getCollection("lw5").insertMany([
             },
             {
                 outcomeType: "DEFAULT",
+                targetNr: 66,
+                content: "If you wish to enter the palace through the kitchens, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
                 targetNr: 49,
                 content: "If you wish to enter through the Vizu-diar, turn to",
             },
@@ -6105,40 +6110,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You prepare your weapon and advance to meet the enemy. There are two Mountain Giaks and you must fight them one at a time.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 9,
-                    endurance: 10,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 8,
-                    endurance: 12,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-        ],
+            "The guards pull open the door, and you spring into action. Your clenched fist strikes the first man beneath his bearded jaw, lifting him from the floor with the power of the blow. His sword drops from his hand and clatters to the ground close to your feet.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 291,
-                content: "If you win, turn to ",
+                targetNr: 4,
+                content: "If you wish to pick up the sword, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 91,
+                content: "If you wish to ignore the sword and attack the second guard with your bare hands, turn to ",
             },
         ],
     },
@@ -6156,19 +6144,19 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
-        content:
-            "The inner courtyard is a bustle of activity. Cavalry scouts are waiting beside their nervous horses for messages from their unit commanders inside the Great Hall. They take orders with great speed to the defenders of the outer fieldworks. No sooner do they gallop off, than other scouts return, many of them breathless and wounded. You have taken less than a dozen steps across the courtyard when you hear a deep voice boom out. ‘Stop that man!’",
         region: {
-            name: "Inner Courtyard",
-            regionType: "STONE_BUILDING",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The inner courtyard is a bustle of activity. Cavalry scouts are waiting beside their nervous horses for messages from their unit commanders inside the  Great Hall. They  take orders with great speed to the defenders of the outer fieldworks.",
-            imageUrl: "images/shadow/regions/stonebuilding.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
+        content:
+            "You are so irritated by the crawling mask of insects covering your skin that you fail to see the rusty metal post sticking out of the water ahead. You walk straight into it and lose your footing. Instinctively, you grab at the post, but like everything else it is covered with sewage, as slippery as Kalte ice.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 66,
+                targetNr: 94,
                 content: "Turn to ",
             },
         ],
@@ -6188,33 +6176,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Old Watch Tower",
-            regionType: "WOOD_BUILDING",
-            description: "The old Watchtower is ...",
-            imageUrl: "images/shadow/regions/ruinwatchtower.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You are in a clearing where several trees have been cut down to make a rickety watchtower. Below the tower are three paths leading off in different directions.",
+            "The iron gates of the armoury are unlocked. You push open the left gate and wince as the shrill squeak of a dry hinge sends a shiver down your spine. Inside, at the end of a long aisle, is a workbench, littered with spearheads, sword hilts, and all manner of armourer’s tools. In the midst of this tangled mess is a large, black, leather-bound book.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 14,
-                content: "If you take the south path, turn to ",
+                targetNr: 83,
+                content: "If you wish to open the book, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 252,
-                content: "If you take the east path, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 215,
-                content: "If you take the southwest path, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 36,
-                content: "If you decide to climb the watchtower, turn to ",
+                targetNr: 181,
+                content: "If you wish to ignore the book and search for your confiscated equipment, turn to ",
             },
         ],
     },
@@ -6233,24 +6211,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Your Sixth Sense has warned you that some of the creatures that attacked the monastery are searching the two paths for any survivors of their raid, but you can avoid both tracks by making your way through the undergrowth of the woods.",
+            "You throw yourself to one side, barely escaping the dart as it whistles past your chest. ‘Seize him!’ screams Maouk, kicking his soldiers onwards through the wreckage. ‘Don’t let him get away this time!’ You are now lying on the floor less than a couple of feet away from the trapdoor.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 56,
-                content: "If you wish to head south, turn to ",
+                targetNr: 51,
+                content: "If you wish to roll over to the trapdoor and escape, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 333,
+                targetNr: 10,
                 content:
-                    "Or if you wish to cut through the heavier foliage towards the northeast, turn to ",
+                    "If you decide to surrender to Maouk and his warriors, turn to ",
             },
         ],
     },
@@ -6269,30 +6248,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
         },
         content:
-            "You can see the tall grey-white walls and glimmering spires of Holmgard, its banners fluttering from the battlements in the fresh morning breeze. Stretching out towards the west, the River Eledil traces its course from the mountains of the Durncrag Range to the Holmgulf. But from below the mountain peaks you can see a vast black army marching relentlessly on towards the city. To your right you can see the highway heading off over the rolling plain towards Holmgard. At a run you could reach the outer fieldworks of the city defences in an hour, but you would be in the open for most of the time and vulnerable to attack by Kraan. However, ahead of you, a wide and muddy river drifts sluggishly towards the Eledil. You could use the cover of the river banks and swim towards the capital. Or towards your left lies the Graveyard of the Ancients. These tombs and crumbling monuments to a forgotten age would conceal your approach, but it is a forbidden area. Many are the unnamed horrors that lie there in restless sleep, waiting to consume the unwary trespasser.",
+            "You hit the water and swim submerged until the pain in your lungs forces you to the surface. Sharnazim are running in every direction, trying to surround the quay and prevent your escape. Gulping another breath, you dive again and swim towards a cluster of small boats less than fifty yards away. Through the clear blue water, it is easy to see the rubbish that litters the bed of the harbour; mementoes of all the merchant ships that have docked at the quayside. Clinging to one old anchor is a strange, jelly-like blob. A mass of short tubes sticks out from all its sides, and a long hook-like scoop hangs beneath its rubbery body. Without warning, the blob suddenly jets towards you, propelled by water from its mass of breathing tubes. It is a Bloodlug, and it is hungry for your flesh!",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 58,
-                content: "If you will try your luck by the highway, turn to",
+                outcomeType : "ABILITY",
+                targetNr : 134,
+                ability : {
+                    abilityType : "ANIMAL_KINSHIP",
+                    description : "This skill enables a Kai Lord to communicate with some animals and to be able to guess the intentions of others."
+                },
+                content : "If you have the Kai Discipline of Animal Kinship, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 135,
+                targetNr: 12,
                 content:
-                    "If you feel that you stand a better chance of reaching the capital via the river, then turn to",
+                    "If you wish to fight the creature, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 102,
+                targetNr: 95,
                 content:
-                    "Or if you are brave enough to risk the unknown perils of the Graveyard of the Ancients, turn to",
+                    "If you wish to evade the creature, turn to ",
             },
         ],
     },
@@ -6311,18 +6295,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "You soon emerge from the woods onto a main highway. You recognize it as being the main road between the port of Toran in the north and the capital in the south. Spurring your horse on, you estimate you will reach the capital by morning.",
+            "You set light to a tar-coated torch and hurl it down into the sewer-hole. There is a tremendous flash and roar; suddenly, all along the alley, plumes of flaming sewage explode skywards. The alley is transformed into a rush of shocked and screaming people, all scrambling to avoid the deluge of burning filth raining down on their heads. The torch has triggered a chain reaction in the Baga-darooz; the inflammable sewer gas has ignited—everywhere is panic and confusion. You run with the crowd through the sewage-stained alleys until you reach a busy market square, unpolluted by the blast. Your eye is caught by a sign hanging above the side door of a large hall: BARRAKEESH PUBLIC BATHS. You push open the door and slip inside.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 149,
+                targetNr: 90,
                 content: "Turn to ",
             },
         ],
@@ -6342,31 +6326,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
-            description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You fight your way through the press of bodies along the main street towards the citadel in the distance. City folk are rushing to and fro in the grip of panic, as the cries of Kraan are heard circling high above. In the crush, one item is stolen from your Backpack. If you no longer have a Backpack or if you have no Backpack Items, you lose a Weapon. Remember to take this off your Action Chart. A runaway horse and cart career past and knock you into a doorway. You are stunned and you lose 2 ENDURANCE points. As you stagger to your feet, the door bursts open and a decrepit old man attacks you with a meat cleaver. He is quite insane and you must fight him or take evasive action.",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -2,
-            },
-        ],
+            "A terrible sense of dread fills your mind. Your Kai skill is warning you that a horrific and inescapable fate awaits you if you stay in this cell. You follow your instincts and attack.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 63,
-                content: "If you choose to fight, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 217,
-                content: "If you wish to evade a fight, turn to ",
+                targetNr: 174,
+                content: "Turn to ",
             },
         ],
     },
@@ -6385,19 +6356,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
+            name: "Barrakeesh",
             regionType: "CITY",
             description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "You feel as if you have been run down by a cart or wagon. As you fall forward the last thing that you remember before the darkness overcomes you, is the taste of the sandy road and the terrible pain in your back.",
+            "You wade into the water, thick with scum, and try not to breathe through your nose. The glutinous mire is clotted with green and black filth, and with your every movement the surface cracks, releasing a vile gas. You cover your mouth with your Kai cloak, but the appalling stench makes you retch and choke. A loud splash behind you warns that Maouk’s men are not far away, and you quicken your step. At regular intervals, circular chutes disappear into the ceiling. Many are stained bright yellow, white, or reddish-brown. This section of the Baga-darooz passes beneath the Linen Quarter of Barrakeesh, where the Guild of Linen-weavers operate their fuller’s shops. The chutes dump waste dyes straight into the sewer, making the oily water even more garish in colour. You spot a ripple in the water ahead. It moves nearer, the wake of a submerged sewer creature. Instinctively, you flatten yourself against the dye-stained wall as you feel the movement of water against your waist, and watch in fear and fascination as the ripple of water disappears into the tunnel. Suddenly, a fearful scream bursts out of the darkness; Maouk has lost one of his men. The terrible cries of the Sharnazim warrior chill your spine, but your instincts tell you to press on while you have the advantage. The channel soon reaches a junction where another tunnel heads off to the west.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 165,
-                content: "Turn to ",
+                targetNr: 108,
+                content: "If you wish to enter the new tunnel, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 70,
+                content: "If you wish to continue northwards, turn to ",
             },
         ],
     },
