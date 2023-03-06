@@ -6383,6 +6383,8 @@ db.getCollection("lw5").insertMany([
          * --  Storysection 146
          * -- --------------------------------------------------------
          */
+
+        // Nicht fertig
         sectionType: "STORY_SECTION",
         sectionNr: 146,
         book: {
@@ -6409,9 +6411,22 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 154,
-                content: "Turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 44,
+                intervall : {
+                    min : 0,
+                    max : 2,
+                },
+                content : "If your total is now 2 or less, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 190,
+                intervall : {
+                    min : 3,
+                    max : 11,
+                },
+                content : "If your total is now 3 or more, turn to "
             },
         ],
     },
