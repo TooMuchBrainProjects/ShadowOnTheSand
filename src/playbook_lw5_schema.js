@@ -835,10 +835,26 @@ db.getCollection("lw5").insertMany([
                             imageUrl: "images/shadow/regions/koneshi_mountains.png",
                             regions: [
                                 {
-                                    name: "",
-                                    regionType: "EVIL_TEMPLE",
-                                    description: "",
-                                    imageUrl: "images/shadow/regions/.png"
+                                    name: "Excavation Site",
+                                    regionType: "CONSTRUCTION_SITE",
+                                    description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+                                    imageUrl: "images/shadow/regions/excavation_site.png",
+                                    regions: [
+                                        {
+                                            name: "Tomb of the Majhan",
+                                            regionType: "EVIL_TEMPLE",
+                                            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+                                            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
+                                            regions: [
+                                                {
+                                                    name: "Throne Chamber",
+                                                    regionType: "ROOM",
+                                                    description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+                                                    imageUrl: "images/shadow/regions/throne_chamber.png",
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -10989,30 +11005,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 1,
-                amount: 3,
-            },
-        ],
+            "You stare at the bolt, willing it to move. The sound of running footsteps behind you sends a cold shiver down your spine as you realize that the Drakkarim are storming the stairs. Then, slowly, the bolt begins to move. As soon as it clears the bolt-hole, you pull open the stone portal and race through, unaware of what lies beyond.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 314,
-                content: "If you accept his offer, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 7,
-                content: "If you would prefer to trust your own sense of direction, turn to",
+                targetNr: 352,
+                content: "Turn to",
             },
         ],
     },
@@ -13994,6 +13998,89 @@ db.getCollection("lw5").insertMany([
                     author: "Joe Dever",
                     illustrator: "Gary Chalk",
                 },
+            },
+        ],
+    },
+    {
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 351
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 352,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },
+    {
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 352
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 352,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
+        },
+        content:
+            "Beyond the portal lies a vaulted corridor leading to a grand stairway. You narrowly avoid confrontation with a dozen Drakkarim, saved by your lightning reactions. As the enemy rush from an archway on the second floor landing, you dive behind a statue of the recently deceased Zakhan Moudalla. They are so intent on their chase that they fail to notice your hiding place and hurry down the stairs, grunting in their heavy armour as they run. Silently, you give thanks that Zakhan Moudalla was a very stout man and that his statue casts a very large shadow in which to hide. </br>At the top of the stairway you discover a hatch, which gives access to the roof. You climb through it and follow a path of sun-bleached tiles that wind in and out of the domes and turrets, eventually leading to a bell-tower.</br>You are exhausted and need to rest, your mind still full of the shock of your encounter with Darklord Haakon. The sound of his terrible voice repeating the words ‘Book of the Magnakai’ echoes again and again in your mind.</br>With desperation sapping your will, you peer out through a grille in the bell-tower. The sight before you renews your flagging hope, for it inspires a daring escape plan.",
+        outcomes: [
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 313,
+                content: "Turn to",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection xxx
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: ,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
