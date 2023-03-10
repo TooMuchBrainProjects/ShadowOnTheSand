@@ -833,6 +833,14 @@ db.getCollection("lw5").insertMany([
                             description:
                                 "The Koneshi Mountains stretch from the southeast to the middle of the Dry Main in Vassagonia. At the western end of this high mountains lies one of the six oasis.",
                             imageUrl: "images/shadow/regions/koneshi_mountains.png",
+                            regions: [
+                                {
+                                    name: "",
+                                    regionType: "EVIL_TEMPLE",
+                                    description: "",
+                                    imageUrl: "images/shadow/regions/.png"
+                                }
+                            ]
                         },
                         {
                             name: "Vale of Tears",
@@ -10951,17 +10959,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Koneshi Mountains",
+            regionType: "MOUNTAIN",
+            description: "The Koneshi Mountains stretch from the southeast to the middle of the Dry Main in Vassagonia. At the western end of this high mountains lies one of the six oasis.",
+            imageUrl: "images/shadow/regions/koneshi_mountains.png",
         },
         content:
-            "You black out for only a few minutes before you are revived with a measure of strong spirit. Feeling weary but thankful to be alive, you lean on the shoulders of the King’s men and you stagger towards the outer defences.",
+            "With the leap of a tiger, you snatch the glowing gem barely a second before Haakon’s spiked fist slams into the floor where the jewel lay. You turn to face your enemy, the gem held high in your hand, its blue beam glinting on the Darklord’s black armour. He shrinks beneath its glare and falls to his knees, a repulsive sucking noise issuing from his helm as he slowly begins to fade. </br> A sudden crack makes you start with shock, but you are no longer in danger. The glowing gem has vanished from your hand; like its master it has left this dimension, never to return.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 288,
+                targetNr: 400,
                 content: "Turn to",
             },
         ],
@@ -10981,14 +10989,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
-            description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The madman lies dead at your feet. Two soldiers soon appear at the doorway and immediately congratulate you. They tell you that he was an escaped lunatic whom they had been tracking for the last two days. One of the soldiers gives you 10 Gold Crowns reward money and offers to escort you to the citadel.",
+            "",
         events: [
             {
                 eventType: "CHANGE_GOLD_AMOUNT_EVENT",
@@ -11024,18 +11031,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Yellow Marsh",
-            regionType: "MARSH",
-            description: "You soon realize that you are walking deeper into a wooded marsh.",
-            imageUrl: "images/shadow/regions/yellowmarch.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You hear the angry cries of the enemy drift across the lake. You must leave here before more Kraan appear. You mount your steed and push on further into the forest.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 21,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11054,13 +11061,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You feel very weak. The poison of the snake has entered your bloodstream and you can feel the muscles of your body involuntarily tightening and relaxing. Your legs suddenly collapse beneath you and you feel the slimy water of the marsh close over your head. Your life ends here.",
+            "",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -11083,14 +11090,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Fogwood",
-            regionType: "VILLAGE",
-            description:
-                "A little path through the wood leads to Gogwood, a small cluster of huts that have beein used by a family of charcoal burnder for nearly fifty years.",
-            imageUrl: "images/shadow/regions/fogwood.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Keeping a watchful eye on the sky above, you move quickly along the track. You recall that this route leads to Fogwood, a small cluster of huts that have been used by a family of charcoal burners for nearly fifty years. After twenty minutes you reach the edge of a clearing where the huts are grouped in a small circle. There is no sign of the usual mist of wood smoke which gives Fogwood its apt name, and the huts are unusually quiet.",
+            "",
         outcomes: [
             {
                 outcomeType: "ABILITY",
@@ -11125,13 +11131,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The outer fieldworks of the city can now be seen. Drawn across the river is a line of barges chained together to form a floating barricade. You can also see soldiers running along the log walls of the fieldworks, and you can hear the faint noise of battle drifting from the west.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -11160,13 +11166,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "In your haste to avoid the enemy, you catch your foot in a tree root and you are pitched head over heels in a tumble of dust and leaves. You quickly get to your feet and, crashing through the undergrowth at the base of the hill, you run into the forest. You have been running for nearly ten minutes when you discover that you have lost your Weapon(s). Well, at least you still have your life and your Backpack. Wiping the grime from your face, you push on through the trees ahead.",
+            "",
         events: [
             {
                 eventType: "DROP_ALL_WEAPONS_EVENT",
@@ -11175,9 +11181,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 331,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11196,13 +11202,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You have followed this twisting track for about twenty minutes when you hear the beating of wings high above the trees. Looking up you see a large Kraan approaching from the north, its huge black wings casting a gigantic shadow on the trees below. On its back are two creatures armed with long spears. They are Mountain Giaks—small ugly creatures full of hatred and malice. Many centuries ago, their ancestors were used by the Darklords to build the infernal city of Helgedad, which lies in the volcanic wastelands beyond the Durncrag mountain range. The construction of the city was long and torturous, and only the strongest of the creatures survived the heat and poisonous atmosphere of Helgedad. Quickly you dive for the shelter of a large fern tree as the Kraan passes overhead. With heart pounding, you pray that your quick reactions have saved you from being spotted. Pick a number from the Random Number Table.",
+            "",
         outcomes: [
             {
                 outcomeType: "RANDOM",
@@ -11239,13 +11245,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Reaching for your weapon you manage to hack your way through the tangle of wood and twisted branches to the clearer forest beyond. Your cloak is torn in several places and your right leg is badly bruised above the knee.",
+            "",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
@@ -11255,9 +11261,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 213,
-                content: "Lose 1 ENDURANCE point and turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11276,13 +11282,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "When you awake, you find yourself lying at the foot of a steep slope in a tangle of tall grasses. Your Backpack and Weapon are missing and your head aches. You cannot tell how long you have been unconscious, but you realize that you must not delay in pressing on with your mission. Standing up, you see your Backpack is intact but one Weapon is broken in two and is now useless. Remember to cross it off your Action Chart. You quickly pick up your Backpack and move off into the trees ahead.",
+            "",
         events: [
             {
                 eventType: "DROP_WEAPON_EVENT",
@@ -11291,9 +11297,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 113,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11312,18 +11318,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You quickly leave the path and gallop off along the track heading towards the capital. When you reach the point where the Doomwolves stopped, you can see just beyond a meadow the main highway which runs from the northern port of Toran to Holmgard. You should reach the capital by morning.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 149,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11342,14 +11348,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You clamber over the loose rocks and into the mouth of the cave, and then quickly turn to push a large rock over the entrance. After a few minutes you see the Giaks on the rocky ledge outside, their evil yellow eyes furtively searching every crevice of the hillside. They are so close that you feel sure that they must spot you any second now. Pick a number from the Random Number Table.",
+            "",
         outcomes: [
             {
                 outcomeType: "RANDOM",
@@ -11386,13 +11391,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As you begin your climb, you hear the beat of wings approaching from the west. Kraan! By the noise they are making you estimate there are at least ten, perhaps more. You curse your bad luck, for the hillside offers no cover from the sky. If you are attacked during this difficult climb, you will find it nearly impossible to fight back and remain upright at the same time.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -11423,13 +11428,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As you race through the trees you can hear the horrible cackle of the Giaks close behind you. Soon the trees start to thin out and directly ahead you can see a rocky hillside.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -11459,19 +11464,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
-            description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Looking above the heads of the crowd, you notice that one of the shops opposite the main gate is the timbered surgery of a city physician. Suddenly, a bold plan springs to mind. Bracing yourself against the tide of bodies, you struggle across to the other side of the street. You quickly enter to find that there is no sign of life, apart from a brightly coloured parrot in its cage by the window. Taking a selection of small bottles you slip on a white surgeon’s cloak, and fight your way back to the main gate. ‘An emergency!’ you bluff, as guards stop and question you. ‘It’s the royal cook’s wife ... she’s having a baby.’ The guards hesitate for a moment, but you assure them that the matter is most urgent and they decide to let you in. One of the great doors swings open about two feet, and you are roughly pushed through the narrow gap into the courtyard beyond.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 11,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11490,13 +11494,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You are only ten feet or so away from the robed stranger when the raven squawks a warning to its master who instantly spins around. You are frozen in your tracks by the hideous apparition of a Vordak, a lieutenant of the Darklords and one of the undead. You must fight him. Due to the surprise of your attack, you may add 2 points to your COMBAT SKILL for the first round of combat only. Unless you have the Kai Discipline of Mindshield, deduct 2 points from your COMBAT SKILL for the second and subsequent rounds of fighting, for the creature is attacking you with the power of its Mindforce as well as with a large black mace!",
+            "",
         events: [
             {
                 eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
@@ -11516,9 +11520,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 123,
-                content: "If you win, turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11537,19 +11541,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Your passage through the Graveyard will not be easy, for the ground is broken and covered with a thorny graveweed. This wicked briar tears your cloak and cuts your legs. The air hangs heavy and still. Foul gases seep from open crypts and the haunting murmur of distant whispering fills your ears. Carefully, you approach a gap between two ancient pillars, and part the graveweed with your cloaked hand. Suddenly, the ground collapses beneath you and you fall in a tumble of earth and stone.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 71,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11568,19 +11571,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Ruins of Raumas",
-            regionType: "TEMPLE_RUIN",
-            description:
-                "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-            imageUrl: "images/shadow/regions/runinsofraumas.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "With a sickening thud, the chunk of marble cracks open the back of the Giak’s head. The creature drops to its knees and slowly falls forward, down to the ruins below. Elated by your skill, you race forward to aid the young wizard.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 235,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11599,13 +11601,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Messengers of death—and ones eager to deliver their news—the Doomwolves surround and then attack you. Valiantly you fight, but it is to no avail for there are too many of them. As your life’s blood seeps away and eternal dark approaches, the last sight you remember is the glint of sunlight on the spires of Holmgard. You have failed in your mission.",
+            "",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -11628,13 +11630,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The track soon disappears completely into a tangle of thorny brambles and low-branched fir trees.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -11664,18 +11666,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As you reach the walls of the fieldworks, the large oak gates open and you are quickly hurried inside. A sergeant, bloodstained and battle-weary, calls to an officer who turns and recognizes your cloak. ‘My Lord,’ he says. ‘Where are the other Kai Masters? We are in desperate need of their wisdom. The Darklords press us most cruelly and casualties are high. You inform the brave officer of the terrible fate of your kinsmen, and the urgency of your mission to seek the King’s council. Without saying a word, he motions to a soldier to bring forward two horses. You both mount and gallop off towards the high city wall of Holmgard.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 129,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11694,19 +11696,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
-            description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The two guards look tired and anxious. They nervously hold their royal halberds in front of themselves, using the weapons to push away anyone who comes too close to the gates. An angry woman attacks one of them, pounding his chest with her clenched fists making him fall against the other guard. All three collapse in a struggling heap of flailing arms and legs. Seeing your chance, you dash forward and pull the large lever which opens the great doors. You slip inside and the doors close without either of the guards seeing you enter.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 139,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11725,13 +11726,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Inside the long box is a sword wrapped in leather. You may take this Weapon if you wish. You close the box and descend the ladder to the clearing below, taking care to use only the sound rungs.",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -11747,9 +11748,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 140,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11768,13 +11769,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The two Giaks lie at your feet, their bodies twisted and lifeless. A quick search reveals 6 Gold Crowns, 2 Spears, and a Dagger. You may keep the Gold and take either the Dagger or a Spear. Remember to mark this on your Action Chart. The Kraan flew off during your battle, and the track is now deserted. You adjust your Backpack and continue your mission.",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -11806,9 +11807,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 272,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11827,14 +11828,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The last thing that you experience of this life is the feeling of being sucked into the void of darkness. No trace of you remains in this world, for you have passed into a realm of timeless existence. You have become a slave of an ancient evil. Your adventure ends here.",
+            "",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -11857,19 +11857,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Ruins of Raumas",
-            regionType: "TEMPLE_RUIN",
-            description:
-                "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-            imageUrl: "images/shadow/regions/runinsofraumas.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "With a wave of his hand, Banedon leaves the ruins and you continue your mission, pushing on through the thick woods ahead. You have not gone far when you realize several pairs of yellow eyes are watching you from the undergrowth to your left. Suddenly, a black arrow skims the top of your head. It is a Giak ambush and you must run as fast as you can to escape it.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 281,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -11888,13 +11887,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Staying underwater for as long as you can, you finally surface to see the Giaks far behind you. You have lost your Weapon(s) and Backpack but at least you are still alive. You wade out of the muddy water and continue your journey under cover of the trees that line the right-hand bank. Pick a number from the Random Number Table.",
+            "",
         outcomes: [
             {
                 outcomeType: "RANDOM",
@@ -11940,13 +11939,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You have continued your journey for about fifteen minutes when suddenly a black arrow whistles past your head and embeds itself in a tree. Instinctively you duck and draw your weapon.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -11976,18 +11975,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You sense something is wrong. With fighting all around and the forces of the Darklords so near, why has this man stayed in the forest? You feel a strange aura of evil about him and decline his offer.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 90,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12006,18 +12005,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Using the skills taught to you by your masters in the art of Hunting, you inch your way through the foliage undetected. In less than a minute you are directly behind, and only a few feet from, the stake to which the ranger is tied. The wood is alight and great clouds of smoke are engulfing the poor victim. You take your weapon and run forward, hidden by the smoke. One blow of your weapon is all that is needed to sever his bonds, and you pull him free and back into the safety of the forest. As you press on into the forest, you hear the shrieks of the Giaks as they discover that their prisoner has literally disappeared in a cloud of smoke!",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 117,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12036,13 +12035,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The head of the bird slowly turns and it curses you. An instant later, it flies off above the trees and has soon disappeared. Shocked by what you have heard you are now sure that the fledgling was a scout of the Darklords and is now probably on its way to inform them of your whereabouts.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -12072,13 +12071,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Yellow Marsh",
-            regionType: "MARSH",
-            description: "You soon realize that you are walking deeper into a wooded marsh.",
-            imageUrl: "images/shadow/regions/yellowmarch.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You soon realize that you are walking deeper into a wooded marsh. To continue in this direction will be slow and hazardous.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -12107,13 +12106,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You walk for over an hour, during which time you keep a constant vigil for any sign of Kraan in the sky above. You have twice spotted their tell-tale shadows in the sky and on both occasions your quick wits have saved you from capture. You are now very hungry and must eat a Meal.",
+            "",
         events: [
             {
                 eventType: "CHANGE_RATION_AMOUNT_EVENT",
@@ -12123,9 +12122,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 13,
-                content: "You may now continue on your journey by turning to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12144,18 +12143,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Clearing",
-            regionType: "CLEARING",
-            description:
-                "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-            imageUrl: "images/shadow/regions/clearing.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content: "Your Kai Discipline reveals that the west path is a dead end.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 27,
-                content: "You choose the south path and turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12174,11 +12172,10 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Ruins of Raumas",
-            regionType: "TEMPLE_RUIN",
-            description:
-                "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-            imageUrl: "images/shadow/regions/runinsofraumas.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content: "Pick a number from the Random Number Table.",
         outcomes: [
@@ -12217,13 +12214,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The forest here is sparse and hilly. It does not give much cover from an attack from the air. You move as quickly as you can from tree to tree, to avoid the Kraan but you can hear the sound of Doomwolves close behind.",
+            "",
         outcomes: [
             {
                 outcomeType: "ABILITY",
@@ -12257,13 +12254,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The Gem feels incredibly hot and burns your hand. Lose 2 ENDURANCE points. You quickly pick it up with the edge of your Kai cloak and slip this Vordak Gem into your Backpack. A Gem that size must be worth hundreds of Crowns. But the Giaks are very close and their arrows whistle past your head as you turn and run for the safety of the forest.",
+            "",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
@@ -12284,9 +12281,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 2,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12305,13 +12302,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Through the open doorway of the first hut, you can see the body of a charcoal burner lying face down on the rough stone floor. He has been murdered, stabbed in the back by a spear. All his furniture and belongings have been smashed and broken and not one piece remains intact. This is the evil handiwork of Giaks without any doubt, for they delight in the destruction of all things. A quick check of the other huts reveals a similar story of murder and wreckage. In the last hut that you search, you discover a Giak Spear—proof of your suspicions. You may keep this Weapon if you wish. More determined than ever now to succeed in your mission, you continue along the track.",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -12327,9 +12324,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 105,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12348,13 +12345,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Dragon Bridge",
-            regionType: "BRIDGE",
-            description: "The Dragon Bridge connects the northern and southern part of Summerlund.",
-            imageUrl: "images/shadow/regions/dragonbridge.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The sound of battle gradually fades behind you. Suddenly, you are pulled to the ground. Three Drakkarim have dropped from a tree above. You struggle but it is useless for there are too many of them for you and they are very strong.The last thing that you hear is the vicious snarls of Drakkarim as they raise their spears. Your life and your mission end here.",
+            "",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -12377,14 +12374,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Treehouse",
-            regionType: "WOOD_BUILDING",
-            description:
-                "Looking up through the massive branches you can see a large treehouse some twhety-five feet above teh ground. There is no ladder, but the ganreld bark of teh tree offers many footholds.",
-            imageUrl: "images/shadow/regions/treehouse.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Your climb is swift and easy. It reminds you of the many trees that you climbed and explored near Toran as a child, when you wanted to pick fruit or to look out over the beautiful countryside of Sommerlund. Pushing open the treehouse door, you see an old hermit huddled in the corner of the small cabin. A look of great relief spreads across his face as he recognizes your green Kai cloak. He tells you that this area is full of Giaks, and that he has counted over forty Kraan flying over his home in the last three hours. They were heading east. He scurries over to a cupboard and returns with a plate of fresh fruit. You thank him and place the fruit in your Backpack. There is enough for one Meal. The hermit also produces a fine Warhammer and lays it upon a table by the door. Your need is greater than mine, Kai Lord,’ he says. ‘Please take this trusty Warhammer if you so wish. You may take this Weapon only if you exchange it for another Weapon already in your possession, for it is the only defence that the hermit has against the enemy. Thanking the old man, you carefully descend the tree and continue on your mission.",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -12405,9 +12401,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 213,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12426,13 +12422,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The stable door is open and you can hear the breathing of a horse from inside the darkened interior. Suddenly, the horse senses your presence and rushes past, knocking you to the ground. You lose 1 ENDURANCE point.",
+            "",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
@@ -12473,13 +12469,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You have taken less than ten paces when the raven squawks a warning to the stranger. Turning to face you, the robed creature utters a piercing screech that freezes your blood and grips your stomach with fear and panic. It is a Vordak, a lieutenant of the Darklords and one of the undead. Within seconds, a host of Giaks appear at its side and attack you. You fight bravely but you are greatly outnumbered. The last thing you remember is the icy grasp of the Vordak’s skeletal fingers as they close around your throat. Your life and your mission end here.",
+            "",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -12502,19 +12498,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
-            description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You notice a small faded sign on the wall of a building opposite. You remember that the royal court sessions are held within the citadel and you are sure that the west road must lead there.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 37,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12533,13 +12528,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The hillside is steep and the earth is loose and slippery. You chance a swift glance over your shoulder and see the two Giaks emerge from the woods. They start to climb after you. About halfway from the peak of the hill, you spot a cave to your right, almost totally hidden by a landslide.",
+            "",
         outcomes: [
             {
                 outcomeType: "ABILITY",
@@ -12579,18 +12574,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You curse your ill luck. It seems that nature and the Darklords have conspired against you, but it does not shake your determination to reach the King. Wiping the sticky mud from your clothes, you turn and press on into the forest.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 299,
-                content: "Turn to ",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12609,13 +12604,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Wiping the foul Giak blood from your weapon, you quickly descend the hillside before the Kraan spots its dead riders. Many times you lose your footing on the loose rocks, falling several feet. Deduct 1 ENDURANCE point for cuts and bruises to your legs.",
+            "",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
@@ -12625,9 +12620,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 248,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12646,14 +12641,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
-            description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "It takes you nearly an hour to reach the citadel. When you arrive you find that the citizens of Holmgard are in panic and confusion. Your escort approaches the armoured guards at the main entrance and tells them of your urgent message for the King. Pick a number from the Random Number Table.",
+            "",
         outcomes: [
             {
                 outcomeType: "RANDOM",
@@ -12690,13 +12684,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Dragon Bridge",
-            regionType: "BRIDGE",
-            description: "The Dragon Bridge connects the northern and southern part of Summerlund.",
-            imageUrl: "images/shadow/regions/dragonbridge.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Wrapped in a bundle of women’s clothing is a small velvet purse containing 6 Gold Crowns. You may take these items and continue your journey.",
+            "",
         events: [
             {
                 eventType: "CHANGE_GOLD_AMOUNT_EVENT",
@@ -12706,9 +12700,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 213,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12727,18 +12721,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "In your haste to avoid the enemy, you catch your foot in a tree root and you are pitched head over heels in a tumble of dust and leaves. Crashing through the undergrowth at the base of the hill, you quickly pick up your weapon and run into the thick forest. The Kraan is no longer circling above, but you can make out the silhouette of two Giaks on the peak of the hill behind. Wiping the grime from your eyes, you wince as you discover a large bruise on your forehead. Without delay, you run deeper into the safety of the forest.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 331,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12757,18 +12751,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Instinctively you dive away from the stairs, and land on the stone floor. Your quick reactions have saved your life, for a vast granite block has fallen from the ceiling and crushed the steps, just in front of the lockplate! Shaken but still in one piece, you get to your feet. A shaft of dull grey light is seeping into the chamber from above, where the stone block was. Through a hole in the ceiling you can see a tangle of graveweed and the cloudy sky above. You clamber out of the tomb and head for the arched south gate of the necropolis as fast as possible. The pointed log walls of the city’s outer defence works are now visible.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 61,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12787,18 +12781,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Two soldiers and a sergeant run towards you, their crossbows aimed at your head. As they get nearer, they recognize your Kai cloak and a look of relief spreads across their faces. ‘My Lord,’ says the sergeant, ‘where are the other Kai Masters? We are in desperate need of their wisdom. The Darklords press us most cruelly and our casualties are high.’ You inform the brave soldier of the fate of your kinsmen, and the urgency of your mission to see the King. He takes you back to the barges where an officer accompanies you on horseback towards the high walls and the main gate of Holmgard.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 129,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12817,14 +12811,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Clearing",
-            regionType: "CLEARING",
-            description:
-                "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-            imageUrl: "images/shadow/regions/clearing.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The slimy creature lets out a long, ghastly death-cry and collapses. You are near to panic and scramble to your feet, grabbing what you think to be your belt from the jaws of the dead beast. You can see light in the far distance, and you sprint for it as fast as you can. When you finally emerge into the daylight, you fall onto the leafy ground and fight for breath in painful gasps. Slowly sitting upright, you notice that you are still wearing your belt—you had not lost it after all. What you grabbed from the jaw of the Burrowcrawler was a leather strap with a small pouch and a sheathed Dagger halfway along it. You break open the clasp to find it contains 20 Gold Crowns. You may take both the Dagger and the Crowns if you are able to. Feeling a little better now, you gather your Equipment together and push on eastwards into the forest.",
+            "",
         events: [
             {
                 eventType: "CHANGE_GOLD_AMOUNT_EVENT",
@@ -12845,9 +12838,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 157,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12866,13 +12859,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As you race across the open field towards the wood, a Kraan dives at you and claws your arm. Before you can fight back, it has flown off again, shrieking with cold malice. You enter the wood, but you have lost 2 ENDURANCE points.",
+            "",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
@@ -12882,9 +12875,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 264,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12903,18 +12896,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You walk for nearly an hour along the twisting river’s edge. Beyond the next turn you can hear the faint noise of battle. You carefully climb a steep hillock to get a better view of the area.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 269,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -12933,13 +12926,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "After what seems an eternity of struggling, you reach the peak of the steep hill. Behind you, above the canopy of trees, you can see the still smouldering remains of the monastery. To the north, a column of jet-black smoke rises high into the sky. Small orange tongues of flame flicker at its base. Your heart sinks as you realize that the port of Toran is ablaze. Suddenly, a piercing cry above warns you that a Kraan is about to attack. It is about thirty yards away and diving for the kill.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -12969,13 +12962,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Old Watch Tower",
-            regionType: "WOOD_BUILDING",
-            description: "The old Watchtower is ...",
-            imageUrl: "images/shadow/regions/ruinwatchtower.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "From the top of the tower you can see above the trees in all directions. Far to the north, a column of jet-black smoke rises high into the sky. Small orange tongues of flame flicker at its base. Your heart sinks as you realize that the port of Toran is ablaze. From the southwest, the wind carries the noise of battle. It is close; no more than five miles at most. On the floor of the watchtower is a large oblong box.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -13005,14 +12998,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You pull up your hood and drop down behind the rocks that litter the mouth of the cave. Holding your breath, you curl up into a tight ball, and completely cover yourself with your green cloak. Only a few minutes later the Giaks clamber over the rocky ledge outside, their evil yellow eyes furtively searching every crevice of the hillside. Then cursing in their strange tongue, they leave the ledge and start to climb towards the peak. You silently thank your old Masters for teaching you the Kai Discipline of Camouflage—it has probably saved your life on this occasion.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -13042,19 +13034,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Ruins of Raumas",
-            regionType: "TEMPLE_RUIN",
-            description:
-                "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-            imageUrl: "images/shadow/regions/runinsofraumas.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Upon seeing you emerge from the woods, the Giak officer shouts ‘Ogot! Ogot!’ to his cowering troops, who flee the ruins and run to the safety of the forest. Shaking his mailed fist at you, the black-clad Giak screams, ‘RANEG ROGAG OK—ORGADAKA OKAK ROGAG GAJ!’ before leaving. Surveying the scene of battle, you count over fifteen Giak dead lying among the broken pillars of Raumas. The young wizard wipes his brow and walks towards you, his hand extended in friendship.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 349,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13073,19 +13064,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You carefully insert the Key and turn it clockwise. You hear a dull click—the Key works. You lift out the pin, and the large granite door slowly swings towards you on hidden hinges. The grey half-light of the Graveyard floods into the tomb. The exit is overgrown with graveweed and you suffer many cuts to your face and arms as you fight your way through to the surface. Looking back, you see the tomb door slowly close and a cruel inhuman laugh seems to rise out of the very ground on which you stand. In blind panic, you race through the eerie necropolis towards the south gate.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 61,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13104,13 +13094,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Within a few minutes, you can see the Kraan hovering over a hilltop behind you. At a quick count you can make out at least sixteen of these horrible creatures, each of which has at least two Giaks riding upon its back. They are armed with long spears and wear tall pointed helmets of dull bronze. You hear the excited grunts of the Giaks. They have spotted you. You jump for the entrance of the tunnel some twenty-five feet below, but your boot gets caught in a thorny briar and you hang helplessly upside down—weaponless and vulnerable. Fortunately for you the end is swift: As the first Giak lance pierces your heart, death is instantaneous. Your life and your mission end here.",
+            "",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -13133,13 +13123,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As the creature dies, its body slowly dissolves into a vile green liquid. You notice that the grass and plants beneath the smoking fluid are beginning to shrivel and die. But a large valuable looking Gem lies on the ground near to the decaying body.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -13168,19 +13158,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As you descend the ridge towards the Graveyard of the Ancients, you are aware of a strange mist and cloud that swirls all around this grey and forbidding place, blocking the sun and keeping the Graveyard in perpetual gloom. A creeping chill seems to penetrate your very bones. Your horse becomes startled and no matter how you urge him on, he refuses to go any nearer to this dreadful place. So you must leave your horse and press on by foot.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 284,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13199,13 +13188,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Dragon Bridge",
-            regionType: "BRIDGE",
-            description: "The Dragon Bridge connects the northern and southern part of Summerlund.",
-            imageUrl: "images/shadow/regions/dragonbridge.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Fatigued by your exertions, you stop to rest for a few minutes at a fallen tree. You notice a large bundle, beneath the trunk.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -13234,14 +13223,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Clearing",
-            regionType: "CLEARING",
-            description:
-                "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-            imageUrl: "images/shadow/regions/clearing.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Surrounded by thorny briars and closely packed roots, you see the entrance of a tunnel disappearing into the hillside beyond. It is approximately seven feet in height and just over ten feet wide. As you get closer, you can feel a slight breeze coming from the inky blackness. If the other end of this tunnel emerges on the far side of the hill, it could save you many hours of difficult climbing. But it could also harbour unknown danger.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -13270,19 +13258,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
-            description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You walk for nearly ten minutes along a dark and winding corridor, and then start to climb a steep staircase to a small wooden door. The man presses a secret catch and the door opens. You enter a large, plushly decorated bedroom with a huge marble bath that takes up one corner of the room. The man suggests that you refresh yourself here whilst he seeks an audience with the King. You quickly bathe and change into some white robes that have been left out on a large marble table. Shortly, the man returns and leads you through a long corridor lined with exquisite tapestries. You finally arrive at a large door guarded by two soldiers wearing silver armour. You are about to meet the King.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 350,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13301,18 +13288,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You have cut your way through the thick undergrowth for nearly half an hour when you hear the beat of wings high above the trees. Looking up you can just make out the shape of a Kraan approaching from the north. It is one of the monsters that attacked the monastery and on its back are two grey-skinned creatures armed with long spears. These are Mountain Giaks—evil servants of the Darklords, full of hatred and malice. Many centuries ago, their ancestors were used by the Darklords to build the infernal city of Helgedad, which lies in the volcanic wastelands beyond the Durncrag range of mountains. The construction of the city was long and torturous and only the strongest of the Giaks survived the heat and poisonous atmosphere of Helgedad. Hidden by the trees, you freeze, keeping absolutely still as the Kraan passes overhead and disappears towards the south. When you are sure that it has gone, you move off once again into the forest.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 131,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13331,13 +13318,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As the stream vanishes up into the rocky hillside, you can see on the track above four soldiers and their officer. They wear the uniform of the King’s army.",
+            "",
         outcomes: [
             {
                 outcomeType: "ABILITY",
@@ -13382,18 +13369,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As you approach, the black bird flies off above the trees and soon disappears from view. You search the tree on which it was perched but find nothing unusual. Rather than waste any more precious time, you continue off along the track.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 121,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13412,13 +13399,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You rush into the clearing and take the Giaks completely by surprise. Without a moment’s hesitation, you strike out at the one nearest to you. He is dead before his body hits the ground. The other Giaks unsheathe their curved swords and attack you. You must fight them one at a time.",
+            "",
         events: [
             {
                 eventType: "COMBAT",
@@ -13443,9 +13430,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 117,
-                content: "If you win, you free the ranger and turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13464,14 +13451,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Just as you remove the ornate pin, a loud crack deafens you. Pick a number from the Random Number Table.",
+            "",
         outcomes: [
             {
                 outcomeType: "RANDOM",
@@ -13508,18 +13494,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "When you awake, you find yourself lying at the foot of a steep slope in a tangle of long grasses. Your Backpack and Weapons are missing and your head aches violently. You cannot tell how long you have been unconscious, but you realize that time is running out and you must press on. Standing up, you notice your Backpack and Weapon on the slope above. They must have broken free when you fell. You quickly retrieve them and move off into the trees ahead.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 113,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13538,14 +13524,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
-            description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You quickly sidestep just as a long dagger shatters the glass top of the counter. A swarthy youth is attacking you and you must fight him.",
+            "",
         events: [
             {
                 eventType: "COMBAT",
@@ -13586,14 +13571,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You gallop forward to meet the oncoming Doomwolf and rider, your Weapon raised to strike. The Giak sees you and unsheathes his scimitar. You must fight both Giak and Doomwolf as one enemy.",
+            "",
         events: [
             {
                 eventType: "COMBAT",
@@ -13608,9 +13592,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 193,
-                content: "If you win the fight, turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13629,14 +13613,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
-            description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The guards do not believe your story and refuse to let you enter. Your escort disappears into the crowd and you are left alone to find your way in this confused city. Shocked, and then dejected by such a rebuff, you are carried along by the crowds until you find yourself at the entrance to the Guildhall. It stands at one side of the Guild Bridge which crosses the River Eledil near where it joins the Holmgulf.",
+            "",
         outcomes: [
             {
                 outcomeType: "ABILITY",
@@ -13675,13 +13658,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "As your voice echoes through the trees, the stranger slowly turns to face you. Your heart pounds and your blood freezes as you realize that the stranger is not human. It is a Vordak, a hideous lieutenant of the Darklords and one of the undead. A piercing scream fills your ears, and the creature raises a huge black mace above its head and charges at you. Frozen with horror, you can also feel the Vordak attacking you with the force of its mind.",
+            "",
         events: [
             {
                 eventType: "COMBAT",
@@ -13696,9 +13679,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 123,
-                content: "If you win, turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13717,13 +13700,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You are held by the mass of tangled branches and roots. Eventually you free your right hand, grab your weapon, and hack your way slowly through the foliage to the clearer forest beyond. Your cloak is torn in several places and your left arm is cut and badly bruised above the elbow.",
+            "",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
@@ -13733,9 +13716,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 213,
-                content: "Lose 2 ENDURANCE points and turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13754,19 +13737,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
-            description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You are weak and dizzy. You can no longer feel your legs and they refuse to bear your weight. You try to crawl for the door but the robber jumps on you and pins you to the ground.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 340,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13785,13 +13767,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "You pull up the hood of your green Kai cloak and hold your breath as the Kraan circles above. After a few minutes, you hear the frantic curses of the Giaks. The beating of Kraan wings fades, as they disappear towards the west. Your quick reactions have saved you from capture and likely death.",
+            "",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -13820,13 +13802,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Lodged deep in the rib cage of the skeleton is a Spear. It is in good condition and you may take it if you wish and are able to.",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -13842,9 +13824,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 14,
-                content: "To leave the clearing, turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13863,13 +13845,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "The trees start to thin out, and just ahead you can make out the silhouette of an old log cabin beneath an oak tree. This hut seems to have been abandoned and there is little of apparent value left behind. Opening a small chest near the main door, you discover bunches of twigs that have been tied together with strong twine. One end of each bundle has been coated with pitch. They are Torches. Next to the chest are a Short Sword and a Tinderbox. You may take them and a Torch if you wish but make sure, that you mark them on your Action Chart. Closing the door of the cabin, you head off along an overgrown path towards the northeast.",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -13907,9 +13889,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 103,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13928,18 +13910,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Yellow Marsh",
-            regionType: "MARSH",
-            description: "You soon realize that you are walking deeper into a wooded marsh.",
-            imageUrl: "images/shadow/regions/yellowmarch.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "Raising your boot to kick away the dead snake, your heart skips a beat as you realize that it was a Red Marshviper. There is no known cure for its venomous bite! You decide that to go any further in this direction would be suicide. Carefully retracing your steps, you eventually reach firm ground and continue on your mission.",
+            "",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 95,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -13958,14 +13940,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Ruins of Raumas",
-            regionType: "TEMPLE_RUIN",
-            description:
-                "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-            imageUrl: "images/shadow/regions/runinsofraumas.png",
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "He is a young blond-haired youth with deep brooding eyes. His face is lined with exhaustion and the grime of battle, and his long sky-blue robes bear evidence of living rough in the wilds. He shakes your hand and bows. ‘My eternal thanks, Kai Lord. My powers are nearly drained. Had you not come to my aid, I fear I would have ended my days atop a Giak lance.’ He is weak and unsteady on his feet. You take his arm and sit him down upon a fallen pillar where you listen intently to what he has to say. ‘My name is Banedon. I am journeyman to the Brotherhood of the Crystal Star, which is the Magicians’ Guild of Toran. My Guildmaster has sent me to your monastery with this urgent message.’ He removes a vellum envelope from inside his robes and handd it to you. ‘As you see, I have opened the letter and read its contents. When the war started, I was on the highway with two travelling companions. The Kraan attacked us and we lost each other in the forest during our escape. The letter is a warning to the Kai Lords that the Darklords have mustered a vast army beyond the Durncrag Range. The Guildmaster urges the Kai to cancel the celebrations of Fehmarn and prepare for war. I fear we were betrayed,’ says Banedon, his head bowed in sorrow. ‘One of my order, a brother called Vonotar, had explored the forbidden mysteries of the Black Art. Ten days ago he denounced the Brotherhood and killed one of our Elders. He has since disappeared. It is rumoured that he now aids the Darklords.’ You tell Banedon what has happened at the monastery, and of your mission to warn the King. Silently, he removes a gold chain from around his neck and hands it to you. On the chain is a small Crystal Star Pendant. ‘It is the symbol of my Brotherhood, and we are both truly brothers in this hour of darkness. It is a talisman of good fortune—may it protect you on your road ahead.’ You thank him, place the chain around your neck, and slip the Crystal Star4 inside your shirt. (Remember to mark this on your Action Chart.) Banedon bids you farewell. ‘We must leave this place lest the Giaks return with more of their loathsome kind to put an end to us. I must return to my Guild. I bid you farewell, my brother. May the luck of the gods go with you.’",
+            "",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
@@ -13981,9 +13962,9 @@ db.getCollection("lw5").insertMany([
         ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 95,
-                content: "Turn to",
+                outcomeType: "",
+                targetNr: ,
+                content: "",
             },
         ],
     },
@@ -14002,7 +13983,7 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         content:
-            "You enter the Chamber of State, a magnificent hall decorated lavishly in white and gold. The King and his closest advisers are studying a large map spread upon a marble plinth in the centre of the chamber. Their faces are lined with worry and concentration. A silence fills the hall as you tell of the death of your kinsmen and of your perilous journey to the citadel. As you finish your story, the King approaches and takes your right hand in his. Lone Wolf, you have selfless courage: the quality of a true Kai Lord. Your journey here has been one of great peril and although your news comes as a grievous blow, the spirit of your determination is like a beacon of hope to us all in this dark hour. You have brought great honour to the memory of your Masters, and for that we praise you.’ You receive the praise and heartfelt thanks of the entire hall—an honour that brings a certain redness to your young face. The King raises his hand and all the voices cease. ‘You have done all that Sommerlund could have asked of a loyal son, but she is greatly in need of you still. The Darklords are powerful once more and their ambition knows no bounds. Our only hope lies within Durenor with the power that once defeated the Darklords an age ago. Lone Wolf, you are the last of the Kai—you have the skills. Will you journey to Durenor and return with the Sommerswerd, the sword of the sun?  Only with that gift of the gods may we crush this evil and save our land.’ If you wish to accept the quest of the Sommerswerd, begin your adventure with Book 2 of the Lone Wolf adventures: Fire on the Water",
+            "",
         events: [
             {
                 eventType: "MISSION_ACCOMPLISHED_EVENT",
