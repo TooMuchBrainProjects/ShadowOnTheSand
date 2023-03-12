@@ -591,6 +591,115 @@ db.getCollection("lw5").insertMany([
             //     weight: "SMALL",
             //     imageUrl: "images/shadow/items/goldenkey.png",
             // },
+            {
+                code: "BLACK_SASHE",
+                name: "Black sashe",
+                itemType: "MAGICAL_ITEM",
+                description: "Black sashe",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/black_sashe.png"
+            },
+            {
+                code: "TINCTURE_OF_CALACENA",
+                name: "Tincture of Calacena",
+                itemType: "UTILITY",
+                description: "causes terrifying hallucinations for 1–2 hours per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/tincture_of_calacena.png"
+            },
+            {
+                code: "TINCTURE_OF_GRAVEWEED",
+                name: "Tincture of Graveweed",
+                itemType: "UTILITY",
+                description: "causes sickness and loss of 2 ENDURANCE points per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/tincture_of_graveweed.png"
+            },
+{
+                code: "VIAL_OF_LARNUMA OIL",
+                name: "Vial of Larnuma Oil",
+                itemType: "UTILITY",
+                description: "restores 2 ENDURANCE points per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/vial_of_larnuma_oil.png"
+            },
+            {
+                code: "POTION_OF_LAUMSPUR",
+                name: "Potion of Laumspur",
+                itemType: "POTION",
+                description: "restores 4 ENDURANCE points per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/potion_of_laumspur.png"
+            },
+            {
+                code: "POTION_OF_GALLOWBRUSH",
+                name: "Potion of Gallowbrush",
+                itemType: "POTION",
+                description: "induces sleep for 1–2 hours per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/potion_of_gallowbrush.png"
+            },
+            {
+                code: "POTION_OF_ALETHER",
+                name: "Potion of Alether",
+                itemType : "POTION",
+                description: "increases COMBAT SKILL by 2 for the duration of 1 combat",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/potion_of_alether.png"
+            },
+            {
+                code: "BRASS_WISTLE",
+                name: "Brass Whistle",
+                itemType: "MAGICAL_ITEM",
+                description: "Brass Whistle",
+                weight: "MEDIUM",
+                imageUrl: "images/flight/items/brass_whistle.png"
+            },
+            {
+                code: "BOTTLE_OF_KOURSHAH",
+                name: "Bottle of Kourshah",
+                itemType: "POTION",
+                description: "There is enough Kourshah in the bottle to restore a further 4 ENDURANCE points.",
+                weight: "MEDIUM",
+                imageUrl: "images/flight/items/bottle_of_kourshah.png"
+            },
+            
+            
+            
+            
+            
+            {
+                code: "BLOWPIPE",
+                name: "Blowpipe",
+                itemType: "WEAPON",
+                description: "A blowpipe for shooting darts at your target.",
+                weight: "MEDIUM",
+                imageUrl: "images/flight/items/blowpipe.png"
+            },
+            {
+                code: "SLEEP_DART",
+                name: "Sleep Dart",
+                itemType: "WEAPON",
+                description: "A dart to be shot with a blowpipe that lets your target fall asleep.",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/sleep_dart.png"
+            },
+            {
+                code: "PRISM",
+                name: "Prism",
+                itemType: "UTILITY",
+                description: "glass prism",
+                weight: "SMALL",
+                imageUrl: "images/shadow/items/prism.png"
+            },
+            {
+                code: "BLUE_STONE_TRIANGLE",
+                name: "Blue Stone Triangle",
+                itemType: "UTILITY",
+                description: "a blue triangle made out of stone",
+                weight: "SMALL",
+                imageUrl: "images/shadow/items/blue_stone_triangle.png"
+            },
         ],
         content:
             "Before leaving Holmgard on your voyage to the Vassagonian capital of Barrakeesh, you are given a map of the desert empire and a pouch of gold.",
@@ -9891,24 +10000,44 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Excavation Site",
+            regionType: "CONSTRUCTION_SITE",
+            description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/excavation_site.png",
         },
         content:
-            "As you push on into the forest, you hear the wings of the Kraan pass above the trees and disappear northwards. You ride on for nearly an hour until you come to a clearing. On the far side is a track that leads off to the south.",
+            "If you are to get inside the tomb, you must either distract or silence the Drakkarim sentry.<br>If you do not possess this item, you will have to creep up and overpower him as quickly and silently as you can. Pick a number from the Random Number Table. If you possess the Kai Disciplines of Hunting, Tracking, and Camouflage, add 2 to the number you have picked. If you have reached the Kai rank of Guardian or higher, add 3 to the number.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 34,
-                content: "If you wish to enter the clearing and take the south exit, turn to ",
+                outcomeType: "ITEM",
+                targetNr: 260,
+                content: "If you possess a Tincture of Graveweed, turn to",
+                item: {
+                    code: "TINCTURE_OF_GRAVEWEED",
+                    name: "Tincture of Graveweed",
+                    description: "causes sickness and loss of 2 ENDURANCE points per dose",
+                    imageUrl: "images/flight/items/tincture_of_graveweed.png"
+                }
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 118,
+                outcomeType: "RANDOM",
+                targetNr: 324,
                 content:
-                    "If you would rather skirt the edge of the clearing and pick up the track further on, turn to ",
+                    "If your total is now 0–4, turn to",
+                intervall: {
+                    min: 0,
+                    max: 4
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 303,
+                content:
+                    "If it is 5 or more, turn to",
+                intervall: {
+                    min: 5,
+                    max: 10
+                }
             },
         ],
     },
@@ -10981,7 +11110,7 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/koneshi_mountains.png",
         },
         content:
-            "With the leap of a tiger, you snatch the glowing gem barely a second before Haakon’s spiked fist slams into the floor where the jewel lay. You turn to face your enemy, the gem held high in your hand, its blue beam glinting on the Darklord’s black armour. He shrinks beneath its glare and falls to his knees, a repulsive sucking noise issuing from his helm as he slowly begins to fade. </br> A sudden crack makes you start with shock, but you are no longer in danger. The glowing gem has vanished from your hand; like its master it has left this dimension, never to return.",
+            "With the leap of a tiger, you snatch the glowing gem barely a second before Haakon’s spiked fist slams into the floor where the jewel lay. You turn to face your enemy, the gem held high in your hand, its blue beam glinting on the Darklord’s black armour. He shrinks beneath its glare and falls to his knees, a repulsive sucking noise issuing from his helm as he slowly begins to fade. <br> A sudden crack makes you start with shock, but you are no longer in danger. The glowing gem has vanished from your hand; like its master it has left this dimension, never to return.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -11035,18 +11164,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "You race along the rock-strewn cave, eager to escape from the infected old man. The horrific stories that you have heard about vaxelus make you careless in your haste, and you lose 2 Items from your Backpack. Choose which two items to erase from your Action Chart (if you have no Backpack Items, you lose a Weapon and a Special Item instead).",
+        events: [
+            {
+                eventType: "DROP_ITEM_EVENT",
+                ranking: 1,
+            },
+            {
+                eventType: "DROP_ITEM_EVENT",
+                ranking: 2,
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 241,
+                content: "Turn to",
             },
         ],
     },
@@ -11065,19 +11205,21 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            nname: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
+            "The Kraan-rider screams past to your left, spun off course by your swift counter-blow. He is now over a hundred feet below but is turning the Kraan for another attack. You wheel towards the south to avoid being caught between the two converging squadrons of Kraan-riders. Your change of direction increases the distance between you and your pursuers, but the Itikar is badly wounded and terrified by the shrieking Kraan.<br>You are close to despair; your feathered mount is losing a lot of blood and could lapse into unconsciousness at any moment and drop you like a stone from the darkening sky. Suddenly you spot something in the distance—a sight that renews your faith in miracles.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "DEFAULT",
+                targetNr: 221,
+                content: "Turn to",
             },
-        ],
+        ]
     },
     {
         /*
@@ -11094,29 +11236,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "You follow a path along a dry gully, the bed of an ancient river that once flowed through the mountains. An arid breeze blows eddies of red dust along the banks of dead earth. The white-walled buildings of Ikaresh suddenly appear, and, as the dust settles, you find yourselves standing in a small square close to the open archway of the town’s east gate.<br>Perched upon a tall basalt monolith in the centre of the square is an eagle—the emblem of this mountain town—cast in bronze. Three bronze arrows are held in its beak, each indicating an exit from the square.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 134,
-                ability: {
-                    abilityType: "TRACKING",
-                    description:
-                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
-                },
-                content: "If you have the Kai Discipline of Tracking, you may turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 376,
+                content: "If you wish to go north, towards the Dougga Market, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 305,
-                content:
-                    "If you do not possess this skill, you prepare your weapon and stealthily approach the huts. Turn to",
+                targetNr: 216,
+                content: "If you wish to go west, towards the main square, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 342,
+                content: "If you wish to go south, along the Avenue of Eagles, turn to",
             },
         ],
     },
@@ -11135,23 +11277,50 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The Akataz leaps through the air at your face. You fall backwards, kicking with both feet, but you are winded as the war-dog jolts the air from your lungs. It slashes your shoulder (lose 1 ENDURANCE point), before cartwheeling over the edge of the stairs, its howl cut short as it smashes into the marble floor of the lower palace.<br>You spring to your feet and draw your weapon, for the Drakkarim are running towards you. A terrible roar of hate and rage fills the hall: ‘Kill him!’ The Drakkarim unsheathe their black swords, eager to obey their master’s command. They attack you simultaneously.<br>You can evade the combat at any time by running into the adjoining passage.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -1
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 2,
+                creature: {
+                    name: "Drakkarim",
+                    combatSkill: 18,
+                    endurance: 35,
+                    imageUrl: "images/shadow/creatures/drakkarim.png",
+                }
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 3,
+                creature: {
+                    name: "Drakkarim",
+                    combatSkill: 18,
+                    endurance: 35,
+                    imageUrl: "images/shadow/creatures/drakkarim.png",
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 179,
-                content: "If you wish to approach the barges, turn to",
+                targetNr: 238,
+                content: "If you wish to evade combat, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 51,
-                content: "If you wish to take cover in the trees, turn to",
+                targetNr: 345,
+                content: "If you win the combat, turn to",
             },
         ],
     },
@@ -11170,24 +11339,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "DROP_ALL_WEAPONS_EVENT",
-                ranking: 1,
-            },
-        ],
+            "Banedon holds a gleaming ring of silver beneath the merchant’s nose and says, ‘This is yours, my friend, if you tell us were Tipasa can be found.’<br>The merchant snatches the ring from the wizard’s hand and stammers, ‘The first alley on the left past the stables. He lives at the house with the blue door.’<br>You hurry across the crowded marketplace towards the stables and enter the street beyond. As you turn into the alley, you hear the merchant’s shriek of dismay above the noise of the crowd; the ring has just dissolved on his finger. At the end of the alley you find the house with the blue door.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 206,
+                content: "Turn to",
             },
         ],
     },
@@ -11206,17 +11370,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "You recognize the flag that flies above a fortified platform in the centre of the strange craft: it is the crescent and crystal star ensign of the Magicians’ Guild of Toran, a city in northern Sommerlund. The skyship is commanded by a Sommlending wizard—one of your own countrymen. He is a blond-haired young man dressed in long, dark blue robes.<br>You are so stunned by the fateful appearance of the craft that you fail to notice the blood seeping from the Itikar’s mouth: the creature is near to death. Suddenly, the great bird lets out a pitiful and agonizing caw. Its wings stiffen, and its head falls limply forward as the last flicker of life escapes from its torn body. You are pitched forward, and your stomach heaves as you plummet towards Lake Inrahim.<br>Pick a number from the Random Number Table.",
         outcomes: [
             {
                 outcomeType: "RANDOM",
-                targetNr: 345,
+                targetNr: 374,
                 intervall: {
                     min: 0,
                     max: 4,
@@ -11225,12 +11390,21 @@ db.getCollection("lw5").insertMany([
             },
             {
                 outcomeType: "RANDOM",
-                targetNr: 74,
+                targetNr: 254,
                 intervall: {
                     min: 5,
+                    max: 8,
+                },
+                content: "If it is 5–8, turn to",
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 261,
+                intervall: {
+                    min: 9,
                     max: 9,
                 },
-                content: "If the number is 5–9, turn to",
+                content: "If it is 9, turn to",
             },
         ],
     },
@@ -11249,25 +11423,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -1,
-            },
-        ],
+            "‘Why do you ask?’ she replies suspiciously, blinking the tears from her eyes. ‘What business do you have with Old Tipasa?’<br>‘He is a friend,’ replies Banedon, placing a Gold Crown on the tavern counter. The old woman covers the coin with her hand, her expression shrewd and calculating.<br>‘Soushilla is old, her memory has faded with the passing years,’ she says, waiting expectantly and glancing at Banedon’s money pouch. He opens the flap to remove another Crown, but the pouch has been emptied by a nimble pickpocket. Sheepishly he avoids your stare, his face growing redder by the second.<br>‘Five Gold Crowns may refresh my memory,’ she says, her gaze now resting on you.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "GOLD",
+                targetNr: 326,
+                content: "If you wish to pay the old woman 5 Gold Crowns, erase them from your Action Chart and turn to",
+                amount: -5
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 202,
+                content: "If you do not have 5 Gold Crowns or do not wish to give her the money, leave the tavern and turn to",
             },
         ],
     },
@@ -11322,18 +11496,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            nname: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "You run, half-crouched, towards your golden blade, grab the hilt, and continue at full speed towards the cover of another pillar. Suddenly, a burst of energy leaps from the Darklord’s fist, exploding into the base of the pillar, severing it from the floor. A tremendous roar fills your ears as you are thrown backwards by the shock of the blast. You lose 3 ENDURANCE points. Haakon’s laugh rises above the crash of falling stone until your head is filled with an agonizing pain.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -3
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 223,
+                content: "If you have the Kai Discipline of Mindshield, turn to",
+                ability: {
+                    abilityType: "MINDSHIELD",
+                    description: 
+                        "The Darklords and many of the evil creatures in their command have the ability to attack you using their Mindforce. The Kai Discipline of Mindshield prevents you from losing any ENDURANCE points when subjected to this form of attack.",
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 379,
+                content: "If you do not have this skill, turn to",
             },
         ],
     },
@@ -11395,25 +11586,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "The Drakkar is strangling the dwarf. As he catches sight of you, he releases his grip and smashes his mailed fist into the dwarf’s face, sending him tumbling into space. You are inflamed by this cold-blooded murder. You draw your weapon and attack.<br>Due to the speed of your attack, do not deduct any of your own ENDURANCE points in the first round of combat.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Drakkar",
+                    combatSkill: 18,
+                    endurance: 25,
+                    imageUrl: "images/shadow/creatures/drakkar.png",
+                }
+            }
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 327,
+                targetNr: 213,
                 content:
-                    "If you decide to draw your weapon and remain completely still, in the hope that the Kraan will not spot you, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 170,
-                content:
-                    "If you decide to quickly descend the hillside and take cover in the tunnel, turn to",
+                    "If you win the combat, turn to",
             },
         ],
     },
@@ -11468,18 +11666,49 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You leave the bell-tower and make your way down towards the sentry. At first, dodging from one turret to the next, it is easy to remain unseen. However, for the final thirty yards to the landing platform you will have no cover, for the platform and the palace roof are linked by an exposed gangplank. If you are to overpower the sentry, you must cross the gangplank undetected.<br>If you do not possess the skill, pick a number from the Random Number Table. If you have the Kai Disciplines of either Hunting or Camouflage, add 2 to the number you have picked. If you have reached the Kai rank of Warmarn or higher, add 3.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 357,
+                content: "If your total score is now 0–4, turn to",
+                intervall: {
+                    min: 0,
+                    max: 4,
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 389,
+                content: "If your total is 5–9, turn to",
+                intervall: {
+                    min: 5,
+                    max: 9,
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 236,
+                content: "If your total is 10 or more, turn to",
+                intervall: {
+                    min: 10,
+                    max: 10,
+                }
+            },
+            {
+                outcomeType: "ABILITY",
+                targetNr: 295,
+                content: "If you have the Kai Discipline of Mind Over Matter, turn to",
+                ability: {
+                    abilityType: "MIND_OVER_MATTER",
+                    description: "Mastery of this Discipline enables a Kai Lord to move small objects with his powers of concentration."
+                }
             },
         ],
     },
@@ -11545,18 +11774,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "You call out to them to stop, but your accent merely confirms their suspicions that you are a spy. A rock hurtles through the air and gashes your forehead. You lose 3 ENDURANCE points. ‘Run, Lone Wolf!’ screams Banedon. ‘They will cut you to pieces!’<br>As they race nearer, the crazed look in their eyes quickly tells you it would be madness to stay. You turn and run for all you are worth.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -3
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 340,
+                content: "Turn to",
             },
         ],
     },
@@ -11605,19 +11842,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Koneshi Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Koneshi Mountains stretch from the southeast to the middle of the Dry Main in Vassagonia. At the western end of this high mountains lies one of the six oasis.",
+            imageUrl: "images/shadow/regions/koneshi_mountains.png",
         },
         content:
-            "",
-        events: [
+            "As night falls, your desperate quest begins. The Giaks pose few problems that you cannot overcome with your warrior skills, for they have been overworked to the point of exhaustion. Only the Drakkarim show any sign of vigilance, but even then, there are less than a dozen patrolling the entire crater. Not until you reach the main entrance to the Tomb do you encounter any real difficulty.<br>A Drakkar stands on guard, his cruel eyes glinting behind his twisted iron death-mask. Occasionally, he diverts his attention from the watch to take a drink from a water flask.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "ABILITY",
+                targetNr: 214,
+                content: "If you have the Kai Discipline of Mind Over Matter, turn to",
             },
-        ],
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 239,
+                content: "If you do not have this skill, turn to",
+            },
+        ]
     },
     {
         /*
@@ -11670,18 +11914,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "The Drakkar curses you with his dying breath, his cry fading as he falls from the platform. You rush to aid your wounded countryman, but the battle is not yet over. A Kraan-rider is swooping towards you, a crossbow levelled at your head; he fires and the bolt shoots towards your face. Then a shrill, metallic whine rings in your ears as the bolt miraculously ricochets away, deflected by an invisible shield.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 399,
+                content: "If you have ever been given a Crystal Star Pendant, turn to",
+                item: {
+                    code : "CRYSTAL_STAR_PENDANT",
+                    name : "Crystal star pendant",
+                    description : "Crystal star pendant",
+                    imageUrl : "images/flight/items/crystal_star_pendant.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 294,
+                content: "If you do not have this Special Item, turn to",
             },
         ],
     },
@@ -11700,18 +11956,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "The throne begins to revolve. A terrible howling fills your ears, changing almost instantaneously to the growling of a harsh guttural language, the like of which you have never heard before. Words and sounds that the mouths of men could never be shaped to speak roll through the chamber like thunder. It is the dark tongue, spoken by Haakon, Lord of Aarnak, Darklord of Helgedad.<br>He rises from the throne, the ghastly voice still echoing from his unnatural mouth. A spiked fist opens to reveal a glowing stone; blue flame smoulders around its surface, and you can feel the currents of power that radiate from its core. Suddenly, his words change and you hear a tongue you know so well—Sommlending.<br>‘Look on your doom, Kai Lord!’<br>There is a deafening crack, a surge of power, and a fireball of blue flame hurtles towards your head.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 311,
+                content: "If you possess the Sommerswerd, turn to",
+                item: {
+                    code : "SOMMERSWERD",
+                    name : "Sommerswerd",
+                    description : "Sommerswerd",
+                    imageUrl : "images/flight/items/sommerswerd.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 219,
+                content: "If you do not have this Special Item, turn to",
             },
         ],
     },
@@ -11832,19 +12099,21 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
+            "Your Kai sense tells you that the house at the end of the alleyway is Tipasa’s home. You signal to Banedon to follow as you approach the blue door.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "DEFAULT",
+                targetNr: 206,
+                content: "Turn to",
             },
-        ],
+        ]
     },
     {
         /*
@@ -11891,40 +12160,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "You see the young magician lower his staff, a trace of a smile on his pain-racked face.<br>‘Alas, I was too slow to shield myself,’ he says wryly, as you kneel at his side and free the spear that pins him to the floor. The wound is serious, and you hastily staunch the bleeding with strips of cloth from his dark blue robes.<br>The wizard then introduces himself. ‘I am Banedon, Journeymaster to the Guild of the Crystal Star,’ he says, his voice weak and shaky. ‘However, you need not introduce yourself, Lone Wolf, for only you would attract such company this far from home.’ He glances at the Kraan-riders swooping past the skyship on every side. ‘Help me to my feet—we must escape before they drag us from the sky.’<br></br>You support the wizard as he grasps the ship’s helm—a radiant crystal sphere with hundreds of glowing facets set upon a slim silver rod.<br>No sooner has his hand closed around the crystal than there is a tremendous explosion.",
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 230,
-                intervall: {
-                    min: 0,
-                    max: 2,
-                },
-                content: "If the number you pick is 0–2, turn to",
-            },
-            {
-                outcomeType: "RANDOM",
-                targetNr: 190,
-                intervall: {
-                    min: 3,
-                    max: 6,
-                },
-                content: "If the number is 3–6, turn to",
-            },
-            {
-                outcomeType: "RANDOM",
-                targetNr: 321,
-                intervall: {
-                    min: 7,
-                    max: 9,
-                },
-                content: "If the number is 7–9, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 323,
+                content: "Turn to",
             },
         ],
     },
@@ -11979,18 +12227,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "Inside, the eating house is full of townsfolk, all seated at small stone tables. Ornate hubble-bubble pipes add to the colourful atmosphere as the smokers discuss all kinds of matters. A quarrelsome trio of Ikareshi are lamenting the death of the old Zakhan. Others give voice to various grievances, calling their new leader an ox, a brute, and other such names. In your opinion, they speak too highly of him. Two rough-faced Ikareshi bid you welcome and invite you to share their pipe.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 362,
+                content: "If you wish to accept their offer, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 388,
+                content: "If you wish to decline, you can leave the eating house and continue along the avenue and turn to",
             },
         ],
     },
@@ -12039,24 +12293,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Tomb of the Majhan",
+            regionType: "EVIL_TEMPLE",
+            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
         },
         content:
-            "",
+            "You are trying to decide whether to try prising open the door, when you hear the sound of stone grating on stone. The door slowly opens to reveal a large chamber. It is dimly lit, but in the thick dust which covers the marble floor you can see innumerable footprints.<br>Then, as you enter, you catch sight of a rough stone throne, facing the wall on the far side of the chamber. Behind you, the stone door slides shut with unnerving speed.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 121,
-                content: "If you wish to continue your journey along the track, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 38,
-                content:
-                    "If you wish to leave the track and continue through the forest instead, turn to",
+                targetNr: 289,
+                content: "Turn to",
             },
         ],
     },
@@ -12075,23 +12323,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "The Vordak removes a bony hand, drenched in blood, from the Itikar’s back and claws at a black iron mace hanging from its belt. It raises the weapon and lunges at your head. It is impossible to evade its attack; you must fight the creature to the death.<br>Unless you have the Kai Discipline of Mindshield, deduct 2 points from your COMBAT SKILL for the duration of this fight, for the Vordak is attacking you with its Mindforce. It is immune to Mindblast.",
+        events: [
+            {
+                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking: 1,
+                amount: -2,
+            }
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 227,
-                content: "If you wish to continue, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 95,
-                content: "If you wish to change direction and head towards firmer ground, turn to",
+                targetNr: 203,
+                content: "If you win the fight, turn to",
             },
         ],
     },
@@ -12218,28 +12469,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Excavation Site",
+            regionType: "CONSTRUCTION_SITE",
+            description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/excavation_site.png",
         },
         content:
-            "",
+            "With speed and stealth you approach the sentry from behind and silence him for good with a sharp twist of the neck. You drag the body away and cover it with a wheelbarrow before entering the Tomb.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 237,
-                ability: {
-                    abilityType: "CAMOUFLAGE",
-                    description:
-                        "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
-                },
-                content: "If you have the Kai Discipline of Camouflage, turn to",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 72,
-                content: "If you do not, turn to",
+                targetNr: 395,
+                content: "Turn to",
             },
         ],
     },
@@ -12426,35 +12667,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -1,
-            },
-        ],
+            "It can take many years for a rider to tame an Itikar, for by nature they are wild and malicious creatures. You use your Kai skill to communicate with the giant bird, to assure it that you mean no harm. It fixes you with a cold, black stare, but you sense that it is no longer hostile.<br>As you settle in its wide saddle, you catch sight of the Drakkarim as they stream across the gangplank. Quickly you lean forward, unhook the anchor rope from the saddle ring and grab the thick leather reins.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 122,
-                ability: {
-                    abilityType: "ANIMAL_KINSHIP",
-                    description:
-                        "This skill enables a Kai Lord to communicate with some animals and to be able to guess the intentions of others.",
-                },
-                content: "If you wish to use the Kai Discipline of Animal Kinship, turn to",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 233,
-                content: "If you wish to chase after the runaway horse, turn to",
+                targetNr: 343,
+                content: "Turn to",
             },
         ],
     },
@@ -12473,19 +12697,21 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
+            "As you enter the stables, you are overpowered by the smell of the douggas. You grit your teeth and cover your nose with your robe. A small boy sniggers at your reaction and says, ‘You’re not Ikareshi—I can tell.’ He mimics your grimace, exposing a line of broken teeth.<br>‘Do you know where Tipasa the Wanderer lives?’ asks Banedon, holding up a silver ring. The boy’s eyes nearly pop out of his head at the sight of the gleaming silver.<br>‘Oh yes, yes, yes, I do indeed,’ he stammers in his excitement. ‘Walk up the street and take the first passage on your left. The old wanderer lives at the house with the blue door.’<br>Banedon flicks the ring into the air and the urchin catches it in his grubby hands. You hurry away from the stables and begin to search for the passageway. Just as you find it, you hear the young boy shriek with disappointment; the ring has just dissolved on his finger. At the end of the rubbish-strewn alley you find the house with the blue door.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "DEFAULT",
+                targetNr: 206,
+                content: "Turn to",
             },
-        ],
+        ]
     },
     {
         /*
@@ -12532,34 +12758,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "You raise your golden sword just in time to deflect the bolt of raw energy. It screams from your blade and explodes into the chamber wall, gouging a hole several feet deep in the steel-hard rock. The impact jars the Sommerswerd from your hand; the blade arcs through the dust-choked air and embeds itself, upright, in the stone floor. You roll across the floor and take cover behind a pillar.<br>‘Your doom, Kai Lord,’ spits Haakon, ‘is but seconds away.’",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 324,
-                ability: {
-                    abilityType: "CAMOUFLAGE",
-                    description:
-                        "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
-                },
-                content: "If you have the Kai Discipline of Camouflage, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 278,
+                content: "If you wish to retrieve the Sommerswerd, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 279,
-                content: "If you wish to hide in the cave, turn to",
+                targetNr: 350,
+                content: "If you wish to try to move to a new hiding place, under cover of the swirling dust, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 47,
-                content:
-                    "If you wish to avoid the cave and continue your climb to the peak, turn to",
+                targetNr: 230,
+                content: "If you wish to stay where you are, turn to",
             },
         ],
     },
@@ -12608,25 +12828,40 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -1,
-            },
-        ],
+            "Below the bell-tower you see a line of Itikar pens, each with its own circular landing platform. Itikar are a breed of huge black birds that nest in eyries high in the peaks of the Dahir and Vakar Mountains. The Vassagonians have long since tamed these giants of the skies, using them as winged mounts for their army leaders, their scouts, couriers, and envoys.<br>An Itikar and rider swoop down out of the reddening sky and alight upon the platform nearest to the bell-tower. Slaves hurl a rope to the rider, who in turn fixes it to a saddle ring before he jumps to the ground. The Itikar caws and beats its huge wings as it is slowly winched into the pen by a hidden capstan.<br>The rider and the slaves leave the platform; there is now only one sentry on guard at the pen. If you can overpower him, you can make your escape on the back of the giant bird.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 325,
+                content: "If you possess a Blowpipe and Sleep Dart, turn to",
+                item: {
+                    code: "BLOWPIPE",
+                    name: "Blowpipe",
+                    description: "A blowpipe for shooting darts at your target.",
+                    imageUrl: "images/flight/items/blowpipe.png"
+                }
+            },
+            {
+                outcomeType: "ITEM",
+                targetNr: 325,
+                content: "If you possess a Blowpipe and Sleep Dart, turn to",
+                item: {
+                    code: "SLEEP_DART",
+                    name: "Sleep Dart",
+                    description: "A dart to be shot with a blowpipe that lets your target fall asleep.",
+                    imageUrl: "images/flight/items/sleep_dart.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 282,
+                content: "If you do not have these items, turn to",
             },
         ],
     },
@@ -12654,22 +12889,18 @@ db.getCollection("lw5").insertMany([
             "",
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 341,
-                intervall: {
-                    min: 0,
-                    max: 6,
-                },
-                content: "If you have picked a number that is 0–6, turn to",
+                outcomeType: "ABILITY",
+                targetNr: 358,
+                content: "If you have the Kai Discipline of Sixth Sense, ",
+                ability: {
+                    abilityType: "SIXTH_SENSE",
+                    description: "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
+                }
             },
             {
-                outcomeType: "RANDOM",
-                targetNr: 98,
-                intervall: {
-                    min: 7,
-                    max: 9,
-                },
-                content: "If the number is 7–9, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 263,
+                content: "If you do not possess this skill, turn to ",
             },
         ],
     },
@@ -12688,25 +12919,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 1,
-                amount: 6,
-            },
-        ],
+            "As you unsheathe the Sommerswerd, a vivid golden flame shoots along the blade. The Vordak shrieks in terror, its blood-drenched bony fingers clawing at a black iron mace that hangs from its belt. It raises the mace to parry your blow, but the sun-sword shears through the iron, a splash of blue flame erupting in its wake. You strike again, curving the golden blade in a great arc. It bites into the Vordak’s neck, tearing through its unnatural body, and severing it diagonally from collarbone to hip. A sickening acidic smell chokes your throat as a fountain of green slime erupts from beneath the red robe. The Vordak crumples and topples from view, its dissolving corpse hissing as its spirals towards Lake Inrahim.<br>Sheathing your sword, you grab the reins and fight to control your injured mount. You have slain the Vordak but the battle is not yet won. The Itikar is losing a lot of blood; it could become unconscious at any moment and drop like a stone.<br>Suddenly you spot something in the distance. It is a sight that renews your faith in miracles.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 221,
+                content: "Turn to",
             },
         ],
     },
@@ -12785,18 +13010,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "‘Ah, Tipasa,’ he replies thoughtfully. ‘He lives near the Dougga Market, but exactly where his home is I am not sure…I haven’t seen old Tipasa for years. If you should find him, remind him of Khamsin the Goatherd. He still owes me twelve Crowns—that I have not forgotten.’ You thank the goatherd for his help and bid him farewell before continuing your trek to Ikaresh.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 272,
+                content: "Turn to",
             },
         ],
     },
@@ -12863,25 +13089,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Koneshi Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Koneshi Mountains stretch from the southeast to the middle of the Dry Main in Vassagonia. At the western end of this high mountains lies one of the six oasis.",
+            imageUrl: "images/shadow/regions/koneshi_mountains.png",
         },
         content:
-            "",
+            "Dawn is breaking on the horizon of a low hill, blurred and dotted with small tufted trees. Swiftly the Skyrider has voyaged through the night to arrive at the foothills of the Koneshi Mountains, in whose folds the skyship is safely tucked away from watchful eyes. Twenty-five miles to the north, across a landscape of barren rock and dry brush, lies the Tomb of the Majhan.<br>You and Banedon set off before the dawn, anxious not to waste either time or the protective cover of darkness. Now, as the great golden disc of the sun rises in the sky, for the first time you can see your goal. A massive excavation has exposed the heart of this scorched land, delving deep around the tombs of its forgotten ancestors. Thousands of Giaks, spiteful and malicious servants of the Darklords, labour unceasingly to remove rock and sand from this quarry, forced by Drakkarim to drag their backbreaking loads up ramps to the rim of the crater.<br>Close to the edge of the crater, an encampment of black tents surrounds a large domed canopy. Lying in the shade of this construction is a huge flying creature—an Imperial Zlanbeast. Its presence here can only mean one thing: Darklord Haakon has arrived. The thought chills your blood, but you draw comfort from the labour of his slaves. That they continue to labour is a sign that their mission has yet to be completed: the Book of the Magnakai has yet to be found.<br>It is impossible to approach the crater unseen; you will have to wait for darkness before you attempt to enter the Tomb. During the long wait, it is agreed that Banedon should attempt to find Tipasa. It is likely that he is being held captive inside the encampment—the Darklords would be unlikely to kill him before discovering the treasure they seek.<br>During the day, you must eat a Meal or lose 3 ENDURANCE points. (You may not use Hunting if required to eat a Meal in the middle of this wasteland.) Make the necessary adjustments to your Action Chart.",
         events: [
             {
                 eventType: "CHANGE_ENDURANCE_EVENT",
                 ranking: 1,
-                amount: -2,
+                amount: -3,
             },
         ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 286,
+                content: "Turn to",
             },
         ],
     },
@@ -12966,24 +13193,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "The explosion is followed by a huge cloud of smoke, which engulfs a cabin perched on the rear deck. As the noise rumbles across the desolate salt-plain, you hear the agonizing shriek of a wounded Kraan; it spirals past the platform, a ragged hole rent in its broken wing.<br>The smoke clears to reveal the grinning face of a dwarf at the cabin window. A smear of soot blackens his rosy cheeks and exaggerates the whiteness of his crooked teeth. He is holding a tube of smoking steel that you assume to be a magic staff, until you notice that each of the dwarf crew carry identical staves. As they point them at the swooping Kraan, gouts of smoke and flame bellow from their tips. Suddenly you recognize the weapons and their wielders—they are dwarves from the mountain kingdom of Bor, armed with one of the inventions for which these ingenious artisans are justly famous throughout Magnamund.<br>The Kraan are terrified by the noise; they turn their leathery tails and fly away, their Drakkarim riders powerless to stop them. The primitive guns have claimed only one victim, but nevertheless, they have driven off the enemy and saved the skyship from disaster.<br>Banedon steers the craft about, banking steeply until the ship faces the darkening peaks of the southern mountains and the distinct V-shaped cleft of the Dahir Pass.<br>Pick a number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 290,
-                content: "If you wish to open this box, turn to",
+                outcomeType: "RANDOM",
+                targetNr: 250,
+                content: "If the number you have picked is 0–2, turn to",
+                intervall: {
+                    min: 0,
+                    max: 2
+                }
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 140,
-                content:
-                    "If you would prefer to descend the ladder and leave the tower, taking care to use only the good rungs, turn to",
+                outcomeType: "RANDOM",
+                targetNr: 312,
+                content: "If it is 3–9, turn to",
+                intervall: {
+                    min: 3,
+                    max: 9
+                }
             },
         ],
     },
@@ -13002,24 +13237,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Excavation Site",
+            regionType: "CONSTRUCTION_SITE",
+            description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/excavation_site.png",
         },
         content:
-            "",
+            "You are less than ten feet from the sentry when he senses that something is wrong. He turns to confront you just as you are making your attack.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Drakkarim Sentry",
+                    combatSkill: 18,
+                    endurance: 25,
+                    imageUrl: "images/shadow/creatures/drakkarim_sentry.png" 
+                }
+            }
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 33,
-                content: "If you wish to explore the cave, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 248,
-                content:
-                    "If you wish to leave and descend the hill in case the Giaks return, turn to",
+                targetNr: 395,
+                content: "If you win the combat, hide the body and enter the tomb. Turn to",
             },
         ],
     },
@@ -13038,18 +13279,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
-        },
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         content:
-            "",
+            "Taking care to load the Blowpipe correctly, you raise the unfamiliar weapon to your lips and take aim. The sentry is standing very still; he makes a perfect target. You inflate your cheeks and fire.<br>Pick a number from the Random Number Table. If you have the Kai Discipline of Weaponskill (any weapon), add 2 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 384,
+                content: "If your total is now 0–3, turn to",
+                intervall: {
+                    min: 0,
+                    max: 3,
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 398,
+                content: "If your total is now 0–3, turn to",
+                intervall: {
+                    min: 4,
+                    max: 10,
+                }
             },
         ],
     },
@@ -13068,18 +13321,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "‘Walk along the street to the Dougga Market. Behind the stables there is an alley. Tipasa lives there, in the house with the blue door.’<br>As you make your way through the dancing crowd to the tavern door, you take care to keep both hands on your Belt Pouch. An embarrassed Banedon follows in your footsteps, cursing his misfortune under his breath.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 202,
+                content: "Turn to",
             },
         ],
     },
@@ -13098,19 +13352,21 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
+            "Your blow has opened a wide gash in both the Drakkar and his mount. The Kraan spins uncontrollably, discarding its black-clad rider as it spirals earthwards. With the terrible cries of the doomed Drakkar fading below, you wheel to the south to avoid being caught between the two converging squadrons of Kraan-riders.<br>The quick change of direction increases the distance between you and your pursuers, but the Itikar is badly wounded and you are close to despair; your mount is losing so much blood that it could lapse into unconsciousness at any moment, dropping you like a stone onto Lake Inrahim.<br>Suddenly, you spot something in the distance. It is a sight that renews your faith in miracles.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "DEFAULT",
+                targetNr: 221,
+                content: "Turn to",
             },
-        ],
+        ]
     },
     {
         /*
@@ -13127,23 +13383,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "The merchant’s face beams with joy as he pockets your gold. Deduct this from your Action Chart.<br>‘The first alley on the left past the stables,’ he says. ‘He lives in the house with the blue door.’<br>You hurry across the crowded marketplace towards the stables and enter the street beyond. As you turn into the rubbish-strewn alley, you see the blue door facing you at the end of the passage.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 76,
-                content: "If you wish to take the Gem, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 118,
-                content: "If you would rather leave as quickly as possible, turn to",
+                targetNr: 206,
+                content: "Turn to",
             },
         ],
     },
@@ -13227,25 +13479,14 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "",
-        outcomes: [
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 170,
-                content: "If you wish to enter the tunnel, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 280,
-                content: "If you would prefer to climb the hillside, turn to",
-            },
-        ],
+            "You have little sleep that night as you lie thinking about the quest that lies before you, haunted by the fear that the Darklords may already have found the Book of the Magnakai.<br>You rise before dawn and breakfast on a meal of sheep’s butter and dried milk cake, before bidding farewell to Tipasa’s wife. The trek back to the Skyrider passes uneventfully, and by noon you have reached the rocky crag where the craft is moored. Nolrim is the first to greet you, but he cannot hide his disappointment that you have returned unaccompanied.<br>‘Do not worry—the answer lies here,’ says Banedon, holding up Tipasa’s diary. ‘Prepare to set sail.’<br>As the Skyrider rises into the clear blue sky, Banedon hands over the helm to Nolrim and bids you follow him to his quarters at the prow. For three hours he pores over his charts, making calculations, checking instrument readings, and racking his brain for the solution that will pinpoint the Tomb of the Majhan.<br>‘It’s no use,’ he says, tired and exasperated. ‘I cannot fathom these numbers.’<br>As you peer at the pages of Tipasa’s diary, suddenly you realize that they are written in code. What Banedon had assumed to be positions of stars is a code to three numbers that give the precise location of the Tomb.<br>Consult the map to help you discover the location of the Tomb of the Majhan.<br>The first of the three numbers is equal to the number of oases on the trail between Ikaresh and Bir Rabalou. The second number is equal to the number of cities in Vassagonia. The third number is equal to the number of islands off the coast of Cape Kabar.<br>When you have broken the code, write the numbers in order and turn to the entry number that they indicate.",
     },
     {
         /*
@@ -13373,18 +13614,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "As you strike the death-blow, the Dhorgaan shimmers and winks out of existence. Darklord Haakon reels back as if weakened by the death of his creation. The glowing stone falls from his hand and rolls across the chamber, coming to rest midway between you.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 204,
+                content: "If you have the Kai Discipline of Sixth Sense, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 268,
+                content: "If you wish to attempt to grab the stone, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 390,
+                content: "If you wish to ignore the stone and attack Haakon, turn to",
             },
         ],
     },
@@ -13403,40 +13654,41 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 13,
-                    endurance: 10,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 12,
-                    endurance: 10,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-        ],
+            "Standing at a fortified platform in the centre of the strange craft is a blond-haired young man with deep, brooding eyes. Instantly you recognize him: it is Banedon, the young Sommlending magician who gave you the Crystal Star Pendant at the ruins of Raumas, after you saved his life in a Giak ambush.<br>You are so stunned by his unexpected appearance that you fail to notice the blood seeping from the Itikar’s mouth; the creature is near to death. Suddenly, the great bird lets out a pitiful and agonized caw, its wings stiffen, and its head falls limp as the last flicker of life escapes from its torn body. It pitches you forward, and your stomach heaves as you plummet towards Lake Inrahim.<br>Pick a number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 374,
+                intervall: {
+                    min: 0,
+                    max: 4,
+                },
+                content: "If the number you have picked is 0–4, turn to",
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 254,
+                intervall: {
+                    min: 5,
+                    max: 8,
+                },
+                content: "If it is 5–8, turn to",
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 261,
+                intervall: {
+                    min: 9,
+                    max: 9,
+                },
+                content: "If it is 9, turn to",
             },
         ],
     },
@@ -13575,30 +13827,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Doomwolf",
-                    combatSkill: 12,
-                    endurance: 12,
-                    imageUrl: "images/shadow/creatures/doomwolf.png",
-                },
-            },
-        ],
+            "It takes over an hour to shake off the Adu-kaw, by which time you have been chased through most of Ikaresh. Had it not been for Banedon’s timely casting of a spell of illusion, they would be after you still. You cannot help but laugh when you picture their faces, when they saw the Kalkoth leaping at them; thank the gods they did not think to question how a Kalte ice-beast came to be roaming the streets of their town.<br>When you have fully recovered from the chase, you leave the narrow alley in which you have been hiding, and press on in search of Tipasa the Wanderer.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 202,
+                content: "Turn to",
             },
         ],
     },
@@ -13662,30 +13903,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Vordak",
-                    combatSkill: 18,
-                    endurance: 25,
-                    imageUrl: "images/shadow/creatures/vordak.png",
-                },
-            },
-        ],
+            "The delicious smell of freshly brewed jala wafts from an eating-house halfway along the avenue. Chattering voices mingle with the clink of glasses, and the wailing cry of a hungry baby fills the air.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 296,
+                content: "If you wish to enter the eating-house, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 277,
+                content: "If you wish to continue along the avenue, turn to",
             },
         ],
     },
@@ -13704,25 +13939,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -2,
-            },
-        ],
+            "You are jerked backwards in the saddle as the Itikar leaves its perch. It shrieks and caws, its wings beating as loud as thunder. A handful of Drakkarim are scattered as if they were rag dolls as the great black bird emerges from the pen and takes to the sky. You catch a glimpse of a Drakkar, his death-mask slashed in two by the bird’s razor-sharp talons, as he pitches from the landing platform and tumbles to his death in the palace gardens far below.<br>The golden domes of the Grand Palace grow smaller as the Itikar gathers speed. Soon, you have passed over the city wall and are heading out towards the shimmering salt-flats of Lake Inrahim. The land below is bathed in beautiful orange twilight, as the sun slowly sinks behind the Dahir Mountains to the west. Elated by your escape, you throw back your head and give voice to a triumphant yell that is carried away on the chill evening wind.<br>As if in answer to your cry, an echoing chorus of shrieks pierce the sky. Fear returns to your heart as you catch sight of a flock of Kraan, hideous leathery-winged fliers. Each carries a Drakkarim warrior on its back. They are over a mile behind you, but they are quickly closing the gap. Less than an hour of light remains; if you can evade them a little longer, you may be able to lose them when night falls.<br>You must decide in which direction to fly, for you are now above the centre of Lake Inrahim—consult the map before making your decision.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 264,
+                content: "If you wish to steer the Itikar south towards the Dahir Pass, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 244,
+                content: "If you wish to head east towards the town of Chula, turn to",
             },
         ],
     },
@@ -13806,31 +14040,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Spear",
-                    itemType: "WEAPON",
-                    description: "Spear",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/spear.png",
-                },
-            },
-        ],
+            "By the side of the street, an old man is selling assortment of rugs and carpets from the back of a wagon. Banedon approaches him and the two converse for several minutes. Finally, the wizard hands the old man a ring; his wrinkled face beams with joy. Banedon returns to you with good news.<br>‘The house with the blue door—at the end of the alley we passed a short while ago. Tipasa lives there.’<br>As you retrace your steps and enter the dingy passage, you hear the old man shriek with disappointment: the ring has just dissolved on his finger.<br>At the end of the alley you find the house with the blue door.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 206,
+                content: "Turn to",
             },
         ],
     },
@@ -13849,55 +14071,21 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Torch",
-                    itemType: "UTILITY",
-                    description: "Torch",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/torch.png",
-                },
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 2,
-                item: {
-                    name: "Tinderbox",
-                    itemType: "UTILITY",
-                    description: "Tinderbox",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/tinderbox.png",
-                },
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 3,
-                item: {
-                    name: "Sword",
-                    itemType: "WEAPON",
-                    description: "Sword",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/sword.png",
-                },
-            },
-        ],
+            "Wincing from the pain of your wound, you snatch the reins back and urge the Itikar to climb higher. The Drakkar is now over a hundred feet below, but he is bringing the shrieking Kraan around for another attack.<br>You wheel to the south to avoid being caught between the two converging squadrons of Kraan-riders. Your sudden change of direction increases the distance between you and your pursuers, but your feathered mount is badly wounded and you are close to despair; the Itikar is losing so much blood that it could become unconscious at any moment, and drop you like a stone onto the distant surface of Lake Inrahim below.<br>Suddenly you spot something in the distance. It is a sight that renews your faith in miracles.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 221,
+                content: "Turn to",
             },
-        ],
+        ]
     },
     {
         /*
@@ -13986,20 +14174,49 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
+        region: {
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
+        },
         content:
-            "",
+            "As you break cover, another burst of energy leaps from the Darklord’s fist. It explodes into the base of the pillar, severing it from the floor, and the roof above caves in with a tremendous roar. The shock wave throws you to the floor, flattening you against the cold marble flagstones. You lose 3 ENDURANCE points. Erase the Sommerswerd from your Action Chart.<br>Haakon’s laugh can still be heard above the crash of falling stone. It rises in pitch until it fills your head with agonizing pain.",
         events: [
             {
-                eventType: "MISSION_ACCOMPLISHED_EVENT",
+                eventType: "CHANGE_ENDURANCE_EVENT",
                 ranking: 1,
-                book: {
-                    name: "Shadow on the Sand",
-                    imageUrl: "images/shadow/title.jpg",
-                    author: "Joe Dever",
-                    illustrator: "Gary Chalk",
-                },
+                amount: -3,
             },
+            {
+                eventType: "DROP_WEAPON_EVENT",
+                ranking: 2,
+                item: {
+                    name : "Sommerswerd",
+                    itemType: "WEAPON",
+                    description : "Sommerswerd",
+                    weight: "MEDIUM",
+                    imageUrl : "images/flight/items/sommerswerd.png"
+                }
+            }
         ],
+        outcomes: [
+            {
+                outcomeType: "ABILITY",
+                targetNr: 253,
+                content: "If you have the Kai Discipline of Mindshield, turn to",
+                ability: {
+                    abilityType: "MINDSHIELD",
+                    description:
+                        "The Darklords and many of the evil creatures in their command have the ability to attack you using their Mindforce. The Kai Discipline of Mindshield prevents you from losing any ENDURANCE points when subjected to this form of attack.",
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 369,
+                content: "If you do not possess this Kai Discipline, turn to",
+            },
+        ]
     },
     {
         /*
@@ -14015,13 +14232,25 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
+        region: {
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
+        },
         content:
-            "",
+            "As you approach the door, Banedon offers you a word of advice. ‘Take care to guard your gold, Lone Wolf. Nothing tempts the Ikareshi more than a full purse. You can trust their honour, but if you trust their honesty they will steal the hair from your head.’<br>Inside, the mood is one of celebration. Tables have been drawn together to form a large semicircle in front of which stands a small, broad-shouldered man dressed lavishly in an embroidered costume. A gold-mounted sword hangs by his side, its blue velvet scabbard as vivid in colour as the man’s silk pantaloons. Affectionately, the man embraces his companions, kissing the friends and relatives who have travelled so many miles to celebrate his wedding. At his side sits his bride, her face concealed behind a veil of shimmering pearls. Suddenly, the tavern is filled with music as the guests take the floor for the wedding dance.<br>On the far side of the floor you see the owner of the tavern, a stout old lady dressed in sombre black. She watches the festivities with tears in her eyes.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 276,
+                content: "If you wish to approach her and ask where Tipasa the Wanderer may be found, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 202,
+                content: "If you wish to leave the tavern and continue along the street, turn to",
             },
         ],
     },
@@ -14046,7 +14275,7 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "Beyond the portal lies a vaulted corridor leading to a grand stairway. You narrowly avoid confrontation with a dozen Drakkarim, saved by your lightning reactions. As the enemy rush from an archway on the second floor landing, you dive behind a statue of the recently deceased Zakhan Moudalla. They are so intent on their chase that they fail to notice your hiding place and hurry down the stairs, grunting in their heavy armour as they run. Silently, you give thanks that Zakhan Moudalla was a very stout man and that his statue casts a very large shadow in which to hide. </br>At the top of the stairway you discover a hatch, which gives access to the roof. You climb through it and follow a path of sun-bleached tiles that wind in and out of the domes and turrets, eventually leading to a bell-tower.</br>You are exhausted and need to rest, your mind still full of the shock of your encounter with Darklord Haakon. The sound of his terrible voice repeating the words ‘Book of the Magnakai’ echoes again and again in your mind.</br>With desperation sapping your will, you peer out through a grille in the bell-tower. The sight before you renews your flagging hope, for it inspires a daring escape plan.",
+            "Beyond the portal lies a vaulted corridor leading to a grand stairway. You narrowly avoid confrontation with a dozen Drakkarim, saved by your lightning reactions. As the enemy rush from an archway on the second floor landing, you dive behind a statue of the recently deceased Zakhan Moudalla. They are so intent on their chase that they fail to notice your hiding place and hurry down the stairs, grunting in their heavy armour as they run. Silently, you give thanks that Zakhan Moudalla was a very stout man and that his statue casts a very large shadow in which to hide. <br>At the top of the stairway you discover a hatch, which gives access to the roof. You climb through it and follow a path of sun-bleached tiles that wind in and out of the domes and turrets, eventually leading to a bell-tower.<br>You are exhausted and need to rest, your mind still full of the shock of your encounter with Darklord Haakon. The sound of his terrible voice repeating the words ‘Book of the Magnakai’ echoes again and again in your mind.<br>With desperation sapping your will, you peer out through a grille in the bell-tower. The sight before you renews your flagging hope, for it inspires a daring escape plan.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
@@ -14069,18 +14298,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "As you slay the last of the Crypt Spawn, Haakon reels back as if weakened by the death of his creatures. You raise the Sommerswerd, willing the blade to discharge a bolt of power that will burn the evil Darklord from the face of Magnamund forever. The blade shimmers with golden fire, but no searing blast issues from its tip. Suddenly, you realize what has happened; you are beneath the earth, and there is no sun from which the sword can draw its power.<br>Haakon utters a terrible laugh that shakes the floor. A beam of blue flame is growing from the stone in his hand, forming a fiery blade that crackles and spits as it cuts through the dust-choked air. The stench of death and decay fills your nostrils as the Darklord prepares to attack.<br>Unless you have the Kai Discipline of Mindshield, reduce your COMBAT SKILL by 2 for the duration of this combat.",
+        events: [
+            {
+                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking: 1,
+                amount: -2,
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 2,
+                creature: {
+                    name: "Darklord Haakon",
+                    combatSkill: 28,
+                    endurance: 45,
+                    imageUrl: "images/shadow/creatures/darklord_haakon.png",
+                }
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 400,
+                content: "If you win the combat, turn to",
             },
         ],
     },{
@@ -14093,7 +14339,7 @@ db.getCollection("lw5").insertMany([
         sectionNr: 354,
         book: {
             name: "Shadow on the Sand",
-            imageUrl: "images /shadow/title.jpg",
+            imageUrl: "images/shadow/title.jpg",
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
@@ -14301,18 +14547,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "Ducking beneath the boom-sail, you clamber onto the platform in time to witness a desperate struggle. The blond-haired magician is pinned to the deck, his left arm skewered by a spear. With a staff in his right hand, he is trying to fend off the dismounted Kraan-rider. The Drakkar senses your presence; he whirls round and draws a twisted black scimitar from its scabbard.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Drakkar",
+                    combatSkill: 18,
+                    endurance: 25,
+                    imageUrl: "images/shadow/creatures/drakkar.png",
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 288,
+                content: "If you win and the fight lasts 3 rounds of combat or less, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 382,
+                content: "If the fight continues to a fourth round of combat, do not resolve it. Instead, turn immediately to",
             },
         ],
     },{
@@ -14330,18 +14594,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "The smoke is cool and fragrant. Unfortunately, the same cannot be said of your hosts. Their long coats of Dougga hide are perfumed with a musk that holds no appeal for Sommlending nostrils.<br>A young girl appears with a tray full of steaming jala cups. ‘1 Crown each,’ she says, as she places the tray upon the table.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 237,
+                content: "If you wish to purchase a cup of the delicious beverage, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 388,
+                content: "If you not wish to purchase a cup of jala or do not have any gold, you must bid farewell and leave the eating-house. Turn to",
             },
         ],
     },{
@@ -14417,18 +14687,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "You sense that the man’s show of friendship is genuine. He may be able to help you find Tipasa the Wanderer if you accept his hospitality.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 225,
+                content: "If you wish to enter his home, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 272,
+                content: "If you decide to press on towards Ikaresh, turn to",
             },
         ],
     },{
@@ -14475,18 +14751,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "Silently, you are beginning to despair. The street is becoming narrower and more disgusting the further you go. A scraggy cat dashes across your path, closely pursued by an equally scraggy street urchin; the dagger that he carries in his hand suggests he is trying to catch his supper.<br>You are about to give up and suggest to Banedon that you should retrace your steps to the junction, when the street ends and turns abruptly left. A sign on the opposite wall points to the Dougga Market.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 376,
+                content: "If you wish to follow the sign, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 216,
+                content: "If you wish to go back to the fork and take the other street, turn to",
             },
         ],
     },{
@@ -14504,18 +14786,74 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "You follow the avenue as it twists and turns through the Armourers’ Quarter of Ikaresh. A street vendor is selling a selection of swords and daggers that catch your eye; they are beautifully crafted, well-balanced and very sharp. A wooden sign displays his prices:<ul><li>Swords—5 Gold Crowns each</li><li>Daggers—3 Gold Crowns each</li><li>Broadswords—9 Gold Crowns each</li></ul>You may purchase any of the above weapons if you wish. Continuing along the avenue, you pass a meat market where carcasses of oxen are hung out in the open. You are not surprised to see the Ikareshi of this quarter walking about the streets with pieces of cotton stuffed into their nostrils (suspended by a thread around their necks), for the smell is dreadful.<br>Eventually you arrive at a fork, but there are no signs to indicate where the new streets lead.",
+        events: [
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item: {
+                    name: "Sword",
+                    itemType: "WEAPON",
+                    description: "Sword",
+                    weight: "MEDIUM",
+                    imageUrl: "images/shadow/items/sword.png",
+                }
+            },
+            {
+                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking: 2,
+                amount: 5
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 3,
+                item: {
+                    name: "Dagger",
+                    itemType: "WEAPON",
+                    description: "Dagger",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/dagger.png",
+                }
+            },
+            {
+                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking: 4,
+                amount: 3
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 5,
+                item: {
+                    name: "Broadsword",
+                    itemType: "WEAPON",
+                    description: "Broadsword",
+                    weight: "HEAVY",
+                    imageUrl: "images/shadow/items/broadsword.png",
+                }
+            },
+            {
+                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking: 6,
+                amount: 9
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 216,
+                content: "If you wish to take the left street, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 367,
+                content: "If you wish to take the right street, turn to",
             },
         ],
     },{
@@ -14533,18 +14871,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "The terrible pain causes spasms throughout every muscle of your body, making them twist and contort uncontrollably. You plead for the agony to cease. Lose 6 ENDURANCE points.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -6,
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 253,
+                content: "If you are still alive after this psychic ordeal, turn to",
             },
         ],
     },{
@@ -14649,18 +14994,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "",
+            "‘That’s it!’ exclaims Banedon, stabbing his finger at a map of the Dry Main that covers his chart table. ‘One hundred and fifteen miles due west of Bir Rabalou; one hundred and fifteen miles due south of the oasis of Bal-loftan.’ He picks up a quill pen and marks the spot. ‘The Tomb of the Majhan.’<br>You study the map and ponder the miles of desolation separating you from your goal. Banedon notices your look of dismay and quickly tries to put your mind at ease.<br>‘Fear not, Lone Wolf—we’ll be there before the dawn.’<br>You smile at his confidence, but it is not the actual journey that worries you—your concern is what you may or may not find upon your arrival.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 320,
+                content: "Turn to",
             },
         ],
     },{
@@ -14678,18 +15024,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "As you tumble earthwards, a blur of colour flashes before your eyes as the Kraan-riders, the skyship, and the distant horizon all melt into a kaleidoscope of shapes and images, which you fear will be the last things you will ever see.<br>You have prepared yourself for death and are calm and relaxed, when suddenly you feel your body entwined by a mass of sticky fibres. There is a terrific jolt, which leaves you breathless and stunned. The impossible is happening; you are no longer falling, but rising!<br>A net of clinging strands has caught you like a fly in a web. You rise up into the sky towards the flying ship as quickly as you fell. Three bearded dwarves clad in bright, padded battle-jerkins pull you aboard an outrigger that runs the length of the hull. However, there is no time to express your gratitude, for the small skyship is under attack from the Kraan-riders.<br>At the end of the outrigger, a dwarf is engaged in hand-to-hand combat with a snarling Drakkar. He is obviously losing. As you rush to his aid, another of the evil warriors lands in the centre of the craft, on top of the fortified platform.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 280,
+                content: "If you wish to help the dwarf, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 361,
+                content: "If you wish to leap from the outrigger onto the platform, turn to",
             },
         ],
     },{
@@ -14736,18 +15088,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "Forty paces along the street is a barracks, a long whitewashed building with ugly square windows. A soldier sits dozing in the evening sun with his spear resting across his lap. Some children are tossing hollowed-out larnuma fruits at him, trying to catch them upon the tip of his spear. Opposite the barracks is a tavern with a line of saddled douggas tied to a rail near the main door. The braying of these sand-horses rivals the sound of revelry drifting from the tavern door.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 351,
+                content: "If you wish to enter the tavern, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 202,
+                content: "If you wish to continue along the street towards the Dougga Market, turn to",
             },
         ],
     },{
@@ -14823,18 +15181,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
+            "The terrible pain racks your body, making your muscles twist and contort in spasms of pain. You scream for the agony to cease. Lose 6 ENDURANCE points.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -6
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 223,
+                content: "If you are still alive after the psychic ordeal, turn to",
             },
         ],
     },{
@@ -14910,18 +15275,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "Suddenly the Drakkar screams, his limbs outstretched, his gloved hands clawing the air. He is in the grip of some invisible power which is crushing him to death inside his armour.<br>You step back as the ghastly sound of cracking bones rises above the screech of the swooping Kraan-riders. The Drakkar crumples to the deck and topples over the edge of the platform.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 399,
+                content: "If you have ever been given a Crystal Star Pendant, turn to",
+                item:[
+                    {
+                        code : "CRYSTAL_STAR_PENDANT",
+                        name : "Crystal star pendant",
+                        description : "Crystal star pendant",
+                        imageUrl : "images/flight/items/crystal_star_pendant.png"
+                    }
+                ]
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 294,
+                content: "If you do not have this Special Item, turn to",
             },
         ],
     },{
@@ -14968,18 +15347,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Unfortunately, you misjudged how hard you need to blow to make the dart reach its intended target. The sleep dart falls short, accidentally hitting a seagull that has alighted on the edge of the landing platform. The unfortunate bird takes a few shaky steps before keeling over onto its back, its splayed legs pointing stiffly at the sky.<br>The guard walks over to the bird and with the toe of his boot, casually flicks it over the edge of the platform. He watches as it spirals down towards the palace gardens far below, unaware that he has only just escaped a similar fate.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 282,
+                content: "Turn to",
             },
         ],
     },{
@@ -15032,12 +15411,26 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "",
+            "A few paces beyond the marketplace, a small alley heads off to the left. At the end you see a house with a bright blue door.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 292,
+                content: "If you have the Kai Discipline of Tracking, turn to",
+                ability: {
+                    abilityType: "TRACKING",
+                    description:
+                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 206,
+                content: "If you wish to enter the alley and knock at the door, turn to",
+            },{
+                outcomeType: "DEFAULT",
+                targetNr: 346,
+                content: "If you wish to continue along the street, turn to",
             },
         ],
     },{
@@ -15142,18 +15535,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Throne Chamber",
+            regionType: "ROOM",
+            description: "A large chamber within the Tomb of the Majhan. It is dimly lit and thick dust covers the marble floor. At the side of the chamber that is opposed to the large stone door there is a rough stone throne.",
+            imageUrl: "images/shadow/regions/throne_chamber.png",
         },
         content:
-            "",
-        outcomes: [
+            "You leap at the staggering form of Darklord Haakon, your weapon poised to strike a killing blow. However, as your arm sweeps down, a spiked fist lashes out; blood spurts from your wrist, your fingers go numb and your weapon falls from your hand. Haakon strikes again, catching you in the chest with a blow that pitches you backwards across the chamber.<br>You struggle to stand but the battle is over: Haakon has retrieved the glowing stone. The last thing you see before you are consumed by searing blue flame is the evil and triumphant grimace of the Darklord.<br>Your life and hopes of Sommerlund end here.",
+        events: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                eventType: "MISSION_FAILED_EVENT",
+                ranking: 1,
             },
         ],
     },{
@@ -15287,19 +15679,41 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Tomb of the Majhan",
+            regionType: "EVIL_TEMPLE",
+            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
         },
         content:
-            "",
+            "As far as the eye can see, a long, straight, sandstone corridor slopes away into the distance. Torches crackle and sputter on the walls, illuminating the pictograms engraved in the yellow stone.<br>At regular intervals, rough-edged slabs protrude into the main corridor. You stop to take a close look at one of these slabs and the floor beneath it and come to a frightening conclusion. They are obviously traps, no doubt set off by the Giaks when they cleared this corridor of sand. Rather than instructing the Giaks to avoid them, the Darklords must have deliberately used their slaves to set them off. Once the traps had been sprung, the squashed bodies were cleared away and the slabs chiselled through to the next section. Pit traps in the floors seem to have been neutralized in the same way. Set off by luckless Giaks, they would have been filled in with the dead bodies and levelled off with sand. The thought of this heartless barbarity fills you with revulsion.<br>Just over a mile along the corridor, you eventually arrive at a large stone door. The stone surround bears evidence of chisel-work, but the door itself is rock solid.<br>You notice a faint beam of light descending from a hole in the ceiling. It creates a small circular pool of light, a little to one side of a similar hole in the floor. In the wall near to the door there is a triangular indentation, no larger than a Gold Crown.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 233,
+                content: "If you possess a Prism, turn to",
+                item: {
+                    code: "PRISM",
+                    name: "Prism",
+                    description: "glass prism",
+                    imageUrl: "images/shadow/items/prism.png"
+                }
             },
+            {
+                outcomeType: "ITEM",
+                targetNr: 245,
+                content: "If you possess a Blue Stone Triangle, turn to",
+                item: {
+                    code: "BLUE_STONE_TRIANGLE",
+                    name: "Blue Stone Triangle",
+                    description: "a blue triangle made out of stone",
+                    imageUrl: "images/shadow/items/blue_stone_triangle.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 298,
+                content: "If you have neither of these items, turn to",
+            }
         ],
     },{
         /*
@@ -15374,18 +15788,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The guard raises a hand to the back of his neck and removes the tiny dart, but before he realizes what has happened, he keels over unconscious, spread-eagled on the landing platform.<br>You can hear the clatter of running feet echoing across the palace roof: the Drakkarim have arrived. You must act quickly if you are to avoid them.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 207,
+                content: "If you wish to search the body of the sleeping guard, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 224,
+                content: "If you wish to ignore the guard and rush into the Itikar pen, turn to",
             },
         ],
     },{
@@ -15403,18 +15822,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "Banedon lowers his staff, the trace of a wry smile on his pain-racked face. ‘Alas, I was too slow to protect myself, Lone Wolf,’ he says, glancing at his arm. You kneel at his side and free the spear that pins him to the floor. The wound is serious; hastily you staunch the bleeding with strips of cloth torn from his dark blue robes. You recognize the robes, for they are the attire of a Journeymaster. It seems that young Banedon has achieved distinction among his brother magicians since last you met.<br>‘It appears that we are fated to meet in their company,’ he says, still watching the Kraan-riders anxiously. ‘Help me to my feet, we must escape before they drag us from the sky.’<br>You support the magician as he grasps the ship’s helm—a radiant crystal sphere with hundreds of glowing facets set on a slim silver rod. No sooner has his hand closed around the crystal than there is a tremendous explosion.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 323,
+                content: "Turn to ",
             },
         ],
     },{
@@ -15432,17 +15852,20 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Koneshi Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Koneshi Mountains stretch from the southeast to the middle of the Dry Main in Vassagonia. At the western end of this high mountains lies one of the six oasis.",
+            imageUrl: "images/shadow/regions/koneshi_mountains.png",
         },
         content:
-            "You examine the floor where Darklord Haakon fell, but there are no signs of his body. The atmosphere is strangely calm and peaceful, as if a great and evil shadow has been lifted. (If you lost the Sommerswerd in the confrontation with the Darklord, you may now retrieve it.)</b>You turn and walk to the throne where Haakon sat, waiting for you to appear. Beyond it lies a portal, an ancient inscription carved deep into the blood-red stone. Below the carving is set the impression of a human hand. Instinct and intuition guide your hand to the door; the carving fits around it like a glove.</b>Silently the portal slides back to reveal your destiny—the Book of the Magnakai. Set on a pedestal, the book lies open, its secrets revealed to your eyes alone. As you lift the sacred book, the very air throbs with the vibration of the force locked within its sun-gold cover. With a pounding heart you close the book and hurry from the chamber.</b>By the time you reach the foothills of the Koneshi, Banedon has successfully completed his mission; he and Tipasa are waiting for you. As they see you appear, clutching the Book of the Magnakai, they can barely contain their excitement.</b>‘This night of triumph,’ says Banedon, jubilantly, ‘will herald a new dawn of hope for Sommerlund. The Kai are reborn.’</b>The quest is now over. You have found the Book of the Magnakai and freed Magnamund from the shadow of Darklord Haakon. But for you, Kai Master Lone Wolf, the story has only just begun.</b>Your destiny lies along the path of the Grand Masters. To learn their secrets and attempt the first exciting quest of the Magnakai, begin your journey with Book 6 of the Lone Wolf series entitled: The Kingdoms of Terror",
-        events:[{
-            eventType:"MISSION_ACCOMPLISHED_EVENT",
-            
-        }]
+            "You examine the floor where Darklord Haakon fell, but there are no signs of his body. The atmosphere is strangely calm and peaceful, as if a great and evil shadow has been lifted. (If you lost the Sommerswerd in the confrontation with the Darklord, you may now retrieve it.)<br>You turn and walk to the throne where Haakon sat, waiting for you to appear. Beyond it lies a portal, an ancient inscription carved deep into the blood-red stone. Below the carving is set the impression of a human hand. Instinct and intuition guide your hand to the door; the carving fits around it like a glove.<br>Silently the portal slides back to reveal your destiny—the Book of the Magnakai. Set on a pedestal, the book lies open, its secrets revealed to your eyes alone. As you lift the sacred book, the very air throbs with the vibration of the force locked within its sun-gold cover. With a pounding heart you close the book and hurry from the chamber.<br>By the time you reach the foothills of the Koneshi, Banedon has successfully completed his mission; he and Tipasa are waiting for you. As they see you appear, clutching the Book of the Magnakai, they can barely contain their excitement.<br>‘This night of triumph,’ says Banedon, jubilantly, ‘will herald a new dawn of hope for Sommerlund. The Kai are reborn.’<br>The quest is now over. You have found the Book of the Magnakai and freed Magnamund from the shadow of Darklord Haakon. But for you, Kai Master Lone Wolf, the story has only just begun.<br>Your destiny lies along the path of the Grand Masters. To learn their secrets and attempt the first exciting quest of the Magnakai, begin your journey with Book 6 of the Lone Wolf series entitled: The Kingdoms of Terror",
+        events:[
+            {
+                eventType: "MISSION_ACCOMPLISHED_EVENT",
+                ranking: 1,
+            },
+        ],
     }
 ]);
 
