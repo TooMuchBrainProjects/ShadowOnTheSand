@@ -591,6 +591,110 @@ db.getCollection("lw5").insertMany([
             //     weight: "SMALL",
             //     imageUrl: "images/shadow/items/goldenkey.png",
             // },
+            {
+                code: "BLACK_SASHE",
+                name: "Black sashe",
+                itemType: "MAGICAL_ITEM",
+                description: "Black sashe",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/black_sashe.png"
+            },
+            {
+                code: "TINCTURE_OF_CALACENA",
+                name: "Tincture of Calacena",
+                itemType: "UTILITY",
+                description: "causes terrifying hallucinations for 1–2 hours per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/tincture_of_calacena.png"
+            },
+            {
+                code: "TINCTURE_OF_GRAVEWEED",
+                name: "Tincture of Graveweed",
+                itemType: "UTILITY",
+                description: "causes sickness and loss of 2 ENDURANCE points per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/tincture_of_graveweed.png"
+            },
+            {
+                code: "VIAL_OF_LARNUMA OIL",
+                name: "Vial of Larnuma Oil",
+                itemType: "UTILITY",
+                description: "restores 2 ENDURANCE points per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/vial_of_larnuma_oil.png"
+            },
+            {
+                code: "POTION_OF_LAUMSPUR",
+                name: "Potion of Laumspur",
+                itemType: "POTION",
+                description: "restores 4 ENDURANCE points per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/potion_of_laumspur.png"
+            },
+            {
+                code: "POTION_OF_GALLOWBRUSH",
+                name: "Potion of Gallowbrush",
+                itemType: "POTION",
+                description: "induces sleep for 1–2 hours per dose",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/potion_of_gallowbrush.png"
+            },
+            {
+                code: "POTION_OF_ALETHER",
+                name: "Potion of Alether",
+                itemType : "POTION",
+                description: "increases COMBAT SKILL by 2 for the duration of 1 combat",
+                weight: "SMALL",
+                imageUrl: "images/flight/items/potion_of_alether.png"
+            },
+            {
+                code: "BRASS_WISTLE",
+                name: "Brass Whistle",
+                itemType: "MAGICAL_ITEM",
+                description: "Brass Whistle",
+                weight: "MEDIUM",
+                imageUrl: "images/flight/items/brass_whistle.png"
+            },
+            {
+                code: "BOTTLE_OF_KOURSHAH",
+                name: "Bottle of Kourshah",
+                itemType: "POTION",
+                description: "There is enough Kourshah in the bottle to restore a further 4 ENDURANCE points.",
+                weight: "MEDIUM",
+                imageUrl: "images/flight/items/bottle_of_kourshah.png"
+            },
+            {
+                code : "SOMMERSWERD",
+                name : "Sommerswerd",
+                itemType: "WEAPON",
+                description : "Sommerswerd",
+                weight: "MEDIUM",
+                imageUrl : "images/flight/items/sommerswerd.png"
+            },
+            {
+                code : "CRYSTAL_STAR_PENDANT",
+                name : "Crystal star pendant",
+                itemType: "GEM",
+                description : "Crystal star pendant",
+                weight: "SMALL",
+                imageUrl : "images/flight/items/crystal_star_pendant.png"
+            },
+            {
+                code : "ONYX_MEDALLION",
+                name : "Onyx Medallion",
+                itemType: "MAGICAL_ITEM",
+                description : "This Special Item, torn from the armour of a renegade Vassagonian captain during the battle of Ruanon, enables you to communicate with the Itikar",
+                weight: "SMALL",
+                imageUrl : "images/flight/items/onyx_medallion.png"
+            },
+            {
+                code : "BLACK_CRYSTAL_CUBE",
+                name : "Black crystal cube",
+                itemType: "MAGICAL_ITEM",
+                description : "Black crystal cube",
+                weight: "SMALL",
+                imageUrl : "images/flight/items/black_crystal_cube.png"
+            },
         ],
         content:
             "Before leaving Holmgard on your voyage to the Vassagonian capital of Barrakeesh, you are given a map of the desert empire and a pouch of gold.",
@@ -665,6 +769,12 @@ db.getCollection("lw5").insertMany([
                             description:
                                 "A great aqueduct over forty miles long, which channels freshwater from the River Da into the city.",
                             imageUrl: "images/shadow/regions/river_da.png",
+                        },
+                        {
+                            name: "Baga-darooz",
+                            regionType: "SEWER",
+                            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+                            imageUrl: "images/shadow/regions/baga-darooz.png"
                         },
                     ],
                 },
@@ -5935,8 +6045,6 @@ db.getCollection("lw5").insertMany([
          * --  Storysection 135
          * -- --------------------------------------------------------
          */
-        // Section Outcome changed, because there was no possibility to map it
-        // Region could be Baga-darooz instead of Barrakeesh because it's in the sewers of Barrakeesh
         sectionType: "STORY_SECTION",
         sectionNr: 135,
         book: {
@@ -5946,14 +6054,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Barrakeesh",
-            regionType: "CITY",
-            description:
-                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
-            imageUrl: "images/shadow/regions/barrakeesh.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png"
         },
         content:
-            "The air of the new tunnel is hot and humid, and as you press on, the putrid gas makes you increasingly nauseous. You are forced to stop—the vapour is burning your throat and causing painful stomach cramps. Suddenly a noise makes you forget your discomfort; you turn to see that one of Maouk’s men has caught up with you. He looms out of the darkness, his face covered by a pad of herbs.",
+            "The air of the new tunnel is hot and humid, and as you press on, the putrid gas makes you increasingly nauseous. You are forced to stop—the vapour is burning your throat and causing painful stomach cramps. Suddenly a noise makes you forget your discomfort; you turn to see that one of Maouk’s men has caught up with you. He looms out of the darkness, his face covered by a pad of herbs. Deduct 2 points from your COMBAT SKILL due to the effects of the noxious fumes.",
         events : [
             {
                 eventType : "COMBAT",
@@ -5966,8 +6073,13 @@ db.getCollection("lw5").insertMany([
                 },
             },
             {
-                eventType : "CHANGE_ENDURANCE_EVENT",
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
                 ranking : 2,
+                amount : -2
+            },
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 3,
                 amount : 3,
             }
             
@@ -6145,11 +6257,10 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Barrakeesh",
-            regionType: "CITY",
-            description:
-                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
-            imageUrl: "images/shadow/regions/barrakeesh.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png"
         },
         content:
             "You are so irritated by the crawling mask of insects covering your skin that you fail to see the rusty metal post sticking out of the water ahead. You walk straight into it and lose your footing. Instinctively, you grab at the post, but like everything else it is covered with sewage, as slippery as Kalte ice.",
@@ -6356,11 +6467,10 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Barrakeesh",
-            regionType: "CITY",
-            description:
-                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
-            imageUrl: "images/shadow/regions/barrakeesh.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png"
         },
         content:
             "You wade into the water, thick with scum, and try not to breathe through your nose. The glutinous mire is clotted with green and black filth, and with your every movement the surface cracks, releasing a vile gas. You cover your mouth with your Kai cloak, but the appalling stench makes you retch and choke. A loud splash behind you warns that Maouk’s men are not far away, and you quicken your step. At regular intervals, circular chutes disappear into the ceiling. Many are stained bright yellow, white, or reddish-brown. This section of the Baga-darooz passes beneath the Linen Quarter of Barrakeesh, where the Guild of Linen-weavers operate their fuller’s shops. The chutes dump waste dyes straight into the sewer, making the oily water even more garish in colour. You spot a ripple in the water ahead. It moves nearer, the wake of a submerged sewer creature. Instinctively, you flatten yourself against the dye-stained wall as you feel the movement of water against your waist, and watch in fear and fascination as the ripple of water disappears into the tunnel. Suddenly, a fearful scream bursts out of the darkness; Maouk has lost one of his men. The terrible cries of the Sharnazim warrior chill your spine, but your instincts tell you to press on while you have the advantage. The channel soon reaches a junction where another tunnel heads off to the west.",
@@ -6383,8 +6493,6 @@ db.getCollection("lw5").insertMany([
          * --  Storysection 146
          * -- --------------------------------------------------------
          */
-
-        // Nicht fertig
         sectionType: "STORY_SECTION",
         sectionNr: 146,
         book: {
@@ -6394,21 +6502,14 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You have ridden about a mile when you are knocked from your horse by an arrow grazing your forehead. You lose 3 ENDURANCE points. As you pull yourself to your feet, you see a patrol of Drakkarim emerge from the woods on either side of the road. You have been ambushed and must evade them as quickly as possible by going into the forest.",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -3,
-            },
-        ],
+            "For a few minutes, you watch the man working at his anvil, in case he, too, should decide to leave the chamber. However, he continues to work, apparently unaffected by the scorching heat. To reach the west door without being seen, you must make your way cautiously across the chamber, dodging from one pillar to the next. Pick a number from the Random Number Table. If you have the Kai Discipline of Camouflage or Hunting, deduct 2 from the number you have chosen.",
         outcomes: [
             {
                 outcomeType : "RANDOM",
@@ -6424,7 +6525,7 @@ db.getCollection("lw5").insertMany([
                 targetNr : 190,
                 intervall : {
                     min : 3,
-                    max : 11,
+                    max : 9,
                 },
                 content : "If your total is now 3 or more, turn to "
             },
@@ -6445,30 +6546,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "After a few minutes walking, you find a mossy hut set back from the path. You are hungry and must eat a Meal here or lose 3 ENDURANCE points. As you eat you notice that the path starts to curve towards the east.",
-        events: [
-            {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 1,
-                amount: -1,
-            },
-        ],
+            "Your Kai sense tells you to beware of the man who helped you. He intends to betray you for a purse of silver.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 42,
-                content: "If you wish to follow it, turn to ",
+                targetNr: 61,
+                content: "If you wish to stay in his house, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 28,
-                content: "If you wish to return the way you have come, turn to ",
+                targetNr: 109,
+                content: "If you wish to escape by the window, turn to ",
             },
         ],
     },
@@ -6487,43 +6582,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Kicking open the door, you dive into the farmhouse. A Kraan soars overhead, letting out a shriek of victory, a victim hanging in its claws. Getting to your feet, you find yourself alone. But propped against the fireplace is a Warhammer. You may take this Weapon if you wish.",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Warhammer",
-                    itemType: "WEAPON",
-                    description: "warhammer",
-                    weight: "HEAVY",
-                    imageUrl: "images/shadow/items/warhammer.png",
-                },
-            },
-        ],
+            "As soon as you enter, the panel slides shut, and you are plunged into darkness. You advance nervously, your hand held before your face to part the cobwebs hanging in festoons from the low ceiling. You are a few feet away from what appears to be a dead end when you tread on a pressure plate, which activates another panel that slides back to reveal a small chamber.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 81,
-                content: "If you want to stay in the farmhouse, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 320,
-                content:
-                    "If you would feel safer in the forest, you can make a dash by turning to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 199,
-                content: "If you wish to search the room further, turn to ",
+                targetNr: 14,
+                content: "Turn to ",
             },
         ],
     },
@@ -6542,19 +6613,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "As you ride along the highway, you notice that light is getting worse. It will soon be completely dark—and impossible to see any dangers that may lurk ahead. You decide to hide and rest at the wood’s edge until morning. When you are satisfied that no one can see you, you pull your warm green cloak about you and drift off into an uneasy sleep.",
+            "You reach the door to the Vizu-diar without being seen, only to find that it is securely bolted from the inside. You are about to curse your bad luck when you notice a window set into an elaborately carved panel above the door; its iron shutter is open. In spite of your injured arm, you successfully climb the nail-studded door and drop through the window into the silence of the trophy room. An eerie collection of stuffed heads lines the walls of this private chamber. Most are those of reptilian desert creatures, souvenirs of imperial hunting expeditions into the Dry Main. Among the snake-like trophies, and more gruesome, are human heads! They are ghoulish battle honours, the heads of enemy commanders slain in battle during the countless wars waged by Vassagonia. You hurry out of the Vizu-diar and into a long marble corridor, where the walls are inlaid with veins of gold and pearls. It leads to a large hall where palace guards and brightly robed courtiers are walking to and fro, but a colonnade of statues provides all the cover you need to reach a distant staircase unseen. Stealthily, you sprint up the staircase to arrive at a junction where passages head off to the east and west. At the end of each is a door with a symbol engraved into the wall above. The symbol above the east door depicts a mortar and pestle; the symbol above the west door, an open book.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 256,
-                content: "Turn to ",
+                targetNr: 57,
+                content: "If you wish to investigate the east door, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 100,
+                content: "If you wish to investigate the west door, turn to ",
             },
         ],
     },
@@ -6573,18 +6648,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Although a little overcooked, the food tastes fine (although it is not enough for a whole Meal) and the clear water slakes your thirst. You have spent nearly half an hour resting in this house when you suddenly realize the delay.",
+            "The corridor heads north but soon ends at a junction where another passage runs across from east to west. Cautiously, you peer around the corner, but there are no signs of any guards. At the end of the east passage you can see a flight of steps descending out of view; to the west, you see a closed door.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 83,
-                content: "Prepare your equipment and leave. Turn to ",
+                targetNr: 93,
+                content: "If you wish to go east, towards the stairs, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 122,
+                content: "If you decide to go west, towards the door, turn to ",
             },
         ],
     },
@@ -6603,30 +6684,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png"
         },
         content:
-            "If you concentrate on the keyhole, you could move the mechanism of the lock and open it. You can then make the pin levitate and free it from the lockplate, avoiding falling prey to any traps that may be set off as the door unlocks.",
+            "Your keen eye falls upon a narrow fissure in the tunnel wall. The gap is near to the level of the scum and can barely be seen in the darkness. You squeeze inside, steeling yourself as the foul water rises up to your chin. The Sharnazim pass within inches of your hiding place, and you have to fight the urge to vomit as a wave of sewage laps your face. ‘He has taken the south tunnel,’ echoes an angry voice. ‘Quickly—don’t waste your time here!’ It seems an eternity before the Sharnazim retrace their steps and disappear back along the tunnel. With a sigh of relief, you emerge from the fissure, but catch your foot in something embedded in the silt of the tunnel floor and lose your balance.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 87,
-                ability: {
-                    abilityType: "MIND_OVER_MATTER",
-                    description:
-                        "Mastery of this Discipline enables a Kai Lord to move small objects with his powers of concentration.",
-                },
-                content:
-                    "If you wish to use your Kai Discipline of Mind Over Matter to open this lock and levitate the pin, turn to ",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 337,
-                content: "If you wish to remove the pin, turn to ",
+                targetNr: 94,
+                content: "Turn to ",
             },
         ],
     },
@@ -6645,25 +6714,40 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
-            description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "The herbalist offers you a selection of special potions. Some increase your strength; some induce invisibility; some give you great powers of stealth; and others give you the power of turning yourself into a gaseous form. The man pulls open the bottom drawer of the counter to reveal a magnificent wand. He says that it is a powerful weapon against all evil creatures, and that it will make you invulnerable in battle. He points to the mystical inscriptions which cover the black staff.",
+            "You press yourself against the weathered stone and try to avoid looking down at the courtyards and gardens of the palace, hundreds of feet below. You bite your lip and wait for the guards to pass, but they do not pass. It is nearly sunset, and they have come to shut the iron grilles of the palace windows. You hear the creak of dry hinges and the click of bolts—sounds that send a shiver down your spine. You realize that you are now locked out. To your left, the ledge continues around outside of a dome; inside this is the mess hall. If you can only inch your way around the tower, you may be able to find an open window on the other side. Pick a number from the Random Number Table.  If you have the Kai Discipline of Hunting, add 2 to the number you have picked. If you have reached the Kai rank of Savant, you may add another 2.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 49,
-                content:
-                    "If you wish to lean over the counter and read the strange inscriptions, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 5,
+                intervall : {
+                    min : 0,
+                    max : 2,
+                },
+                content : "If your total score is now 0–2, turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 231,
-                content: "If you are more interested in the potions, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 38,
+                intervall : {
+                    min : 3,
+                    max : 8,
+                },
+                content : "If your total score is now 3–8, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 87,
+                intervall : {
+                    min : 9,
+                    max : 13,
+                },
+                content : "If your total score is now 9-13, turn to "
             },
         ],
     },
@@ -6682,30 +6766,41 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
         },
         content:
-            "Before you are the tall grey-white walls and glimmering spires of Holmgard, the city’s banners fluttering from the battlements in the fresh morning breeze. Stretching out towards the west, the River Eledil traces its course from the mountains of the Durncrag Range to the Holmgulf. But below the mountain peaks you can see a vast black army marching relentlessly on towards the capital.To your right you can see the highway heading off over the rolling plain towards Holmgard. At a gallop you could make the outer fieldworks of the city’s defences in less than an hour, but you would be in the open for most of the time and vulnerable to attack by Kraan. Directly ahead of you, a wide river drifts sluggishly towards the Eledil. If you abandoned your horse, you could swim towards the outer defences under cover of the river banks. Or there is a final alternative. To your left lies the Graveyard of the Ancients. These tombs and crumbling monuments to a forgotten age would conceal your approach but it is a forbidden area. Many are the unnamed horrors that lie there in restless sleep, waiting to consume the unwary trespasser.",
+            "Maouk orders his black-clad troops to search the area, threatening them with death if they allow you to escape. You bite your lip and wait for a chance to run. Creeping from one boat to the next, you reach a narrow flight of stone steps. At the top of the steps, beyond a small paved square, lies a maze of crooked alleyways that disappear into the shadows of the Thieves’ Quarter. You are less than twenty feet from safety when a cry echoes across the water: ‘There he is!’ You sprint along the deserted passage and climb a stairway into an open courtyard. The sound of hooves clattering on the cobblestones below urges you onwards. There are three possible exits from the courtyard: a high, nail-studded gate to the left; an alley to your right; and a straight, paved pathway that leads to an arch. You must make a quick decision for Maouk’s men are close at your heels.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 202,
-                content: "If you will try your luck by the highway, turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 42,
+                ability : {
+                    abilityType : "TRACKING",
+                    description : "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks."
+                },
+                content : "If you possess the Kai Discipline of Tracking, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 135,
+                targetNr: 75,
                 content:
-                    "If you feel that you stand a better chance of reaching the capital via the river then turn to",
+                    "If you wish to enter the gate, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 329,
+                targetNr: 117,
                 content:
-                    "Or if you are brave enough to risk the unknown perils of the Graveyard of the Ancients, turn to",
+                    "If you wish to enter the alley, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 169,
+                content:
+                    "If you decide to take the straight pathway through the arch, turn to ",
             },
         ],
     },
@@ -6724,18 +6819,117 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "You are dizzy from your wound and you stumble through the trees like a blind man. Suddenly you fall forward as if the ground has been snatched from beneath your feet. You have fallen head-first into a hunting pit. As you look up, you can see four Drakkarim levelling their bows at you, evil sneers spreading simultaneously across their ugly faces. As the world darkens, the last thing you feel is the black shafts of their arrows deep in your chest. You have failed in your mission.",
+            "You part the bead curtain that hangs across the doorway and enter the cool interior. The light is poor and the room gloomy, for the windows are obscured by sheaves of herbs and plants. You are studying a curious row of coloured bottles when a woman appears. She has piercing green eyes and her red hair is raised, bound with rings of jadin. Softly, she speaks to you. ‘Welcome, Northlander. I sense you are a warrior—or am I mistaken?’ As you hesitate to answer, she shrugs her shoulders and searches through a pile of parchments stacked on top of a wine casket. She blows away the dust before handing you a yellowed sheet. It is a list of merchandise, written in Sommlending: Potion of Alether (increases COMBAT SKILL by 2 for the duration of 1 combat)—4 Gold Crowns, Potion of Gallowbrush (induces sleep for 1–2 hours per dose)—2 Gold Crowns, Potion of Laumspur (restores 4 ENDURANCE points per dose)—5 Gold Crowns, Vial of Larnuma Oil (restores 2 ENDURANCE points per dose)—3 Gold Crowns, Tincture of Graveweed (causes sickness and loss of 2 ENDURANCE points per dose)—1 Gold Crown, Tincture of Calacena (causes terrifying hallucinations for 1–2 hours per dose)—2 Gold Crowns.You may purchase any of the above and in any quantity you desire; all potions, vials, and tinctures are Backpack Items. You then leave the shop and continue along the street.",
         events: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 1,
+                item : {
+                    name : "Potion of Alether",
+                    itemType : "POTION",
+                    description : "increases COMBAT SKILL by 2 for the duration of 1 combat",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/potion_of_alether.png"
+                }
+            },
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 2,
+                amount : -4,
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 3,
+                item : {
+                    name : "Potion of Gallowbrush",
+                    itemType : "POTION",
+                    description : "induces sleep for 1–2 hours per dose",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/potion_of_gallowbrush.png"
+                }
+            },
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 4,
+                amount : -2
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 5,
+                item : {
+                    name : "Potion of Laumspur",
+                    itemType : "POTION",
+                    description : "restores 4 ENDURANCE points per dose",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/potion_of_laumspur.png"
+                }
+            },
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 6,
+                amount : -5
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 7,
+                item : {
+                    name : "Vial of Larnuma Oil",
+                    itemType : "UTILITY",
+                    description : "restores 2 ENDURANCE points per dose",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/vial_of_larnuma_oil.png"
+                }
+            },
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 8,
+                amount : -3
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 9,
+                item : {
+                    name : "Tincture of Graveweed",
+                    itemType : "UTILITY",
+                    description : "causes sickness and loss of 2 ENDURANCE points per dose",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/tincture_of_graveweed.png"
+                }
+            },
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 10,
+                amount : -1
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 11,
+                item : {
+                    name : "Tincture of Calacena",
+                    itemType : "UTILITY",
+                    description : "causes terrifying hallucinations for 1–2 hours per dose",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/tincture_of_calacena.png"
+                }
+            },
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 12,
+                amount : -2
+            },
+        ],
+        outcomes: [
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 179,
+                content: "Turn to ",
             },
         ],
     },
@@ -6754,18 +6948,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "As you approach, the group of people stop talking. You can see by their expressions that they recognize your green Kai cloak. Slowly, one of the men extends his hand in friendship and says, ‘My Lord, we had heard a rumour that the Kai were destroyed. Heaven be praised that it is not so. We feared all was lost.’You do not tell them of the destruction of the monastery,  for they are refugees from Toran and have lost everything they owned. Their only hope now is that the Kai Lords will lead an army to victory. You learn that the northern port was attacked from both air and sea, and that the forces of the Darklords far outnumbered the King’s brave garrison. You reassure them that Sommerlund will not fall and wish them luck on their journey ahead.",
+            "From the view, you judge that this window is set high up in the south wall of the Grand Palace. Far below you can see the buildings of the capital, in miniature clusters inside the white city wall. To the southeast lies Lake Inrahim, an immense salt-water plain that is completely dry and cracked. To the east, a road stretches across the causeway to the town of Chula, just visible on the horizon. To the southwest lie the barren, sun-scorched Dahir Mountains and the shifting ocean of sand known as the Dry Main. The bars of the window are badly corroded; it would be easy to dislodge them. However, the drop of several hundred feet to the city below means that there is no hope of escape this way. You climb down from the table and hurry along the corridor.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 70,
-                content: "turn to",
+                targetNr: 182,
+                content: "Turn to",
             },
         ],
     },
@@ -6775,6 +6970,7 @@ db.getCollection("lw5").insertMany([
          * --  Storysection 156
          * -- --------------------------------------------------------
          */
+        //Outcome needs two abilites
         sectionType: "STORY_SECTION",
         sectionNr: 156,
         book: {
@@ -6784,24 +6980,37 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "Black arrows embed themselves in the mud all around you. More Giaks have appeared on the steep slope of the river bank and are firing at you. There is no cover on this side of the river.",
+            "After concentrating on the lock for several minutes, you realize that it is connected to an alarm. If you turn the lock to the wrong number, the alarm will be triggered, alerting the entire palace guard.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 294,
-                content: "If you wish to dive into the water and swim with the current, turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 8,
+                ability : {
+                    abilityType : "SIXTH_SENSE",
+                    description : "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure."
+                },
+                content : "If you possess the Kai Disciplines of Mind Over Matter and Sixth Sense, turn to "
+            },
+            {
+                outcomeType : "ABILITY",
+                targetNr : 8,
+                ability : {
+                    abilityType : "MIND_OVER_MATTER",
+                    description : "Mastery of this Discipline enables a Kai Lord to move small objects with his powers of concentration."
+                },
+                content : "If you possess the Kai Disciplines of Mind Over Matter and Sixth Sense, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 245,
+                targetNr: 98,
                 content:
-                    "If you wish to swim across to the cover of the trees on the other bank, turn to ",
+                    "If you do not have both of these skills, turn to ",
             },
         ],
     },
@@ -6820,26 +7029,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "The forest begins to thin out until finally you can make out a road through the trees ahead. The highway is full of people heading south. Many are wheeling their possessions along on handcarts.",
+            "The house smells strongly of burnt incense. You enter a narrow hallway lined with chairs and walk slowly along the central aisle towards a fountain, flanked by a pair of massive orange-red pillars. A man, dressed from head to toe in black, appears from behind the left-hand pillar and walks towards you. Suddenly, you hear Maouk’s men enter the plaza, and cast an anxious glance towards the open door. The man sees you are nervous and silently points to a cellar door.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 30,
+                targetNr: 16,
                 content:
-                    "If you wish to join the refugees and perhaps learn more of what has happened in the north, turn to",
+                    "If you wish to hide in the cellar, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 167,
+                targetNr: 99,
                 content:
-                    "If you would prefer to continue to move south but under cover of the trees, turn to",
+                    "If you wish to leave the hallway, return to the plaza by turning to ",
             },
         ],
     },
@@ -6858,25 +7067,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Darkstone Temple",
-            regionType: "EVIL_TEMPLE",
-            description:
-                "It was only by an unlucky chance you discovered teh secret temple of a sect of evil druids",
-            imageUrl: "images/shadow/regions/darkstonetemple.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "The Key fits and the lock opens. You pull back the door to find yourself face to face with a strange old man. In his right hand is a staff. Suddenly a bolt of lightning shoots from the staff and hits you square in the chest. You lose 6 ENDURANCE points. Gasping with pain, you knock the old man aside and run up the steep staircase towards daylight. You are halfway up the stairs when he fires another bolt at you. If you survive, you stagger out into the daylight and curse your bad luck. It was only by an unlucky chance you discovered the secret temple of a sect of evil druids. You are very lucky to have escaped with your life. You quickly rejoin the path which now disappears over the hill.",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -7,
-            },
-        ],
+            "You enter a gallery, which houses a beautiful mosaic. Thousands of tiny fragments of pearl and gold shimmer in the light of the evening sun, glancing rainbows of colour across the high marble walls. A group of palace courtiers ambles through the gallery, and you are forced to hide behind a huge pillar. You wait until their footsteps have faded into the distance before emerging into light. All hope of signing a peace treaty has long vanished, and your only concern now is to escape from the Grand Palace and, somehow, return home to Sommerlund as quickly as possible. Hurrying out of the gallery, you follow the passage westwards and soon reach a junction where the passage turns abruptly to the north.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 106,
+                targetNr: 58,
                 content: "Turn to ",
             },
         ],
@@ -6896,19 +7097,41 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Your ploy does not work, for the merchant will not allow you to enter his caravan. Suddenly he clicks his fingers and the bodyguard grasps the hilt of his scimitar.",
+            "You batter your way through the door successfully, but having gathered momentum, you cannot stop, and fall headlong down a flight of stairs on the other side. You landed in a heap on the hard marble floor of an antechamber, (you lose 2 ENDURANCE points) barely a few feet away from an armed soldier, who is guarding the doors to the palace armoury. He is startled by your dramatic entrance but quickly regains his senses and attacks. Deduct 2 from your COMBAT SKILL for the first 3 rounds of combat, as you are lying on the ground. You cannot evade combat and must fight the guard to the death.",
+        events : [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -2
+            },
+            {
+                eventType : "COMBAT",
+                ranking :2,
+                creature : {
+                    name : "Armoury Guard",
+                    combatSkill : 16,
+                    endurance : 22,
+                    imageUrl : "images/flight/creatures/armoury_guard.png"
+                }
+            },
+            {
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking : 3,
+                amount : -2
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 191,
-                content: "You must fight him by turning to ",
+                targetNr: 52,
+                content: "If you win, turn to ",
             },
         ],
     },
@@ -6927,31 +7150,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
-        content: "Pick a number from the Random Number Table.",
+        content: "Your desire to leave this treacherous city is overcome by your fear of losing your arm. You must get the Oede herb, even though it means you will have to enter the very place you are most anxious to avoid—the Grand Palace. The alley follows a tortuous route through the Mikarum, finally leading you to the ‘Horm-tas-Lallaim’: the Tomb of the Princesses. Beyond the tomb, the Grand Palace rises like a massive white pantheon. You suddenly recall a legend told to you by your Kai masters long ago: ‘The Nemesis of the Black Zakhan’. The Black Zakhan was a brutal tyrant, the cruellest of an evil lineage that ruled over the desert empire long ago. The barbaric excesses of his reign have never been forgotten in the Lastlands. The Grand Palace was built by his army of slaves, prisoners from countries he had conquered in war. The palace became his obsession; he personally oversaw its entire construction and punished the workers personally if there was the slightest delay. He butchered his subjects indiscriminately and in the most terrible fashion. His favourite form of execution was for the victim to be sawn in half from head to foot until the body fell in two pieces. However, it was the mass execution of the slaves who built the Grand Palace that made him infamous. He slaughtered every slave worker so that his enemies could never learn of the secret treasure chambers he had had constructed. Among the slaves were his only daughters, Kebilla and Sousse, who openly opposed their father’s cruelty and tried to prevent the executions. In a blind rage, he ordered that they should be the first to die. It would have been better for the Zakhan, and for Vassagonia, if he himself had died that day. He lived for another two years, but his mind was unhinged by guilt, and he was tortured by self-loathing and despair. In the Grand Palace, the silence of the night was frequently broken by the Zakhan’s moans and cries, as he wandered from room to room looking for his daughters. When he died, he was laid beside them, here, in the Tomb of the Princesses. From where you stand, you can see two entrances to the Grand Palace; a spike-topped gate in the north wall, and an arch in the west wall, blocked by an iron portcullis. The palace is usually heavily guarded, but there are very few guards today; most are searching for you in the city.",
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 286,
-                intervall: {
-                    min: 0,
-                    max: 4,
-                },
-                content: "If it is 0–4, you have been seen. Turn to ",
+                outcomeType: "DEFAULT",
+                targetNr: 126,
+                content: "If you wish to approach the north gate, turn to ",
             },
             {
-                outcomeType: "RANDOM",
-                targetNr: 10,
-                intervall: {
-                    min: 5,
-                    max: 9,
-                },
-                content:
-                    "If it is 5–9, they do not spot you and they slowly file away along the far side of the ridge. Turn to ",
+                outcomeType: "DEFAULT",
+                targetNr: 79,
+                content: "If you wish to approach the west arch, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 49,
+                content: "If you wish to search for some other way of entering the Grand Palace, turn to ",
             },
         ],
     },
@@ -6970,18 +7190,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth. Restore 5 ENDURANCE points",
+            imageUrl: "images/shadow/regions/baga-darooz.png",
         },
         content:
-            "As you sit down, the stone serpent slowly moves forward on its plinth. You suddenly break out in a cold sweat and grasp your weapon with trembling fingers in case it should attack. A red forked tongue appears from the head of this strange statue and dips into the bowl of green light above your head. Slowly the tongue re-emerges holding a Golden Key which, to your surprise, it drops into your lap. A panel in the east wall clicks open to reveal an exit. You take the Key and leave as quickly as possible.",
+            "You are very lucky that your enemy was only trying to knock you unconscious",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : 5
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 209,
+                targetNr: 69,
                 content: "Turn to ",
             },
         ],
@@ -7001,28 +7227,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "As you get nearer to the men, you call to them. As they turn to face you, your skin turns cold and your heart pounds, for they are Drakkarim in disguise. Suddenly they charge at you. Forced to the ground, you are tied up with ropes and dragged behind them along a track. They take your Backpack and Weapons, but do not search your cloak or find your Gold Crowns. They cackle menacingly to themselves, and talk at great length of the tortures that await you at their camp.",
+            "You pull yourself into the left chimney and pause to catch your breath. The scalding steam hurts your lungs, and every move becomes a tremendous strain, for your hands and feet are now swollen and sore. Lose 1 ENDURANCE point before continuing your climb. You hook your fingers into a jagged crack in the wall of the sweltering chimney and try to draw yourself upwards. Suddenly, a wave of fear engulfs you—something is crawling up your forearm. You have disturbed a nest of loathsome arachnids. These creatures are immune to Mindblast. If you have lost the use of one arm, you cannot fight these biting horrors, for you will inevitably slip and fall into the tar-sorkh. Pick a number from the Random Number Table. This represents the number of ENDURANCE points that you lose (0 = 10) as you climb past the Steamspiders’ nest.",
+        events : [
+            {
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Steamspiders",
+                    combatSkill : 10,
+                    endurance : 35,
+                    imageUrl : "images/flight/creatures/.png"
+                }
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 258,
-                ability: {
-                    abilityType: "MIND_OVER_MATTER",
-                    description:
-                        "Mastery of this Discipline enables a Kai Lord to move small objects with his powers of concentration.",
-                },
-                content: "If you have the Kai Discipline of Mind Over Matter, turn to ",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 127,
-                content: "If you do not have this skill, turn to ",
+                targetNr: 114,
+                content: "If you are still alive after climbing past the nest, or if you fight the Steamspiders and win, turn to ",
             },
         ],
     },
@@ -7041,18 +7270,33 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "After nearly half an hour you feel the current getting stronger. Looking out across the surface you can see that you are approaching a whirlpool in the middle of a large river bend. You will surely drown if caught in its current, so you quickly swim towards the right hand river bank and continue your mission on foot, carrying all your equipment.",
+            "While you wait for the return of the guard, you are taunted and ridiculed by the other bully. He describes with relish all the horrible tortures that await you and is greatly disappointed when the other guard returns empty-handed. ‘The Zakhan doesn’t want our northern friend damaged. He’s got something special planned for him this evening,’ he snarls. Wicked grimaces spread across their faces as they turn to leave the cell. Both now have their backs towards you.",
         outcomes: [
             {
+                outcomeType : "ABILITY",
+                targetNr : 144,
+                ability : {
+                    abilityType : "SIXTH_SENSE",
+                    description : "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure."
+                },
+                content : "If you have the Kai Discipline of Sixth Sense, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 321,
-                content: "Turn to ",
+                targetNr: 174,
+                content: "If you wish to attack the guards, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 18,
+                content: "If you wish to remain as you are, turn to ",
             },
         ],
     },
@@ -7071,42 +7315,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png",
         },
         content:
-            "Carefully opening the seals on each of the bottles, you sniff at the contents. They all seem to be different types of wine. Suddenly a smaller bottle tucked behind the others catches your eye. Pulling out the glass stopper, you recognize the smell to be that of Alether, a Potion of Strength, which is orange in colour. You may keep this Potion and swallow it before you fight. It will increase your COMBAT SKILL by 2 points for the duration of your fight. Be sure to mark it down on your Action Chart and to strike it off once you have used it.",
+            "The water is becoming thicker, and the stench of the sewer gas increasingly more vile and nauseating. Suddenly the air becomes choked with thousands of tiny flies, and every time you gasp for breath you feel the thick fur of pulped bodies in your throat. The black specks build up like paste around your eyes, mouth, and nostrils, and the sharp tangy taste in your mouth makes you retch. Lose 1 ENDURANCE point. As if in answer to your prayers, an iron ladder appears from out of the gloom. It is fixed to the tunnel wall and leads up to a circular stone trapdoor in the ceiling.",
         events: [
             {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Potion of Alether",
-                    itemType: "POTION",
-                    description: "Potion of Alether",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/alether.png",
-                },
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 2,
-                item: {
-                    name: "Potion of Alether",
-                    itemType: "POTION",
-                    description: "Potion of Alether",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/alether.png",
-                },
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -1,
             },
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 308,
-                content: "You now decide to investigate the stable by turning to ",
+                targetNr: 31,
+                content: "If you wish to climb the ladder, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 139,
+                content: "If you wish to ignore the ladder and press on along in the insect-choked tunnel, turn to ",
             },
         ],
     },
@@ -7125,19 +7357,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "You awake in a fever. Images swim before your eyes and then fade completely. The pain in your back is intense and you cry out for relief. You feel a cool, damp cloth placed on your forehead and glimpse the worried face of a young woman. An old man whispers in her ear and then he disappears from view. The girl kneels at your side and comforts you with words of kindness and reassurance, but the light quickly fades and darkness engulfs you once more.",
+            "The guard clutches at his wounds and drops lifeless to the ground. You see that the other man is recovering from your blow and is clawing at the cell door to try to pull himself to his feet.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 212,
-                content: "Turn to",
+                targetNr: 78,
+                content: "If you wish to attack this guard, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 199,
+                content: "If you wish to overpower him and capture him alive, turn to ",
             },
         ],
     },
@@ -7156,25 +7393,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png",
         },
         content:
-            "You are in the presence of a great evil. Your mind is being probed by a powerful and timeless being and you must shield yourself. The struggle has begun and your sanity is at stake. It is a long and torturous ordeal, during which you experience many fantastic and terrible apparitions that tempt and appal you. After this you must lose 4 ENDURANCE points and stagger towards the tunnel.",
+            "You knead your numb arm in an effort to massage some life back into it, but it is useless; the muscles are limp and nerveless. The only consolation is that it is not your weapon arm, but as long as you are suffering from this disease, you cannot use a shield of any sort. Deduct 3 points from your COMBAT SKILL—the lost points may be recovered if ever you should regain the use of your arm. You turn your attention to your surroundings in an effort to find some way of escape from the nightmarish sewer. The passage ahead winds and curves like a giant snake, and the foul air that drifts towards you is hot and humid. You have shaken off your pursuers, but you now have the problem of your arm to solve.",
         events: [
             {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -4,
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking : 1,
+                amount : -3,
             },
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 104,
+                targetNr: 55,
                 content: "Turn to ",
             },
         ],
@@ -7194,35 +7430,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You have been travelling for about a mile when you notice two legs sticking out from behind a large boulder.",
+            "You pass through the door and hurry into the welcoming cool of the room beyond. You notice a large drawbar on this side of the door and instinctively lock it to delay any would-be pursuers. The room is empty, save for some clothing draped over the back of a wrought-iron chair. Judging by the size and cut of the material, the clothes must belong to the armourer. You can hear noises echoing from a passage to the east; the voices of hungry guards and the distinctive clatter of plates. You climb a wide stairway and follow a network of passages towards the west. They are lined with alcoves that contain marble busts and beautiful tapestries, each depicting a past Zakhan or a long-forgotten battle.",
         outcomes: [
             {
                 outcomeType: "ABILITY",
-                targetNr: 178,
+                targetNr: 105,
                 ability: {
                     abilityType: "SIXTH_SENSE",
                     description:
                         "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
                 },
                 content:
-                    "If you possess and wish to use the Kai Discipline of Sixth Sense, turn to ",
+                    "If you have the Kai Discipline of Sixth Sense, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 88,
-                content: "If you wish to take a closer look, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 264,
-                content:
-                    "If you would rather avoid meeting their owner and press on into the forest, turn to ",
+                targetNr: 158,
+                content: "If you do not possess this skill, turn to ",
             },
         ],
     },
@@ -7241,26 +7471,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You pull yourself to the top of the opulent caravan and nestle among the travelling cases and bags. Night will soon engulf the highway. A chill wind blows from the west and you pull your cloak around yourself to keep warm. You listen to the voices below and you can smell the mouthwatering aroma of spiced meat. It reminds you that you are very hungry and must now take a Meal. The fatigue of your ordeal finally catches up with you and you drift off into a restless sleep.",
+            "With a tiger-like bound you are among the startled guards. The blowpipe firer raises his weapon, but a well-aimed kick to the forehead counters his move. He somersaults backwards, cracking his head against the wall with a sickening thud. A trident flashes towards your ribs; you sidestep and grab the haft with your free hand, pulling the guard off balance. He stumbles forward and falls flat on his face. You turn just in time to face the third guard—his trident is poised to stab you.",
         events: [
             {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 1,
-                amount: -1,
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Vestibule Guard",
+                    combatSkill : 15,
+                    endurance : 23,
+                    imageUrl : "images/flight/creatures/vestibule_guard.png"
+                }
             },
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 64,
-                content: "Turn to ",
+                targetNr: 101,
+                content: "If you win the combat and the fight lasts 3 rounds or less, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 46,
+                content: "If you win and the fight lasts longer than 3 rounds, turn to ",
             },
         ],
     },
@@ -7279,31 +7519,42 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "As you pass each skull, it slowly turns, as if watching your every move. You are halfway across the room when you hear the sharp crack of bone splitting. Suddenly you see hideous shapes hatching inside the skulls, and stretching their wings. Ten slimy winged creatures attack you, and you must fight them as one enemy.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Crypt Spawn",
-                    combatSkill: 16,
-                    endurance: 16,
-                    imageUrl: "images/shadow/creatures/cryptspawn.png",
+            "You enter a wide street where vendors compete for space for their stalls beneath the overhanging balconies. The market is crowded with people; they each wear a black sash as a mark of respect to their dead Zakhan, but here, unlike in most of Barrakeesh, business continues as normal. You pass a stall festooned with black sashes, each costing 2 Gold Crowns. If you wish to buy a sash, pay the vendor and mark it on your Action Chart as a Special Item (which you wear over your tunic). You hurry away from the stall and dodge into a narrow passage lined with eating houses and small taverns, where the smell of food is mingled with the odour of stale wine, and the air is alive with chatter and gossip. Your attention is drawn to a notice freshly pasted to a tavern wall. The bold headline reads: THE ZAKHAN IS DEAD—LONG LIVE THE ZAKHAN",
+            events: [
+                {
+                    eventType : "ACQUIRE_ITEM_EVENT",
+                    ranking : 1,
+                    item : {
+                        name : "Black sashe",
+                        itemType : "MAGICAL_ITEM",
+                        description : "Black sashe",
+                        weight : "SMALL",
+                        imageUrl : "images/flight/items/black_sashe.png"
+                    }
                 },
-            },
-        ],
+                {
+                    eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                    ranking : 2,
+                    amount : -2
+                },
+            ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 137,
-                content: "If you win the combat, turn to ",
+                targetNr: 88,
+                content: "If you wish to stop to read the poster, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 113,
+                content: "If you wish to continue along the passage, turn to ",
             },
         ],
     },
@@ -7322,31 +7573,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Clearing",
-            regionType: "CLEARING",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-            imageUrl: "images/shadow/regions/clearing.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "The tunnel is dark and the air is much cooler than outside. You carefully advance with one hand on the tunnel wall to aid your sense of direction. You have been in total darkness for three minutes when you detect the foul smell of decay ahead, similar to rotting meat. If you have a Torch and Tinderbox in your Pack, you may light the Torch to see your way ahead. Suddenly, something heavy drops from the tunnel ceiling onto your back and you fall to your knees.  It is a Burrowcrawler and you must fight it, for it is trying to strangle you with its long slimy tentacles.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Burrowcrawler",
-                    combatSkill: 17,
-                    endurance: 7,
-                    imageUrl: "images/shadow/creatures/burrowcrawler.png",
-                },
-            },
-        ],
+            "The combined mastery of these Kai Disciplines enables you to slip past the guards undetected. By the time they resume their correct guard positions, you have safely made your way into the palace gardens.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 319,
-                content: "If you win, turn to ",
+                targetNr: 137,
+                content: "Turn to ",
             },
         ],
     },
@@ -7365,19 +7604,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You are at the very edge of the wood when your horse rears up in agony. The Kraan has sunk its claws deep into the horse’s hind legs and is trying to knock you to the ground with its wings. The ghoulish Giak rider squeals with delight as he stabs at you with his spear. You jump to the ground and dash for the trees, leaving the poor dying horse in the clutches of the Kraan.",
+            "A panel in the alcove slides aside to reveal a secret, dark, and very narrow passage. A pair of footprints can clearly be seen in the dust-covered floor, leading into the darkness.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 303,
-                content: "Turn to ",
+                targetNr: 148,
+                content: "If you wish to enter the secret passage, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 158,
+                content: "If you decide to avoid the passage, close the secret panel and continue along the corridor and turn to ",
             },
         ],
     },
@@ -7396,34 +7639,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Night falls and you are soon engulfed in darkness. To press on any further would be futile, for you would be sure to lose your way. Tethering your horse to a tree, you pull your green Kai cloak about you and fall into a restless sleep. You are awoken by the sound of troops in the distance. Across the lake you see the black shapes of Drakkarim and a pack of Doomwolves. A Kraan appears from above the trees and lands on the roof of the small wooden shack. It is being ridden by a creature dressed in red robes. The Kraan takes off and begins to fly across the lake to where you are hidden.",
+            "‘Come in, stranger. Welcome to my humble tavern,’ says the plump landlady of the eating house. ‘We have wine and food and rooms a-plenty.’ At this moment, you hear Maouk’s men enter the plaza and cast an anxious glance towards the open door. The landlady sees that you are nervous; she points to the cellar stairs and says in a hushed voice: ‘Do not worry—we share your fear of the new Zakhan. Quickly, you must hide.’ There is no time to hesitate. Maouk’s warriors are already approaching the tavern.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 114,
-                ability: {
-                    abilityType: "CAMOUFLAGE",
-                    description:
-                        "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
-                },
-                content:
-                    "If you wish to use the Kai Discipline of Camouflage to hide yourself and your horse, turn to ",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 239,
-                content: "If you wish to ride deeper into the forest to escape the Kraan, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 29,
-                content: "If you wish to prepare to fight the creature, turn to ",
+                targetNr: 16,
+                content: "Turn to",
             },
         ],
     },
@@ -7442,30 +7670,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Darkstone Temple",
-            regionType: "EVIL_TEMPLE",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "It was only by an unlucky chance you discovered teh secret temple of a sect of evil druids",
-            imageUrl: "images/shadow/regions/darkstonetemple.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "As you reach the door you hear the crash of a giant stone slab as it falls from the ceiling. Turning around, you see that your exit is now blocked.",
+            "Judging by the direction of the sluggish flow, the right channel appears to head off to the north. The vast tide of sewage and garbage from the Baga-darooz is swept out towards the coast, until it emerges at Chiras, a village northwest of the capital. There it makes life both difficult and unpleasant for the poor local fishermen (especially during the summer months). If you take the north channel, you should eventually reach the coast. The left channel heads south, running below the very heart of the capital. In the maze of tunnels that feed into the Baga-darooz, you should be able to find at least one exit to the streets above. Straight ahead, the channel leads off to the west. It is by far the least fetid and contaminated of the three. During the voyage, you remember ‘The Stink’ telling you about the Grand Madani: a great aqueduct over forty miles long, which channels freshwater from the River Da into the city. As a result, the citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy a lavish supply of fresh water. The west channel will lead to that water source.",
         outcomes: [
             {
-                outcomeType: "ITEM",
-                targetNr: 158,
-                item: {
-                    code: "SILVER_KEY",
-                    name: "Silver Key",
-                    description: "Silver Key",
-                    imageUrl: "images/shadow/items/.png",
-                },
-                content: "If you have a Silver Key, you may try to open the door by turning to ",
+                outcomeType: "DEFAULT",
+                targetNr: 145,
+                content: "If you wish to take the north channel, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 259,
-                content: "If you do not possess a Silver Key, turn to ",
+                targetNr: 96,
+                content: "If you wish to take the south channel, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 13,
+                content: "If you wish to take the west channel, turn to 1",
             },
         ],
     },
@@ -7484,18 +7711,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "After nearly an hour of drifting downstream, the water current becomes quite strong and you can see that you are being drawn towards a whirlpool near the centre as the river curves round. You know that if you are caught in the swirling water, you stand very little chance of escaping a watery death. You dive into the muddy river and as you begin to swim towards the shore.",
+            "You spring forward and strike the taller of the guards, slamming your clenched fist into the nape of his neck. He groans and sinks to his knees, his sword clattering to the ground close by your feet.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 190,
-                content: "Turn to",
+                targetNr: 4,
+                content: "If you wish to pick up the sword, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 91,
+                content: "If you wish to ignore the sword and attack the second guard with your bare hands, turn to ",
             },
         ],
     },
@@ -7514,33 +7747,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Waving your arms at the approaching cavalry, you recognize them to be Border Rangers of the King’s army, tough woodsmen who police the troubled western frontier of the kingdom. Your relief at seeing them soon fades when you realize that they are fleeing from a pack of Doomwolves with snarling Giak riders. Black arrows are dropping all around the rangers, as the vicious Doomwolves get nearer and nearer.",
+            "Before you find a suitable hiding place, three Sharnazim wade into view. ‘Leave him to me, you fools!’ booms a voice, and the warriors make way for Maouk, who appears from the shadows—a dart held high in his hand. He hisses a curse and flings the missile at your chest.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 182,
-                ability: {
-                    abilityType: "CAMOUFLAGE",
-                    description:
-                        "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
-                },
-                content: "If you possess the Kai Discipline of Camouflage, turn to ",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 41,
-                content: "If you wish to take cover and hide, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 116,
-                content: "If you wish to make for the other bank, turn to ",
+                targetNr: 25,
+                content: "Turn to ",
             },
         ],
     },
@@ -7559,24 +7778,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
         },
         content:
-            "You hide behind some thick bushes so that the Doomwolf and its rider will not see your white horse. Luckily it works—the beast lopes past and vanishes down the track that you have just come along.",
+            "You are stripped of your Backpack, your Weapons, your Gold Crowns, and all of your Special Items. (Make all the necessary adjustments to your Action Chart, but note your lost possessions elsewhere in case you find them again later.) Your hands are tied behind your back and you are pushed head-first into the waiting carriage. ‘Back to the palace!’ commands Maouk as he climbs aboard and slams the door. ‘The Zakhan awaits his prize.’ You fight to free the cords that bind you, but Maouk is quick to see the danger. He grabs your arm and forces a dart into your skin. As sleep engulfs your senses, you hear Maouk’s wicked laughter fading into the silence. Make a necessary adjustments to your Action Chart, and list all the items that you have had confiscated on a separate piece of paper, for reference in case you should discover them later in your adventure.",
+        events : [
+            {
+                eventType : "DROP_ALL_ITEMS_EVENT",
+                ranking : 1
+            }
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 253,
-                content:
-                    "If you wish to attack the remaining Doomwolves and their riders, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 126,
-                content: "If you wish to press on deeper into the forest, turn to ",
+                targetNr: 69,
+                content: "Turn to ",
             },
         ],
     },
@@ -7595,18 +7815,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png",
         },
         content:
-            "You search all of the cupboards in the small cottage but do not find anything of use or value. You decide that you have wasted enough time here and must press on without further delay.",
+            "As you strike the Kwaraz a killing blow, three Sharnazim wade out of the dark sewer. They have discarded their black robes and they are naked to the waist. Their muscular chests are decorated with a large, blue tattoo of an eagle’s claw. As they struggle out of the water, they fix you with a malicious stare and unsheathe razor-sharp scimitars.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 83,
-                content: "Turn to ",
+                targetNr: 60,
+                content: "If you wish to attack the Sharnazim, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 43,
+                content: "If you wish to evade them by climbing the narrow stone stairs, turn to ",
             },
         ],
     },
@@ -7625,23 +7850,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Your skill enables you to recognize the boots and leggings of a King’s soldier. You can sense that the man is wounded and in need of help.",
+            "You are halfway down the stairs when the guard realizes what you are doing. He leaps to his feet and unsheathes his sword; you cannot evade him now and you must fight to the death.",
+        events: [
+            {
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Armoury Guard",
+                    combatSkill : 16,
+                    endurance : 22,
+                    imageUrl : "images/flight/creatures/armoury_guard.png"
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 88,
-                content: "If you wish to aid him, turn to ",
+                targetNr: 52,
+                content: "If you win the combat, you may search his body and turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 264,
-                content: "If you would rather leave him here, turn to ",
+                targetNr: 140,
+                content: "If you would rather ignore the body and enter the armoury, turn to ",
             },
         ],
     },
@@ -7660,23 +7898,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
-        content: "You have been spotted by the guards who level their crossbows at you.",
+        content: "All manner of strange and exotic plants, oils, potions, and medicaments fill the shop windows, and the smell of the herb-filled street is intoxicating. There is a sudden bustle of activity at the end of the street. The crowd disperses, melting into the shops as if into thin air. A man stands before you, his face is streaked with sweat, his turquoise robes torn and heavily stained. It is Maouk—he has survived the Baga-darooz. ‘Were it not for the Zakhan, I would kill you here and now,’ hisses Maouk, his face a mask of hate. ‘But I will not lose my head for a cowardly Sommlending.’ His insult enrages you, but you control your anger. You sense he is not alone; eyes are watching you at every window.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 318,
+                targetNr: 197,
                 content:
-                    "If you wish to raise your hands above your head and walk slowly towards them, turn to ",
+                    "If you wish to attack Maouk, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 51,
-                content: "If you wish to run for cover in the trees, turn to ",
+                targetNr: 92,
+                content: "If you wish to turn and run back along the street, turn to ",
             },
         ],
     },
@@ -7695,50 +7934,41 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
-        content: "They see you raise your weapon, and they instantly attack you.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Sergant",
-                    combatSkill: 15,
-                    endurance: 22,
-                    imageUrl: "images/shadow/creatures/sergant.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Soldier",
-                    combatSkill: 13,
-                    endurance: 20,
-                    imageUrl: "images/shadow/creatures/soldier.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 3,
-                creature: {
-                    name: "Soldier",
-                    combatSkill: 12,
-                    endurance: 20,
-                    imageUrl: "images/shadow/creatures/soldier.png",
-                },
-            },
-        ],
+        content: "As your enemy collapses at your feet, you notice that the other guard has recovered from your punch. He pulls a dagger from his boot and draws back his hand to throw. If you do not possess this skill, pick a number from the Random Number Table. If you have the Kai Discipline of Sixth Sense or Hunting, add 3 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 62,
-                content: "If you kill all three of them, turn to",
+                outcomeType : "ABILITY",
+                targetNr : 45,
+                ability : {
+                    abilityType : "MINDBLAST",
+                    description : "This enables a Kai Lord to attack an enemy using the force of his mind. It can be used at the same time as normal combat weapons and adds two extra points to your COMBAT SKILL. Not all the creatures encountered on this adventure will be harmed by Mindblast. You will be told if a creature is immune.",
+                },
+                content : "If you possess the Kai Discipline of Mindblast, turn to "
             },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 120,
+                intervall : {
+                    min : 0,
+                    max : 5,
+                },
+                content : "If your total is now 0–5, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 193,
+                intervall : {
+                    min : 6,
+                    max : 12,
+                },
+                content : "If your total is now 6–12, turn to "
+            },  
         ],
     },
     {
@@ -7756,19 +7986,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "Instinctively you duck, and dive to avoid the crossbow bolt. The bandit fires and you feel the sleeve of your jacket tear as the missile grazes past your left arm. You thank the gods for your good fortune and sprint on. None of the other bandits have bows and they soon give up the chase. As you sprint off into the distance, you leave them all far behind. You stop just long enough to strap up your wounded arm and then continue along the road towards the outer defences of the capital.",
+            "You root through all the drawers and cupboards of the workbench, smashing locks when they refuse to open, only to be disappointed. These drawers and cupboards do not contain your missing equipment. All hope of signing a peace treaty with the new Zakhan has vanished; your only concern now is to find your equipment, escape from the Grand Palace, and somehow return home to Sommerlund as quickly as possible. You pull aside a latticed partition and enter a small antechamber. Narrow stones steps lead up to an open door in the north wall, beside which stands a wooden chest.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 288,
-                content: "Turn to ",
+                targetNr: 14,
+                content: "If you wish to climb the steps and enter the door, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 97,
+                content: "If you wish to investigate the wooden chest, turn to ",
             },
         ],
     },
@@ -7787,18 +8021,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Three rangers gallop past the river bank, closely followed by the Giaks on their snarling mounts—the Doomwolves. But your Camouflage skill has saved you from being spotted. The pack of evil Giaks continue on their chase without even glancing at the river.",
+            "You arrive at a high-vaulted chamber with a large, nail-studded door set into the south wall. A rack standing near to the door holds a Spear and a Broadsword. You may take either or both of these if you wish. To the north, beneath a beautifully decorated horseshoe arch, is another passage that leads out of the chamber.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 174,
-                content: "Turn to ",
+                targetNr: 132,
+                content: "If you wish to enter the passage, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 115,
+                content: "If you wish to listen at the door, turn to ",
             },
         ],
     },
@@ -7817,24 +8057,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "The officer orders his men to halt and asks you your business. You tell him who you are, and how the monastery has been destroyed. He is deeply saddened to hear your news. He offers you a horse and asks you to accompany him to Prince Pelathar, the King’s son.",
+            "The warrior’s head suddenly emerges from the sewer hole. He lashes at your legs, tearing a nasty gash in your calf. You lose 2 ENDURANCE points. In anger and pain, you raise your foot and stamp on the man’s head with all your strength. He screams and falls back into the sewer, and you hear a loud, resounding splash. You replace the stone lid and drag a heavy barrel across it before making your way through the maze of city streets. All hope of signing a peace treaty with the new Zakhan has vanished; your only concern now is to escape from Barrakeesh and, somehow, return to Sommerlund as quickly as possible. Eventually you reach a busy market square. Your eye is caught by a sign hanging above the side entrance to large building: BARRAKEESH PUBLIC BATHS.By this time, the smell of your clothes is making you feel quite ill. You have no hesitation in opening the door and slipping inside.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 97,
+                targetNr: 183,
                 content: "If you accept, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 200,
-                content: "If you decide to decline his offer, turn to ",
             },
         ],
     },
@@ -7853,41 +8088,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
         },
         content:
-            "The caravan is out of control and is bumping wildly through the rough ground that borders the highway. With difficulty you eventually steer the frightened horses back onto the road and halt the caravan. A quick search of the interior reveals 40 Gold Crowns, a Sword, and enough Food for 3 Meals. If you wish to keep any of these items, mark them on your Action Chart.",
-        events: [
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 1,
-                amount: 40,
-            },
-            {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 2,
-                amount: 3,
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 3,
-                item: {
-                    name: "Sword",
-                    itemType: "WEAPON",
-                    description: "Sword",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/sword.png",
-                },
-            },
-        ],
+            "As you stare out across the harbour, you notice a large, white-domed warehouse near to the water’s edge. A platform on the upper floor overhangs a merchant dhow moored at the quay below. On this platform are several earthenware tuns: huge spice containers destined for the trading emporia of Ragadorn. You focus your attention on one of these tuns and concentrate all your Kai skill into making it move. Sweat pours down your face from the strain, but you soon hear a distant crash that confirms your success. The tun has fallen and shattered on the deck of the dhow.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 64,
+                targetNr: 153,
                 content: "Turn to ",
             },
         ],
@@ -7907,18 +8119,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You narrow your eyes and scan the trees for some sign of the hidden archer. Your wait is not a long one, for a moment later a sharp pain tears through your chest and you are thrown back by the force of three arrows. Two of the black shafts have sunk deep into your rib cage, and the third has pierced your thigh. The last thing that you see is the canopy of fern trees above and a large green dragonfly as it settles on your belt buckle. Your life and your mission end here.",
-        events: [
+            "The footsteps grow louder and then suddenly stop. You hear whispering and Maouk slowly appears from the shadows, his henchmen at his heels. ‘Caught like a wolf in the trap,’ he sniggers, a dart held high in his sinewy fist. He hisses a curse and flings the missile at your chest.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "DEFAULT",
+                targetNr: 25,
+                content: "Turn to ",
             },
         ],
     },
@@ -7937,18 +8150,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "The Kakarmi disappear into the dense undergrowth and you soon find yourself lost. After nearly two hours of walking you hear the sound of running water. You decide to investigate a little closer.",
+            "Using your Kai skill to disguise your Sommlending accent, you call out to the guard. ‘Quick! We need your help—the Northlander is escaping!’ Immediately, the guard leaps to his feet and charges up the stairs towards the door. You wait until he reaches the top step before you attack—one kick to the knee sends him tumbling backwards into the chamber, where he falls in a heap at the foot of the stairs. You enter the chamber, poised to strike again should the guard recover and attack. However, this time your caution is unnecessary; the guard is dead, his neck was broken in the fall.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 106,
-                content: "Turn to ",
+                targetNr: 52,
+                content: "If you wish to search his body, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 140,
+                content: "If you wish to ignore the body and enter the armoury, turn to ",
             },
         ],
     },
@@ -7967,23 +8186,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Baga-darooz",
+            regionType: "SEWER",
+            description: "The sewer of Barrakeesh, a dirty and disgusting place, full with rats and insects. The water is thick with scum, and the glutinous mire is clotted with green and black filth.",
+            imageUrl: "images/shadow/regions/baga-darooz.png",
         },
         content:
-            "Two furry faces appear over the top of the trunk. Both pairs of eyes stare at your weapon and the two creatures let out a shriek of fright. Leaping from the trunk, they disappear into the forest.",
+            "You recognize the creature; it is a Kwaraz, a giant, creeping reptile. Kwaraz are native to the Maakenmire swamp, hundreds of miles to the west of Vassagonia, but they thrive in any hot, damp, and fetid environment, and it strikes you that the Baga-darooz sewer is an ideal breeding ground for these deadly beasts. The Kwaraz moves along the ceiling, gripping the stone with its long, curved claws—its oval eyes opening wider and wider. Kwaraz are very susceptible to psychic power. By using your Kai Discipline of Animal Kinship, you persuade it that you are not at all appetizing, and it soon loses interest. You watch with a mixture of fear and fascination as the huge reptile disappears along the tunnel. Suddenly, a fearful scream bursts out of the darkness; Maouk has lost one of his men. A shiver runs down your spine, but your instincts tell you to press on while you have the advantage.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 186,
-                content: "If you wish to follow them, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 228,
-                content: "If you wish to let them go and continue, turn to",
+                targetNr: 17,
+                content: "Turn to ",
             },
         ],
     },
@@ -8002,26 +8216,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You can see the shadow of the Kraan getting larger all around you. It suddenly strikes, pitching you forward onto your face with the power of its attack. You have been wounded in both arms. Lose 3 ENDURANCE points and run to the trees.",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -3,
-            },
-        ],
+            "The tavern is crowded with people who are seated at a long, stone counter decorated with fragments of coloured marble. Large earthenware jars, full of spicy foods, are set into the counter, and serving girls are busy attending to the hungry customers.",
         outcomes: [
             {
+                outcomeType : "ITEM",
+                targetNr: 172,
+                item : {
+                    code : "BLACK_SASH",
+                    name : "Black Sash",
+                    description : "Black Sash",
+                    imageUrl : "images/flight/items/black_sash.png"
+                },
+                content : "If you are wearing a Black Sash, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 303,
-                content: "Turn to ",
+                targetNr: 71,
+                content: "If you do not possess a Black Sash, turn to ",
             },
         ],
     },
@@ -8040,17 +8258,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You thank your Kai training and your quick thinking, for that bog could have proved as deadly as any Drakkarim or Kraan. You are worried about losing time, and push on further into the trees towards the south. Ahead of you, you see a wide path that also leads south.",
+            "The courier screams as he falls but is dead before his head hits the cobblestones. You waste little time dragging his body into the shadows. You don his loose robe and raise the hood, concealing your tunic and your face. In the pocket of the robe you find a scroll: the pass needed to enter the Grand Palace. The dead courier’s horse has bolted and fled, but your appearance at the gate on foot does not seem to arouse any suspicion. The guards inspect the scroll with bored indifference and allow you to pass through the gate into the palace gardens beyond.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 118,
+                targetNr: 137,
                 content: "Turn to ",
             },
         ],
@@ -8070,24 +8288,37 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You walk for three miles along the water’s edge until you chance upon a wrecked river barge. It appears to have served as shelter for someone, as you can see a bed and some cooking utensils through a hole in the deck.",
+            "You have barely taken a dozen steps before you are seen. The giant armourer raises a massive hammer and strides forward, a bloodthirsty snarl escaping from between his clenched teeth. You prepare to defend yourself, but you are momentarily stunned when you see that the hammer is part of his right arm: it is, in fact, an enormous steel fist. The armourer bellows a war-cry and you react just in time. The hammer tears a chunk of stone from the wall, less than an inch above your scalp.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Hammerfist the Armourer",
+                    combatSkill: 18,
+                    endurance: 30,
+                    imageUrl: "images/shadow/creatures/hammerfist_the_armourer.png",
+                },
+            },
+            {
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking : 2,
+                amount : -2,
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 20,
-                content: "If you wish to search the barge, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 273,
-                content: "If you wish to press on, turn to",
-            },
+                targetNr: 111,
+                content: "If you win the combat, turn to ",
+            }
         ],
     },
     {
@@ -8104,24 +8335,24 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
-        content: "The bodyguard unsheathes a large scimitar and strikes at your head.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Bodyguard",
-                    combatSkill: 11,
-                    endurance: 21,
-                    imageUrl: "images/shadow/creatures/bodyguard.png",
-                },
-            },
-        ],
+        region: {
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
+        },
+        content: "You manage to inch your way along the row of oars until you reach the ship’s rail, where eager hands catch hold of your cloak and pull you to safety. Maouk’s voice booms out across water. ‘Surrender the Kai Lord to me. The Zakhan commands it. Your lives and the lives of all your kin will be forfeit if you disobey this order!’ The crew stare at each other in sorrow and dismay—they know that Maouk’s words are no idle threat. You cannot expect these men to sacrifice their families for you, so you must quickly decide on an alternative plan.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 24,
-                content: "If you win, turn to ",
+                targetNr: 176,
+                content: "If you decide to surrender to Maouk, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 142,
+                content: "If you wish to dive overboard and attempt an escape, turn to ",
             },
         ],
     },
@@ -8140,25 +8371,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You see the razor-fanged mouth of a Doomwolf and hear the hideous cries of the Giaks. Two of them are coming straight for you. You are saved from certain death when your horse jumps at the approaching beasts, knocking them both to the ground. You lash out at the Giak and open a large wound in his head ... and then suddenly, as if by a miracle, you’re through and racing on down the highway, clear of the rest of the pack. But a shadow follows you. It is a Kraan and it has started to dive. Its target is you.",
+            "The sweltering heat is overwhelming. Three times you nearly slip and fall and are saved only by your quick wits and natural survival instincts from a gruesome end in the tar-sorkh. You manage to climb twenty feet of the chimney, but the price is high. Your fingers and knees are skinned and bleeding, and your legs ache with fatigue. Lose 2 ENDURANCE points.",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -2
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 171,
-                content: "If you veer off the highway towards the cover of the trees, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 120,
-                content:
-                    "If you press on regardless of the Kraan and gallop flat out down the highway, turn to ",
+                targetNr: 114,
+                content: "Turn to ",
             },
         ],
     },
@@ -8177,36 +8409,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "The beast and its rider lie dead. You notice a Scroll tucked into the Giak’s belt. You may take this if you wish, but remember to mark it on your Action Chart. The other Doomwolves are charging along the path towards you.",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Giak Scroll",
-                    itemType: "SCROLL",
-                    description: "Scroll",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/giakscroll.png",
-                },
-            },
-        ],
+            "You jump to one side as the dagger whistles towards you, skimming barely an inch from your throat. The guard stares in open-mouthed disbelief. He is now unarmed.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 253,
-                content: "If you wish to fight them, turn to ",
+                targetNr: 78,
+                content: "If you wish to attack the guard, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 126,
-                content: "If you wish to escape into the woods, turn to ",
+                targetNr: 199,
+                content: "If you wish to overpower him and capture him alive, turn to ",
             },
         ],
     },
@@ -8225,24 +8444,34 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You sprint towards the wagon. People are running everywhere in panic as the Kraan make their attack, carrying their poor victims off into the darkening sky. A large Kraan is hovering above the wagon and three snarling Giaks drop from its back onto the startled horses. You must fight them or leave the wagon and run to the safety of a nearby farmhouse.",
+            "The Yas is a constrictor: it kills its prey by crushing them to death with the coils of its powerful body. Its sleepy eyes have now opened and the red-rimmed slit pupils fix you with a mesmerizing stare. You suddenly realize that the Yas is trying to hypnotize you. Unless you have the Kai Discipline of Mindshield, deduct 3 points from your COMBAT SKILL for the duration of this combat.",
+        events :  [
+            {
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking : 1,
+                amount : 3
+            }, {
+                eventType : "COMBAT",
+                ranking : 2,
+                creature : {
+                    name : "Yas",
+                    combatSkill : 14,
+                    endurance : 28,
+                    imageUrl : "images/flight/creatures/yas.png"
+                }
+            }
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 208,
-                content: "If you wish to fight the Giaks, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 148,
-                content: "If you wish to run to the farmhouse, turn to ",
+                targetNr: 35,
+                content: "If you win the combat, turn to ",
             },
         ],
     },
@@ -8261,23 +8490,34 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
         },
         content:
-            "Wiping the bear’s blood from your weapon, you notice the mouth of a cave hidden behind the rock from which the bear attacked.",
+            "A forge has been constructed in the centre of a massive circular chamber, its funnel-like chimney stretching up to the roof. The heat had become unbearable long ago, but now you feel as if you have walked straight into a raging furnace. Two men, naked except for small loin-cloths, work the bellows that feed the forge. Sweat pours from their bodies, and they frequently stop to gulp ladlefuls of water from a trough set in the stone floor. An armourer hammers a strip of red-hot iron at an anvil close to the flames. He is massive; his huge, muscled shoulders and powerful chest are as wide as the other two men put together. The bellows men stop work and leave the chamber; one by the door in the north wall, the other by the door in the west wall. The big man continues to hammer at the anvil.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 59,
-                content: "If you wish to investigate this cave further, turn to ",
+                targetNr: 11,
+                content: "If you wish to follow the man who left by the north door, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 106,
-                content: "If you wish to press on, turn to ",
+                targetNr: 146,
+                content: "If you wish to follow the man who left by the west door, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 190,
+                content: "If you wish to attack the armourer working at the anvil, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 30,
+                content: "If you wish to leave the chamber and retrace your steps along the corridor to take the other passage, turn to ",
             },
         ],
     },
@@ -8296,25 +8536,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You follow the man into a small library off the main hall. He pushes one of the many books on the shelves which line all four walls, and you hear a metallic click. One section of the bookcase slowly slides back to reveal a hidden passage.",
+            "You notice that a large table dominates the room; it is set with wine and meat, and freshly-baked loaves of bread.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 332,
-                content: "If you wish to follow the man into the passage, turn to ",
+                targetNr: 61,
+                content: "If you wish to eat some of this mouth-watering food, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 144,
-                content:
-                    "If you do not want to enter the dark corridor, leave the guildhall and return to the street. Turn to ",
+                targetNr: 109,
+                content: "If you wish to leave the room by the window, turn to ",
             },
         ],
     },
@@ -8333,35 +8572,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "The Drakkar lies dead at the bottom of the ferry. He has a Sword and 6 Gold Crowns which you may keep if you wish. You push the body into the water where it floats for a few seconds before disappearing into the icy depths. Grabbing the pole, you steer to the other side of the lake and abandon the ferry.",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Sword",
-                    itemType: "WEAPON",
-                    description: "Sword",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/sword.png",
-                },
-            },
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 2,
-                amount: 6,
-            },
-        ],
+            "Maouk pulls his hand from his robe, a dart held tightly in his sinewy fist. He hisses a curse and flings the missile at your chest. You gasp with shock as the missile strikes home—you are too close to avoid being hit.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 172,
+                targetNr: 25,
                 content: "Turn to ",
             },
         ],
@@ -8381,24 +8603,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You can sense that there is someone else behind the screen. There is a lingering aura of wickedness around this shop. Be on your guard—something is wrong here.",
+            "As the officer’s body slumps lifelessly across the shattered cellar door, the Sharnazim back away and step aside. Maouk himself appears in the doorway, a dart held high in his hand. ‘I have you now!’ he hisses, and flings the missile at your chest. Pick a number from the Random Number Table. If you have the Kai Discipline of Hunting, add 3 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 7,
-                content: "If you wish to return to the street, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 25,
+                intervall : {
+                    min : 0,
+                    max : 6,
+                },
+                content : "If your total is now 0–6, turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 152,
-                content: "If you wish to examine the goods in the glass counter, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 141,
+                intervall : {
+                    min : 7,
+                    max : 12,
+                },
+                content : "If your total is now 7–9, turn to "
             },
         ],
     },
@@ -8417,26 +8647,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Most of the cupboards and drawers are empty. Whoever lived here took nearly everything they owned with them, but you do manage to scrape together enough fruit in the cellar for one Meal. You may mark this on your Action Chart.",
-        events: [
-            {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 1,
-                amount: 6,
-            },
-        ],
+            "You grasp the frightened guard in a secure head-lock and threaten to break his neck if he does not answer your questions. He immediately promises to tell you everything he knows. He says that the new Zakhan fears that you are an assassin, sent by his enemies in the west. He claims to hate the new Zakhan himself. He is only a simple gaoler, he says, and knows nothing more.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 81,
-                content: "Turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 39,
+                ability : {
+                    abilityType : "SIXTH_SENSE",
+                    description : "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure."
+                },
+                content : "If you have the Kai Discipline of Sixth Sense, turn to "
+            },
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 9,
+                content : "If you do not possess this skill, turn to "
             },
         ],
     },
@@ -8455,30 +8687,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
-            description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "Night is starting to close in. The shadows of the forest are growing longer and darker. Just as you are about to stop and rest, you see through the trees a line of people moving south along a wide highway. Moving closer, you notice a large merchant’s caravan in the centre of the dusty turnpike. It is drawn by six large horses and is moving much faster than any of the other traffic. This could be your chance to reach the capital as quickly as possible.",
+            "Upon a raised platform, carpeted with scarlet fur, sits the Vassagonian Emperor, Zakhan Kimah. He is robed in gold but devoid of all ornamentation. In his hand is an orb of black metal, and in his eye an ice-cold cruelty that chills your spine. The Zakhan is a man of awesome countenance, but he pales in the shadow of his companion. Before him stands the cause of your terror. A helm as black as death itself hides the face, but the stench of decay and a hideous sepulchral voice betray the identity. ‘Give me Lone Wolf!’ It is the fell voice of a mortal enemy—a Darklord of Helgedad. As the Zakhan rises to his feet, you notice a flicker of doubt, or perhaps of fear, dim his cruel gaze, but he is quick to mask it. ‘He will be brought to you at sunset in exchange for the Orb of Death. It is agreed.’ ‘You have the Orb,’ echoes the chilling voice. ‘Give me Lone Wolf!’ The Zakhan hides his fear well, but time is not on his side. The game of bluff he is playing is deadly. However, the fact that he has not yet been discovered is evidence of his powerful will, for you sense the Darklord is persistently clawing and probing at his mind. ‘You will get your Northlander, Lord Haakon,’ says the Zakhan, his voice curt with anger, ‘when you tell me why your servants defile the Tomb of the Majhan. You claim to have no need for gold and jewels—why then do you plunder the graves of our ancestors?’ A deathly quiet fills the hall; only the unnatural hiss of the Darklord’s breath disturbs the silence. ‘This land, this insignificant speck of sand, harbours two small thorns that prick our skin. We seek to remove them both—forever. The fledgling Kai, Lone Wolf, is the thorn that denies us Sommerlund. The Tomb of the Majhan hides the other thorn that threatens us—the accursed Book of the Magnakai.’ Your heart pounds as the words echo in your head. The Book of the Magnakai! Suddenly, the reason why you have been enticed into a deadly trap becomes clear, and the sinister truth is revealed. The Book of the Magnakai is one of the oldest legends of Sommerlund. With the wisdom of the Magnakai, Sun Eagle, the first Kai Grand Master, instilled the disciplines into the warriors of the House of Ulnar, the bloodline of your king, that were to save your land from devastation at the hands of the Darklords. The Book of the Magnakai was lost hundreds of years ago, but its wisdom was kept alive, handed down through generations of Sommlending warriors so that they could share the strength to resist their eternal enemies, the Darklords of Helgedad. If the Darklords discover and destroy the Book of the Magnakai, the secrets will be lost forever, and when you die, the Kai will become extinct. However, if you discover the Book of the Magnakai first and deny the Darklords their prize, all the wisdom of the Magnakai will be revealed to you. Through its wisdom you will become strong, strong enough to reach the ultimate achievement for a Sommlending warrior—to become a Kai Grand Master. However, the peril and the glory of the quest that lies ahead are distracting you from more immediate danger. To discover this danger and to begin the quest for the Book of the Magnakai, turn to Part Two of Shadow on the Sand.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 168,
-                ability: {
-                    abilityType: "CAMOUFLAGE",
-                    description:
-                        "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
-                },
-                content:
-                    "If you wish to use the Kai Discipline of Camouflage to hide in among the packing cases strapped to the roof, turn to ",
-            },
-            {
                 outcomeType: "DEFAULT",
-                targetNr: 78,
-                content: "If you wish to jump onto the caravan, turn to ",
+                targetNr: 201,
+                content: "Begin your adventure at ",
             },
         ],
     },
@@ -8497,28 +8717,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You follow the rough track for nearly an hour when you notice ahead of you another wider path branching off towards the south.",
+            "Suddenly, you catch sight of two warriors creeping towards you from a passage to your right. They are clad in jet-black armour and scarlet robes, and their hideous death-masks identify them as Drakkarim warriors. They are men, but they are evil men, as evil as the Darklords whom they serve. One of them holds a razor-fanged Akataz, a creeping leathery war-dog, straining on a chain leash. The Drakkar hisses and the Akataz springs towards your throat.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 238,
-                content: "If you wish to turn south along the new path, turn to ",
+                targetNr: 273,
+                content: "If you wish to fight this creature, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 201,
-                content: "But if you wish to head east, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 130,
-                content: "Or if you wish to go west, turn to ",
+                targetNr: 285,
+                content: "If you wish to try to evade the attack and escape, turn to ",
             },
         ],
     },
@@ -8537,18 +8752,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "Urging your horse forward, you gallop down the long stretch of highway towards the capital. After only a few minutes your horse suddenly slows and finally limps to a halt. You dismount and examine its raised right foreleg. You curse your ill luck, for you see that it has thrown a shoe and injured its hoof quite badly. You will have to leave him here and proceed on foot as quickly as you can.",
+            "You pass under an arch where two brass-gilded, conical towers gleam like gold and enter a marketplace crowded with squabbling merchants. Exotic carpets, brightly coloured material, and all manner of foods are being bought, sold, and haggled over. The north side of the marketplace is devoted to the auction of douggas. The sleek but noisy desert beasts are being paraded, for the benefit of the bidders, around a paddock adjoining their stables. Just past the stables, a street vanishes into the Carpet-weavers’ Quarter of Ikaresh.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 58,
-                content: "Turn to ",
+                targetNr: 309,
+                content: "If you wish to investigate the stables, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 248,
+                content: "If you wish to ask one of the merchants if they know where Tipasa lives, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 386,
+                content: "If you wish to leave the marketplace, continue along the adjoining street and turn to ",
             },
         ],
     },
@@ -8567,31 +8793,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You suddenly feel a searing pain shoot through your chest as something explodes against you in a shower of red sparks. You lose 10 ENDURANCE points. Through the smoke, the Sage is preparing to throw more explosives at you.",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: 10,
-            },
-        ],
+            "There is a sickening and acidic smell as a great gout of green blood gushes from the Vordak’s red robe. The creature screams and topples from view, its mangled corpse spiralling downwards. Sheathing your weapon, you grab the reins and fight to regain control of your injured mount. You have slain the Vordak, but the battle is not yet won. The Itikar is losing a lot of blood and could lapse into unconsciousness at any moment to drop you like a stone onto hard Lake Inrahim. Suddenly you see something in the distance—something that renews your faith in miracles.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 80,
-                content: "If you have 10 or more ENDURANCE points left, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 344,
-                content: "If you now have less than 10 ENDURANCE points, turn to ",
+                targetNr: 221,
+                content: "Turn to ",
             },
         ],
     },
@@ -8610,18 +8824,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "After an hour of walking you arrive at a junction. The path continues south and another path joins it from the west. You realize that the west path will lead you back to the marsh, so you continue southwards.",
+            "You sense that the stone radiates pure evil. If you can only turn the stone’s power against the Darklord, it will drain his strength and make him fade from this dimension. Although the stone cannot kill Haakon, it can at least banish him to a place where he can no longer harm you.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 111,
-                content: "Turn to ",
+                targetNr: 268,
+                content: "If you wish to try to grab the stone and turn it on your enemy, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 390,
+                content: "If you wish to ignore the stone and attack the Darklord with your own weapon, turn to ",
             },
         ],
     },
@@ -8640,27 +8860,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Their leader picks up your discarded Equipment and ushers you along the road ahead. (You must now erase all Weapons and Backpack Items from your Action Chart.) An evil grin spreads across the face of the other two men, and you suddenly realize that they are not soldiers after all. You make a break for it and run away from there, sprinting towards the distant capital. Behind you, the ominous click of a crossbow being primed sends a shiver down your spine. Pick a number from the Random Number Table.",
-        events: [
-            {
-                eventType: "DROP_ALL_WEAPONS_EVENT",
-                ranking: 1,
-            },
-            {
-                eventType: "DROP_BACKPACK_EVENT",
-                ranking: 2,
-            },
-        ],
+            "All you can hear above the wind that screams past your face are the gleeful howls of the Drakkarim. They are watching you fall to certain doom. Pick a number from the Random Number Table.",
         outcomes: [
             {
                 outcomeType: "RANDOM",
-                targetNr: 181,
+                targetNr: 234,
                 intervall: {
                     min: 0,
                     max: 4,
@@ -8669,12 +8880,12 @@ db.getCollection("lw5").insertMany([
             },
             {
                 outcomeType: "RANDOM",
-                targetNr: 145,
+                targetNr: 293,
                 intervall: {
                     min: 5,
                     max: 9,
                 },
-                content: "If the number is 5–9, turn to ",
+                content: "If the number you have picked is 5–9, turn to ",
             },
         ],
     },
@@ -8692,12 +8903,19 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
+        region: {
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
+        },
         content:
-            "The path soon joins a highway where a signpost indicates Toran to the north and Holmgard to the south. You turn south towards the capital.",
+            "There is no reply to your first knock. You are about to knock again when the door opens a few inches and the red-rimmed eyes of an old woman stare out from the darkness. ‘Banedon!’ she exclaims, her voice hoarse and shaky. ‘Thank the gods it is you.’ She ushers you both inside and locks the door. The house is sparsely furnished, and what little is there is either damaged or broken. ‘They have taken him, Banedon, they have taken my husband—the men with the faces of the dead. Ten days ago. They came like shadows in the night.’ She breaks down, her frail body wracked by sobs. Banedon comforts her as best he can, but you sense he shares her bitter loss. The Drakkarim have taken Tipasa, of that there is little doubt. By now they will have made him tell everything he knows about the Tomb of the Majhan. ‘We will find him, I promise,’ says Banedon, wiping the tears from the old woman’s face, ‘but you must try to help us if you can. Tipasa always kept a diary of his travels—do you have it still?’ A flicker of hope shines in the old woman’s eyes. ‘Yes, it is here. He told me to hide it when the evil men came for him.’ She kneels at an empty fireplace and prises a loose brick from the chimney; a leather-bound book drops from its hiding place into her hand. She gives it to Banedon who studies the yellowed pages, his face lined in thought. You notice that the book is full of cryptic symbols, numbers, and pictograms. ‘They are drawn by the night stars,’ says Banedon, tracing his finger along the astronomical drawings. ‘They hold the secret, I know, but without my star charts we cannot hope to find the tomb. We must return to the Skyrider at first light. There I shall be able to make some sense of this book.’",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 224,
+                targetNr: 331,
                 content: "Turn to ",
             },
         ],
@@ -8717,18 +8935,37 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "The track soon reaches a larger road which crosses the stream via a stone bridge. A signpost at the bridge points north to Toran and south to Holmgard. The road itself is jammed with people moving south, some pushing their possessions along on handcarts. You join the refugee column and head towards the capital.",
+            "You discover little of interest: 8 Gold Crowns and a Brass Whistle on a chain around the guard’s neck. You may take these if you wish, but remember to mark them on your Action Chart. (The Brass Whistle is a Special Item worn on a chain around the neck.) Suddenly, a noise alerts you to unwelcome company; Drakkarim are rushing along the tiled pathway that leads to the pens. Without a moment’s hesitation, you turn and run inside the Itikar’s enclosure.",
+        events: [
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 1,
+                amount : 8
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 2,
+                item : {
+                    name : "BRASS_WISTLE",
+                    itemType : "MAGICAL_ITEM",
+                    description : "Brass Whistle",
+                    weight : "MEDIUM",
+                    imageUrl : "images/flight/items/brass_whistle.png"
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 30,
-                content: "",
+                targetNr: 224,
+                content: "Turn to ",
             },
         ],
     },
@@ -8747,31 +8984,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "The ghoulish creatures thrust their spears at you and attack. Fight these creatures as a single enemy.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 12,
-                    endurance: 12,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-        ],
+            "‘By the gods!’ cries Banedon. ‘A vaxeler!’ The old man’s face is a mask of green putrescent sores. The pupils of his eyes are yellow, and his ragged grey lips hang in tatters. Banedon grabs your arm and pulls you away from the wretched man. ‘He has vaxelus, Lone Wolf, a terrible disease that rots the skin. It is highly contagious—our lives are in peril.’",
         outcomes: [
             {
+                outcomeType : "ITEM",
+                targetNr: 321,
+                item : {
+                    code : "OEDE_HERB",
+                    name : "Oede herb",
+                    description : "golden leaves which heal many deadly diseases or restore 10 ENDURANCE if swallowed after combat",
+                    imageUrl : "images/flight/items/oedeherb.png"
+                },
+                content : "If you possess some Oede herb, you may give it to the poor vaxeler by turning to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 148,
-                content: "If you win, you can run to the safety of the farmhouse by turning to ",
+                targetNr: 270,
+                content: "If you do not have any Oede, or if you do not wish to give it to the man, you can flee the cave with Banedon by turning to ",
             },
         ],
     },
@@ -8790,18 +9026,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You see ahead a corridor sloping upwards, and as you reach the top of this slope, a stone portal slides across to reveal another passage ahead. You step through the opening which then quickly closes with a crunch.",
+            "You reach the landing in time to see three Drakkarim warriors enter the tower. Maniacal laughter echoes from their ghoulish death-mask faces, as they form a line and creep towards you. More of their evil kind are flooding onto the bridge, some carrying crossbows. You decide it would be suicide to attack the Drakkarim and sprint quickly up the stairs to escape from them.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 23,
+                targetNr: 322,
                 content: "Turn to ",
             },
         ],
@@ -8821,25 +9057,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Just inside the door, you are stopped by a journeyman of the Guildhall and asked to explain your intrusion. You calmly inform him of your urgent message for the King, and he hurries you into the Guildmaster’s chambers. A distinguished old man in deep purple robes turns to greet you and listens to your story. Taking you by the arm, he leads you into an adjoining library and closes the door. Pressing one of the many thousands of books, he releases a secret panel in the wall and beckons you to follow him.",
+            "You dive aside, your Kai skill saving you from the axe that is spinning towards the platform. Suddenly, a deafening bang rings out and the Drakkar is flung backwards, his breastplate torn open by dwarf shot. He gives a long, agonizing death-cry as he disappears from sight, tumbling into the darkness that surrounds the speeding skyship. As if in answer to the shot, a menacing roll of thunder rumbles across the darkening plain from Barrakeesh. It is as if the city itself were cursing your escape. Banedon appears at your side, his face lined with concern. As he offers a shaky hand to help you to your feet, you notice that the makeshift bandage which binds his wound is soaked with blood. He is pale and weak and close to collapse.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 332,
-                content: "If you wish to follow him into the dark passage, turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 377,
+                ability : {
+                    abilityType : "HEALING",
+                    description : "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level."
+                },
+                content : "If you have the Kai Discipline of Healing, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 37,
+                targetNr: 339,
                 content:
-                    "If you are not completely happy about this man and wish to leave the Guildhall, turn to ",
+                    "If you do not possess this skill, turn to ",
             },
         ],
     },
@@ -8857,29 +9097,49 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
+        region: {
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
+        },
         content:
-            "You walk along a dimly lit corridor which opens out into a large square room, with an oak door in the far wall. ",
+            "Despite your misgivings, the lime-green wine tastes delicious. A warm glow radiates slowly from your stomach, filling you with a comfortable sense of well-being. Restore 2 ENDURANCE points. The man looks delighted by your reaction to his wine and offers to sell you the bottle for 5 Gold Crowns. If you wish to buy the Bottle of Kourshah, pay the man 5 Gold Crowns and make the necessary adjustments to your Action Chart. (There is enough Kourshah in the bottle to restore a further 4 ENDURANCE points.)",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : 2,
+            },
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 2,
+                item : {
+                    name : "Bottle of Kourshah",
+                    itemType : "POTION",
+                    description : "Bottle of Kourshah",
+                    weight : "MEDIUM",
+                    imageUrl : "images/flight/items/.png"
+                }
+            }, 
+            {
+                eventType : "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking : 3,
+                amount : -5,
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 244,
-                ability: {
-                    abilityType: "SIXTH_SENSE",
-                    description:
-                        "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
-                },
-                content: "If you possess the Kai Discipline of Sixth Sense turn to ",
+                outcomeType: "DEFAULT",
+                targetNr: 318,
+                content: "If you wish to question him about Tipasa the Wanderer, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 173,
-                content: "If you wish to walk across to the door, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 106,
+                targetNr: 272,
                 content:
-                    "If you would prefer to return to the surface and continue your journey, turn to ",
+                    "If you wish to leave his home and continue on your way to Ikaresh, turn to ",
             },
         ],
     },
@@ -8898,19 +9158,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "When you awake, the pain is but a memory. Restore all lost ENDURANCE points to your original score. A tall man dressed in white robes stands before you, a bowl of herbs in his hands. Placing the leaves into a kettle of boiling water, he then turns to greet you. ‘You have passed close to death and have seen his face, Kai Lord, but the Grey One has not claimed you for his flock. You are healed in body but I sense that you are wounded in spirit. What is it that troubles you so?’ You recognize the man to be one of the King’s senior physicians, for the gold embroidered emblem of a dove upon his sleeve is the sign of his respected vocation. You tell the aged cleric of the events at the monastery and of your perilous journey to the King. Raising you gently from the bed by your arm, he bids you follow him. You notice that you are in a lavishly decorated room which leads out through a long corridor lined with tapestries. It slowly dawns on you just where you are. This is the citadel of Holmgard and you are about to meet the King.",
+            "Fleeting shadows move through the densely packed trees: the Drakkarim are trying to surround you. Suddenly, a red shape bursts from the foliage and a mace glances across your forehead. You roll with the blow, tumbling over as though stunned by the force. The Vordak shrieks with malicious laughter and leaps upon you, its black mace raised to crush your skull.",
         outcomes: [
             {
+                outcomeType : "ITEM",
+                targetNr: 349,
+                item : {
+                    code : "SOMMERSWERD",
+                    name : "Sommerswerd",
+                    description : "Sommerswerd",
+                    imageUrl : "images/flight/items/.png"
+                },
+                content : "If you possess the Sommerswerd, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 350,
-                content: "Turn to ",
+                targetNr: 355,
+                content: "If you do not possess this Special Item, turn to ",
             },
         ],
     },
@@ -8929,17 +9200,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You have been trudging through the forest for nearly two hours. The nagging fear that you are lost begins to seem a reality. Apart from the occasional cry of a Kraan in the far distance, you have seen or heard no evidence that the enemy is in this part of the forest. As you descend a rocky hillock, you see something unusual in the tangled woods ahead.",
+            "The Drakkar falls to his knees and makes a horrible rasping noise as he tries in vain to prise open his shattered death-mask. Your blows have staved in his helm, and the buckled metal has fractured his skull. You lash out with your foot and kick him from the outrigger, sending him spiralling down to Lake Inrahim to join the dwarf he murdered. But the dwarf is neither dead nor hundreds of feet below. He hangs by his foot, unconscious, snagged in the netting below the outrigger boards. You grab the dwarf’s leg and haul him to safety before continuing the fight. The platform looks empty—no heads are showing above its armoured parapet, but you sense something is wrong. Instinctively, you leap from the outrigger onto the main hull, your weapon poised to strike.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 331,
+                targetNr: 361,
                 content: "Turn to ",
             },
         ],
@@ -8959,17 +9231,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Excavation Site",
+            regionType: "CONSTRUCTION_SITE",
+            description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/excavation_site.png",
         },
         content:
-            "The path gradually narrows until it disappears completely into a mass of dense vegetation. You cannot go any further on this route and therefore you must return to the clearing.",
+            "You focus your skill on a nearby spade, willing the spade handle to rattle against the wheelbarrow in which it rests. It only takes a few seconds for the vigilant Drakkarim sentry to leave his post and investigate the noise. By the time he returns, you are inside the Tomb of the Majhan.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 125,
+                targetNr: 395,
                 content: "Turn to ",
             },
         ],
@@ -8989,23 +9261,34 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "You emerge into a small clearing. In the centre you see the skeletal remains of a large animal. To the south a narrow track leads off into the distance.",
+            "At the bottom of the stairs, a wooden door braced with iron blocks the entrance to the scented garden. Frantically you twist the handle, but it does not open—the door is locked. Then a couple of palace guards appear on the bridge above; they see you and unsling their heavy crossbows.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 346,
-                content: "If you wish to examine the skeleton, turn to ",
+                outcomeType : "ITEM",
+                targetNr: 246,
+                item : {
+                    code : "COPPER_KEY",
+                    name : "Copper Key",
+                    description : "Copper Key",
+                    imageUrl : "images/flight/items/copperkey.png"
+                },
+                content : "If you possess a Copper Key, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 14,
-                content: "If you would rather press on, turn to ",
+                targetNr: 301,
+                content: "If you do not possess this item, you can try to climb over the door by turning to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 375,
+                content: "Alternatively, you can run back up the stairs and attempt to attack the guards before they load and fire their crossbows by turning to ",
             },
         ],
     },
@@ -9024,18 +9307,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Dragon Bridge",
-            regionType: "BRIDGE",
-            description: "The Dragon Bridge connects the northern and southern part of Summerlund.",
-            imageUrl: "images/shadow/regions/dragonbridge.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "Placing one hand on his forehead and the other on his wounded arm, you feel the warmth of your healing powers leave your body and give strength to the injured man. He tells you his name is Trimis and he is a soldier in Prince Pelathar’s army. The Prince and his troops are engaged in battle to the south, where a large force of the Darklords’ creatures are attacking the bridge of Alema. During the fight, he had been snatched into the air by a Kraan, and dropped into the forest. You make the soldier as comfortable as possible before continuing on your mission.",
+            "You soon enter a public square where a throng of men have gathered at the ruins of a fountain. They are listening to the frenzied speech of a man dressed in red from head to toe; each man in the crowd is wearing a strip of the same coloured cloth, which covers the lower half of his face. ‘They’re Adu-kaw—“the veiled ones”,’ says Banedon nervously. ‘It sounds as if they’re declaring a blood feud on their old enemies, the men of Tefa.’ You follow Banedon to the shelter of a toa tree, where you will be less conspicuous. The speaker is denouncing the Tefarim for imposing a heavy tax for safe passage through their town and for use of the highway to Kara Kala. His ranting begins to stir the crowd to fever pitch. Suddenly he points to where you stand and shrieks, ‘Tefarim spies!’",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 264,
-                content: "If you would rather press on, turn to ",
+                targetNr: 284,
+                content: "If you want to try to reason with the crowd of screaming fanatics that are now running towards you with their swords drawn, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 340,
+                content: "If you wish to follow Banedon’s example and run for your life, turn to ",
             },
         ],
     },
@@ -9054,25 +9343,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Kings Citadel",
-            regionType: "CITADEL",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Kings Citadel is the highest law enforcement and paramilitary organization in Holmgard.",
-            imageUrl: "images/shadow/regions/holmguardcitadel.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You quickly escape from the madman and dodge along a dark alleyway where the houses are small and cramped together. At the very end is a green door with a sign above it that says: Herbalis",
+            "The Itikar fixes you with a cold, black stare, but you sense that it is no longer hostile. As you settle on its wide saddle, you catch sight of the Drakkarim streaming across the gangplank. Leaning forward, you unhook the anchor rope from the saddle ring and grab the thick leather reins.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 91,
-                content: "If you wish to enter, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 7,
-                content:
-                    "If you wish to wait until you are sure the madman has disappeared and then return to the main street, turn to ",
+                targetNr: 343,
+                content: "Turn to ",
             },
         ],
     },
@@ -9091,17 +9374,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Your senses reveal that more than just horses are heading towards you. You can just make out the very high shrieks of Giak war-cries in the distance. By the number of cries and curses you estimate that there are over a dozen Giaks, and probably Doomwolves as well. You decide that advertising your existence is perhaps not quite such a good idea after all!",
+            "The dwarves continue their meal, pausing only to light large hooded pipes. Through the bluish hue of the pipe smoke that clouds the low cabin roof, you notice that they are casting nervous glances at you, as if you might explode at any moment. After five minutes have passed, Nolrim raises his tankard and proclaims a toast: ‘To Lone Wolf—a man among dwarves!’ The dwarves guffaw at Nolrim’s wry toast and raise their tankards in a salute to your courage and fortitude. The Bor-brew has loosened their tongues, and they are eager to tell you of their past exploits.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 75,
+                targetNr: 291,
                 content: "Turn to",
             },
         ],
@@ -9121,18 +9405,27 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
-            description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+            name: "Tomb of the Majhan",
+            regionType: "EVIL_TEMPLE",
+            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
         },
         content:
-            "All that remains of you now is embedded five feet into the stairs on which you were standing, beneath a vast granite block. Your mission and your life end here. ",
-        events: [
+            "You act purely by instinct. You dive to the floor and roll over; the blue flame screams past your head and explodes into the chamber wall, blasting a hole several feet deep in the steel-hard rock. You spring to your feet and dodge behind a massive pillar as the hideous laugh of Darklord Haakon echoes around the dust-choked chamber. As it rises in pitch, your mind is filled with agonizing pain.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType : "ABILITY",
+                targetNr : 253,
+                ability : {
+                    abilityType : "MINDSHIELD",
+                    description : "The Darklords and many of the evil creatures in their command have the ability to attack you using their Mindforce. The Kai Discipline of Mindshield prevents you from losing any ENDURANCE points when subjected to this form of attack."
+                },
+                content : "If you have the Kai Discipline of Mindshield, turn to "
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 369,
+                content: "If you do not possess this Kai Discipline, turn to ",
             },
         ],
     },
@@ -9151,35 +9444,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Bodyguard",
-                    combatSkill: 11,
-                    endurance: 21,
-                    imageUrl: "images/shadow/creatures/bodyguard.png",
-                },
-            },
-        ],
-        content: "The bodyguard unsheathes a scimitar and lunges for your head. ",
+        content: "Your Kai sense of Tracking reveals that the winding path leads into the Zakhan’s arboretum: his cathedral of trees. The stairs to the portal lead to a private chamber in the upper palace, but you still cannot tell what the chamber contains.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 24,
-                content: "If you win, turn to ",
+                targetNr: 391,
+                content: "If you wish to follow the path, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 234,
+                targetNr: 352,
                 content:
-                    "If you wish to evade combat at any time during the fight, you can jump from the speeding caravan by turning to ",
+                    "If you decide to climb the stairs to the portal, turn to ",
             },
         ],
     },
@@ -9198,18 +9480,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Cautiously, you approach the base of the log wall. The tree trunks are rough-hewn and afford plenty of footholds for your climb. As you reach the top of the wall, you come face to face with a crossbow. The soldier holding it in your face motions for you to descend a wooden ladder to the ground. You do not argue with him. Slowly you descend the ladder.",
+            "Emerging from a bank of cloud on the skyline is a flying ship. It is a small craft, no bigger than an Unoram river barge, with two triangular sails swept back either side of its curving prow. In the fading twilight you can make out a long pennant that flutters from its mast. A faint humming reaches your ears. Your first reaction is disbelief; what you are seeing must be a trick of the light or some fiendish illusion created by the Darklords. However, as the ship floats nearer, your senses tell you that it is indeed quite real.",
         outcomes: [
             {
+                outcomeType : "ITEM",
+                targetNr: 336,
+                item : {
+                    code : "CRYSTAL_STAR_PENDANT",
+                    name : "Crystal star pendant",
+                    description : "Crystal star pendant",
+                    imageUrl : "images/flight/items/crystal_star_pendant.png"
+                },
+                content : "If you have ever been given a Crystal Star Pendant, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 318,
-                content: "Turn to",
+                targetNr: 275,
+                content: "If you do not have this Special Item, turn to ",
             },
         ],
     },
@@ -9228,32 +9522,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
-        content: "As you go on you discover a forest path that divides at the point you join it.",
+        content: "You must act quickly if you are to avoid detection, for the creature in red is a Vordak: one of the powerful undead who serve the Darklords. Pick a number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 67,
-                ability: {
-                    abilityType: "TRACKING",
-                    description:
-                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
+                outcomeType : "RANDOM",
+                targetNr : 378,
+                intervall : {
+                    min : 0,
+                    max : 2,
                 },
-                content: "If you wish to use your Kai Discipline of Tracking, turn to ",
+                content : "If the number you have picked is 0–2, turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 140,
-                content: "If you wish to take the south fork, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 252,
-                content: "If you wish to take the east fork, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 262,
+                intervall : {
+                    min : 3,
+                    max : 9,
+                },
+                content : "If the number is 3–9, turn to "
             },
         ],
     },
@@ -9272,25 +9565,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Riverbank",
-            regionType: "RIVER_BANK",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "Peering over the steep undercut of the riverbank, you can see a tanble of driftwood along the waters edge.",
-            imageUrl: "images/shadow/regions/riverbank.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "After quite a struggle, you manage to free the heavy trunk from the river bank. Gathering your equipment in a bundle, you stow it on top of the log and then slowly wade out into the river. The current soon takes you and you drift slowly downstream. After twenty minutes you hear the sound of horses along the left bank. ",
+            "Suddenly, the pain subsides—but the onslaught has only just begun. A mist as black as the grave is seeping from Haakon’s mouth. It creeps along his outstretched arm and settles like a cloud in the palm of his upturned hand. Whirling shadow-shapes draw into focus; wings and tentacles sprout and take form. A curse in the dark tongue shakes the whole chamber as a deadly flood of horror hurtles from his hand.",
+        events: [
+            {
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Crypt Spawn",
+                    combatSkill : 24,
+                    endurance : 40,
+                    imageUrl : "images/flight/creatures/.png"
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 75,
-                content: "If you wish to hide behind the log, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 175,
-                content:
-                    "If you wish to climb onto the log and prepare to catch the riders’ attention, then turn to ",
+                targetNr: 353,
+                content: "If you win the combat, turn to ",
             },
         ],
     },
@@ -9309,18 +9608,70 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You have ridden several miles and have seen no sign of refugees or of the enemy. You race on towards a high ridge in the middle distance. You should be able to see the capital from there. As you reach the peak, the sight that meets you on the far side is one of hope—but there is still one challenge you know you have to face.",
+            "The great black bird beats its massive wings, cawing hoarsely through the domed pen. Two black eyes, fierce and cold, fix you with a deadly stare as you edge nearer to its perch. Grabbing the saddle pommel, you haul yourself up, but suddenly there is a flash of razor-sharp talons. Instinctively, you shield your face as a glint of orange sunlight is caught on the Itikar’s curved beak, for it slashes the air barely inches above your head. If you possess neither the Kai Discipline nor the Special Item, pick a number from the Random Number Table. If you have reached the Kai Rank of Aspirant or higher, add 2 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 153,
-                content: "Turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 308,
+                ability : {
+                    abilityType : "ANIMAL_KINSHIP",
+                    description : "This skill enables a Kai Lord to communicate with some animals and to be able to guess the intentions of others."
+                },
+                content : "If you have the Kai Discipline of Animal Kinship, turn to "
+            },
+            {
+                outcomeType : "ITEM",
+                targetNr: 319,
+                item : {
+                    code : "ONYX_MEDALLION",
+                    name : "Onyx Medallion",
+                    description : "This Special Item, torn from the armour of a renegade Vassagonian captain during the battle of Ruanon, enables you to communicate with the Itikar",
+                    imageUrl : "images/flight/items/onyx_medallion.png"
+                },
+                content : "If you possess an Onyx Medallion, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 287,
+                intervall : {
+                    min : 8,
+                    max : 11,
+                },
+                content : "If your total is now 8–11, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 240,
+                intervall : {
+                    min : 4,
+                    max : 7,
+                },
+                content : "If your total is 4–7, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 370,
+                intervall : {
+                    min : 1,
+                    max : 3,
+                },
+                content : "If your total is 1–3, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 257,
+                intervall : {
+                    min : 0,
+                    max : 0,
+                },
+                content : "If your total is 0, turn to "
             },
         ],
     },
@@ -9339,24 +9690,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "You recognize the language to be that of the Kakarmi, an intelligent race of forest animals that live in, and care for the forests of Sommerlund. You have nothing to fear from these creatures as they are very timid and gentle in their behaviour. Using your skill of Animal Kinship, you call to them in their strange native tongue.",
+            "The man is short of stature but broad-shouldered and strongly built, physical characteristics common among the tough mountain-dwellers in Vassagonia. He pulls a cork from a bottle of lime-green wine and pours three large measures into earthenware cups. ‘Kourshah!’ he exclaims, and downs the wine in one swift gulp.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 187,
-                content: "If you say ‘Do not be afraid, I am a friend,’ turn to ",
+                targetNr: 211,
+                content: "If you wish to follow his example and drink the strange wine, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 39,
+                targetNr: 318,
                 content:
-                    "If you say ‘I am a Kai Lord. I wish you no harm. I must talk with you,’ turn to ",
+                    "If you do not want to drink the wine, ask him where Tipasa can be found and turn to ",
             },
         ],
     },
@@ -9375,31 +9727,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "At first the descent is quite easy, but you soon find it difficult to see clearly and your legs feel very weak. The ‘Sleeptooth’ scratches are affecting you, and suddenly you pitch forward and slip head-first into darkness.",
+            "You are the first to recover from the surprise of the sudden encounter.",
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 277,
-                intervall: {
-                    min: 0,
-                    max: 4,
-                },
-                content: "If the number you have picked is 0–4, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 334,
+                content: "If you wish to attack the guards (Ignore any wounds you may sustain in the first 2 rounds of combat.), turn to ",
             },
             {
-                outcomeType: "RANDOM",
-                targetNr: 338,
-                intervall: {
-                    min: 5,
-                    max: 9,
-                },
-                content: "If the number is 5–9, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 209,
+                content: "If you do not wish to fight them, you can evade before they have a chance to strike at you by running back up to stairs. Turn to ",
             },
         ],
     },
@@ -9418,35 +9763,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Yellow Marsh",
-            regionType: "MARSH",
-            description: "You soon realize that you are walking deeper into a wooded marsh.",
-            imageUrl: "images/shadow/regions/yellowmarch.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "You are now up to your waist in slimy water. The air is thick with small insects that sting your face and clog your nose. Something wraps itself around your leg. It is a Marshviper and you must fight it.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Marshviper",
-                    combatSkill: 13,
-                    endurance: 6,
-                    imageUrl: "images/shadow/creatures/marshviper.png",
-                },
-            },
-        ],
+            "As you near the entrance to a shadowy alley, you hear a woman’s voice begging in the darkness: ‘Alms for a poor widow, young sirs?’ A decrepit old woman hobbles into the light, her features harsh, her face haggard and drawn. She repeats her plaintive cry: ‘Will you spare a coin for a poor widow’s needs?’",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 271,
-                content: "If you lose any ENDURANCE points in the combat, turn to ",
+                targetNr: 265,
+                content: "If you wish to stop and question her, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 348,
-                content: "If you kill it without losing any ENDURANCE points, turn to ",
+                targetNr: 388,
+                content: "If you wish to ignore her and continue on your way, turn to ",
             },
         ],
     },
@@ -9465,24 +9799,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
-        content: "The path continues eastwards but soon disappears into thick undergrowth.",
+        content: "Eager to put distance between yourself and your merciless enemy, you race headlong through a tangle of trees and roots until you stumble upon a small domed hut of latticed wood, half hidden by a curtain of vines. Peering through the dense foliage, you see that the vines reach up to a wrought-iron walkway, which ends at an open stone door.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 140,
+                targetNr: 352,
                 content:
-                    "If you continue east, cutting through the vegetation with your weapon, turn to ",
+                    "If you wish to climb up a vine to the walkway and escape through the open stone door, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 215,
+                targetNr: 332,
                 content:
-                    "If you head south to where the bushes are less dense and then press on through the forest, turn to ",
+                    "If you wish to search for an exit from the arboretum at ground level, turn to ",
             },
         ],
     },
@@ -9501,23 +9836,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "The Kraan hovers above you, raising dust with the beat of its huge black wings. The dust gets into your eyes and nose, and you start to cough. Now the beast attacks. If you win you have a choice:",
+            "As the craft emerges into the sunlight, a terrible noise fills the air—the screeching cacophony of Kraan-riders, sweeping down from the table of rock. They have been waiting patiently for the Skyrider to appear before launching their ambush, for they have been certain of your hiding place since before the dawn. The Black Crystal Cube enabled them to track your escape route through the Dahir Mountains, its signal to them as clear as a burning beacon in the night. You sense it is the Cube which has betrayed your escape and snatch it from your pocket, but before you can hurl the accursed object away, it explodes in your hand. Pick a number from the Random Number Table. If you have the Kai Discipline of Sixth Sense, add 3 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 267,
-                content: "Will you search the body by turning to ",
+                outcomeType : "RANDOM",
+                targetNr : 385,
+                intervall : {
+                    min : 0,
+                    max : 6,
+                },
+                content : "If your total is now 0–6, turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 125,
-                content: "Or will you continue along the east path by turning to ",
+                outcomeType : "RANDOM",
+                targetNr : 251,
+                intervall : {
+                    min : 7,
+                    max : 12,
+                },
+                content : "If your total is now 7–12, turn to "
             },
         ],
     },
@@ -9536,20 +9880,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Tomb of the Majhan",
+            regionType: "EVIL_TEMPLE",
+            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
         },
         content:
-            "In the far distance, you can make out the silhouette of soldiers on barges that are strung out in a line across the river. You can hear the low growls of Doomwolves returning along the opposite bank. For once you throw caution to the wind and sprint along the river bank towards the barges in the distance.",
-        outcomes: [
+            "There is another searing blast, which hits the base of the huge pillar behind which you have taken refuge; it severs the stone in an instant. Your body is torn to pieces as the pillar explodes into a million fragments—the little of you that remains is buried beneath tons of falling sand and stone. Your life and the hopes of Sommerlund end here.",
+        events : [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 179,
-                content: "Turn to ",
-            },
-        ],
+                eventType : "MISSION_FAILED_EVENT",
+                ranking : 1
+            }
+        ]
     },
     {
         /*
@@ -9566,42 +9909,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Holmgard",
-            regionType: "CITY",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "Holmgard is the capital of Sommerlund and is a seaport on the Holmgulf. It is located near the Graveyard of the Ancients. The city is enclosed by grey-white walls two hundred feet in height whose gatehouses are 100 yards long. At the center of the city is the Citadel of the King.",
-            imageUrl: "images/shadow/regions/holmguard.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You are about to ask the price of the potions when the bamboo screen crashes down and a young man leaps at you. He has a long curved dagger in his hand. He is upon you and you must fight for your life.",
+            "The Drakkarim rush into the guard room, bellowing like Kalte mammoths and hacking madly at the air with their cruel, black swords. The leader advances on you, a mane of jet-black hair streaming from the open back of his helm, his sword held low for a thrust that will disembowel you. You sidestep and drive your weapon into his armoured chest. The black metal buckles, crushing his ribs, killing him instantly, but before he has fallen to the ground, two more Drakkarim are upon you. You cannot evade combat and must fight them to the death.",
         events: [
             {
                 eventType: "COMBAT",
                 ranking: 1,
                 creature: {
-                    name: "Robber",
-                    combatSkill: 13,
-                    endurance: 20,
-                    imageUrl: "images/shadow/creatures/robber.png",
+                    name: "Drakkarim",
+                    combatSkill: 18,
+                    endurance: 34,
+                    imageUrl: "images/shadow/creatures/drakkarim.png",
                 },
             },
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 94,
-                content: "If you kill him within 4 rounds of combat, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 203,
-                content: "If you are still fighting after 4 rounds of combat, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 7,
-                content:
-                    "You may evade more fighting after 2 rounds of combat by dashing through the front door. If you wish to do this, turn to",
+                targetNr: 290,
+                content: "If you win the combat, turn to ",
             },
         ],
     },
@@ -9620,25 +9952,20 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Boat Crossing",
-            regionType: "CITY_OUTSKIRTS",
-            description: "The outer fildworks of the city can now be seen.",
-            imageUrl: "images/shadow/regions/holmguardoutskirts.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "The rough-looking leader approaches you and says, ‘Our needs are simple, kind sir. Your money or your life!’",
-        outcomes: [
+            "You try to sidestep as the lethal blade hurtles towards you, but in the darkness you cannot be sure of the direction of its flight. You are hit in the chest, the blow smashing the air from your lungs. Lights flash before your eyes, and an explosion rings in your ears. You fall to your knees, and a sensation of numbness spreads through your chest. Through a haze of swirling mist, you see the Drakkar flung backwards, his breastplate torn open by dwarf shot. Banedon appears; his face is ashen grey. His lips move, but you cannot hear what he is saying. Images of Sommerlund swim in your mind and then slowly fade as oblivion engulfs you. Your life and the last hope of Sommerlund end here.",
+        events : [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 180,
-                content: "If you wish to fight them, turn to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 22,
-                content: "If you wish to run, turn to ",
-            },
-        ],
+                eventType : "MISSION_FAILED_EVENT",
+                ranking : 1
+            }
+        ]
     },
     {
         /*
@@ -9655,17 +9982,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "After nearly an hour, you catch up with the horse and succeed in calming him down. You are now north of the cabin, but you are confident of finding your way back. Mounting the horse, you ride back past the cabin, and press on towards the south once again.",
+            "Holding the Prism in the centre of the beam, you divert the light towards the hole in the floor. You hear the sound of stone grating on stone as the door slowly opens to reveal a large chamber. It is dimly lit, but in the dust that covers the marble floor you can see footprints too numerous to count. As you enter, you suddenly catch sight of a rough stone throne, facing the wall on the far side of the chamber. Behind you the door slides shut with unnerving speed.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 206,
+                targetNr: 289,
                 content: "Turn to ",
             },
         ],
@@ -9685,18 +10013,34 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You jump clear of the speeding caravan but land very badly and break your ankle. The pain is terrible and you soon lose consciousness. Unfortunately you never wake up, but it may be of interest to you that your head is now adorning the saddle of a Kraan. Your life and your mission end here.",
-        events: [
+            "In a complete daze you tumble and spin, totally unaware of whether you are falling head- or feet-first. The warm wind tears at your face, forcing your eyelids and mouth open. You can barely breathe. You scream with terror until you hit the upper branches of a toa tree; in the next instant you hit water. You rapidly surface again, and instinctively begin to pump your legs. You have no idea in which direction you are swimming, but in three strokes you find yourself at the side of this deep, sculptured pool of clear water. Still shaking from the shock of impact, you crawl your way out onto a mossy bank. Miraculously, you have escaped injury, but your ordeal is far from over. The Drakkarim and the palace guards watched you fall and at this very moment are racing down from the tower and the bridge to the palace gardens. Ahead of you, beyond a tree-lined colonnade, a flight of steps ascends to a small portal in the wall of the upper palace. To your right, a leafy tunnel winds away into the trees and shrubs.",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "ABILITY",
+                targetNr: 220,
+                ability: {
+                    abilityType: "TRACKING",
+                    description:
+                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
+                },
+                content: "If you have the Kai Discipline of Tracking, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 352,
+                content: "If you wish to climb the stairs to the small portal, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 391,
+                content: "If you wish to follow the winding path, turn to ",
             },
         ],
     },
@@ -9709,40 +10053,28 @@ db.getCollection("lw5").insertMany([
         sectionType: "STORY_SECTION",
         sectionNr: 235,
         book: {
-            name: "Shadow on the Sand",
-            imageUrl: "images/shadow/title.jpg",
-            author: "Joe Dever",
-            illustrator: "Gary Chalk",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "The Prince’s horse is indeed a magnificent animal, fast and sure of foot. You gallop along the twisting track as if it were a straight highway, until the noise of battle has disappeared far behind you. You are hungry and must eat a Meal during your ride. After several miles, the path stops abruptly at a junction. There is a signpost, but it has been hacked down.",
-        events: [
-            {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 1,
-                amount: -1,
-            },
-        ],
+            "Rows of stalactites hang from the roof of the cave, like the fangs of some incredible monster, and the bubbling of a distant geyser echoes eerily through the unknown depths. You begin to explore and eventually reach a place where a natural bridge of rock arches over a steaming course of water, red with ore. Huddled beneath the bridge is a pathetic figure, its body bent and emaciated. A tattered blanket covers his face, and in his withered hands he clutches a crude fishing rod. A small catch of lavacrabs lies on the bank, their claws twitching as they slowly die. As you move nearer, the figure raises his face to stare at you. It is a man, but the sight of his face shocks you to the core.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 254,
-                ability: {
-                    abilityType: "TRACKING",
-                    description:
-                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
+                outcomeType : "ABILITY",
+                targetNr : 344,
+                ability : {
+                    abilityType : "HEALING",
+                    description : "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level."
                 },
-                content: "If you wish to use your Kai Discipline of Tracking, turn to ",
+                content : "If you have the Kai Discipline of Healing, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 32,
-                content: "If you wish to turn left, go to ",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 146,
-                content: "If you wish to turn right, go to ",
+                targetNr: 208,
+                content: "If you do not possess this Kai Discipline, turn to ",
             },
         ],
     },
@@ -9761,35 +10093,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "The Gem hovers above the mouth of the skeleton king, glowing a fierce red. Suddenly, an explosion of searing crimson flame lashes upwards from the sarcophagus, destroying the Gem completely. You are thrown against the far wall and knocked unconscious. When you awake, the chamber is completely empty. The skeleton king and the sarcophagus have vanished. You have lost 6 ENDURANCE points, and your initial COMBAT SKILL is reduced by 1 point for the rest of your life. You carefully get to your feet and stagger towards the tunnel.",
-        events: [
-            {
-                eventType: "CHANGE_ENDURANCE_EVENT",
-                ranking: 1,
-                amount: -6,
-            },
-            {
-                eventType: "CHANGE_COMBAT_SKILL_EVENT",
-                ranking: 2,
-                amount: -1,
-            },
-            {
-                eventType: "DROP_ALL_ITEMS_EVENT",
-                ranking: 3,
-            },
-        ],
+            "Your speed and stealth carry you across the gangplank undetected. Your attack is silent and deadly.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 104,
-                content: "Turn to ",
+                targetNr: 207,
+                content: "If you wish to search the guard’s body, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 224,
+                content: "If you decide to ignore the body, hurry into the Itikar’s pen and turn to ",
             },
         ],
     },
@@ -9808,32 +10128,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "You make full use of your Kai Discipline and quickly burrow deep into the loose earth of the wooded hillside. Covering yourself with your cloak, you pull a loose branch across your hastily dug shelter. Pick a number from the Random Number Table.",
+            "The jala tastes as good as it smells and, after your dusty trek through the hills, is a welcome relief to your parched throat. Restore 1 ENDURANCE point. ‘Do you know where we may be able to find a man called Tipasa the Wanderer?’ asks Banedon, successfully hiding his Northland accent with his expert mastery of the Ikareshi dialect. ‘I’m sorry, friend, but I have never heard of this man,’ replies one of the men. ‘You would be wise,’ interrupts the other, ‘to ask the widow Soushilla. There is little in Ikaresh that she does not know.’ ‘Where can she be found?’ you ask. ‘At her tavern, of course,’ they reply, simultaneously. ‘Cross Eagle Square and you’ll find it on the way to the Dougga Market.’ You thank the Ikareshi and leave the eating house. Retracing your steps to the square, you set off towards the Dougga Market in search of Soushilla the Widow.",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : 1,
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 265,
-                intervall: {
-                    min: 0,
-                    max: 4,
-                },
-                content:
-                    "If you have picked a number 0–4, then you have passed undetected. Turn to ",
-            },
-            {
-                outcomeType: "RANDOM",
-                targetNr: 72,
-                intervall: {
-                    min: 5,
-                    max: 9,
-                },
-                content: "If you have picked a number 5–9, then you are not so lucky! Turn to ",
+                outcomeType: "DEFAULT",
+                targetNr: 376,
+                content: "Turn to ",
             },
         ],
     },
@@ -9852,23 +10166,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "he path meanders between several small, wooded hills and eventually leads to a ruined log cabin. It seems that it had burnt down not so long ago, for the ashes are still warm and a haze of smoke still lingers. You sense possible danger here.",
+            "You escape from the combat and sprint along the opposite passage, but the enemy gives chase, and the crunch of iron-shod boots echoes in your ears. You race down a stairway, through an arch of silver and along a balcony overlooking the lower palace. You glimpse the silhouette of Darklord Haakon in the hall below, his spiked fist raised. A Drakkar appears from nowhere and leaps at you, his sword raised high above his skull-like helm. There is a deafening crack, and a bolt of blue lightning streaks from a stone in the Darklord’s hand and hurtles towards you. The Drakkar lunges and wounds your forearm (you lose 1 ENDURANCE point), but he is now standing in the path of the bolt. In a flash of light, the Drakkar is gone; only cinders and the rotten odour of scorched flesh remain. At the end of the balcony you see another arch and a staircase.",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -1,
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 42,
-                content: "You may leave by the south route by turning to ",
+                targetNr: 381,
+                content: "If you wish to escape through the arch, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 68,
-                content: "Or you may take the north track by turning to ",
+                targetNr: 317,
+                content: "If you wish to escape by the stairs, turn to ",
             },
         ],
     },
@@ -9887,24 +10208,42 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Excavation Site",
+            regionType: "CONSTRUCTION_SITE",
+            description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/excavation_site.png",
         },
         content:
-            "As you push on into the forest, you hear the wings of the Kraan pass above the trees and disappear northwards. You ride on for nearly an hour until you come to a clearing. On the far side is a track that leads off to the south.",
+            "If you are to get inside the tomb, you must either distract or silence the Drakkarim sentry. If you do not possess this item, you will have to creep up and overpower him as quickly and silently as you can. Pick a number from the Random Number Table. If you possess the Kai Disciplines of Hunting, Tracking, and Camouflage, add 2 to the number you have picked. If you have reached the Kai rank of Guardian or higher, add 3 to the number.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 34,
-                content: "If you wish to enter the clearing and take the south exit, turn to ",
+                outcomeType : "ITEM",
+                targetNr: 260,
+                item : {
+                    code : "TINCTURE_OF_GRAVEWEED",
+                    name : "Tincture of Graveweed",
+                    description : "causes sickness and loss of 2 ENDURANCE points per dose",
+                    imageUrl : "images/flight/items/tincture_of_graveweed.png"
+                },
+                content : "If you possess a Tincture of Graveweed (You may only use Graveweed in its Tincture form in this case (you may not use a concentrated potion if you have one)), turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 118,
-                content:
-                    "If you would rather skirt the edge of the clearing and pick up the track further on, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 324,
+                intervall : {
+                    min : 0,
+                    max : 4,
+                },
+                content : "If your total is now 0–4, turn to "
+            },
+            {
+                outcomeType : "RANDOM",
+                targetNr : 303,
+                intervall : {
+                    min : 5,
+                    max : 12,
+                },
+                content : "If it is 5 or more, turn to "
             },
         ],
     },
@@ -9923,18 +10262,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "The path leads along a ridge of wooded hillocks and changes direction towards the east.",
+            "Itikar are wild and malicious creatures. It can take several years for a rider to tame and train one, but once trained, the giant black birds are fiercely loyal. As you approach, the Itikar senses that you are not his master and furiously attacks you with its deadly beak and talons. Fight the combat as normal, but double all ENDURANCE points lost by the giant bird. When its score falls to zero or below, you will have subdued it enough to be able to climb into the saddle and take control. All the ENDURANCE points you lose in the combat count as wounds and must be deducted from your current ENDURANCE points total.",
+        events: [
+            {
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Itikar",
+                    combatSkill : 17,
+                    endurance : 30,
+                    imageUrl : "images/flight/creatures/itikar.png"
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 79,
-                content: "Turn to ",
+                targetNr: 217,
+                content: "If you successfully reduce the Itikar’s ENDURANCE points to zero or below, turn to ",
             },
         ],
     },
@@ -9953,19 +10305,33 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Ruins of Raumas",
-            regionType: "TEMPLE_RUIN",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
             description:
-                "Edging nearer, you soon make out a clearing that you recognize to be the site of the ruins of Raumas.",
-            imageUrl: "images/shadow/regions/runinsofraumas.png",
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "The wizard heeds your cry and spins around just in time to loose a searing bolt of energy at the Giak. The creature’s head disintegrates in flames and its twitching body falls in a heap at the foot of the pillar. The Giak officer sees you and shouts, ‘Ogot...Ogot!’ to his cowering troops, who quickly run away from the ruins to the safety of the forest beyond.The young wizard wipes his brow, and walks towards you, his hand extended in gratitude and friendship.",
+            "Once outside the cave, you and Banedon waste no time in pressing on towards Ikaresh. As you near the outskirts of the town, you pass a small, round hut where a goat is eating from a manger near the door. A man appears in the darkened doorway and bids you welcome; he touches his forehead in a salute of friendship and invites you to enter his humble home.",
         outcomes: [
             {
+                outcomeType : "ABILITY",
+                targetNr : 365,
+                ability : {
+                    abilityType : "SIXTH_SENSE",
+                    description : "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure."
+                },
+                content : "If you have the Kai Discipline of Sixth Sense, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 237,
-                content: "Turn to",
+                targetNr: 225,
+                content: "If you wish to accept his invitation, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 272,
+                content: "If you decide to decline his offer and continue on your way towards Ikaresh, turn to ",
             },
         ],
     },
@@ -9983,23 +10349,33 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
+        region: {
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
+        },
         content:
-            "The lid of the sarcophagus slips to the floor with a dull crunch. You are looking at the remains of an ancient king, who lies still surrounded by his treasure. An ornate crown is still in position on his skull. The jaw of the skeleton is wide open and the darkness of the mouth seems strangely bottomless. A distant rumbling can now be heard from deep in the earth.",
+            "You recognize the creature dressed in red: it is a Vordak, a servant of the Darklords, one of the powerful undead. Vordaks possess great psychic power, and you feel it scanning for you with its Mindforce. You know that if you are to avoid these evil troops, you will not only have to hide, but also shield your mind. Pick a number from the Random Number Table. If you have the Kai Discipline of Camouflage, add 2 to the number you have picked. If you have the Kai Discipline of Mindshield, add 3.",
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 166,
-                ability: {
-                    abilityType: "MINDSHIELD",
-                    description:
-                        "The Darklords and many of the evil creatures in their command have the ability to attack you using their Mindforce. The Kai Discipline of Mindshield prevents you from losing any ENDURANCE points when subjected to this form of attack.",
+                outcomeType : "RANDOM",
+                targetNr : 262,
+                intervall : {
+                    min : 0,
+                    max : 6,
                 },
-                content: "If you have the Kai Discipline of Mindshield, turn to ",
+                content : "If your total score is now 0–6, turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 9,
-                content: "If you do not, turn to ",
+                outcomeType : "RANDOM",
+                targetNr : 378,
+                intervall : {
+                    min : 7,
+                    max : 12,
+                },
+                content : "If it is 7 or over, turn to "
             },
         ],
     },
@@ -10018,31 +10394,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Hurrying through the forest, you stumble and fall down a steep slope which drops you in a heap on a hidden path below. On the path is a dead body. It is a Giak, a spiteful and ghoulish servant of the Darklords. Many centuries ago, their ancestors were used by the Darklords to build for them the infernal city of Helgedad, which lies in the volcanic wastelands beyond the Durncrag range of mountains. The construction of the city was a long and torturous nightmare, and only the strongest of the Giaks survived the heat and poisonous atmospheres of Helgedad. This creature that lies before you is a descendant of these Giak slaves. It has been killed by a sword blow to its head, and by its side lies a Mace. You may take this Weapon if you wish.",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Mace",
-                    itemType: "WEAPON",
-                    description: "A Mace is a",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/mace.png",
-                },
-            },
-        ],
+            "Your deadly stroke hurls the Drakkar over the armoured parapet. He tumbles from view and plummets into the valley thousands of feet below.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 97,
-                content: "Continue along the hidden path by turning to ",
+                targetNr: 306,
+                content: "Turn to ",
             },
         ],
     },
@@ -10061,19 +10425,40 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
-        content:
-            "Your senses tell you that you are not alone. You are in very great danger. Return to the surface as quickly as you can.",
+        content: "You can clearly see the main highway that links Chula to the capital. It crosses the desolate salt plain of Lake Inrahim by means of a causeway thirty feet high and is a useful landmark by which you can steer. Little stone houses with beaten earth roofs are grouped in small clusters along the highway, their numbers increasing as you draw nearer to the town. You are five miles from Chula, when you notice a dark cloud hovering several hundred feet above one of the small villages. It is a cloud of Kraan; they are moving to intercept you. Suddenly the Itikar squeals in pain, and a splash of feathers billows out from its wing. A Kraan has closed in from behind; it is less than a hundred yards distant. The Drakkarim rider holsters an empty bronze crossbow and draws his black sword. His bolt has passed through the wing of your mount, and he prepares to strike as the Itikar loses height and speed. The Kraan and its rider are swooping on you from behind. You will only be able to fight for one round of combat before they are carried past by the momentum of their attack.",
+        events: [
+            {
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Drakkarim Kraan-rider",
+                    combatSkill : 20,
+                    endurance : 28,
+                    imageUrl : "images/flight/creatures/drakkarim_kraan-rider.png"
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 93,
-                content: "Turn to ",
+                targetNr: 347,
+                content: "If you lose more ENDURANCE points than the enemy in this one round combat, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 327,
+                content: "If the enemy loses more ENDURANCE points than you, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 271,
+                content: "If you both lose exactly the same number of ENDURANCE points, turn to ",
             },
         ],
     },
@@ -10092,17 +10477,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Tomb of the Majhan",
+            regionType: "EVIL_TEMPLE",
+            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
         },
         content:
-            "Arrows hit the water above you, and drop harmlessly past as you swim beneath the surface towards the opposite bank. Quickly you wade out of the river and dash for the trees. You are now out of range of the Giaks, who remount their Doomwolves and continue their chase.",
+            "You remove your Blue Stone Triangle from around your neck and press it into the indentation in the wall. It is a perfect fit. You hear the sound of stone grating on stone, and the door slowly opens to reveal a chamber. It is dimly lit, but you see that the thick dust on its marble floor is covered with innumerable footprints. As you enter, you catch sight of a rough stone throne, facing the wall on the far side of the chamber. Behind you the stone door slides shut with unnerving speed.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 190,
+                targetNr: 289,
                 content: "Turn to ",
             },
         ],
@@ -10122,30 +10507,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "When the ferry reaches the middle of the lake, the man stops rowing and stands up. He laughs menacingly and pulls back the hood of his cloak to reveal himself. He is a Drakkar and you must fight him.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Drakkar",
-                    combatSkill: 15,
-                    endurance: 23,
-                    imageUrl: "images/shadow/creatures/drakkar.png",
-                },
-            },
-        ],
+            "Using the Copper Key, you unlock the door and hurry into the garden, not a moment too soon; as the heavy door swings shut you hear crossbow bolts ricocheting from the bands of studded iron. The enclosed garden is filled with the fragrance of exotic shrubs and trees, which cluster around a sculptured pool of deep blue water. It is a beautiful sight, but you dare not stop to enjoy it. The Drakkarim and the palace guards know where you are, and you must keep moving if you are to escape them. Beyond a tree-lined colonnade, a flight of steps ascends to a small portal in the wall of the upper palace. To your right, a leafy tunnel winds away into the trees and shrubs.",
         outcomes: [
             {
+                outcomeType : "ABILITY",
+                targetNr : 220,
+                ability : {
+                    abilityType : "TRACKING",
+                    description : "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks."
+                },
+                content : "If you possess the Kai Discipline of Tracking, turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 197,
-                content: "If you win, turn to",
+                targetNr: 352,
+                content: "If you decide to climb the stairs to the small portal, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 391,
+                content: "If you would rather follow the winding path, turn to ",
             },
         ],
     },
@@ -10164,25 +10551,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "The merchant looks angry. He calls to his bodyguard. You must think of something quickly.",
+            "The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Far below, sulphurous water bubbles from fissures in the orange ground and streams of hissing lava carve circular channels, which glow like moats of liquid fire. You watch the sky, but there are no signs of the enemy. ‘Ikaresh,’ says Banedon pensively. ‘ “The Eagle’s Lair”. That is where we will find Tipasa the Wanderer. It is the place of his birth and the home of his family. He roams the Dry Main, but he always returns to Ikaresh.’ It is late afternoon when you reach the hills beyond the Koos that overlook the town of Ikaresh. Banedon moors the Skyrider to a pinnacle of stone, and a rope ladder is lowered to the ground. It has been decided that you and he will enter Ikaresh on foot and locate Tipasa, while Nolrim and the crew wait in hiding for you to return—the sight of the Skyrider hovering above the mountain town would be sure to arouse unwanted interest in your arrival. You and Banedon prepare yourselves for your mission by staining your skins with brown copalla berries and dressing in the grey and white robes commonly worn by the mountain people of this region. You bid farewell to Nolrim and set off across the barren hills. Pick in number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 159,
-                content:
-                    "If you decide to offer him something of greater value that you have in your Backpack, turn to",
+                outcomeType : "RANDOM",
+                targetNr : 337,
+                intervall : {
+                    min : 0,
+                    max : 2,
+                },
+                content : "If the number you have picked is 0–2, turn to "
             },
             {
-                outcomeType: "DEFAULT",
-                targetNr: 220,
-                content: "If you prepare to fight the bodyguard, turn to",
+                outcomeType : "RANDOM",
+                targetNr : 383,
+                intervall : {
+                    min : 3,
+                    max : 9,
+                },
+                content : "If it is 3–9, turn to "
             },
         ],
     },
@@ -10201,23 +10595,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "You reach the base of the hill and hurry into the forest. After only a few minutes you discover an old forest track.",
+            "A small, heavy-set merchant is hawking his wares from a stall set close to the archway. His small, beady eyes twinkle from beneath a ridiculously outsized turban. As you approach, he launches himself at you, desperately trying, with a flood of wild claims, to persuade you to buy his obviously inferior goods. He looks surprised when you interrupt him with your question. ‘Tipasa?’ he answers. ‘Yes, I know where he lives.’ He holds up a gaudy waistcoat of pink and orange sackcloth and offers it to you. ‘It would make a worthy gift for your esteemed friend,’ he suggests, his eyes continually glancing at your Belt Pouch. ‘Only 5 Gold Crowns, master.’ You realize you will first have to purchase this ridiculous garment before the merchant will tell you where Tipasa lives.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 44,
-                content: "If you wish to follow this track north, turn to",
+                outcomeType : "GOLD",
+                targetNr: 328,
+                amount : -5,
+                content : "If you wish to buy the waistcoat, pay the man 5 Gold Crowns and turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 300,
-                content: "If you wish to follow this track east, turn to",
+                targetNr: 274,
+                content: "If you do not want to buy the waistcoat or cannot afford to pay him 5 Gold Crowns, turn to ",
             },
         ],
     },
@@ -10236,24 +10632,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You descend a flight of stone stairs that lead to a large chamber. A macabre sight awaits you. Directly opposite, across the large stone room, is an ornate archway with a corridor leading into the darkness beyond. The strange green light radiates from two lines of skulls each resting on a stone plinth. They face each other to form an eerie walkway across the room.",
+            "As the Vordak dies, its body gradually dissolves into a bubbling green liquid, shrivelling the plants that lie beneath the crumbled red robe. The swish of a sword alerts you to the Drakkarim who are now closing in around their slain leader. Without hesitation, you sheathe your weapon and run for cover among the densely packed trees.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 169,
-                content: "If you wish to walk across the room to the archway, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 107,
-                content: "If you wish to attack the skulls, turn to",
+                targetNr: 228,
+                content: "Turn to ",
             },
         ],
     },
@@ -10272,23 +10663,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Dahir Mountains",
+                    regionType: "MOUNTAIN",
+                    description:
+                        "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+                    imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "Leaping from the top of the trunk, you land in front of two small furry creatures. You recognize that they are Kakarmi, an intelligent race of animals that inhabit and tend the forests of Sommerlund. Before you can apologize for your dramatic entrance, the frightened little creatures scurry off into the forest.",
+            "As you watch the Kraan-riders disappear into the darkening sky, a roll of thunder rumbles across the plain from Barrakeesh. The sound is threatening and full of brooding menace, as if the city itself were cursing your escape. You turn away and focus your attention on Banedon, your unexpected rescuer. The makeshift bandage that binds his wound is soaked with blood, and he looks pale and weak.",
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 186,
-                content: "If you wish to follow them, turn to ",
+                outcomeType : "ABILITY",
+                targetNr : 377,
+                ability : {
+                    abilityType : "HEALING",
+                    description : "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level."
+                },
+                content : "If you have the Kai Discipline of Healing, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 228,
-                content: "If you wish to continue, turn to ",
+                targetNr: 339,
+                content: "If you do not have this skill, turn to ",
             },
         ],
     },
@@ -10307,18 +10703,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
         content:
-            "You are lucky, they do not seem to have spotted you. They slowly move on and have soon disappeared along the far side of the ridge. You continue your run.",
+            "You are fortunate that you are not struck by the blast, but even so, the blue flame scorches your hand and arm and knocks you to the floor. Lose 6 ENDURANCE points.",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -6
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 10,
-                content: "Turn to ",
+                targetNr: 316,
+                content: "If you are still alive, turn to ",
             },
         ],
     },
@@ -10337,24 +10741,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Clearing",
-            regionType: "CLEARING",
-            description:
-                "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-            imageUrl: "images/shadow/regions/clearing.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "In the centre of a small clearing you see a group of humans talking excitedly and gesturing wildly with their hands. There are two children, three men, and a woman. Their belongings are wrapped in bundles which they carry slung over their shoulders. Their clothes look well made and expensive but they are dirty and torn.",
+            "You whirl your feet away from the shining steel and narrowly escape being wounded as the axe bites inches deep into the polished stone floor. However, before the guard can strike another blow, you lash out and send the axe spinning from his hand. He screams, clutching broken fingers to his chest. You turn and run towards an open door. The air is filled with the sound of pounding feet, for the palace guard are on full alert; together with the Drakkarim, they are now bent on finding and killing you as quickly as possible. Beyond the door, a bridge rises at a slanted angle over an enclosed garden, joining this part of the palace to a needle-like tower of white marble. At the entrance to the bridge, a narrow stair disappears into the garden below.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 155,
-                content: "If you wish to approach them and ask who they are, turn to",
+                targetNr: 396,
+                content: "If you wish to cross the bridge and enter the Tower, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 67,
-                content: "If you wish to avoid them and continue onwards on your mission, turn to",
+                targetNr: 215,
+                content: "If you decide to descend the stairs, turn to ",
             },
         ],
     },
@@ -10372,50 +10775,35 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
-        content: "The Doomwolves are soon on you and you must fight them one at a time.",
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Tomb of the Majhan",
+            regionType: "EVIL_TEMPLE",
+            description: "an old tomb where Darklord Haakon hopes to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/tomb_of_the_Majhan.png",
         },
+        content: "Suddenly, the pain subsides, but a new horror is taking shape before your eyes. Out of the darkness, a green whorl of vapour is forming slowly into the shape of a glistening, serpent-like monster. A grey mist issues forth from the Darklord’s mouth, floating towards the core of this horror, infusing it with the power of death. The serpent writhes and convulses as the grey mist fills its body, changing it from a dream-like illusion into a living nightmare. Two pinpoints of crimson glow from its eyes, as it slithers towards you. If you possess a Jewelled Mace, you may add 5 to your COMBAT SKILL for the duration of the combat, for it is an enchanted weapon, especially effective against such a creature.",
         events: [
             {
                 eventType: "COMBAT",
                 ranking: 1,
                 creature: {
-                    name: "Doomwolf",
-                    combatSkill: 14,
-                    endurance: 22,
-                    imageUrl: "images/shadow/creatures/doomwolf.png",
+                    name: "Dhorgaan",
+                    combatSkill: 20,
+                    endurance: 40,
+                    imageUrl: "images/shadow/creatures/dhorgaan.png",
                 },
             },
             {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Doomwolf",
-                    combatSkill: 14,
-                    endurance: 22,
-                    imageUrl: "images/shadow/creatures/doomwolf.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 3,
-                creature: {
-                    name: "Doomwolf",
-                    combatSkill: 14,
-                    endurance: 22,
-                    imageUrl: "images/shadow/creatures/doomwolf.png",
-                },
-            },
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking : 2,
+                amount : 5
+            }            
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 278,
-                content: "If you kill them all in battle, turn to",
+                targetNr: 335,
+                content: "If you win the combat, turn to ",
             },
         ],
     },
@@ -10434,23 +10822,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "Your Tracking ability tells you that several trails from the right path lead off in the direction of the left path. They have been made by large wolves. The Darklords use such beasts to scout for their armies. They are vicious creatures and are often ridden by Giaks. The left path leads towards Holmgard, and the right path leads off towards the Durncrag Mountains. The choice of route is yours.",
+            "The chill air whips past your face as you tumble towards Lake Inrahim. The Kraan-riders, the skyship, and the distant horizon all melt into a kaleidoscope of shapes and images. You fear these will be the last things you will ever see. You have prepared yourself for death and feel calm and relaxed. Suddenly, you feel your body engulfed by a mass of sticky fibres. There is a terrific jolt, which leaves you breathless and stunned. (Lose 2 ENDURANCE points.) The impossible is happening—you are no longer falling but rising! You have been caught by a net of sticky strands like a fly in a web. You rise into the sky towards the flying ship as quickly as you fell. Three bearded dwarves clad in bright, padded battle-jerkins pull you aboard an outrigger that runs the length of the hull. There’s no time to express your gratitude, for the small skyship is under attack from the Kraan-riders. At the end of the outrigger, a dwarf is in hand-to-hand combat with a snarling Drakkar. He is losing the battle. As you rush to help him, another of the evil warriors lands in the centre of the craft, on top of the fortified platform.",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -2,
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 32,
-                content: "If you wish to turn left, go to",
+                targetNr: 280,
+                content: "If you wish to help the dwarf, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 146,
-                content: "If you wish to turn right, go to",
+                targetNr: 361,
+                content: "If you wish to leap from the outrigger onto the fortified platform, turn to ",
             },
         ],
     },
@@ -10469,41 +10865,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Dragon Bridge",
-            regionType: "BRIDGE",
-            description: "The Dragon Bridge connects the northern and southern part of Summerlund.",
-            imageUrl: "images/shadow/regions/dragonbridge.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "The creature that you now face is a Gourgaz, one of a race of cold-blooded reptilian creatures that dwell deep in the treacherous Maakenmire swamps. Their favourite food is human flesh! The Prince’s Sword lies at your feet. You may pick up and use this weapon if you wish. The Gourgaz is about to strike at you—you must fight him to the death.",
+            "As the Drakkar collapses to the ground, a Black Crystal Cube falls from his pocket. If you wish to take this item, place it in your own pocket and mark it on your Action Chart as a Special Item. The shriek of the Vordak drives you away from the dead body—his hideous cry is loud and very near.",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
                 ranking: 1,
                 item: {
-                    name: "Amethyst Sword",
+                    name: "Black Crystal Cube",
                     itemType: "MAGICAL_ITEM",
-                    description: "Prince Yisun Qis sword",
+                    description: "Black Crystal Cube",
                     weight: "SMALL",
-                    imageUrl: "images/shadow/items/amethystsword.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Gourgaz",
-                    combatSkill: 20,
-                    endurance: 30,
-                    imageUrl: "images/shadow/creatures/gourgaz.png",
+                    imageUrl: "images/shadow/items/black_crystal_cube.png",
                 },
             },
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 82,
-                content: "If you win, turn to",
+                targetNr: 228,
+                content: "Turn to ",
             },
         ],
     },
@@ -10522,19 +10909,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You are awoken by the cries of Kraan high above you in the clear morning sky. Rubbing your eyes, you peer upwards through the canopy of branches to see three of the loathsome creatures fly off towards the north. You are sure you have not been spotted, but perhaps it would be best to leave now—just in case. You mount your horse and ride south along the highway.",
+            "‘Here you are,’ says Banedon, flicking a Gold Crown into her empty bowl. ‘Now will you help us in return?’ She snatches the coin to her mouth and bites into the gold. Satisfied that the coin is real, she nods her head.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 224,
-                content: "Tunr to ",
+                targetNr: 307,
+                content: "If you wish to ask her if she is Soushilla (only if you have heard that name before), turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 314,
+                content: "If you wish to ask her if she knows were Tipasa the Wanderer can be found, turn to ",
             },
         ],
     },
@@ -10553,25 +10945,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You find a stone portal in the east wall, but there does not appear to be any way of opening it.",
-        outcomes: [
+            "The creature’s curved beak gores your back, impaling you upon its razor-sharp tip. You are lifted into the air and dashed against the wall with one flick of the great bird’s powerful neck. Mercifully, death is instantaneous as your skull is shattered against the hard, unyielding marble. Your life and the hopes of Sommerlund end here.",
+        events : [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 133,
-                content: "If you wish to examine the statue, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 161,
-                content: "If you wish to sit on the seat, turn to",
-            },
+                eventType : "MISSION_FAILED_EVENT",
+                ranking : 1
+            }
         ],
     },
     {
@@ -10589,27 +10975,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Silvermoon Lake",
-            regionType: "LAKE",
-            description: "The Silvermoon Lake is a ...",
-            imageUrl: "images/shadow/regions/silvermoonlake.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Using your Kai Discipline of Mind Over Matter, you untie the ropes binding your hands. You wait for a chance to make a break for it and then sprint as fast as you can into the dense undergrowth. Black arrows whistle past you, but you are soon deep among the trees and safe again. You have lost your Backpack and Weapons but you have your life and limbs intact. You continue to push on into the forest.",
-        events: [
-            {
-                eventType: "DROP_ALL_WEAPONS_EVENT",
-                ranking: 1,
-            },
-            {
-                eventType: "DROP_BACKPACK_EVENT",
-                ranking: 2,
-            },
-        ],
+            "The sun-sword tingles with power as you point it at the flame which hurtles nearer and nearer, its hiss becoming so loud that it drowns the noise of battle. You brace yourself for the moment of impact. The flame hits the Sommerswerd with a thunderous noise and is held there in a ball of liquid purple fire that burns at the very tip of the magical blade. Instinctively, you whirl the Sommerswerd around your head and cast the fireball back into the sky. The Vordak shrieks with terror, but it is too late—its fate is sealed. The fireball consumes the Zlanbeast and its rider in a massive explosion of sun-like brilliance.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 50,
+                targetNr: 267,
                 content: "Turn to ",
             },
         ],
@@ -10629,14 +11006,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Darkstone Temple",
-            regionType: "EVIL_TEMPLE",
-            description:
-                "It was only by an unlucky chance you discovered teh secret temple of a sect of evil druids",
-            imageUrl: "images/shadow/regions/darkstonetemple.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "The room is getting colder. You gradually notice the smell of sulphur in the air. You can hear chanting in the distance. It sounds as if it is somewhere in another part of this cave. A slit in the stone wall opens, and the end of a black staff begins to appear. Suddenly a bolt of blue lightning leaps from the staff and hits you in the chest. As your life slowly drains away, the last thing you see is an old man dressed in black robes raising a dagger above your throat. Your life and your mission end here.",
+            "Two bolts whistle through the air and slam into your back. As the pain tears through your body, you faint and fall onto the poison-tipped spikes. As your life’s blood drains away, the last sound you hear is the hideous gloating laughter of Darklord Haakon rising above the ghoulish howl of his evil Drakkarim warriors. Your life and the hopes of Sommerlund end here.",
         events: [
             {
                 eventType: "MISSION_FAILED_EVENT",
@@ -10658,35 +11034,19 @@ db.getCollection("lw5").insertMany([
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
+        region: {
+            name: "Excavation Site",
+            regionType: "CONSTRUCTION_SITE",
+            description: "An excavation site in the Koneshi Mountains delving the Tomb of Majhan. Commanded by Darklord Haakon in order to find the \"Book of the Magnakai\"",
+            imageUrl: "images/shadow/regions/excavation_site.png",
+        },
         content:
-            "Swimming towards the bank, you can see the ranger spread-eagled at the water’s edge. You reach him but only to find that he has broken his neck in the fall and is dead. Suddenly, two Giaks jump on you from above and you must fight them.",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 9,
-                    endurance: 9,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Giak",
-                    combatSkill: 8,
-                    endurance: 11,
-                    imageUrl: "images/shadow/creatures/giak.png",
-                },
-            },
-        ],
+            "Using the cover of the excavation equipment scattered around the crater, you creep up on the sentry and empty the Tincture into the water flask resting by his feet. A few minutes later, he reaches down and drinks from the flask. It is not long before he begins to feel very ill. As he staggers away to be violently sick, you slip into the Tomb unnoticed.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 156,
-                content: "If you win, turn to ",
+                targetNr: 395,
+                content: "Turn to ",
             },
         ],
     },
@@ -10705,24 +11065,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Lake Inrahim",
+            regionType: "LAKE",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "The lake is an immense salt-water plain that is completely dry and cracked.",
+            imageUrl: "images/shadow/regions/lake_inrahim.png",
         },
         content:
-            "Sweating, and out of breath, you part the dense undergrowth to see a Kraan hovering over the wagon. Three ghoulish Giaks drop from its back, startling the horses. They advance upon the helpless children with their spears.",
-        outcomes: [
+            "You tumble earthwards, blurred colours flashing before your eyes. The Kraan-riders, the skyship, and the distant horizon all melt into a kaleidoscope of shapes, the last images you see before smashing into the hard and barren salt-plain of Lake Inrahim. Your life and the hopes of Sommerlund end here.",
+        events: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 208,
-                content: "If you wish to run back to the wagon and defend the children, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 264,
-                content: "If you want to run deeper into the forest, turn to",
+                eventType: "MISSION_FAILED_EVENT",
+                ranking: 1,
             },
         ],
     },
@@ -10741,25 +11095,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Main Road",
-            regionType: "ROAD",
+            name: "Barrakeesh",
+            regionType: "CITY",
             description:
-                "The Main Road is the main passage between the port of Toran in the north and the capital in the south.",
-            imageUrl: "images/shadow/regions/sommerlundmainroad.png",
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "The merchant takes your Gold and clicks his fingers. His bodyguard attacks you with his scimitar.",
+            "You have been detected; the Vordak shrieks a hideous high-pitched scream and points a bony finger towards your hiding place. Drakkarim crash through the undergrowth, cleaving a path with their black swords.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 191,
-                content: "If you wish to fight, turn to",
+                targetNr: 212,
+                content: "If you wish to draw your weapon and prepare for combat, turn to ",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 234,
+                targetNr: 393,
                 content:
-                    "If you wish to evade combat, jump clear of the speeding caravan by turning to",
+                    "If you wish to try to escape from them, turn to ",
             },
         ],
     },
@@ -10778,32 +11132,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Clearing",
-            regionType: "CLEARING",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
             description:
-                "You pass through a long, dark tunnel of voerhanging branches that eventually opens out into a large clearing.",
-            imageUrl: "images/shadow/regions/clearing.png",
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Carefully, you follow the stream as it makes its way towards the east. Suddenly you notice something in the distance that brings you to a halt. Lying in the rushing water like a great black dam is a dead Kraan. You creep nearer, under cover of the foliage, until you see three arrows deep in the beast’s chest. Trapped beneath the beast is the body of its rider. It is a Giak, a spiteful and malicious servant of the Darklords. Many centuries ago, their ancestors were used by the Darklords to build the infernal city of Helgedad, which lies in the volcanic wastelands beyond the Durncrag range of mountains. The construction of the city was a long and torturous nightmare, and only the strongest Giaks survived the heat and poisonous atmospheres of Helgedad. This creature is a descendant of these Giak slaves. It seems that this one must have drowned. The Giak’s pouch contains 3 Gold Crowns.",
-        events: [
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 1,
-                amount: 3,
-            },
-        ],
+            "The crone hobbles away into the dark alley; you and Banedon retrace your steps to the eagle monolith, where an arrow sign points west to the main square. The evening shadows are lengthening as you set off from the eagle once more.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 70,
-                content: "You may continue downstream, by turning to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 157,
-                content:
-                    "Or you may leave the stream and make your way on foot through the wooded hills to the south by turning to",
+                targetNr: 216,
+                content: "Turn to ",
             },
         ],
     },
@@ -10822,22 +11163,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Dahir Mountains",
+            regionType: "MOUNTAIN",
+            description:
+                "The Dahir Mountains are a barren, sun-scorched mountain range lying in the south of Barrakeesh.",
+            imageUrl: "images/shadow/regions/dahir_mountains.png",
         },
-        content: "You have not gone far when you hear the sound of battle to the west.",
+        content: "A terrible shriek rings out above the rush of the wind, filling your head with pain. You are being attacked by a powerful Mindblast. Unless you possess the Kai Discipline of Mindshield, deduct 2 ENDURANCE points from your current total. The Itikar shudders and frantically twists its head from side to side as the shriek rings out again. You sense that the great bird is in agony, racked by the Mindblast. As you glance over your shoulder, your stomach becomes knotted with fear—a Kraan is swooping down to attack. On its back is your adversary: a Vordak, one of the undead and a hideous lieutenant of the Darklords. As the Kraan streaks towards you, the Vordak spreads its red-robed arms and leaps from the saddle. It lands behind you, astride the Itikar’s back, its skeletal fingers sunk deep into your mount’s feathered flesh. The shock of the impact throws you forward, and the reins slip from your hands. The giant bird screeches in horror and pain as the Vordak’s grip paralyses its spine. You must act quickly, for the Itikar is now plummeting towards the salt-plain of Lake Inrahim.",
+        events: [
+            {
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -2,
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "DEFAULT",
-                targetNr: 97,
-                content: "If you wish to follow the sound, turn to",
+                outcomeType : "ITEM",
+                targetNr: 315,
+                item : {
+                    code : "SOMMERSWERD",
+                    name : "Sommerswerd",
+                    description : "Sommerswerd",
+                    imageUrl : "images/flight/items/sommerswerd.png"
+                },
+                content : "If you possess the Sommerswerd, turn to "
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 6,
-                content: "If you would rather continue south, turn to",
+                targetNr: 299,
+                content: "If you do not possess this Special Item, turn to ",
             },
         ],
     },
@@ -10856,18 +11211,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "You quickly move off into the forest before more Doomwolves or Kraan appear.You have walked for more than an hour when you reach the top of a rocky hill. The sight that befalls you on the other side is one of hope. But there is also a daunting challenge to be faced.",
+            "She refuses to say anything until you have placed some money in her begging bowl.",
         outcomes: [
             {
+                outcomeType : "GOLD",
+                targetNr: 397,
+                amount : 1,
+                content : "If you wish to give her a Gold Crown, make the adjustment to your Action Chart and turn to "
+            },
+            {
                 outcomeType: "DEFAULT",
-                targetNr: 142,
-                content: "Turn to ",
+                targetNr: 256,
+                content: "If you do not wish, or cannot afford, to give her any gold, turn to ",
             },
         ],
     },
@@ -10886,18 +11248,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Graveyard of the Ancients",
-            regionType: "GRAVEYARD",
-            description:
-                "The Graveyard of the Ancients is an ancient, mist-shrouded graveyard just North of Holmgard. This place is taboo because of the nameless horrors that inhabit it. No one knows who lies in eternal unrest here but the Evil that lives there is more ancient than the Darklords.",
-            imageUrl: "images/shadow/regions/graveyardofancients.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "As the beast writhes in its final death agony on the black stone floor, the portal in the east wall clicks open to reveal a corridor beyond. You quickly dash through the secret door just as it crashes shut.",
+            "Your Kai skill warns you that two palace guards are running up the spiral stairs from their guardroom in the base of the tower. Quickly, you ascend the stairs before the Drakkarim enter and see in which direction you have gone.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 209,
+                targetNr: 322,
                 content: "Turn to",
             },
         ],
@@ -10917,42 +11278,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "Sommerlund Woodlands",
-            regionType: "WOODS",
-            description: "Deep Woods in Summerlund",
-            imageUrl: "images/shadow/regions/sommerlundwoodlands.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "Covering your nose with your cloak, you cautiously approach the dead beast. The sharp smell of its fetid black blood makes your stomach churn, but you are determined to press on. Then you notice a large saddlebag strapped to its chest. Opening the bag, you find a Message written on an animal skin. Deeper in the bag is a Dagger. You may keep both the Message and the Dagger if you wish. You leave the body and continue eastwards along the path.",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Dagger",
-                    itemType: "WEAPON",
-                    description: "Dagger",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/dagger.png",
-                },
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 2,
-                item: {
-                    name: "Giak Scroll",
-                    itemType: "SCROLL",
-                    description: "Giak Scroll",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/giakscroll.png",
-                },
-            },
-        ],
+            "The Drakkarim falter, blinded by the flash. Nolrim seizes the opportunity and urges his brethren forward against the invaders, leading the attack with his mighty battle-axe. Its razor edge whines and strikes sparks against the enemies’ black armour, cutting through their unsteady ranks like a scythe through blighted corn. You climb back onto the platform and see a Drakkar about to strike Banedon. The wizard seems unconcerned about the screaming warrior who threatens to decapitate him with a black broadsword. Banedon points his finger at the Drakkar, who is poised to strike.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 125,
-                content: "Turn to",
+                targetNr: 330,
+                content: "If you wish to attack the Drakkar before he lands his blow upon Banedon’s head, turn to ",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 394,
+                content: "If you do not wish to attack, turn to ",
             },
         ],
     },
