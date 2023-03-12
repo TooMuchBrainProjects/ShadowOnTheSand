@@ -107,17 +107,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "You search the bodies of the three vestibule guards and uncover the following items:
-
-            4 Gold Crowns
-            1 Dagger
-            1 Sword
-            1 Potion of Alether (Increases your COMBAT SKILL by 2 points for the duration of one fight.)
-            You may also take the Blowpipe and the remaining Sleep Dart. If you decide to take them, mark them on your Action Chart as Backpack Items.
-
-            In the robe of the dead blowpipe warrior, you find a small piece of parchment upon which is written today’s date and the number 67. A smile creeps across your face as you realize that this is the number that will open the bronze door.
-
-            You hold your breath and twist the dial!",
+         content : "You search the bodies of the three vestibule guards and uncover the following items:4 Gold Crowns 1 Dagger 1 Sword 1 Potion of Alether (Increases your COMBAT SKILL by 2 points for the duration of one fight.)You may also take the Blowpipe and the remaining Sleep Dart. If you decide to take them, mark them on your Action Chart as Backpack Items.In the robe of the dead blowpipe warrior, you find a small piece of parchment upon which is written today’s date and the number 67. A smile creeps across your face as you realize that this is the number that will open the bronze door.You hold your breath and twist the dial!",
 
 
         events : [
@@ -200,11 +190,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "You stoop to grasp the sword, but as your fingers close around the hilt, the second guard attacks.
-
-            Palace Gaoler: COMBAT SKILL 14   ENDURANCE 21
-
-            Ignore all ENDURANCE points lost by the enemy in the first round of combat, for you can only attempt to parry his blow.",
+         content : "You stoop to grasp the sword, but as your fingers close around the hilt, the second guard attacks.Palace Gaoler: COMBAT SKILL 14   ENDURANCE 21 Ignore all ENDURANCE points lost by the enemy in the first round of combat, for you can only attempt to parry his blow.",
 
 
         events : [],
@@ -454,9 +440,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "To reach the north door without being seen, you must work your way carefully around the chamber, dodging from one pillar to the next.
-
-        Pick a number from the Random Number Table. If you possess the Kai Discipline of Camouflage or Hunting, deduct 2 from the number you have picked.",
+         content : "To reach the north door without being seen, you must work your way carefully around the chamber, dodging from one pillar to the next.Pick a number from the Random Number Table. If you possess the Kai Discipline of Camouflage or Hunting, deduct 2 from the number you have picked.",
 
         outcomes:[
             {
@@ -499,13 +483,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "You are in underwater combat with a deadly salt water scavenger.
-
-            Bloodlug: COMBAT SKILL 17   ENDURANCE 11
-
-            Deduct 2 points from your COMBAT SKILL due to the speed of its attack. This creature is immune to Mindblast.
-
-            [Illustration I]",
+         content : "You are in underwater combat with a deadly salt water scavenger.Bloodlug: COMBAT SKILL 17   ENDURANCE 11Deduct 2 points from your COMBAT SKILL due to the speed of its attack. This creature is immune to Mindblast.[Illustration I]",
 
 
         events : [
@@ -765,9 +743,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "The cell door does not open again until the sun has dipped below the peaks of the Dahir Mountains. You prepare yourself to meet the Zakhan, to demand your immediate release and safe passage back to Sommerlund, but it is not only the Zakhan who awaits you in the Grand Hall. He has a guest who has travelled many miles for this special meeting. His name is Haakon. He is a Darklord of Helgedad.
-
-        Unarmed and helpless, you are forced to kneel before the Darklord. With wicked relish, Haakon squeezes the life from your body with his own hands.",
+         content : "The cell door does not open again until the sun has dipped below the peaks of the Dahir Mountains. You prepare yourself to meet the Zakhan, to demand your immediate release and safe passage back to Sommerlund, but it is not only the Zakhan who awaits you in the Grand Hall. He has a guest who has travelled many miles for this special meeting. His name is Haakon. He is a Darklord of Helgedad.Unarmed and helpless, you are forced to kneel before the Darklord. With wicked relish, Haakon squeezes the life from your body with his own hands.",
 
         outcomes:[
                 {
@@ -837,11 +813,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "Frantically the warrior pulls on the reins and tries to trample you beneath the hooves of his startled horse.1
-
-        Horseman: COMBAT SKILL 21   ENDURANCE 28
-
-        [Illustration II]",
+         content : "Frantically the warrior pulls on the reins and tries to trample you beneath the hooves of his startled horse.1Horseman: COMBAT SKILL 21   ENDURANCE 28[Illustration II]",
 
         events:[{
             eventType : "COMBAT",
@@ -1136,21 +1108,14 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "Each of the three bottles bears a label, handwritten in green ink.
-
-            Larnuma Oil (restores 2 ENDURANCE points per dose)—3 Gold Crowns
-            Laumspur (restores 4 ENDURANCE points per dose)—5 Gold Crowns
-            Rendalim’s Elixir (restores 6 ENDURANCE points per dose)—7 Gold Crowns
-            You may purchase any of the above. (The prices are per dose. All the potions are Backpack Items.) The herb-mistress then escorts you to a side door. ‘I sense your despair, Northlander. I pray you find your cure.’
-
-            As you leave, she offers a word of advice. ‘The guards at the north gate of the Grand Palace can be bribed.’ You thank her and enter the alley running along the side of her shop.",
+         content : "Each of the three bottles bears a label, handwritten in green ink.Larnuma Oil (restores 2 ENDURANCE points per dose)—3 Gold CrownsLaumspur (restores 4 ENDURANCE points per dose)—5 Gold CrownsRendalim’s Elixir (restores 6 ENDURANCE points per dose)—7 Gold Crowns You may purchase any of the above. (The prices are per dose. All the potions are Backpack Items.) The herb-mistress then escorts you to a side door. ‘I sense your despair, Northlander. I pray you find your cure.’As you leave, she offers a word of advice. ‘The guards at the north gate of the Grand Palace can be bribed.’ You thank her and enter the alley running along the side of her shop.",
 
         events :  [
             {
                 eventType : "ACQUIRE_ITEM_EVENT",
                 ranking : 1,
                 item : {
-                    name : "Larnuma Oil,
+                    name : "Larnuma Oil",
                     itemType : "POTION",
                     description : "restores 2 ENDURANCE per dose",
                     weight : "SMALL",
@@ -1255,7 +1220,7 @@
             eventType : "DROP_ITEM_EVENT",
                 ranking : 1,
                 item : {
-                    name : "Rope,
+                    name : "Rope",
                     itemType : "POTION",
                     description : "restores 2 ENDURANCE per dose",
                     weight : "SMALL",
@@ -1418,9 +1383,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "You hack the dirt-encrusted floor and uncover a large metal ring, which proves to be part of an old trapdoor. The metal ring is badly corroded, but you manage to prise the trapdoor open. It covers a deep shaft; from the inky darkness below comes the stench of the sewer.
-
-        The Sharnazim are climbing up the stone steps. Their pounding footsteps match your racing heartbeat.",
+         content : "You hack the dirt-encrusted floor and uncover a large metal ring, which proves to be part of an old trapdoor. The metal ring is badly corroded, but you manage to prise the trapdoor open. It covers a deep shaft; from the inky darkness below comes the stench of the sewer.The Sharnazim are climbing up the stone steps. Their pounding footsteps match your racing heartbeat.",
 
         outcomes:[
             {
@@ -1496,11 +1459,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "The great snake shudders and convulses in the throes of death. The smell of its thick brown blood is disgusting, and you have to hold your breath and grit your teeth as you lift the dead Yas away from the chest and peer inside.
-
-        You discover six silver-handled maces, each beautifully carved and encrusted with rubies, emeralds, and pearls. In the Northlands these weapons would fetch thousands of Crowns. At the bottom of the chest, you also discover a small Copper Key. If you wish to take either a Jewelled Mace or the Copper Key, or both, mark them on your Action Chart as Special Items. You carry the Copper Key in the pocket of your tunic and the Jewelled Mace tucked into your belt.
-
-        The acidic smell of the snake blood is beginning to make you retch. Quickly, you climb the stone steps and leave the armoury by the north door.",
+         content : "The great snake shudders and convulses in the throes of death. The smell of its thick brown blood is disgusting, and you have to hold your breath and grit your teeth as you lift the dead Yas away from the chest and peer inside.You discover six silver-handled maces, each beautifully carved and encrusted with rubies, emeralds, and pearls. In the Northlands these weapons would fetch thousands of Crowns. At the bottom of the chest, you also discover a small Copper Key. If you wish to take either a Jewelled Mace or the Copper Key, or both, mark them on your Action Chart as Special Items. You carry the Copper Key in the pocket of your tunic and the Jewelled Mace tucked into your belt.The acidic smell of the snake blood is beginning to make you retch. Quickly, you climb the stone steps and leave the armoury by the north door.",
 
         events:[{
             eventType : "ACQUIRE_ITEM_EVENT",
@@ -1698,7 +1657,7 @@
                 eventType : "DROP_ITEM_EVENT",
                 ranking : 3,
                 item : {
-                    name : "Rope,
+                    name : "Rope",
                     itemType : "UTILITY",
                     description : "it is a rope",
                     weight : "SMALL",
@@ -1911,9 +1870,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "As your adversary falls to the ground, the other guard stabs at you with his Trident. You cannot evade combat and must fight him to the death.
-
-         Vestibule Guard 2: COMBAT SKILL 14   ENDURANCE 24",
+         content : "As your adversary falls to the ground, the other guard stabs at you with his Trident. You cannot evade combat and must fight him to the death. Vestibule Guard 2: COMBAT SKILL 14   ENDURANCE 24",
 
          events : [
             {
@@ -2186,14 +2143,7 @@ Pick a number from the Random Number Table. If you have the Kai Discipline of Hu
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "You turn the body over with the toe of your boot and search the robes, discovering the following items:
-
-            4 Gold Crowns
-            Gaoler’s Keys (Special Item)
-            Dagger
-            Sword
-            If you wish to keep any of these items, remember to mark them on your Action Chart. (The Gaoler’s Keys should be worn on your belt.)",
-
+         content : "You turn the body over with the toe of your boot and search the robes, discovering the following items:4 Gold CrownsGaoler’s Keys (Special Item)DaggerSwordIf you wish to keep any of these items, remember to mark them on your Action Chart. (The Gaoler’s Keys should be worn on your belt.)",
         events :  [{
             eventType : "ACQUIRE_ITEM_EVENT",
                 ranking : 1,
@@ -2274,5 +2224,273 @@ Pick a number from the Random Number Table. If you have the Kai Discipline of Hu
                 content : "If you decide to enter the tavern instead, turn to "
             }
 
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 54
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 54,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Hurrying down the steps and away from the Bath Hall, you enter the ‘Saadi-tas-Ouda’: the Square of the Dead. Jet-black flagstones cover the square, each with a long iron spike set deep into its centre. From the Bath Hall steps, the square resembles the back of a massive iron porcupine, but when you reach the base of the steps, you realize that the Saadi-tas-Ouda is in fact far more sinister. Stuck on top of each spike is a human skull—all that remains of pirates, murderers, traitors, and thieves who have been sentenced to death. The grisly display serves as a warning to others never to defy the law of the Zakhan.As you reach the far side of the square, you brush against a spike. Fresh blood is smeared across the arm of your tunic, staining it dark red. You raise your eyes, cursing at your misfortune, but you are shocked into silence by the sight before you.[Illustration III]Impaled upon the sharp iron pole is the head of the Vassagonian envoy. To either side are the heads of all the galley crew. On each of their foreheads is freshly branded one word—TRAITOR. Fear wells up inside you; turning your face away from the sightless eyes, you run into the crowded streets of the Mikarum, the district where the spice and herb merchants live.At the end of a narrow, winding street, you reach a junction. Opposite is a shop with a bright red sign above the door:Bir Dar Masoun—HERB-MISTRESS",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 68,
+                content : "If you need the Oede herb, turn to"
+            },{
+                outcomeType : "DEFAULT",
+                targetNr :  154,
+                content : "If you do not need this herb, but still decide to enter the shop, turn to"
+            },{
+                outcomeType : "DEFAULT",
+                targetNr :  179,
+                content : "If you wish to continue along in a new alleyway that heads off towards the Grand Palace, turn to "
+            }
+
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 55
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 55,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The temperature rises steadily until you are bathed in sweat. Ahead, you see a chamber filled with steam that rises from its bubbling floor. You are about to enter the chamber when you catch a glimpse of the danger awaiting you; the stone walkway ends abruptly, only a few yards into the chamber. Ten feet below, lying before you like the surface of a huge bubbling cauldron, is a tar-sorkh: a mud geyser.These geysers are common in Vassagonia. Much of the desert empire is unstable, but although it is subject to constant earth tremors, it rarely results in great destruction. The Vassagonians call these tremors: ‘Tasa-Dophiem’, which means ‘The Wrestling Gods’.This particular mud geyser has been put to practical use. It provides a constant source of heat for the dwellings built over the chamber. The steam from the tar-sorkh rises into a pair of huge, circular chimneys in the domed ceiling, which in turn feed heat to the buildings above. Your only way out of this chamber is by climbing one of these chimneys. Although there are no ladders, the rock-hewn chamber wall offers many footholds.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 162,
+                content : "If you wish to climb the left chimney, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr :  23,
+                content : "If you wish to climb the right chimney, turn to"
+            }
+
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 56
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 56,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "A search of the baskets crowding the little boat uncovers a beautifully hand-tooled leather case. You flick open the brass catch and discover that the case contains a Jakan—a hunting bow used by the coastal fishermen of Vassagonia. (You may record the Jakan Bow as a Weapon on your Action Chart. You must possess an Arrow in order to use this Weapon.) You are elated by your find but disappointed to discover that the case contains only one Arrow.Across the harbour square, close to Maouk’s carriage, you notice a small, white-walled shop where a row of green glass flagons line a balcony on the first floor. You draw the bowstring to your lips and take careful aim; it is a difficult shot, and you have only one chance.Pick a number from the Random Number Table. If you possess the Kai Discipline of Weaponskill (any weapon), add 2 to the number you have picked.",
+        outcomes:[
+            {
+                outcomeType : "RANDOM",
+                targetNr : 7,
+                intervall : {
+                    min : 0,
+                    max : 3
+                },
+                content : "If your total is now 0–3, turn to "
+            },{
+                outcomeType : "RANDOM",
+                targetNr :  28,
+                intervall : {
+                    min : 4,
+                    max : 11
+                },
+                content : "If your total is now 4–11, turn to "
+            }
+
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 57
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 57,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The door is unlocked, and for a moment your heart sinks; if this room is the Imperial Apothecary where the Oede herb is kept, why is the door not locked and guarded? Anxiously you slip inside and survey the interior.It seems to be an apothecary. Glass retorts bubble and steam over jets of blue flame, and strange fluids pass back and forth through a crazy maze of tubes and tunnels. Hundreds of herb jars line the far wall, and ten large copper urns, each full of rainbow-coloured powder, hang suspended from the soot-blackened ceiling. You begin searching through the herb jars, and suddenly you discover why the door was left unlocked. Creeping slowly towards you is the cat-like creature that guards the apothecary. Its eyes glow with a vivid green luminescence as it prepares to strike. Elix: COMBAT SKILL 17   ENDURANCE 32 If you have ever fought an Elix before, add 2 to your COMBAT SKILL for the duration of this fight. You cannot evade combat and must fight it to the death.",
+
+         events:[{
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Elix",
+                    combatSkill : 17,
+                    endurance : 32,
+                    imageUrl : "images/flight/creatures/elix.png"
+                }
+
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 2,
+                content : "If you win the combat, turn to "
+            }
+
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 55
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 55,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You follow a straight passage of pale, rose-coloured stone, which soon ends at an empty vestibule. In its north wall is set a great wooden door, covered with engraved bronze plaques and studded with bronze nails. There is a curious lock set into the middle of this door, encircled by a beautiful carving of a long-tailed scorpion. A closer look at the lock reveals a series of Vassagonian numerals, numbered 1 to 200, engraved in the lock. You recognize the design: it is a Cloeasian combination lock. ",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : ,
+                content : "If you know the correct number that will open the bronze door, turn to that section number."
+            },{
+                outcomeType : "DEFAULT",
+                targetNr :  98,
+                content : "If you choose the wrong combination, you do not get a second guess. Turn immediately to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr :  156,
+                content : "If you do not know the number and do not attempt to open the door, turn to "
+            }
+
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 59
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 55,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You spring forward and slam your fist into the guard’s face; he grunts and falls, clutching a bleeding nose. His sword drops to the ground close by your feet.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 4,
+                content : "If you wish to pick up the sword, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr :  91,
+                content : "If you wish to ignore the sword and attack the second guard with your bare hands, turn to "
+            }
+
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 60
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 60,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The temperature rises steadily until you are bathed in sweat. Ahead, you see a chamber filled with steam that rises from its bubbling floor. You are about to enter the chamber when you catch a glimpse of the danger awaiting you; the stone walkway ends abruptly, only a few yards into the chamber. Ten feet below, lying before you like the surface of a huge bubbling cauldron, is a tar-sorkh: a mud geyser.These geysers are common in Vassagonia. Much of the desert empire is unstable, but although it is subject to constant earth tremors, it rarely results in great destruction. The Vassagonians call these tremors: ‘Tasa-Dophiem’, which means ‘The Wrestling Gods’.This particular mud geyser has been put to practical use. It provides a constant source of heat for the dwellings built over the chamber. The steam from the tar-sorkh rises into a pair of huge, circular chimneys in the domed ceiling, which in turn feed heat to the buildings above. Your only way out of this chamber is by climbing one of these chimneys. Although there are no ladders, the rock-hewn chamber wall offers many footholds.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 25,
+                content : "Turn to "
+            }
          ]
     }
