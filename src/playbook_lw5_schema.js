@@ -194,6 +194,7 @@ db.createCollection("lw5", {
                                     "DROP_ALL_ITEMS_EVENT",
                                     "DROP_WEAPON_EVENT",
                                     "MISSION_ACCOMPLISHED_EVENT",
+                                    "DROP_ITEM_EVENT"
                                 ],
                             },
                             ranking: {
@@ -591,6 +592,28 @@ db.getCollection("lw5").insertMany([
             //     weight: "SMALL",
             //     imageUrl: "images/shadow/items/goldenkey.png",
             // },
+            {
+                code: "COPPER_KEY",
+                name: "Copper Key",
+                itemType: "Key",
+                description: "Copper Key",
+                weight: "SMALL",
+                imageUrl: "images/shadow/items/copperkey.png"
+            },{
+                    code: "OEDE_HERB"
+                    name : "Sufficient Oede",
+                    itemType : "HERB",
+                    description : "golden leaves which heal many deadly diseases or restore 10 ENDURANCE if swallowed after combat",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/oedeherb.png"
+            },{
+                code : "GAOLERS_KEYS",
+                name : "Gaoler's Keys",
+                itemType: "KEY",
+                description : "Gaoler's Keys",
+                weight: "SMALL",
+                imageUrl : "images/flight/items/gaolerskeys.png"
+            }
         ],
         content:
             "Before leaving Holmgard on your voyage to the Vassagonian capital of Barrakeesh, you are given a map of the desert empire and a pouch of gold.",
