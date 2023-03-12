@@ -700,6 +700,14 @@ db.getCollection("lw5").insertMany([
                 weight: "SMALL",
                 imageUrl: "images/shadow/items/blue_stone_triangle.png"
             },
+            {
+                code: "JEWELLED_MACE",
+                name: "Jewelled Mace",
+                itemType: "WEAPON",
+                description: "a mace full of juwels",
+                weight: "HEAVY",
+                imageUrl: "images/flight/items/jewelled_mace.png"
+            }
         ],
         content:
             "Before leaving Holmgard on your voyage to the Vassagonian capital of Barrakeesh, you are given a map of the desert empire and a pouch of gold.",
@@ -11460,13 +11468,13 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You crouch low as you wait for your chance to leap up and open the door. More and more crossbow bolts ricochet from the wall and parapet every second. The sound of iron-shod boots sends a shiver down your spine; the Drakkarim are storming the stairs—it’s now or never!<br>You spring to your feet and run to the door, grasping the iron bolt with trembling fingers. A steel-tipped missile splinters stone less than an inch from your hand, another ricochets and opens a cut above your eye. The instant the bolt clears the bolt-hole, you pull open the stone portal and race through, unaware of what lies beyond.",
         events: [
             {
                 eventType: "DROP_WEAPON_EVENT",
@@ -11543,31 +11551,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "A narrow corridor faces you, which is lit by the orange light of the setting sun filtering down from small open windows set high above in the patterned walls. The air is filled with the sound of running feet, for the Grand Palace is now on full alert. The palace guards and the evil Drakkarim are bent on finding and killing you, for their own lives will be forfeit if they fail.<br>You reach a door that opens onto an outside balcony. A stair descends to a bridge that connects a needle-like tower of white marble to the main palace. The stair itself continues past the bridge, disappearing down towards the palace gardens far below. You see no soldiers, either on the bridge or in the gardens.",
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 112,
-                intervall: {
-                    min: 0,
-                    max: 6,
-                },
-                content: "If the number you have picked is 0–6, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 396,
+                content: "If you wish to descend to the bridge and enter the marble tower, turn to",
             },
             {
-                outcomeType: "RANDOM",
-                targetNr: 96,
-                intervall: {
-                    min: 7,
-                    max: 9,
-                },
-                content: "If the number is 7–9, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 215,
+                content: "If you wish to continue past the bridge, descending the stairs to the palace gardens, turn to",
             },
         ],
     },
@@ -11630,24 +11630,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "As you turn to leave, the vaxeler bids you to wait. From a bundle of rags hidden beneath the bridge, he produces a gem-encrusted mace. The weapon is carved from solid silver and adorned with emeralds and diamonds along the haft. ‘Take it, I beseech you, as a token of my eternal thanks.’<br>If you wish to accept this gift, mark the Jewelled Mace on your Action Chart as a Special Item (which you carry tucked into your belt) before leaving the cave.",
+        events:[
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item: {
+                    name: "Jewelled Mace",
+                    itemType: "WEAPON",
+                    description: "a mace full of juwels",
+                    weight: "HEAVY",
+                    imageUrl: "images/flight/items/jewelled_mace.png"
+                }
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 311,
-                content: "f you break cover and climb up the hill, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 77,
-                content:
-                    "If you change direction and continue your run through the forest, turn to",
+                targetNr: 241,
+                content: "Turn to",
             },
         ],
     },
@@ -11727,35 +11735,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
-                ranking: 1,
-                amount: 2,
-            },
-            {
-                eventType: "COMBAT",
-                ranking: 2,
-                creature: {
-                    name: "Vordak",
-                    combatSkill: 18,
-                    endurance: 25,
-                    imageUrl: "images/shadow/creatures/vordak.png",
-                },
-            },
-        ],
+            "The dwarves are not offended by your refusal. They have seen men stirred to fury or laid unconscious by a jug of Bor-brew. Nolrim grasps the tankard and downs the draught with one awesome gulp, removing the froth from his ginger beard with a practised flick of his forefinger.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 261,
+                content: "If you wish to ask the dwarves how they came to be under Banedon’s command, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 359,
+                content: "If you wish to bid them goodnight, turn to",
             },
         ],
     },
@@ -11812,18 +11809,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "As you turn and sprint along the passage, a terrible roar of hatred and rage fills the hall: ‘Kill him!’<br>You glance back. The Drakkarim are unsheathing their black swords, eager to obey their master’s command. You race down some stairs, through a silver archway, and along a balcony that overlooks the lower palace.<br>The Akataz is nearly upon you; you feel its fetid breath on your legs. Instinctively you dodge aside at the very second it leaps. It crashes muzzle first into a marble pillar. A howl of pain leaves its broken mouth as you step forward and strike a death-blow; it will never attack again.<br>You glimpse the grim silhouette of Darklord Haakon in the hall below, his spiked fist raised. A Drakkar appears as if from nowhere and advances, a sword held high above his skull-like helm. There is a deafening crack as a bolt of blue lightning streaks from a stone in the Darklord’s hand and comes hurtling towards you. The Drakkar lunges and wounds your arm (you lose 2 ENDURANCE points), but he now stands in the path of the bolt. In a flash of light, the Drakkar is gone, leaving only cinders and the rotten odour of scorched flesh behind.<br>At the end of the balcony are another arch and a staircase.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -2
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 381,
+                content: "If you wish to escape through the arch, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 317,
+                content: "If you wish to escape by the stairs, turn to",
             },
         ],
     },
@@ -11878,24 +11887,25 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Itikar are by nature wild and malicious creatures, and it can take many years for a rider to tame and train one. However, the effort is well worthwhile as once this is been accomplished, the giant black birds are fiercely loyal.<br>The Itikar senses that you are not his master and tries to drive you away, wounding your back with a glancing blow from its powerful beak. You lose 1 ENDURANCE point. However, due to sheer strength of will, you manage to climb into the saddle and subdue the creature. It turns its head and fixes you with a cold black stare, but you sense that it is now no longer hostile.<br>Suddenly, you catch sight of the Drakkarim, streaming across the gangplank. You stretch forward, unhook the Itikar’s anchor rope from the saddle ring, and grab the thick leather reins.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -1
+            },
+        ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 13,
-                content: "If you decide to return to the junction and head east, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 330,
-                content:
-                    "If you decide to hack your way slowly through the undergrowth in this present direction, turn to",
+                targetNr: 343,
+                content: "Turn to",
             },
         ],
     },
@@ -11997,31 +12007,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You search the body of the dead Drakkarim leader and discover in his pocket a Black Crystal Cube. If you wish to keep the Black Crystal Cube, place it in your pocket and mark it on your Action Chart as a Special Item.<br>The sound of more Drakkarim thundering down the tower stairs prompts you to leave the other bodies and hurry over to the wooden door.",
         events: [
             {
                 eventType: "ACQUIRE_ITEM_EVENT",
                 ranking: 1,
                 item: {
-                    name: "Sword",
-                    itemType: "WEAPON",
-                    description: "Sword",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/sword.png",
+                    name : "Black crystal cube",
+                    itemType: "MAGICAL_ITEM",
+                    description : "Black crystal cube",
+                    weight: "SMALL",
+                    imageUrl : "images/flight/items/black_crystal_cube.png"
                 },
             },
         ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 359,
+                content: "Turn to",
             },
         ],
     },
@@ -12040,47 +12050,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Sword",
-                    itemType: "WEAPON",
-                    description: "Sword",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/sword.png",
-                },
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 2,
-                item: {
-                    name: "Spear",
-                    itemType: "WEAPON",
-                    description: "Spear",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/spear.png",
-                },
-            },
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 3,
-                amount: 6,
-            },
-        ],
+            "You learn that the dwarves were once the crew of a more conventional vessel, a merchantman that sailed the Tentarias of southern Magnamund. The Tentarias is a vast expanse of lakes and land-locked seas, which connect to form a continuous canal stretching nearly three thousand miles. They were created, as was the Rymerift of Durenor, by a massive landslide. Three years ago, the dwarves’ former captain, a dwarf named Quan, lost his ship, cargo, and crew whilst gambling at cards; it seems the unfortunate captain was unaware of Banedon’s true profession until it was far too late. As a result, Banedon became the dwarves’ captain, and ever since they have adventured with him across the lands and skies of Southern Magnamund. The Skyrider itself was given to Banedon by the Magicians of Dessi, in return for his help in defeating the Gagadoth—a monstrous creature that terrorized their land, over which their own sorcery could not prevail.<br>The Skyrider was travelling from Dessi on its way to Barrakeesh when you appeared. The dwarves have overheard your talk with Banedon and are excited by the prospects of a new adventure. They seem undaunted by the deadly dangers that it will certainly involve.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 359,
+                content: "Turn to",
             },
         ],
     },
@@ -12130,20 +12112,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        outcomes: [
+            "For a moment, your sense of bearing is completely lost as you tumble and spin into the void, unaware of what is happening to your body. You try to cry out, but your cries are lost on the wind as it rushes past. You hit the upper branches of a toa tree. You are stunned by the crash, and your body becomes numb.<br>By the time your broken body is found by the Drakkarim, you have bled to death.<br>Your life and the hopes of Sommerlund end here.",
+        events: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
-            },
-        ],
+                eventType: "MISSION_FAILED_EVENT",
+                ranking: 1
+            }
+        ]
     },
     {
         /*
@@ -12191,24 +12172,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Focusing your skill on a money pouch that hangs from the sentry’s belt, you concentrate on untying the leather thong that secures it. Seconds later, the pouch drops to the ground and spills its contents. The guard yelps in horror as he sees his gold rolling over the edge of the platform and drops to his knees to gather what little remains. As he turns his back, you break cover and run across the gangplank. Your speed and stealth carry you across the gangplank undetected. When you strike, the guard is still on his knees, picking up his scattered gold. Your attack is silent and deadly.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 185,
-                content:
-                    "If you wish to remain where you are in order to try to spot the hidden archer, turn to",
+                targetNr: 207,
+                content: "If you wish to search the guard’s body, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 92,
-                content: "If you wish to run for the cover of denser undergrowth, turn to",
+                targetNr: 224,
+                content: "If you decide to ignore the body, hurry into the Itikar’s pen and turn to",
             },
         ],
     },
@@ -12263,18 +12243,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The guards are the first to recover from the surprise of the encounter. They attack, opening a deep wound in your chest. Lose 4 ENDURANCE points.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -4
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 334,
+                content: "If you are still alive and wish to fight the guards, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 209,
+                content: "If you wish to try to escape by running back up the stairs, turn to",
             },
         ],
     },
@@ -12361,25 +12353,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 1,
-                amount: -1,
-            },
-        ],
+            "You wake shortly after dawn to the sound of snoring dwarves and the low hum of the Skyrider. Gathering your equipment, you climb on deck to find everything in shadow, for the Skyrider is hovering beneath a massive outcrop of sandstone that juts out from the side of a mountain, thousands of feet above the valley floor below. Banedon stands at the helm, but he is no longer in a trance.<br>‘Kraan-riders,’ he says, pointing to the sun-bleached valley beyond the shadows. ‘They arrived with the dawn.’<br>You stare out across this alien landscape, a mountain valley filled with pillars of massive and precariously balanced boulders. The Vassagonians call this place the Koos—‘the needles’. The rocky columns reach so high into the sky that an avalanche seems unavoidable. Perched upon two of the columns are Kraan, their Drakkarim riders scouring the valley with telescopes. An hour passes before they take to the air and disappear.<br>‘Trim the boom-sail, Bo’sun Nolrim,’ orders Banedon, his voice barely audible above the increasing hum of the Skyrider. ‘We’ve a fast run ahead.’",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 229,
+                content: "If you possess a Black Crystal Cube, turn to",
+                item: {
+                    name : "Black crystal cube",
+                    itemType: "MAGICAL_ITEM",
+                    description : "Black crystal cube",
+                    weight: "SMALL",
+                    imageUrl : "images/flight/items/black_crystal_cube.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 247,
+                content: "If you do not have this Special Item, turn to",
             },
         ],
     },
@@ -12398,17 +12396,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
-        content: "Your Kai Discipline reveals that the west path is a dead end.",
+        content: "Using the bands of iron as footholds, you clamber to the top of the door. Long spikes protrude from the timber crossbar, each coated with an oily black tar. Just as you are stepping over the spikes, the guards fire their crossbows.<br>Pick a number from the Random Number Table. If you have reached the Kai rank of Guardian or higher, subtract 2 from the number you have picked. If you have the Kai Discipline of Hunting, subtract 1 from this number.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 363,
+                content: "If your total score is 4 or less, turn to ",
+                intervall: {
+                    min: 0,
+                    max: 4,
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 259,
+                content: "If your score is 5–9, turn to",
+                intervall: {
+                    min: 5,
+                    max: 9,
+                }
             },
         ],
     },
@@ -12427,30 +12438,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
-        content: "Pick a number from the Random Number Table.",
+        content: "Banedon takes over the helm as his extraordinary ship, the Skyrider, as the dwarves call it, speeds through the gathering darkness towards the Dahir Pass. Visibility diminishes with each passing minute until, finally, you can see no further than the outriggers. You feel uneasy; if the Skyrider veers but a fraction off course, you will be smashed to pieces against the mountainside.<br>‘Do not worry, Lone Wolf,’ says Nolrim, the dwarf with the velvet satchel. ‘The captain will see us through.’<br>Banedon stands with his hand resting lightly on the glowing crystal, relaxed as if in a trance. His eyes are closed and a crackle of energy, like fine white lightning, traces an intricate pattern over his forehead and temples.<br>The dwarf leads you to the cabin at the rear of the craft where the crew are excitedly recounting their victory over the Kraan-riders. They are seated about a table cluttered with plates of steaming food and jugs of foaming ale. The rich smell of spiced meat and Bor-brew fills your nostrils, reminding you of how ravenously hungry you are.<br>You make short work of the meat and marrow placed before you. Restore 3 ENDURANCE points. However, you are unsure about accepting a jug of ale; Bor-brew is so strong that in many cities of Magnamund it has been banned for fear of the havoc it can cause.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: 3
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 110,
-                intervall: {
-                    min: 0,
-                    max: 2,
-                },
-                content: "If the number you have picked is 0–2, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 392,
+                content: "If you wish to accept a jug of the notorious ale, turn to",
             },
             {
-                outcomeType: "RANDOM",
-                targetNr: 285,
-                intervall: {
-                    min: 3,
-                    max: 9,
-                },
-                content: "If the number is 3–9, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 283,
+                content: "If you decide to decline the offer, turn to",
             },
         ],
     },
@@ -12499,36 +12510,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The Vordak collapses at your feet, but before you can escape, you are surrounded by Drakkarim. A silence fills the arboretum; all is deathly quiet. You prepare to cut your way out, but more of the evil warriors appear. You shiver with a chill of fear—the Drakkarim reinforcements are armed with heavy bronze crossbows.<br>As you shout your battle-cry ‘For Sommerlund!’ you are hit by a volley of poison-tipped bolts, which hurl you backwards to the soft earth. The last sound you hear as your life’s blood drains away into the soil is the hideous gloating laughter of Darklord Haakon, rising above the ghoulish howl of his Drakkarim.<br>Your life and the hopes of Sommerlund end here.",
         events: [
             {
-                eventType: "CHANGE_ENDURANCE_EVENT",
+                eventType: "MISSION_FAILED_EVENT",
                 ranking: 1,
-                amount: -2,
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 2,
-                item: {
-                    name: "Glowing Gem",
-                    itemType: "MAGICAL_ITEM",
-                    description: "Glowing Gem",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/glowinggem.png",
-                },
-            },
-        ],
-        outcomes: [
-            {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
             },
         ],
     },
@@ -12547,31 +12539,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Spear",
-                    itemType: "WEAPON",
-                    description: "Spear",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/spear.png",
-                },
-            },
-        ],
+            "Tying one end of the rope to the parapet rail, you drop the other end over the side and glissade down the tower. You have reached halfway when you see two Drakkarim above you, sawing at the knot. Suddenly, the rope snaps and you plummet into the void.<br>Pick a number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 293,
+                content: "If the number you have picked is 0–2, turn to",
+                intervall: {
+                    min: 0,
+                    max: 2,
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 234,
+                content: "If it is 3–9, turn to",
+                intervall: {
+                    min: 3,
+                    max: 9,
+                }
             },
         ],
     },
@@ -12728,18 +12720,59 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "As you climb over the lifeless bodies, you notice a Copper Key on a chain around one of their necks. Grabbing the Key, you slip it into your pocket, and race down the steps towards a dim light below. Mark the Copper Key on your Action Chart as a Special Item.<br>A small fire, over which is roasting a chicken on a spit, illuminates a guardroom at the base of the tower. On the back of a wrought-iron chair hangs a Canteen of Water, and lying beside it is a razor-sharp Broadsword. You may take either of these items if you wish, and mark them on your Action Chart (the Canteen is a Backpack Item).<br>You hear the Drakkarim rushing down the tower stairs. They will soon be upon you.",
+        events: [
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item: {
+                    name: "Copper Key",
+                    itemType: "Key",
+                    description: "Copper Key",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/copperkey.png"
+                }
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 2,
+                item: {
+                    code: "BROADSWORD",
+                    name: "Broadsword",
+                    itemType: "WEAPON",
+                    description: "Broadsword",
+                    weight: "HEAVY",
+                    imageUrl: "images/shadow/items/broadsword.png",
+                }
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 3,
+                item: {
+                    name: "Canteen ",
+                    itemType: "UTILITY",
+                    description: "a little canteen ",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/canteen.png"
+                }
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 246,
+                content: "If you wish to leave the tower by a door in the north wall, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 231,
+                content: "If you wish to prepare yourself for combat and wait for the Drakkarim to appear, turn to",
             },
         ],
     },
@@ -12798,18 +12831,61 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "The dwarves are clearing the deck of battle debris. A dead Drakkar lies sprawled face down across a pile of chests and sacks roped beneath the boom-sail. As the dwarves grab his legs to cast him over the side he suddenly springs to life, sending the dwarves tumbling in all directions. He screams like a fiend, his black axe cutting a wide arc around his blood-smeared body. A curse, vile and evil, echoes from his death-mask as he draws back the axe to throw. His target is you.<br>If you have neither of these skills, pick a number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 210,
+                content: "If you have the Kai Discipline of Hunting or Sixth Sense, turn to",
+                ability: {
+                    abilityType: "SIXTH_SENSE",
+                    description:
+                        "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
+                }
+            },
+            {
+                outcomeType: "ABILITY",
+                targetNr: 210,
+                content: "If you have the Kai Discipline of Hunting or Sixth Sense, turn to",
+                ability: {
+                    abilityType: "HUNTING",
+                    description:
+                        "This skill ensures that a Kai Lord will never starve in the wild. He will always be able to hunt for food for himself except in areas of wasteland and desert. You are aware that most of Vassagonia is arid desert; should your adventure lead you into this desert, the opportunities for successful hunting may not arise. But this skill is still very useful for it also enables a Kai Lord to move with great speed and dexterity.",
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 354,
+                content: "If the number you of picked is 0–4, turn to",
+                intervall: {
+                    min: 0,
+                    max: 4
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 371,
+                content: "If it is 5–8, turn to ",
+                intervall: {
+                    min: 5,
+                    max: 8
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 232,
+                content: "If it is 9, turn to",
+                intervall: {
+                    min: 9,
+                    max: 9
+                }
             },
         ],
     },
@@ -12950,18 +13026,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "You stagger to your feet to see the Skyrider being engulfed by Drakkarim; they leap from their shrieking Kraan and crash onto the decks and outriggers, their black swords already drawn from their scabbards. The dwarves are caught by surprise; their weapons have been unloaded and stored below deck. Even so, they are quick to rally and fight with skill and fury. Above the din you hear Nolrim’s joyous battle-cry, ‘Blood for blood!’<br>An unexpected blow catches you squarely on the back, knocking you from the platform to the deck below. You have risen to one knee when your assailant attacks again. You cannot evade him.<br>Due to the surprise of the attack, reduce your COMBAT SKILL by 2 for the first 3 rounds of combat.",
+        events: [
+            {
+                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking: 1,
+                amount: -2
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 2,
+                creature: {
+                    name: "Drakkar",
+                    combatSkill: 18,
+                    endurance: 26,
+                    imageUrl: "images/shadow/creatures/drakkar.png",
+                }
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 333,
+                content: "If you win the combat, turn to",
             },
         ],
     },
@@ -12980,18 +13074,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The blood is pounding in your ears as you bound up the marble steps. Twenty feet ahead of you, there is a landing with a stone door set into the wall. The stairs continue to ascend to a parapeted walkway, at the end of which is another stone door, identical to the first. Suddenly, the door on the first landing swings open and a palace guard wheels round to face you.<br>‘Majhan!’ he cries, fumbling for the hilt of his sword.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 338,
+                content: "If you wish to attack the guard before he draws his weapon, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 372,
+                content: "If you wish to barge him aside and continue climbing the stairs, turn to",
             },
         ],
     },
@@ -13041,36 +13140,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 1,
-                amount: 20,
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 2,
-                item: {
-                    name: "Dagger",
-                    itemType: "WEAPON",
-                    description: "Dagger",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/dagger.png",
-                },
-            },
-        ],
+            "The Onyx Medallion is beginning to glow and vibrate in your pocket. This Special Item, torn from the armour of a renegade Vassagonian captain during the battle of Ruanon, enables you to communicate with the Itikar. You reassure it that you mean no harm. Itikar are by nature wild and malicious creatures, but the power of the Onyx Medallion tames this natural instinct, subduing them to the wearer’s command.<br>As you settle in the wide saddle, you catch sight of the Drakkarim streaming across the gangplank. Quickly, you lean forward, unhook the Itikar’s anchor rope from the saddle ring and grab the thick leather reins.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 343,
+                content: "Turn to",
             },
         ],
     },
@@ -13127,18 +13208,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "You place the Oede herb upon the stone bridge and step back. At first the vaxeler is suspicious and frightened—nobody has dared to enter his cave for many years. But when he recognizes the golden leaves of the Oede herb, he breaks down, weeping tears of joy.<br>‘May the Majhan bless you—may you live in eternal peace,’ he cries, his feeble voice brimming over with emotion. ‘How can I ever repay this kindness?’",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 356,
+                content: "If you wish to question the vaxeler about Tipasa the Wanderer, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 281,
+                content: "If you wish to leave the cave and press on towards Ikaresh, turn to",
             },
         ],
     },
@@ -13157,24 +13244,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The stairs are high and steep. You gasp for breath and force your aching legs to climb, for the Drakkarim are less than a dozen steps behind you. At the top of the tower, an open arch leads out onto a platform where a huge kettledrum stands. This is used by the tower guard to send messages to the other palace towers. A bleached hide is stretched across its surface and a black wooden beater hangs from the side.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 17,
-                content: "If you are going to stand and fight it as it swoops down, turn to",
+                targetNr: 329,
+                content: "If you wish to push the drum down the tower stairs, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 89,
-                content:
-                    "If you are going to evade its attack and slide down the other side of the hill, away from the Kraan, turn to",
+                targetNr: 387,
+                content: "If you prefer to ignore the drum and escape out onto the platform, turn to",
             },
         ],
     },
@@ -13414,18 +13500,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The heavy copper drum rolls from its wooden base and crashes down the tower stair, a thunderous boom echoing from the dark as it careers on a collision course with the enemy. The screams of horror are cut short as the drum hurtles through the ranks of the Drakkarim, crushing them into the hard stone steps.<br>Your quick action has scattered your pursuers, but victory turns sour when you discover that you are trapped; there are no other stairs from the platform. You have delayed the Drakkarim, but your reprieve is only temporary.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 305,
+                content: "If you possess a Rope, you can attempt to climb down to the gardens below. Turn to",
+                item: {
+                    code : "ROPE",
+                    name : "Rope",
+                    description : "Rope",
+                    imageUrl : "images/flight/items/rope.png"
+                },
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 387,
+                content: "If you do not possess a Rope, turn to",
             },
         ],
     },
@@ -13444,23 +13541,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
-        outcomes: [
+            "You parry the Drakkar’s blow and turn it aside, but he is quick to recover. He turns to face you and bellows a vile curse, his broadsword arcing back towards your skull.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Drakkar",
+                    combatSkill: 18,
+                    endurance: 23,
+                    imageUrl: "images/shadow/creatures/drakkar.png",
+                }
+            },
+        ],
+            outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 315,
-                content: "If you wish to examine the contents of the bundle, turn to",
+                targetNr: 243,
+                content: "If you win the combat and it lasts for 2 rounds or less, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 213,
-                content: "If you wish to leave it where it is and continue your mission, turn to",
+                targetNr: 394,
+                content: "If the combat lasts more than 2 rounds, do not continue the combat but turn immediately to",
             },
         ],
     },
@@ -13503,18 +13613,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Leaving the arbour, you press on towards the outer wall of the arboretum. Through the dense foliage you can make out a narrow, arched doorway that leads to an open chamber. A stairway ascends to a parapeted walkway, at the end of which is a stone door. You are halfway up the stairs when the sound of a crossbow being cocked freezes your blood. To turn back now would be suicide; you grit your teeth and bound up the stairs as a hail of crossbow fire slams into the steps on either side of you.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 372,
+                content: "Turn to",
             },
         ],
     },
@@ -13533,18 +13643,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "You catch a glimpse of Nolrim fighting his way through a mass of red-cloaked Drakkarim, his two-handed battle-axe bringing down three of them in as many blows. He cuts a path to your side and points with his bloodstained axe to a creature hovering high above the Skyrider.<br>You recognize it to be a Zlanbeast, a creature rather like a Kraan but far larger than its leathery subspecies. Upon its back sits a red-robed Vordak, a staff of black iron in its skeletal hand. There is a flash, and a stream of liquid blue flame pours from its tip.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 258,
+                content: "If you possess the Sommerswerd, turn to",
+                item: {
+                    code : "SOMMERSWERD",
+                    name : "Sommerswerd",
+                    description : "Sommerswerd",
+                    imageUrl : "images/flight/items/sommerswerd.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 349,
+                content: "If you do not have the Special Item, turn to",
             },
         ],
     },
@@ -13563,39 +13685,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You are in combat with two grim-faced warriors. They block the stair and you must fight both of them as one enemy.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Tower Guards",
+                    combatSkill: 17,
+                    endurance: 32,
+                    imageUrl: "images/shadow/creatures/tower_guards.png"
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 48,
-                ability: {
-                    abilityType: "SIXTH_SENSE",
-                    description:
-                        "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
-                },
-                content: "If you wish to use the Kai Discipline of Sixth Sense, turn to",
-            },
-            {
-                outcomeType: "ABILITY",
-                targetNr: 73,
-                ability: {
-                    abilityType: "CAMOUFLAGE",
-                    description:
-                        "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place.",
-                },
-                content:
-                    "If you wish to use the Kai Discipline of Camouflage and wait for them to pass, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 209,
+                content: "If you wish to avoid combat at any time by running back up the spiral staircase, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 162,
-                content: "If you wish to approach them, turn to",
+                targetNr: 310,
+                content: "If you win the fight, turn to",
             },
         ],
     },
@@ -13713,25 +13831,27 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "",
+            "Without the breeze of the speeding Skyrider to cool you, the heat of the mountains is almost unbearable. You trudge across the loose reddish sand, your faces covered to keep the dust from choking your throats. All that seems to grow in this desolate waste is the wire-hard grass that tears at your boots and leggings.<br>As you reach the outskirts of Ikaresh, you pass a small round hut where a goat is eating from a manger by the door. A man appears at the darkened doorway and bids you welcome; he touches his forehead in a salute of friendship and invites you both to enter his humble home.",
         outcomes: [
             {
-                outcomeType: "RANDOM",
-                targetNr: 219,
-                intervall: {
-                    min: 0,
-                    max: 4,
-                },
-                content: "If the number picked is 0–4, turn to",
+                outcomeType: "ABILITY",
+                targetNr: 365,
+                content: "If you have the Kai Discipline of Sixth Sense, turn to",
+                ability: {
+                    abilityType: "SIXTH_SENSE",
+                    description:
+                       "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure.",
+                }
             },
             {
-                outcomeType: "RANDOM",
-                targetNr: 317,
-                intervall: {
-                    min: 5,
-                    max: 9,
-                },
-                content: "If the number is 5–9, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 225,
+                content: "If you wish to accept his invitation, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 272,
+                content: "If you wish to decline his offer and continue towards Ikaresh, turn to",
             },
         ],
     },
@@ -13750,18 +13870,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Using your skill for unarmed combat taught to you by your Kai masters, you grab the startled guard by the throat and pitch him over the low wall at the edge of the landing. His cry of terror fills the air until he crashes into the flagstones below.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 372,
+                content: "If you wish to continue climbing the stairs towards the door of the walkway, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 279,
+                content: "If you wish to enter the door through which the guard came, turn to",
             },
         ],
     },
@@ -13780,35 +13905,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "COMBAT",
-                ranking: 1,
-                creature: {
-                    name: "Human",
-                    combatSkill: 10,
-                    endurance: 10,
-                    imageUrl: "images/shadow/creatures/human.png",
-                },
-            },
-        ],
+            "Two dwarves clamber onto the platform and hurry to their young captain’s side. One flicks open a red velvet satchel strapped to his barrel-like chest, and removes a glass vial and a clean linen bandage. They attend to the wound, and, as his strength returns, Banedon listens intently to your account of the terrifying events that have led up to this meeting. As you conclude your woeful tale, Banedon speaks, his voice full of grim determination.<br>‘The future of Sommerlund rests in our hands, Lone Wolf. We must stop Darklord Haakon from destroying the Book of the Magnakai. I have heard tell of the Tomb of the Majhan from the nomads of the Dry Main. They say it is a terrible place, a place of horror and death—for what little there is left to die there. It lies beyond the Dahir, near the oasis of Bal-loftan. That is all I know, for the Majhan hid their tombs well and what few traces remained have long since disappeared beneath the shifting sands of the Dry Main.’<br>Your face conveys the disappointment you feel upon hearing these words.<br>‘However, all is not lost,’ says Banedon, undaunted. ‘There is a man who can guide us there. His name is Tipasa Edarouk—“Tipasa the Wanderer”. It is he who we must seek, for he is the only man who has ever entered the Tomb of the Majhan and lived to tell the tale.’",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 94,
-                content: "If you kill him within 4 rounds of Combat, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 203,
-                content: "If you are still fighting after 4 rounds of Combat, turn to",
+                targetNr: 302,
+                content: "Turn to",
             },
         ],
     },
@@ -13858,33 +13967,59 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "As you step over the lifeless bodies, you notice a Copper Key on a chain around one of their necks. Grabbing the Key, you slip it into your pocket and race down the tower steps. (Mark the Key as a Special Item on your Action Chart). At the entrance, you see a crowd of Drakkarim and palace guards rushing across the bridge—certain death awaits you there. You continue down the spiral stairs towards a dim light below.<br>A small fire, over which roasts a chicken on a spit, illuminates a guardroom at the base of the tower. On the back of a wrought-iron chair hangs a Canteen of Water and a Broadsword. You may take either or both of these items if you wish, but remember to mark them on your Action Chart. (The Canteen is a Backpack Item.)<br>You hear the enemy thundering down the stairs; they will soon be upon you. However, a heavy wooden door in the north wall offers you another chance of escape.",
+        events: [
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item: {
+                    name: "Copper Key",
+                    itemType: "Key",
+                    description: "Copper Key",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/copperkey.png"
+                }
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 2,
+                item: {
+                    code: "BROADSWORD",
+                    name: "Broadsword",
+                    itemType: "WEAPON",
+                    description: "Broadsword",
+                    weight: "HEAVY",
+                    imageUrl: "images/shadow/items/broadsword.png",
+                }
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 3,
+                item: {
+                    name: "Canteen ",
+                    itemType: "UTILITY",
+                    description: "a little canteen ",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/canteen.png"
+                }
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "ABILITY",
-                targetNr: 310,
-                ability: {
-                    abilityType: "TRACKING",
-                    description:
-                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
-                },
-                content: "If you wish to use the Kai Discipline of Tracking, turn to",
+                outcomeType: "DEFAULT",
+                targetNr: 246,
+                content: "If you wish to escape from the guard room by this door, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 210,
-                content: "If you wish to enter the Guildhall, turn to",
-            },
-            {
-                outcomeType: "DEFAULT",
-                targetNr: 37,
-                content: "If you wish to search for another route into the citadel, turn to",
+                targetNr: 231,
+                content: "If you wish to stand and fight, turn to",
             },
         ],
     },
@@ -13919,7 +14054,7 @@ db.getCollection("lw5").insertMany([
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 277,
+                targetNr: 227,
                 content: "If you wish to continue along the avenue, turn to",
             },
         ],
@@ -13975,18 +14110,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "The old man’s face is a mask of putrescent green sores. The pupils of his eyes are yellow, and his ragged grey lips hang in tatters. He suffers from vaxelus, an infectious disease that rots the skin and attacks the nerves, resulting in hideous mutilation and deformity. He has been cast from his community, banished to this cave where he must eke out his last few years of life in misery and solitude.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 321,
+                content: "If you possess some Oede herb and wish to give it to the poor vaxeler, turn to",
+                item: {
+                    name : "Sufficient Oede",
+                    itemType : "HERB",
+                    description : "golden leaves which heal many deadly diseases or restore 10 ENDURANCE if swallowed after combat",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/oedeherb.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 270,
+                content: "If you do not have any Oede herb, or if you do not wish to give it to this unfortunate wretch, flee the cave and turn to",
             },
         ],
     },
@@ -14005,23 +14153,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You glimpse the silhouette of Darklord Haakon in the hall below, his spiked fist raised. There is a deafening crack as a bolt of blue lightning streaks from a stone in the Darklord’s hand and hurtles towards you. You dive for cover behind the body of the Drakkar as the bolt explodes. In a flash of light, the Drakkar is gone. Only cinders and the rotten odour of scorched flesh remain.<br>You scramble to your feet and sprint along the passage. Another bolt hurtles from the hall, tearing into the ceiling with shattering effect. Splinters of razor-sharp marble whistle down, slashing your cloak and tunic. You race down some stairs, through a silver archway and along a balcony that overlooks the lower palace. A peal of bells and the crunch of iron-shod boots echo in your ears—the Zakhan has sounded the alarm, his guards close in on every side.<br>At the end of the balcony are another arch and a staircase: both look deserted.",
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 272,
-                content: "You can now return to the track, by turning to",
+                targetNr: 381,
+                content: "If you wish to escape through the arch, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 19,
-                content: "Or push on under cover of the trees. Turn to",
+                targetNr: 317,
+                content: "If you wish to race up the stairs, turn to",
             },
         ],
     },
@@ -14102,18 +14250,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "Suddenly, you catch sight of Banedon. His arm is raised above the armoured parapet of the platform, and in his hand he holds a slender blue rod. A torrent of water gushes from the rod, arcing into the sky to meet the deluge of liquid flame. There is a tremendous explosion as the elements collide, and a massive whirlpool of flame and water spirals towards the Vordak.<br>The Vordak shrieks with terror but it is too late—its fate is sealed. The whirlpool consumes the Zlanbeast and its rider in a massive burst of sun-like brilliance.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 267,
+                content: "Turn to",
             },
         ],
     },
@@ -14373,18 +14522,40 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        outcomes: [
+            "You roll away a split second before the mace smashes down, crushing the dark soil where your head once lay. Unless you have the Kai Discipline of Mindshield, deduct 2 points from your COMBAT SKILL for the duration of the combat, for the Vordak is attacking you with the power of its Mindforce. This creature is immune to Mindblast.",
+        events: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking: 1,
+                amount: -2
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 2,
+                creature: {
+                    name: "Vordak",
+                    combatSkill: 18,
+                    endurance: 25,
+                    imageUrl: "images/shadow/creatures/vordak.png",
+                }
+            },
+        ],
+            outcomes: [
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 249,
+                content: "If you win and the fight lasts 4 rounds or less, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 304,
+                content: "If you win and the fight lasts longer than 4 rounds, turn to",
             },
         ],
     },{
@@ -14402,18 +14573,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "‘I knew Tipasa once, when my body was young and strong like yours. We fought the Lakuri pirates at Samiz and voyaged to a distant land where ice and snow lay thick on the ground, and the sun had not the power to melt them. Yes, I knew Tipasa the Wanderer…once. All I know now is that he dwells in Ikaresh. Find the widow Soushilla—she will know. She knows all that passes in Ikaresh.’",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 281,
+                content: "Turn to",
             },
         ],
     },{
@@ -14489,18 +14661,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "",
+            "The fatigue of your ordeal finally catches up with you; you are finding it impossible to keep your eyes open. Nolrim shows you to a bunk in the hull of the Skyrider. Gratefully you climb into bed and pull the blankets over your aching limbs. Nolrim apologizes that the bunk is too short, but his words fall on deaf ears—you are already asleep. Restore 2 ENDURANCE points for this much needed rest.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: 2
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 300,
+                content: "Turn to",
             },
         ],
     },{
@@ -14518,18 +14698,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Two black-clad guards suddenly appear on the stairs below. You are both surprised by the encounter and are slow to react.<br>Pick a number for the Random Number Table. If you have the Kai Discipline of Hunting, add 1 to the number you have picked. Now, pick another number from the Random Number Table.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 226,
+                content: "If the second number is less than the first, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 297,
+                content: "If it is more than the first number, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 334,
+                content: "If it is exactly the same, turn to",
             },
         ],
     },{
@@ -14658,18 +14848,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "",
+            "The room is moving, at first only imperceptibly, but in the space of a few minutes, the dwarves and the cabin have become a blur of colour. You grasp the table, your knuckles whitening as you fight to control the feeling of dizziness that overcomes you. Sounds seem distant like echoes in a cave. Suddenly, the spinning stops and blackness engulfs your senses. You have collapsed unconscious to the floor.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 380,
+                content: "Turn to",
             },
         ],
     },{
@@ -14722,18 +14913,17 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        outcomes: [
+            "Nervously, you wait for the chance to leap up and open the door, but the crossbow bolts ricocheting from the wall and parapet are increasing in number. Suddenly, the sound of running footsteps sends a cold shiver down your spine; the Drakkarim are storming the stairs—it is now or never!<br>You spring to your feet and run to the door, grasping the iron bolt between trembling fingers. As you fight to open it, a pain tears through your back: you have been hit. Another bolt strikes home, sinking deep into your shoulder and throwing you flat against the door.<br>As darkness falls before your eyes, you are unaware of the Drakkarim leaping towards you, their black swords raised for the death-blow. Their blades bite deep but you feel nothing: you are already dead.<br>Your life and the hopes of Sommerlund end here.",
+        events: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                eventType: "MISSION_FAILED_EVENT",
+                ranking: 1
             },
         ],
     },{
@@ -14793,67 +14983,24 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "You follow the avenue as it twists and turns through the Armourers’ Quarter of Ikaresh. A street vendor is selling a selection of swords and daggers that catch your eye; they are beautifully crafted, well-balanced and very sharp. A wooden sign displays his prices:<ul><li>Swords—5 Gold Crowns each</li><li>Daggers—3 Gold Crowns each</li><li>Broadswords—9 Gold Crowns each</li></ul>You may purchase any of the above weapons if you wish. Continuing along the avenue, you pass a meat market where carcasses of oxen are hung out in the open. You are not surprised to see the Ikareshi of this quarter walking about the streets with pieces of cotton stuffed into their nostrils (suspended by a thread around their necks), for the smell is dreadful.<br>Eventually you arrive at a fork, but there are no signs to indicate where the new streets lead.",
+            "The axe bites deeply into your calf, making you cry out in pain and surprise. Lose 3 ENDURANCE points. However, before the guard can strike again, you lash out, sending the axe spinning from his hand. He howls, clutching broken fingers to his chest.<br>Gritting your teeth, you hobble away towards an open door. The air is alive with the sound of pounding feet, for the Grand Palace is now on full alert. Both the Drakkarim and the palace guard are bent on finding you; their lives will be forfeit if they fail.<br>Beyond the door, a bridge rises over an enclosed garden, joining the palace to a needle-like tower of white marble. At the entrance to the bridge, a narrow stair disappears into the garden below.",
         events: [
             {
-                eventType: "ACQUIRE_ITEM_EVENT",
+                eventType: "CHANGE_ENDURANCE_EVENT",
                 ranking: 1,
-                item: {
-                    name: "Sword",
-                    itemType: "WEAPON",
-                    description: "Sword",
-                    weight: "MEDIUM",
-                    imageUrl: "images/shadow/items/sword.png",
-                }
-            },
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 2,
-                amount: 5
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 3,
-                item: {
-                    name: "Dagger",
-                    itemType: "WEAPON",
-                    description: "Dagger",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/dagger.png",
-                }
-            },
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 4,
-                amount: 3
-            },
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 5,
-                item: {
-                    name: "Broadsword",
-                    itemType: "WEAPON",
-                    description: "Broadsword",
-                    weight: "HEAVY",
-                    imageUrl: "images/shadow/items/broadsword.png",
-                }
-            },
-            {
-                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
-                ranking: 6,
-                amount: 9
+                amount: -35
             },
         ],
         outcomes: [
             {
                 outcomeType: "DEFAULT",
-                targetNr: 216,
-                content: "If you wish to take the left street, turn to",
+                targetNr: 396,
+                content: "If you wish cross the bridge and enter the tower, turn to",
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 367,
-                content: "If you wish to take the right street, turn to",
+                targetNr: 215,
+                content: "If you decide to descend the stair that leads to the garden below, turn to",
             },
         ],
     },{
@@ -14965,18 +15112,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "A crossbow bolt grazes your shoulder as you reach the walkway, making you dive for cover behind its low parapet wall. You lose 1 ENDURANCE point. Two more bolts ricochet from the stone lip barely inches from your head.<br>The stone door is shut, secured by an iron bolt on this side. To pull open the bolt, you will have to expose yourself to crossbow fire, for the bolt is clearly in view above the lip of the wall.<br>If you do not have the skill of Mind Over Matter, pick a number for the Random Number Table. If you have reached the Kai rank of Aspirant or higher, add 2 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 366,
+                content: "If your total is now is 0–3, turn to",
+                intervall: {
+                    min: 0,
+                    max: 3
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 277,
+                content: "If it is 4 or more, turn to",
+                intervall: {
+                    min: 4,
+                    max: 10
+                }
+            },
+            {
+                outcomeType: "ABILITY",
+                targetNr: 269,
+                content: "If you possess the Kai Discipline of Mind Over Matter, turn to",
             },
         ],
     },{
@@ -15123,18 +15288,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "Clasping your hands around Banedon’s injured arm, you concentrate your Kai skill on healing the torn muscle and splintered bone. The warmth of your healing power numbs the pain and repairs the internal damage sufficiently to be able to remove the blood-soaked strips of cloth. The wound is still open, but you have saved the limb.<br>‘We’ll help him now, Lone Wolf,’ shouts a strange voice. You are surprised by this bold claim and turn around to discover who has made it.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 339,
+                content: "Turn to",
             },
         ],
     },{
@@ -15152,18 +15318,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Pressing yourself against the damp soil, you hold your breath and pray you will not be seen as the Vordak glides into view. Its bony arm is outstretched, and a skeletal finger sweeps the lush undergrowth on either side of the path. You sense the Vordak is using its Mindforce to try to locate your hiding place—as the finger points in your direction, a wave of pain washes over your body. You are near to crying out, when the pain ceases; you have not been detected. The finger sweeps away and the enemy continues its search along the path.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 228,
+                content: "Turn to",
             },
         ],
     },{
@@ -15223,12 +15389,31 @@ db.getCollection("lw5").insertMany([
             imageUrl: "images/shadow/regions/.png",
         },
         content:
-            "",
+            "Shortly after dawn the following day, you wake with a splitting headache. With bleary eyes you peer around you at the snoring dwarves who occupy the tiny bunks of the cramped cabin. The low hum of the ship only increases the pain that throbs like a demon inside your head, causing you to wince and grit your teeth at the slightest movement of your stiff and aching limbs. You lose 2 ENDURANCE points due to this monstrous hangover!<br>Painfully, you gather up your equipment and climb on deck to find everything in deep shadow, for the Skyrider is hovering beneath a massive outcrop of sandstone that juts from the side of a mountain. Banedon still stands at the helm, but he is no longer in a trance.<br>‘Kraan-riders,’ he says, pointing to a sun-bleached valley beyond the shadows. ‘They arrived with the dawn.’<br>You stare out across an alien landscape, a mountain valley filled with thousands of pillars formed from massive and precariously balanced boulders. The pillars reach so high into the sky that an avalanche looks inevitable. The Vassagonians call this place the Koos—‘the needles’. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes. An hour passes before they take to the sky and disappear.<br>‘Trim the boom-sails, Bo’sun Nolrim,’ orders Banedon, his voice barely audible above the increasing hum of the Skyrider. ‘We’ve a fast run ahead.’",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -2
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ITEM",
+                targetNr: 229,
+                content: "If you possess a Black Crystal Cube, turn to",
+                item: {
+                    name : "Black crystal cube",
+                    itemType: "MAGICAL_ITEM",
+                    description : "Black crystal cube",
+                    weight: "SMALL",
+                    imageUrl : "images/flight/items/black_crystal_cube.png"
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 247,
+                content: "If you do not have this Special Item, turn to",
             },
         ],
     },{
@@ -15246,18 +15431,31 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You run through the arch and straight into a black-robed palace guard. You bruise your ribs and the impact throws you off balance, but you manage to grab the wall to stop yourself from falling over. The guard lies sprawled upon the floor, but with incredible swiftness he draws a shining steel axe and lashes out at your legs.<br>Pick a number from the Random Number Table. If you have the Kai Discipline of Hunting, add 2 to the number you have picked.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 368,
+                content: "If your total is now 0–4, turn to",
+                intervall: {
+                    min: 0,
+                    max: 4,
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 252,
+                content: "If it is 5–11, turn to",
+                intervall: {
+                    min: 5,
+                    max: 10,
+                }
             },
         ],
     },{
@@ -15318,18 +15516,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "You trudge through the loose red sand, your faces covered to protect them from the dust and the blazing heat. The landscape is stark and desolate; all that seems to thrive here is the wire-hard grass that scratches your boots and leggings. You soon come across a dried river bed that leads to a cave in the orange sandstone hillside. A wooden plaque is nailed by the mouth of the cave, but you are unable to understand the strange words painted on its sun-blistered surface.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 235,
+                content: "If you wish to investigate the cave, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 272,
+                content: "If you wish to press on towards Ikaresh, turn to",
             },
         ],
     },{
@@ -15376,18 +15580,26 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "The searing flash of blue flame scorches your arm and face. You are thrown across the platform by the blast, and your body is peppered with shards of black crystal. Lose 12 ENDURANCE points.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -12
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 316,
+                content: "If you are still alive after this calamity, turn to",
             },
         ],
     },{
@@ -15448,18 +15660,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Your heart sinks; there are no other stairs down from the platform—you are trapped. Before you can think of a plan, the Drakkarim burst from the arch and attack.<br>The only way you can evade combat is by leaping from the tower to the gardens below, a drop of over one hundred feet.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Drakkarim",
+                    combatSkill: 17,
+                    endurance: 35,
+                    imageUrl: "images/shadow/creatures/drakkarim.png" 
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 205,
+                content: "If you wish to jump, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 341,
+                content: "If you win the combat, turn to",
             },
         ],
     },{
@@ -15477,18 +15706,74 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "You follow the avenue as it twists and turns through the Armourers’ Quarter of Ikaresh. A street vendor is selling a selection of swords and daggers that catch your eye; they are beautifully crafted, well-balanced and very sharp. A wooden sign displays his prices:<ul><li>Swords—5 Gold Crowns each</li><li>Daggers—3 Gold Crowns each</li><li>Broadswords—9 Gold Crowns each</li></ul>You may purchase any of the above weapons if you wish. Continuing along the avenue, you pass a meat market where carcasses of oxen are hung out in the open. You are not surprised to see the Ikareshi of this quarter walking about the streets with pieces of cotton stuffed into their nostrils (suspended by a thread around their necks), for the smell is dreadful.<br>Eventually you arrive at a fork, but there are no signs to indicate where the new streets lead.",
+        events: [
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item: {
+                    name: "Sword",
+                    itemType: "WEAPON",
+                    description: "Sword",
+                    weight: "MEDIUM",
+                    imageUrl: "images/shadow/items/sword.png",
+                }
+            },
+            {
+                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking: 2,
+                amount: 5
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 3,
+                item: {
+                    name: "Dagger",
+                    itemType: "WEAPON",
+                    description: "Dagger",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/dagger.png",
+                }
+            },
+            {
+                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking: 4,
+                amount: 3
+            },
+            {
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 5,
+                item: {
+                    name: "Broadsword",
+                    itemType: "WEAPON",
+                    description: "Broadsword",
+                    weight: "HEAVY",
+                    imageUrl: "images/shadow/items/broadsword.png",
+                }
+            },
+            {
+                eventType: "CHANGE_GOLD_AMOUNT_EVENT",
+                ranking: 6,
+                amount: 9
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 216,
+                content: "If you wish to take the left street, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 367,
+                content: "If you wish to take the right street, turn to",
             },
         ],
     },{
@@ -15563,18 +15848,23 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "As you follow the track deeper into the arboretum, high-pitch shrieks echo above the ceiling of creepers and low branches. The air is humid as a jungle. You press on but the going is difficult; the soft, sticky, rotting humus clings to your boots like river clay.<br>A sudden movement on the path ahead makes you dive for cover; a handful of Drakkarim are coming this way, led by a figure dressed in red.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 242,
+                content: "If you have reached the Kai rank of Warmarn or higher, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 222,
+                content: "If you not yet reached this level of Kai training, turn to",
             },
         ],
     },{
@@ -15592,18 +15882,32 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
-            "",
+            "The ale is thick and creamy, with a taste like malted apples. You lower the half-empty tankard and wipe away the froth from your lips with your sleeve.<br>Pick a number from the Random Number Table. If your current ENDURANCE point total is less than 15, deduct 2 from this number. If your ENDURANCE point total is above 25, add 2 to this number. If you have reached the Kai rank of Savant, add 3 to this number.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "RANDOM",
+                targetNr: 364,
+                content: "If your total score is now below 7, turn to",
+                intervall: {
+                    min: 0,
+                    max: 6
+                }
+            },
+            {
+                outcomeType: "RANDOM",
+                targetNr: 218,
+                content: "If your total score is now 7 or above, turn to",
+                intervall: {
+                    min: 7,
+                    max: 10
+                }
             },
         ],
     },{
@@ -15730,18 +16034,28 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Inside the cool marble tower, two flights of spiral stairs meet at a landing. You detect the sound of distant running feet, gradually growing louder. It is coming from one of the spiral staircases, but which one? Suddenly, a band of Drakkarim warriors appear; they are crossing the bridge that leads to the tower. You must escape.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 266,
+                content: "If you have the Kai Discipline of Sixth Sense, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 322,
+                content: "If you wish to ascend the spiral stairs, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 360,
+                content: "If you wish to descend the spiral stairs, turn to",
             },
         ],
     },{
