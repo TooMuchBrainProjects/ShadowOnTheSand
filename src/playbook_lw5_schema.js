@@ -14008,7 +14008,7 @@ db.getCollection("lw5").insertMany([
          * -- --------------------------------------------------------
          */
         sectionType: "STORY_SECTION",
-        sectionNr: 352,
+        sectionNr: 351,
         book: {
             name: "Shadow on the Sand",
             imageUrl: "images/shadow/title.jpg",
@@ -14057,11 +14057,11 @@ db.getCollection("lw5").insertMany([
     },{
         /*
          * -- --------------------------------------------------------
-         * --  Storysection xxx
+         * --  Storysection 353
          * -- --------------------------------------------------------
          */
         sectionType: "STORY_SECTION",
-        sectionNr: ,
+        sectionNr: 353,
         book: {
             name: "Shadow on the Sand",
             imageUrl: "images/shadow/title.jpg",
@@ -14083,7 +14083,1367 @@ db.getCollection("lw5").insertMany([
                 content: "",
             },
         ],
-    },
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 354
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 354,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 355
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 355,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 356
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 356,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 357
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 357,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 358
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 358,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 359
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 359,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 360
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 360,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 361
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 361,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 362
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 362,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 363
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 363,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 364
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 364,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 365
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 365,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 366
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 366,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 367
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 367,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 368
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 368,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 369
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 369,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 370
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 370,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 371
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 371,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 372
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 372,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 373
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 373,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 374
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 374,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 375
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 375,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 376
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 376,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 377
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 377,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 378
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 378,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 379
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 379,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 380
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 380,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 381
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 381,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 382
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 382,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 383
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 383,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 384
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 384,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 385
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 385,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 386
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 386,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 387
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 387,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 388
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 388,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 389
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 389,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 390
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 390,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 391
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 391,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 392
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 392,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 393
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 393,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 394
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 394,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 395
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 395,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 396
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 396,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 397
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 397,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 398
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 398,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 399
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 399,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "",
+        outcomes: [
+            {
+                outcomeType: "",
+                targetNr: ,
+                content: "",
+            },
+        ],
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 400
+         * -- --------------------------------------------------------
+         */
+        sectionType: "STORY_SECTION",
+        sectionNr: 400,
+        book: {
+            name: "Shadow on the Sand",
+            imageUrl: "images /shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk",
+        },
+        region: {
+            name: "",
+            regionType: "",
+            description: "",
+            imageUrl: "images/shadow/regions/.png",
+        },
+        content:
+            "You examine the floor where Darklord Haakon fell, but there are no signs of his body. The atmosphere is strangely calm and peaceful, as if a great and evil shadow has been lifted. (If you lost the Sommerswerd in the confrontation with the Darklord, you may now retrieve it.)</b>You turn and walk to the throne where Haakon sat, waiting for you to appear. Beyond it lies a portal, an ancient inscription carved deep into the blood-red stone. Below the carving is set the impression of a human hand. Instinct and intuition guide your hand to the door; the carving fits around it like a glove.</b>Silently the portal slides back to reveal your destiny—the Book of the Magnakai. Set on a pedestal, the book lies open, its secrets revealed to your eyes alone. As you lift the sacred book, the very air throbs with the vibration of the force locked within its sun-gold cover. With a pounding heart you close the book and hurry from the chamber.</b>By the time you reach the foothills of the Koneshi, Banedon has successfully completed his mission; he and Tipasa are waiting for you. As they see you appear, clutching the Book of the Magnakai, they can barely contain their excitement.</b>‘This night of triumph,’ says Banedon, jubilantly, ‘will herald a new dawn of hope for Sommerlund. The Kai are reborn.’</b>The quest is now over. You have found the Book of the Magnakai and freed Magnamund from the shadow of Darklord Haakon. But for you, Kai Master Lone Wolf, the story has only just begun.</b>Your destiny lies along the path of the Grand Masters. To learn their secrets and attempt the first exciting quest of the Magnakai, begin your journey with Book 6 of the Lone Wolf series entitled: The Kingdoms of Terror",
+        events:[{
+            eventType:"MISSION_ACCOMPLISHED_EVENT",
+            
+        }]
+    }
 ]);
 
 db.lw5.find();
