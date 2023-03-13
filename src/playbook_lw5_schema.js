@@ -14849,18 +14849,33 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You dive into the garden below, avoiding death by a fraction of a second. The crossbow bolts ricochet off the poison-tipped spikes and shoot into the air, the whine of their twisted metal shafts fading into the sky.<br>The enclosed garden is full of the fragrance of exotic plants and flowers, clustered around a sculptured pool of deep blue water. It is a beautiful sight but one that you dare not stop to enjoy. The palace guards are sure to give chase and you must keep moving.<br>Ahead, beyond a tree-lined colonnade, a flight of steps ascends to a small portal in the wall of the upper palace. To your right, a leafy tunnel winds away into the shrubs and trees.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 220,
+                content: "If you have the Kai Discipline of Tracking, turn to",
+                ability: {
+                    abilityType: "TRACKING",
+                    description:
+                        "This skill enables a Kai Lord to make the correct choice of a path in the wild, to discover the location of a person or object in a town or city and to read the secrets of footprints or tracks.",
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 352,
+                content: "If you do not possess this skill, you can either climb the stairs to the small portal by turning to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 391,
+                content: "Or follow the winding path into the trees, by turning to",
             },
         ],
     },{
@@ -15084,18 +15099,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You sidestep to avoid its slashing beak but are caught by its talons and suffer a deep wound to your back. Lose 3 ENDURANCE points.<br>Itikar are wild and malicious creatures, and it can take many years for a rider to tame and train one. However, it is well worth the effort as, once trained, they become fiercely loyal to their master. The Itikar has sensed that you are a stranger and is ferociously attacking you with its long, curved beak and talons.<br>Fight the combat as usual, but double all ENDURANCE points lost by the bird. When its score falls to zero or below, you will have succeeded in subduing it enough to be able to climb into the saddle and take control. All ENDURANCE points that you lose are from ordinary wounds and must be deducted from your current ENDURANCE points total.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -3
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 2,
+                creature: {
+                    name: "Itikar",
+                    combatSkill: 17,
+                    endurance: 30,
+                    imageUrl: "images/shadow/creatures/itikar.png",
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 217,
+                content: "If you successfully reduce the Itikar’s ENDURANCE points to zero or below, turn to",
             },
         ],
     },{
@@ -15113,18 +15145,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "The axe howls through the dark; you sidestep, guided only by instinct, for you cannot see the lethal axe-blade, which hurtles towards you. Black steel bites into your side, the sudden pain making you gasp in shocked surprise. You clutch at your wounded ribs to feel warm blood oozing through your fingers. Lose 4 ENDURANCE points.<br>A deafening bang rings out and the Drakkar is flung backwards, his breastplate torn open by dwarf shot. He screams a long, agonizing death-cry as he disappears from sight, tumbling into the darkness, which surrounds the speeding skyship. From Barrakeesh, a roll of thunder rumbles across the dark plain, full of brooding menace, as if the city itself were cursing your escape.<br>Banedon appears at your side, his face lined with concern. As he offers a shaky hand to help you to your feet, you notice that the makeshift bandage which binds his wound is soaked with blood. He is weak and pale, and close to collapse.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -4
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 377,
+                content: "If you have the Kai Discipline of Healing, turn to",
+                ability: {
+                    abilityType: "HEALING",
+                    description:
+                        "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are not involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level.",
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 339,
+                content: "If you do not possess this skill, turn to",
             },
         ],
     },{
@@ -15254,18 +15304,30 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "Beads of sweat break out on the faces of the guards as they frantically race to load their crossbows. Your bold move has unnerved them, and their fear makes them clumsy.<br>You reach the top of the steps and attack with the speed of a tiger, dashing the crossbow from a guard’s shaking hands with your first blow and splitting his jaw with the second. He screams and falls, toppling from the bridge to crash into the garden below. Meanwhile, the other guard has thrown away his crossbow and drawn a steel mace. He runs at you with hatred blazing in his dark eyes; you have just killed his brother and he is thirsty for revenge. Due to his frenzied state of mind, this guard is now immune to Mindblast.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Tower Guard",
+                    combatSkill: 17,
+                    endurance: 22,
+                    imageUrl: "images/shadow/creatures/tower_guard.png"
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 369,
+                content: "If you win the combat, you enter the tower. Turn to",
             },
         ],
     },{
@@ -15413,10 +15475,11 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Vassagonia",
+            regionType: "CONTINENT",
+            description:
+                "Vassagonia is a vast and unforgiving desert empire located in the southern reaches of Magnamund. The empire is ruled by the Zakhan of Vassagonia, who now seeks peace between Sommerlund and Vassagonia.",
+            imageUrl: "images/shadow/regions/vassagonia.png",
         },
         content:
             "Shortly after dawn the following day, you wake with a splitting headache. With bleary eyes you peer around you at the snoring dwarves who occupy the tiny bunks of the cramped cabin. The low hum of the ship only increases the pain that throbs like a demon inside your head, causing you to wince and grit your teeth at the slightest movement of your stiff and aching limbs. You lose 2 ENDURANCE points due to this monstrous hangover!<br>Painfully, you gather up your equipment and climb on deck to find everything in deep shadow, for the Skyrider is hovering beneath a massive outcrop of sandstone that juts from the side of a mountain. Banedon still stands at the helm, but he is no longer in a trance.<br>‘Kraan-riders,’ he says, pointing to a sun-bleached valley beyond the shadows. ‘They arrived with the dawn.’<br>You stare out across an alien landscape, a mountain valley filled with thousands of pillars formed from massive and precariously balanced boulders. The pillars reach so high into the sky that an avalanche looks inevitable. The Vassagonians call this place the Koos—‘the needles’. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes. An hour passes before they take to the sky and disappear.<br>‘Trim the boom-sails, Bo’sun Nolrim,’ orders Banedon, his voice barely audible above the increasing hum of the Skyrider. ‘We’ve a fast run ahead.’",
@@ -15647,10 +15710,11 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
             "A few paces beyond the marketplace, a small alley heads off to the left. At the end you see a house with a bright blue door.",
@@ -15821,18 +15885,35 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "As you leap from the gangplank onto the landing platform, the sentry wheels round to confront you. He snatches up his spear in preparation for attack. He now stands between you and the Itikar’s pen; combat is unavoidable.",
+        events: [
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Sentry",
+                    combatSkill: 15,
+                    endurance: 23,
+                    imageUrl: "images/shadow/creatures/sentry.png"
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 207,
+                content: "If you win the combat and wish to search the sentry’s body, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 224,
+                content: "If you wish to ignore the body and hurry into the Itikar’s pen, turn to",
             },
         ],
     },{
@@ -15950,23 +16031,50 @@ db.getCollection("lw5").insertMany([
         sectionNr: 393,
         book: {
             name: "Shadow on the Sand",
-            imageUrl: "images /shadow/title.jpg",
+            imageUrl: "images/shadow/title.jpg",
             author: "Joe Dever",
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "You run headlong through the foliage, the piercing scream of the Vordak tearing at your mind. Unless you possess the Kai Discipline of Mindshield, lose 2 ENDURANCE points. Suddenly, a Drakkar looms out of the trees ahead, his black broadsword held high above his masked face, ready to strike a deadly blow.<br>Deduct 2 from your COMBAT SKILL for the first round of combat due to the surprise of the Drakkar’s attack. You can evade combat after three rounds.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -2
+            },
+            {
+                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking: 2,
+                amount: -2
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 3,
+                creature: {
+                    name: "Drakkar",
+                    combatSkill: 16,
+                    endurance: 25,
+                    imageUrl: "images/shadow/creatures/drakkar.png"
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 228,
+                content: "If you wish to evade combat, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 255,
+                content: "If you win the combat, turn to",
             },
         ],
     },{
@@ -15984,18 +16092,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
+            "The Drakkar shrieks a cry of horror and lets the broadsword slip from his fingers. He claws at his death-mask, fumbling for the latch which opens the black steel visor. As it clicks open, a mass of writhing insects tumbles from the helmet. The Drakkar screams like a madman as the creatures slither and crawl around inside his armour, stinging and biting his skin. In his crazed panic, he topples over the parapet and falls to his doom thousands of feet below.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 306,
+                content: "Turn to",
             },
         ],
     },{
@@ -16103,18 +16212,24 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "Greedily, she snatches the coin from her begging bowl and tests it between her blackened teeth. Once satisfied the coin is real, she nods her head and waits for your questions.",
         outcomes: [
             {
                 outcomeType: "",
-                targetNr: ,
-                content: "",
+                targetNr: 307,
+                content: "If you wish to ask her if she is Soushilla (only if you have heard that name before), turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 314,
+                content: "If you wish to ask her if she knows where Tipasa the Wanderer can be found, turn to",
             },
         ],
     },{
