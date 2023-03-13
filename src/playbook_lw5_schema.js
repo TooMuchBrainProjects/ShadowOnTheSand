@@ -12582,17 +12582,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "The Koos",
+            regionType: "MOUNTAIN",
+            description:
+                "Highest mountains in the middle of Dahir Mountains. The voyage through the Koos is breathtaking. The Skyrider glides between the towers of rock that rise from the valley floor with fantastic and unearthly grandeur. Perched upon two of these huge rocky columns are Kraan, their Drakkarim riders scouring the valley with telescopes.",
+            imageUrl: "images/shadow/regions/the_koos.png",
         },
         content:
-            "",
-        events: [
+            "‘Hold tight, Lone Wolf,’ shouts Banedon, as he regains control of the glowing crystal helm. You obey and grasp the parapet rail, bracing your feet against a deck cleat for safety, for you have guessed what manoeuvre the young wizard is about to perform.<br>‘Pirate roll!’ he shouts to his fighting dwarves, and jerks the helm to the left. The Skyrider responds to his touch, swerving violently as the deck swings from a horizontal to a near-vertical angle. The dwarves heed his cry and throw themselves to the deck, clutching the boards like limpets to a galleon’s keel.<br>The Drakkarim are caught off-balance and hurtle over the decks and outriggers, tumbling into the void. Banedon rights the craft and a victory cheer resounds across the decks as you speed away from the Koos. ‘Blood for blood!’",
+        outcomes: [
             {
-                eventType: "MISSION_FAILED_EVENT",
-                ranking: 1,
+                outcomeType: "DEFAULT",
+                targetNr: 247,
+                content: "Turn to"
             },
         ],
     },
@@ -12611,36 +12613,19 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Warhammer",
-                    itemType: "WEAPON",
-                    description: "Warhammer",
-                    weight: "HEAVY",
-                    imageUrl: "images/shadow/items/warhammer.png",
-                },
-            },
-            {
-                eventType: "CHANGE_RATION_AMOUNT_EVENT",
-                ranking: 2,
-                amount: 1,
-            },
-        ],
+            "‘Yes, yes. I am Soushilla,’ she replies.<br>‘Do you know where we can find Tipasa the wanderer?’ asks Banedon.<br>The old crone does not reply, she merely holds out her begging bowl in expectation. Banedon loses another crown before she answers his question.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 314,
+                content: "Turn to",
             },
         ],
     },
@@ -12956,13 +12941,14 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "‘Tipasa can be found at the main square—he is always there at this time of day,’ says the woman cringingly, her face creased into an exaggerated smile.",
         outcomes: [
             {
                 outcomeType: "ABILITY",
@@ -12975,7 +12961,7 @@ db.getCollection("lw5").insertMany([
             },
             {
                 outcomeType: "DEFAULT",
-                targetNr: 263,
+                targetNr: 358,
                 content: "If you do not possess this skill, turn to ",
             },
         ],
@@ -13825,10 +13811,11 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
             "Without the breeze of the speeding Skyrider to cool you, the heat of the mountains is almost unbearable. You trudge across the loose reddish sand, your faces covered to keep the dust from choking your throats. All that seems to grow in this desolate waste is the wire-hard grass that tears at your boots and leggings.<br>As you reach the outskirts of Ikaresh, you pass a small round hut where a goat is eating from a manger by the door. A man appears at the darkened doorway and bids you welcome; he touches his forehead in a salute of friendship and invites you both to enter his humble home.",
@@ -14281,31 +14268,18 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
-        events: [
-            {
-                eventType: "ACQUIRE_ITEM_EVENT",
-                ranking: 1,
-                item: {
-                    name: "Crystal Star",
-                    itemType: "MAGICAL_ITEM",
-                    description: "Crystal Star",
-                    weight: "SMALL",
-                    imageUrl: "images/shadow/items/crystalstar.png",
-                },
-            },
-        ],
+            "The golden blade sings in your hand, a crackle of pure energy spreading along its razor-sharp edge. You strike a tremendous blow, splitting the Vordak’s skull to the teeth. It releases an awful howl of unearthly evil, pain, terror, and death. As it falls, its skeletal body dissolves into a smoking green fluid, shrivelling the plants on the ground beneath.<br>The Drakkarim hesitate as the golden light of the sun-sword glints on their shiny black death-masks; you see your chance and run straight at them, slashing to left and right. A Drakkar raises his shield, but your blade slices clean through the iron-sheathed wood, severing his arm at the shoulder. Wheeling round, you catch another Drakkar in mid-attack, tearing open his black armour with the sword as if it were merely parchment. He screams in agony, but you disappear into the dense foliage before his body falls lifelessly to the soft earth.",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 228,
+                content: "Turn to",
             },
         ],
     },
@@ -14493,18 +14467,36 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Barrakeesh",
+            regionType: "CITY",
+            description:
+                "Barrakeesh is the capital city of Vassagonia. It has a habour, a lake and on the outskirts of the magnificent city are some smaller towns such as Chiras and Chula. The citizens of Barrakeesh, unlike the inhabitants of other Vassagonian cities, enjoy an abundant supply of fresh water from the Da River.",
+            imageUrl: "images/shadow/regions/barrakeesh.png",
         },
         content:
-            "",
+            "You throw yourself to the deck, but the axe blade strikes your thigh, drawing a crimson line across the skin. You lose 2 ENDURANCE points. Suddenly, a deafening bang rings out and the Drakkar is flung backwards, his breastplate torn open by dwarf shot. He gives a long, agonizing death-cry as he disappears from sight, tumbling into the darkness that surrounds the speeding ship.<br>From Barrakeesh, a roll of thunder rumbles across the darkening plain. It is full of brooding menace, as if the city itself were cursing your escape. Banedon appears at your side, his face line with concern for your condition. As he offers a shaky hand to help you to stand, you notice that the makeshift bandage that binds his wound is soaked with blood. He is pale and weak, and close to collapse.",
+        events: [
+            {
+                eventType: "CHANGE_ENDURANCE_EVENT",
+                ranking: 1,
+                amount: -2,
+            },
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "ABILITY",
+                targetNr: 377,
+                content: "If you have the Kai Discipline of Healing, turn to",
+                ability: {
+                    abilityType: "HEALING",
+                    description:
+                        "This Discipline can be used to restore ENDURANCE points lost in combat. If you possess this skill you may restore 1 ENDURANCE point to your total for every numbered section of the book you pass through in which you are not involved in combat. (This is only to be used after your ENDURANCE has fallen below its original level.) Remember that your ENDURANCE cannot rise above its original level.",
+                }
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 339,
+                content: "If you do not possess the skill, turn to",
             },
         ],
     },{
@@ -14603,18 +14595,45 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Grand Palace",
+            regionType: "STONE_BUILDING",
+            description: "The biggest building in Barrakeesh. ",
+            imageUrl: "images/shadow/regions/chula.png",
         },
         content:
-            "",
+            "The gangplank springs up and down as you stride across the gap, and you are forced to slow your pace for fear of falling over the edge. The sentry wheels round, alerted by the noise of creaking planks. He runs to intercept your attack, his spear levelled to thrust at your waist. You cannot avoid combat and must fight the sentry to the death. Deduct 2 from your COMBAT SKILL for the duration of this fight, for the plank on which you are standing is very unstable.",
+        events: [
+            {
+                eventType: "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking: 1,
+                amount: -2
+            },
+            {
+                eventType: "COMBAT",
+                ranking: 1,
+                creature: {
+                    name: "Platform Sentry",
+                    combatSkill: 15,
+                    endurance: 23,
+                    imageUrl: "images/shadow/creatures/platform_sentry.png"
+                }
+            }
+        ],
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 293,
+                content: "If at any time during this combat you pick a 1 from the Random Number Table, you lose your balance and fall. Turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 207,
+                content: "If you win the combat and decide to search the sentry’s body, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 224,
+                content: "If you win but decide to ignore the body and hurry into the Itikar’s pen, turn to",
             },
         ],
     },{
@@ -14632,18 +14651,29 @@ db.getCollection("lw5").insertMany([
             illustrator: "Gary Chalk",
         },
         region: {
-            name: "",
-            regionType: "",
-            description: "",
-            imageUrl: "images/shadow/regions/.png",
+            name: "Ikaresh",
+            regionType: "TOWN",
+            description:
+                "This is a village lying between the mountains of Dahir. The villagers - named Ikareshi - have their own dialect, so called Ikareshi dialect",
+            imageUrl: "images/shadow/regions/ikaresh.png",
         },
         content:
-            "",
+            "You sense that the old woman is lying. She is not Soushilla the widow—she is a fraud, attempting to fleece you of your gold. When you confront her, she turns tail and disappears into the alley like a bolt of lightning.<br>‘Let her go,’ says Banedon. ‘Our time is worth more than the gold she took.’",
         outcomes: [
             {
-                outcomeType: "",
-                targetNr: ,
-                content: "",
+                outcomeType: "DEFAULT",
+                targetNr: 388,
+                content: "If you wish to continue along the Avenue of Eagles, turn to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 376,
+                content: "If you decide to retrace your steps to the Eagle Square, you can either go north towards the Dougga Market, by turning to",
+            },
+            {
+                outcomeType: "DEFAULT",
+                targetNr: 216,
+                content: "Or west towards the Main Square, by turning to",
             },
         ],
     },{
