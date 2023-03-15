@@ -528,14 +528,14 @@ db.getCollection("lw5").insertMany([
             //     weight: "MEDIUM",
             //     imageUrl: "images/shadow/items/shortsword.png",
             // },
-            // {
-            //     code: "WARHAMMER",
-            //     name: "Warhammer",
-            //     itemType: "WEAPON",
-            //     description: "Warhammer",
-            //     weight: "HEAVY",
-            //     imageUrl: "images/shadow/items/warhammer.png",
-            // },
+             {
+                 code: "WARHAMMER",
+                 name: "Warhammer",
+                 itemType: "WEAPON",
+                 description: "Warhammer",
+                 weight: "HEAVY",
+                 imageUrl: "images/shadow/items/warhammer.png",
+             },
             {
                 code: "SWORD",
                 name: "Sword",
@@ -613,10 +613,17 @@ db.getCollection("lw5").insertMany([
                 description : "Gaoler's Keys",
                 weight: "SMALL",
                 imageUrl : "images/flight/items/gaolerskeys.png"
+            },{
+                code : "HERB_PAD",
+                name : "Herb Pad",
+                itemType: "UTILITY",
+                description : "Pouch with herbs to breath through",
+                weight: "SMALL",
+                imageUrl : "images/flight/items/herbpad.png"
             }
         ],
         content:
-            "Before leaving Holmgard on your voyage to the Vassagonian capital of Barrakeesh, you are given a map of the desert empire and a pouch of gold.",
+            "Before leaving Holmgard on your voyage to the Vassagonian capital of Barrakeesh, you are given a map of the desert empire and a pouch of gold."
     },
     {
         /*
