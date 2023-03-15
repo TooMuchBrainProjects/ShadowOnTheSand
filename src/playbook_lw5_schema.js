@@ -552,14 +552,14 @@ db.getCollection("lw5").insertMany([
             //     weight: "HEAVY",
             //     imageUrl: "images/shadow/items/axe.png",
             // },
-            // {
-            //     code: "QUARTER_STAFF",
-            //     name: "Quarterstaff",
-            //     itemType: "WEAPON",
-            //     description: "Quarterstaff",
-            //     weight: "SMALL",
-            //     imageUrl: "images/shadow/items/quarterstaff.png",
-            // },
+             {
+                 code: "QUARTER_STAFF",
+                 name: "Quarterstaff",
+                 itemType: "WEAPON",
+                 description: "Quarterstaff",
+                 weight: "SMALL",
+                 imageUrl: "images/shadow/items/quarterstaff.png",
+             },
             // {
             //     code: "BROADSWORD",
             //     name: "Broadsword",
@@ -600,12 +600,12 @@ db.getCollection("lw5").insertMany([
                 weight: "SMALL",
                 imageUrl: "images/shadow/items/copperkey.png"
             },{
-                    code: "OEDE_HERB"
-                    name : "Sufficient Oede",
-                    itemType : "HERB",
-                    description : "golden leaves which heal many deadly diseases or restore 10 ENDURANCE if swallowed after combat",
-                    weight : "SMALL",
-                    imageUrl : "images/flight/items/oedeherb.png"
+                code: "OEDE_HERB"
+                name : "Sufficient Oede",
+                itemType : "HERB",
+                description : "golden leaves which heal many deadly diseases or restore 10 ENDURANCE if swallowed after combat",
+                weight : "SMALL",
+                imageUrl : "images/flight/items/oedeherb.png"
             },{
                 code : "GAOLERS_KEYS",
                 name : "Gaoler's Keys",

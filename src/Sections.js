@@ -56,15 +56,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "Breathless from the exertion of combat, you step back as the Elix finally collapses and dies. Slowly, its glass-green eyes mist over and become opaque like hard, cold jadin. Around the creature’s blood-spattered throat hangs a Gold Key on a chain. You quickly discover that the Gold Key opens the steel door of a strongroom at the far end of apothecary.
-
-        High upon a shelf, just inside the door, you find a small box that contains what you seek—the Oede herb. Within seconds of pressing the beautiful golden leaves to your wounded shoulder, a tingling sensation engulfs your whole arm. The numbness soon fades, and both your arm and shoulder are free of the horrific Limbdeath microbes.
-
-        Sufficient Oede herb remains in the box for one further application. It is a powerful substance that can be used against many deadly diseases or alternatively can be used to restore 10 ENDURANCE points if swallowed after combat. If you wish to keep the Oede herb, mark it on your Action Chart as a Backpack Item. You should also restore the COMBAT SKILL points that were temporarily lost due to Limbdeath.
-
-        After dragging the dead Elix into the strongroom, you lock the steel door from the inside. You notice that there are in fact two doors to the strongroom: the one by which you entered and a smaller door set into the opposite wall. The Gold Key opens the lock of the new door, which leads to a narrow staircase beyond, dimly lit by flaring torches in wall brackets.
-
-        The climb is steep and arduous. You suspect that these steps are part of a secret route to the strongroom, and your suspicions are only confirmed when you arrive at what appears to be a dead end. A closer examination reveals a narrow bronze door set flush to the wall, plain in appearance except for a tiny key hole close to the floor. As you insert and twist the Gold Key, you are quietly confident that the bronze door will open.",
+         content : "Breathless from the exertion of combat, you step back as the Elix finally collapses and dies. Slowly, its glass-green eyes mist over and become opaque like hard, cold jadin. Around the creature’s blood-spattered throat hangs a Gold Key on a chain. You quickly discover that the Gold Key opens the steel door of a strongroom at the far end of apothecary.        High upon a shelf, just inside the door, you find a small box that contains what you seek—the Oede herb. Within seconds of pressing the beautiful golden leaves to your wounded shoulder, a tingling sensation engulfs your whole arm. The numbness soon fades, and both your arm and shoulder are free of the horrific Limbdeath microbes.       Sufficient Oede herb remains in the box for one further application. It is a powerful substance that can be used against many deadly diseases or alternatively can be used to restore 10 ENDURANCE points if swallowed after combat. If you wish to keep the Oede herb, mark it on your Action Chart as a Backpack Item. You should also restore the COMBAT SKILL points that were temporarily lost due to Limbdeath.        After dragging the dead Elix into the strongroom, you lock the steel door from the inside. You notice that there are in fact two doors to the strongroom: the one by which you entered and a smaller door set into the opposite wall. The Gold Key opens the lock of the new door, which leads to a narrow staircase beyond, dimly lit by flaring torches in wall brackets.      The climb is steep and arduous. You suspect that these steps are part of a secret route to the strongroom, and your suspicions are only confirmed when you arrive at what appears to be a dead end. A closer examination reveals a narrow bronze door set flush to the wall, plain in appearance except for a tiny key hole close to the floor. As you insert and twist the Gold Key, you are quietly confident that the bronze door will open.",
 
 
         events : [
@@ -193,7 +185,16 @@
          content : "You stoop to grasp the sword, but as your fingers close around the hilt, the second guard attacks.Palace Gaoler: COMBAT SKILL 14   ENDURANCE 21 Ignore all ENDURANCE points lost by the enemy in the first round of combat, for you can only attempt to parry his blow.",
 
 
-        events : [],
+        events : [{
+            eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Palace Gaoler",
+                    combatSkill : 14,
+                    endurance : 21,
+                    imageUrl : "images/flight/creatures/palacegaoler.png"
+                }
+        }],
         outcomes:[
             {
                 outcomeType : "DEFAULT",
@@ -1108,7 +1109,7 @@
                 "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
             imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
          },
-         content : "Each of the three bottles bears a label, handwritten in green ink.Larnuma Oil (restores 2 ENDURANCE points per dose)—3 Gold CrownsLaumspur (restores 4 ENDURANCE points per dose)—5 Gold CrownsRendalim’s Elixir (restores 6 ENDURANCE points per dose)—7 Gold Crowns You may purchase any of the above. (The prices are per dose. All the potions are Backpack Items.) The herb-mistress then escorts you to a side door. ‘I sense your despair, Northlander. I pray you find your cure.’As you leave, she offers a word of advice. ‘The guards at the north gate of the Grand Palace can be bribed.’ You thank her and enter the alley running along the side of her shop.",
+         content : "Each of the three bottles bears a label, handwritten in green ink.Larnuma Oil (restores 2 ENDURANCE points per dose)—3 Gold Crowns Laumspur (restores 4 ENDURANCE points per dose)—5 Gold CrownsRendalim’s Elixir (restores 6 ENDURANCE points per dose)—7 Gold Crowns You may purchase any of the above. (The prices are per dose. All the potions are Backpack Items.) The herb-mistress then escorts you to a side door. ‘I sense your despair, Northlander. I pray you find your cure.’As you leave, she offers a word of advice. ‘The guards at the north gate of the Grand Palace can be bribed.’ You thank her and enter the alley running along the side of her shop.",
 
         events :  [
             {
@@ -2389,11 +2390,11 @@ Pick a number from the Random Number Table. If you have the Kai Discipline of Hu
     },{
         /*
          * -- --------------------------------------------------------
-         * --  Storysection 55
+         * --  Storysection 58
          * -- --------------------------------------------------------
          */
          sectionType : "STORY_SECTION",
-         sectionNr : 55,
+         sectionNr : 58,
          book : {
             name: "Shadow on the Sand",
             imageUrl: "images/shadow/title.jpg",
@@ -2413,7 +2414,7 @@ Pick a number from the Random Number Table. If you have the Kai Discipline of Hu
         outcomes:[
             {
                 outcomeType : "DEFAULT",
-                targetNr : ,
+                targetNr : 67,
                 content : "If you know the correct number that will open the bronze door, turn to that section number."
             },{
                 outcomeType : "DEFAULT",
@@ -2490,6 +2491,1496 @@ Pick a number from the Random Number Table. If you have the Kai Discipline of Hu
             {
                 outcomeType : "DEFAULT",
                 targetNr : 25,
+                content : "Turn to "
+            }
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 61
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 61,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Suddenly, the door bursts open, and in rush the Sharnazim. You make a dash for the open window but are grabbed from behind and pulled to the ground. Lashing out with your feet and fists you free yourself, only to be overpowered by more of the dark-skinned warriors. As they drag you out into the courtyard, you catch a glimpse of the man who opened the gate; he smiles at you as he slips a pouch of silver into his pocket.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 176,
+                content : "Turn to "
+            }
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 62
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 62,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Instinct and experience warn you that it would be rash to attack the guards so close to a crowded mess hall; any noise of combat would immediately be heard by the soldiers inside. There’s now only one course of action for you to take—you must hide outside on the ledge running around a palace wall.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 152,
+                content : "Turn to "
+            }
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 63
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 63,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You tear strips of cloth from your Kai cloak and bandage the wound as best you can. You manage to staunch the flow, but you have lost a lot of blood and fear the wound is infected. Deduct 4 ENDURANCE points from your total, except you have a potion of Laumspur in your inventory.",
+
+        events : [
+        {
+            eventType : "CHANGE_ENDURANCE_EVENT",
+            ranking : 1,
+            amount : -4
+        },{
+            eventType: "DROP_ITEM_EVENT",
+            ranking:2,
+            item : {
+                    name : "Laumspur",
+                    itemType : "HERB",
+                    description : "restores 4 ENDURANCE Points",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/Laumspur.png"
+            }
+        }],
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 25,
+                content : "Turn to "
+            }
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 64
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 64,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You have barely taken a dozen steps along the walkway when you hear a low, inhuman growl. Then, the noise suddenly changes to an abominable and high-pitched sputter, as the huge bulk of a Kwaraz emerges from out of the dark. It is upon you before you can take any evasive action. Kwaraz: COMBAT SKILL 20   ENDURANCE 30 The giant reptile is very susceptible to psychic power. If you have the Kai Discipline of Mindblast, add 4 (instead of the normal 2) to your COMBAT SKILL for the duration of the combat. [Illustration IV]",
+
+         events:[{
+            eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Kwaraz",
+                    combatSkill : 20,
+                    endurance : 30,
+                    imageUrl : "images/flight/creatures/kwaraz.png"
+                }
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 117,
+                content : "If you win the combat, turn to "
+            }
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 65
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 65,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The guard slumps to the ground, his neck broken by the blow from the edge of your hand, but as you turn you see that the other man has recovered from your punch and is crawling across the floor, his hand stretched out to retrieve his sword.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 78,
+                content : "If you wish to attack the guard, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 199,
+                content : "If you wish simply to overpower him and capture him alive, turn to "
+            }
+         ]
+    },{
+        /*
+         * -- --------------------------------------------------------
+         * --  Storysection 66
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 66,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "A sour-faced guard with a whip stands at the great doors to the kitchen. He delights in bullying the slaves that pass to and fro, lashing them with his whip and cursing them foully. You decide it is far too risky to confront the guard and instead focus your attention on the kitchen windows. The guard is too engrossed in beating an unfortunate slave who has dropped a basket of fruit to notice you sprint across the gardens and leap into the shadow of a tall, arched kitchen window. Then, to your horror, you notice that two guards are seated inside the kitchen, just below the window ledge on which you now stand. If they should so much as turn their heads, you will be seen.",
+
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 149,
+                content : "If you wish to jump back into the palace gardens and try to enter the palace through the Zakhan’s trophy room, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 124,
+                content : "If you wish to launch a surprise attack on the seated guards, before they notice you are there, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 67
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 67,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You hear a faint click followed by a soft whirring sound; the bronze door slides open. As you hurry through, the door clicks shut behind your back, as softly as it had opened. Instinct tells you that you have entered the chambers of the upper palace, the sumptuous private enclave of the Zakhan. You walk upon glistening tiles of opal and platinum, past sculptures and statues of pure gold. The door of solid amethyst ahead seems plain in comparison to the breathtaking splendour of this private world. Beyond the door lies another unique and startlingly beautiful world: the arboretum. A circular, cathedral-like arena spreads out below you, the green velvet canopy alive with the sound of bird song. Trees of every colour, shape, and size flourish in the deep, dark soil of the floor. The Zakhan’s arboretum houses a specimen of every tree that grows in Magnamund, and many species that are now extinct elsewhere. As you walk the wrought iron balcony which encircles the arboretum, you recognize the leaves of a Sommlending oak. You feel a sudden wave of homesickness, but it does not make you despair; rather it renews your determination to escape from this hostile, sun-bleached land. At one of the exits from the arboretum, you discover a Quarterstaff propped against the wall. (If you wish to take this, remember to mark it on your Action Chart.) The desire to escape urges you on as you leave the arboretum and hurry through a network of lavish corridors and empty, deserted vestibules. You reach a landing where a broad staircase descends to a massive room that occupies most of the lower palace. From the top of the staircase, hidden by the shadow of a pilaster, you stare down on a sight that freezes your blood with terror.",
+
+         events:[{
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item : {
+                    name : "Quarterstaff",
+                    itemType : "WEAPON",
+                    description : "Quarterstaff",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/quarterstaff.png"
+                }
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 200,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 68
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 68,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You part the curtain of beads hanging in the doorway and enter the cool interior. The lifeless arm that hangs limply by your side has taken on a bluish hue. Fear returns; you must find the Oede herb to cure the disease, or you will lose the whole limb and possibly your life. A woman appears from the shadows of the counter. She has piercing green eyes and her red hair is raised, bound round with rings of jadin. ‘Welcome, Northlander,’ she says, in a voice both soft and clear. ‘How may I serve you?’ You hesitate before replying, ‘Oede.’ She narrows her eyes and casts a glance at your injured arm. ‘I cannot help you,’ she says sorrowfully. ‘Oede is now a very rare and precious herb. I would have to sell my shop and all my possessions in order to buy just one small pouch of Oede. There is only one man in Barrakeesh rich enough to possess this herb—the Zakhan.’ Sweat breaks out upon your brow as your fear grows. ‘What little Oede there is,’ she continues, ‘is kept in the Grand Palace under lock and key.’ You ask if there is any other herb that can cure your arm. She shakes her head from side to side. ‘Only Oede will cure Limbdeath—and you can only find that in the strongroom of the Imperial Apothecary.’ She reaches behind the counter and brings forward three glass bottles, each containing a coloured liquid. ‘They will not cure you, but they will dull the pain in the last few hours.’ ",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 27,
+                content : "If you wish to examine the potions, turn to"
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 160,
+                content : "If you decide to ignore them, leave the shop and continue along the alley, turn to"
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 69
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 69,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You wake up in great discomfort; every muscle of your body feels knotted and bruised. You force open eyelids clogged with dried sweat, and look with dread at your wretched surroundings. You are lying on the hard stone floor of a prison cell. Over by the far wall, beneath a window criss-crossed with iron bars, is a low wooden bunk covered in filthy rags. Cockroaches, some the size of field mice, scuttle along a foul-smelling gutter that disappears into a grating in the floor. (Erase from your Action Chart all Weapons, Special Items, Gold Crowns, and your Backpack and all its contents, but note them down elsewhere in case you should find them again later.) You discover that your hands are free and slowly pull yourself upright into a sitting position, resting your back against the cell door. A faint draught from the corridor outside provides the only relief from the stifling heat and bad air of the cell. In the distance you can hear footsteps approaching. Then there is a jangle of keys and the creak of hinges. A door closes with a dull thud. More footsteps; they are getting louder. They come to halt outside the cell door and a loud voice bellows out: ‘Sleeping on duty, Sefrou? You’ll wake up on the other side of this door if the captain catches you!’ The chair scrapes along the ground, and a startled voice, full of indignation, replies: ‘Curse you, Hadj! The Zakhan doesn’t want the Northlander taken to the Grand Hall until sunset. You’ve cheated me of two hours sleep.’ ‘Shut up, Sefrou,’ snarls the first voice, ‘and listen hard. I’ve just come from the armoury. Some interesting trinkets were found on the Northlander, worth a great deal of gold I’d say. Seems a pity to let them go to waste, eh?’ The two guards chuckle greedily and discuss at length the good time they will be able to have in the city, once they have sold your equipment. ‘I’ll take a peek at our friend,’ says one of the guards. ‘I wonder if he’s enjoying our hospitality.’ A spy-hole slides open above your head and you hear a gasp of shock. ‘He’s gone! He’s gone! By the Majhan, we’ll lose our heads!’ You suddenly realize that you cannot be seen so close to the door. ‘Let me see,’ hisses the other guard, eager to see for himself. You hear the click of a key in the lock; this could be your chance to escape.",
+
+         events :  [
+            {
+                eventType : "DROP_ALL_WEAPONS_EVENT",
+                ranking : 1
+            }, {
+                eventType : "DROP_BACKPACK_EVENT",
+                ranking : 2
+            }
+         ],
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 138,
+                content : "If you wish to attack the guards as soon as the door opens, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 85,
+                content : "If you wish to move away from the door and stand in the middle of the cell, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 70
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 70,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You press on for about a mile until you can go no further: a huge iron grating blocks the tunnel. The decomposing carcass of a giant lizard has been washed up against the bars. Bones are clearly visible where the dead flesh has rotted or been eaten away. The bars are firmly fixed; it will be impossible to continue in this direction. Close to the dead lizard, a narrow stone platform juts out from the wall. Beyond a platform, you notice a low arch leading to some stairs, ascending out of the sewer. The sound of Maouk’s voice drifts along the tunnel. He is urging his Sharnazim in your direction.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 43,
+                content : "If you wish to climb the steps, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 60,
+                content : "If you wish to wait here and fight your pursuers, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 71
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 71,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Having washed off the worst of the dirt, you clamber out of the bath and enter a small antechamber; the room is hot and arid and your clothes are soon as dry as bone. Beyond the antechamber is another hall, this time crowded with people, some seated, others standing, and everyone busy in conversation. These are the free baths of Barrakeesh and the citizens of the capital are justly proud of them. They are the envy of the other desert cities where water is scarce and precious. The citizens treat the baths as a forum, a place for meeting and talking with friends. Much of the conversation you overhear is about the new Zakhan; few speak well of him. You wrap yourself in the large Towel and make your way through the crowd towards the main entrance. If you wish to keep the Towel once you are outside, you must mark it on your Action Chart as 2 Backpack Items, due to its size.",
+
+         events:[{
+                eventType: "ACQUIRE_ITEM_EVENT",
+                ranking: 1,
+                item : {
+                    name : "Towel",
+                    itemType : "UTILITY",
+                    description : "Towel needs 2 Backpack spots",
+                    weight : "MEDIUM",
+                    imageUrl : "images/flight/items/towel.png"
+                }
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 43,
+                content : "If you wish to climb the steps, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 60,
+                content : "If you wish to wait here and fight your pursuers, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 72
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 72,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "‘Go away!’ shouts the plump landlady of this tavern. ‘We’ve no hospitality for those who show no respect to our dead Zakhan.’ Two burly man, wearing wide arm-bands of black silk, roughly push you out of the tavern door. You slip and fall on the dusty cobblestones, grazing your hip and elbows. Lose 1 ENDURANCE point. As you get to your feet, Maouk and his warriors rush into the plaza and surround you.",
+
+         events:[{
+                eventType : "CHANGE_ENDURANCE_EVENT",
+                ranking : 1,
+                amount : -1
+            }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 36,
+                content : "If you wish to fight them, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 176,
+                content : "If you wish to surrender, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 73
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 73,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The stench of the sewer begins to fade and the water becomes less polluted the further you explore in this direction. The sound of Maouk’s men has faded and now only the constant gurgle and rush of the fetid water fills your ears. Suddenly your foot is caught by something, and you are thrown off balance. Half-buried in the sludge of the tunnel floor is a rusty suit of armour.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 94,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 74
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 74,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You detect that the west door leads to the palace armoury.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 44,
+                content : "If you wish to go through the west door, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 167,
+                content : "If you wish to avoid the armoury, leave the chamber by the north door and turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 75
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 75,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You twist the handle but the gate is locked. You are about to turn and run when suddenly the gate flies open: a man stands in the doorway. ‘Quickly, Northlander. I will hide you!’ The man steps back to allow you to enter.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 24,
+                content : "If you wish to enter, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 169,
+                content : "If you wish to refuse and climb the path towards the archway, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 117,
+                content : "If you wish to climb the steps, turn to If you wish to enter the alley, turn to "
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 76
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 76,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You flick the dial to 76 and press your shoulder against the great bronze plaques, expecting to hear at any moment the creak of hinges. You detect a sound, but it is not the noise of a door opening—you have chosen the wrong number.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 98,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 77
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 77,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Your numb arm makes the climb impossible. Valiantly you struggle to escape up the chimney, but when a spur of rock breaks away in your hand, you cannot prevent yourself from tumbling backwards into the bubbling mud.",
+
+        outcomes:[
+            {
+                outcomeType : "MISSION_FAILED",
+                targetNr : -1,
+                content : "Your life comes to a swift end as you are boiled to death in the tar-sorkh of Barrakeesh."
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 78
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 78,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Your attack is swift and deadly. Before the guard can scream for help, you have silenced him for good with an open-handed chop to the neck.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 150,
+                content : "If you wish to leave the bodies and escape along the corridor, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 102,
+                content : "If you wish to search them, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 79
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 79,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "A line of toa trees casts a shadow that hides your stealthy approach. The iron portcullis is down, and only a couple of soldiers stand guard inside where there would normally be ten times that number. Suddenly, there is the grate of metal as the portcullis slowly rises. The guards stand back to allow a troop of cavalry to leave the palace. As they gallop past, the horses kick up a huge cloud of dust, covering the luckless guards from head to toe. They cough and sneeze and run to a horse-trough to slake their dust-choked throats. The portcullis is still open, the archway unguarded.",
+
+        outcomes:[
+            {
+                outcomeType : "ABILITY",
+                targetNr : 170,
+                ability : {
+                    abilityType : "CAMOUFLAGE",
+                    description : "This Discipline enables a Kai Lord to blend in with his surroundings. In the countryside, he can hide undetected among trees and rocks and pass close to an enemy without being seen. In a town or city, it enables him to look and sound like a native of that area, and can help him to find shelter or a safe hiding place."
+                },
+                content : "If you possess the Kai Disciplines of both Camouflage and Hunting, turn to "
+            },{
+                outcomeType : "ABILITY",
+                targetNr : 170,
+                ability : {
+                    abilityType : "HUNTING",
+                    description : "This skill ensures that a Kai Lord will never starve in the wild. He will always be able to hunt for food for himself except in areas of wasteland and desert. The skill also enables a Kai Lord to be able to move stealthily when stalking his prey."
+                },
+                content : "If you possess the Kai Disciplines of both Camouflage and Hunting, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 86,
+                content : "If you decide to attempt to sneak past the drinking guards, turn to 86."
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 119,
+                content : "If you decide to attack them while their backs are turned, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 80
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 80,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "Within seconds, the image of the lock appears in your mind. You use your power to make the lock open and a loud click confirms your success.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 136,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 81
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 81,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You recognize the symptoms of Limbdeath. The wound has become infected by thousands of Limbdeath microbes, one of many strains of deadly bacteria to be found in the Baga-darooz. None of your Kai skills can prevent the eventual loss of your arm. There is only one cure for the disease—the infected wound must be treated with the herb Oede within twenty-four hours. Unless you find some Oede by mid-afternoon tomorrow, your arm will become gangrenous. You will then have to choose between losing your arm or losing your life. This dreadful realization renews your determination to escape from this terrible place, for you can be sure of one thing: you will find no Oede in the Baga-darooz.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 166,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 82
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 82,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You fight with great skill and courage, but you are heavily outnumbered. The black-clad warriors close in and overpower you, dragging you back to a jubilant Maouk. ‘You are brave, Kai Lord. But you’ll need more than bravery to save you now!’",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 176,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 83
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 83,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "It is an armoury log. The pages contain handwritten lists of all the work carried out here. Spears and swords made for the garrison of Kara Kala, ore shipments from the Vakar Mountains, weapons due for repair and all manner of daily routines are carefully recorded. You are about to discard the log when you notice a folded piece of parchment tucked into the spine. It is a list of dates and numbers with a heading in bold print: ‘The Bronze Door’. You scan the page and locate today’s date. The number listed next to it is ‘67’. Make a note of this number in the margin of your Action Chart—it could be of use at a later stage of your adventure. You throw the book back onto the cluttered bench and begin to search for your missing equipment.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 181,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 84
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 84,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You dive into the putrid water, stealing yourself for the ghastly swim you have decided to make. The oily scum fills your nose and mouth and chokes in your throat. You claw your way across the vault to the opposite tunnel and struggle onto a narrow walkway. You are trembling, but it is not the shock of the swim that has made you shiver. Your arm will not function. Your shoulder, wounded when the trapdoor grille fell, stings painfully, and the whole arm below it is numb and useless. Horror engulfs you as you realize what is wrong.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 81,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 85
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 85,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The guards pull open the door and rush into the cell, their weapons held in readiness to attack. They are brutish men with cruel, war-scarred faces. Their surprise at your sudden appearance soon turns to anger and they shove you back against the far wall. ‘Seems we have a trickster, Sefrou,’ hisses the taller guard. ‘A northland illusionist who’s lost his way,’ croons the other. They snigger at their joke, their eyes full of malevolence and spite. ‘Let’s teach our guest a lesson,’ says the first guard, raising his blade to your throat. ‘Go fetch the thumbscrews.’",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 59,
+                content : "If you wish to attack the guard who holds the sword, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 163,
+                content : "If you do not wish to attack, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 86
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 86,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You sprint through the archway, keeping a watchful eye on the two drinking guards. The dust is settling, and should they turn around, you will certainly be seen. In your hurry, you fail to see a stone statue close to the wall and catch it with your knee. Stifling a yelp of pain, you hobble into the palace gardens and take cover beneath a leafy kasl bush. You lose 1 ENDURANCE point due to your injury, but at least you have entered the Grand Palace unseen.",
+
+         events:[{
+            eventType: "CHANGE_ENDURANCE_EVENT",
+            ranking:1,
+            amount:-1
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 137,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 87
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 87,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "On the far side of the small tower, the ledge passes directly beneath a line of windows set high in the north wall. The sandstone blocks have been severely eroded by the strong ocean winds, creating many cracks and hollows which make climbing easy. To your delight, you also discover that the iron window grilles have yet to be locked on this side of the palace. You drop to the floor of a corridor that heads off to the west. A wide staircase leads to a network of passages set with alcoves. Each alcove contains a bust or tapestry depicting past Zakhans and Vassagonian victories in long-forgotten wars.",
+
+        outcomes:[
+            {
+                outcomeType : "ABILITY",
+                targetNr : 105,
+                ability : {
+                    abilityType : "SIXTH_SENSE",
+                    description : "This skill may warn a Kai Lord of imminent danger. It may also reveal the true purpose of a stranger or strange object encountered in your adventure."
+                },
+                content : "If you have the Kai Discipline of Sixth Sense, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 158,
+                content : "If you do not possess this skill, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 88
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 88,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The poster is written from right to left in Vassagonian script. The time you spent learning the language aboard the galley was well spent, for you have little difficulty in translating the proclamation: His most illustrious majesty, Zakhan Moudalla the Exalted, has passed into the realm of the Majhan. May his spirit never die! By the grace of the Council of Kadi, the Funtal of Kara Kala, and the Judicar of Barrakeesh, it is decreed that Kimah, Emir of Ferufezan, Protector of the Dry Main, shall by right claim the throne of Vassagonia. Through the unity of the Seven Cities, he will lead his people to greatness. Long may he reign! A scuffle breaks out at the end of the passage as a handful of Sharnazim try to push their way through the crowd. In the confusion a fruit stall is overturned, and its owner curses the clumsy soldiers at the top of his voice. Then there is a sudden silence—the luckless man has been beheaded for his insolence. You turn and run, splashing through the shallow drainage channel running the length of the foul passage.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 113,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 89
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 89,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "A sharp pain stabs through your jaw as the needle finds its mark. In an instant, the room becomes a spinning vortex of darkness, beyond the reach of pain. You awake to find yourself back in the cockroach-infested prison cell from which you originally escaped. You have been disarmed and stripped of all your equipment and can do little now except await the arrival of the Zakhan.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 18,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 90
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 90,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You enter a large vestibule constructed from blocks of pink and white marble. A man in a white robe sits near a door in the far wall; he is reading a scroll held close to his face. He has not seen you enter the baths, but he is quick to sense your presence. [Illustration V] ‘By the Majhan!’ he cries. ‘You smell worse than a Baknar!’ He hurls a towel at you and points to the door. ‘Take my advice,’ he whines, his fingers pinching shut his nostrils. ‘Don’t get undressed—your clothes need the bath as much as you.’ You grit your teeth in anticipation of the moment when he sees that you are not Vassagonian, but he simply returns to his scroll, holding the parchment close to his short-sighted eyes. You smile as you realize that the man cannot see you clearly enough to know you are a foreigner. Beyond the door there is a long hall, leading at regular intervals into smaller open chambers, each with a sunken bath. Perfumed water constantly splashes into the baths and drains away directly into the Baga-darooz. You decide to take the bath attendant’s advice and jump straight into the cool water, keeping all your clothes on. You notice a large earthenware jar stands beside the bath, full to the brim with translucent purple oil.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 6,
+                content : "If you have the Kai Discipline of Healing, turn to"
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 41,
+                content : "If you wish to swallow some of the purple oil, turn to"
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 103,
+                content : "If you wish to rub some into your skin, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 71,
+                content : "If you decide to ignore the oil, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 91
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 91,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The guard lashes out at your head with his warhammer. Instinctively, you duck, rolling to one side as the weapon strikes sparks from the wall. Palace Gaoler: COMBAT SKILL 14   ENDURANCE 21 You must deduct 4 points from your COMBAT SKILL for the duration of this combat, as you are without a weapon.",
+
+        events : [
+            {
+                eventType : "COMBAT",
+                ranking : 1,
+                creature : {
+                    name : "Palace Gaoler",
+                    combatSkill : 14,
+                    endurance : 21,
+                    imageUrl : "images/flight/creatures/palacegaoler.png"
+                }
+            },{
+                eventType : "TEMPORARY_CHANGE_COMBAT_SKILL_EVENT",
+                ranking : 1,
+                amount : -4
+            }
+         ],
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 65,
+                content : "If you win and the fight lasts 4 rounds of combat or less, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 180,
+                content : "If you win and the fight lasts longer than 4 rounds of combat, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 92
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 92,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You sprint along the cobblestones but are soon forced to stop. Cavalry appear at the end of the street; they shout and charge at you, three abreast. Maouk hisses a curse. You are shocked by how close his voice sounds, as if he were but a step behind you. You wheel round to confront him, only to see he still stands where he first appeared. A dart is held high in his hand; he hisses another curse and flings the missile into the air.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 25,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 93
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 93,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You descend the stairs and follow the corridor eastwards, taking care to tread lightly. The bars on windows high in the wall to your right cast latticed shadows across the smooth marble floor ahead. Beneath one of these windows stands a table on which rests a pitcher of water. Your throat is parched, and you stop to take a long drink. Restore 1 ENDURANCE point.",
+
+         events:[{
+            eventType: "CHANGE_ENDURANCE_EVENT",
+            ranking:1,
+            amount:1
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 155,
+                content : "If you wish to climb onto the table and look through the window, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 182,
+                content : "If you wish to press on along the corridor, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 94
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 94,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You fall face first into putrid water. The oily slime fills your ears and nose and chokes in your throat. You surface and struggle onto a narrow walkway, only to find that your arm no longer functions. Your wounded shoulder, injured by the falling trapdoor grille, still stings painfully, but now the whole arm below it is numb and useless. Horror overcomes you as you realize what is wrong.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 81,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 95
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 95,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "You surface beside a covered skiff. Anxious to avoid the scavengers in the waters of Barrakeesh harbour, you haul yourself aboard and hide beneath the boat’s canopy of woven rushes. You are breathless from your swim, but you dare not make a sound; Maouk’s men are everywhere, racing along the harbour walls, their eyes searching the water for any sign of you. If you are to escape, you must think of something to divert their attention.",
+
+        outcomes:[
+            {
+                outcomeType : "ABILITY",
+                targetNr : 184,
+                ability : {
+                    abilityType : "MIND_OVER_MATTER",
+                    description : "Mastery of this Discipline enables a Kai Lord to move small objects with his powers of concentration."
+                },
+                content : "If you have the Kai Discipline of Mind Over Matter, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 56,
+                content : "If you do not possess this skill, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 96
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 96,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The water is clotted with a revolting variety of green and black muck and scum. It reaches up to your waist, and, as you force your way through the glutinous mire, the surface film breaks, releasing a vile gas. You have to cover your nose and mouth with your Kai cloak, for the stench is appalling. A sudden splash warns that Maouk’s men are not far behind. Your foot catches in something buried in the silt of the tunnel floor, and for one brief second, you are seized by total panic. You struggle to kick free but are held fast. Blindly, you stab your weapon beneath the filthy water until your foot is finally freed. As you withdraw your weapon, you half-expect to find some hideous sewer creature impaled upon it. Instead, you discover a human rib cage. You shudder and flick the bones back into the stinking mire. The channel soon divides: the new tunnel heads west and the other continues southwards. The splashing has grown steadily louder—Maouk’s men are gaining on you.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 135,
+                content : "If you wish to head west, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 164,
+                content : "If you wish to continue south, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 97
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 97,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The chest is plain except for a small square of red metal bolted to the top. There is no lock, but, instinctively, you avoid opening the lid with your hands in case it is booby-trapped. Nearby, you notice a wooden bucket and a ladle. Using the ladle, you lever open the chest and push back the lid. The chest itself is not booby-trapped, but your caution was well placed; coiled on a bed of jewel-encrusted maces lies a Yas, a non-poisonous but very large Vassagonian snake. A red forked tongue flicks out of its yellow head as it prepares to defend its valuable bed.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 194,
+                content : "If you wish to attack the Yas, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 14,
+                content : "If you wish to flick shut the lid and leave the armoury by the north door, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 98
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 98,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The soft shuffle of stealthy feet warns that you are no longer alone. You whirl around and crouch in readiness for combat; it is this automatic reaction to danger that saves you from a drugged needle fired from a blowpipe. As the tiny missile clips the hood of your cloak, you see the firer reach into his belt pouch for another. Behind him are two warriors armed with sharp, barbed tridents. The three block your passage from the vestibule.",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 168,
+                content : "If you wish to attack them before the firer can reload his blowpipe, turn to"
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 118,
+                content : "If you do not want to attack them and decide to try to dodge the second blowpipe dart, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 99
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 99,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "As you step into the sunlight, a voice rings out above the noise of the crowd. ‘There he is!’ It is Maouk. He points at you and a dozen Sharnazim draw their scimitars. ‘Surrender, Lone Wolf,’ he snarls. ‘You cannot escape.’",
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 36,
+                content : "If you wish to fight, turn to "
+            },{
+                outcomeType : "DEFAULT",
+                targetNr : 176,
+                content : "If you decide to surrender, turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 100
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 100,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The marble door opens into semi-darkness, and the musty smell of old parchment wafts through the air. Row upon row of neatly stacked, leather-bound books stand upon marble shelves, each one of which is beautifully decorated with intricate arabesques in fine gold leaf. Judging by the dates and inscriptions, you deduce that these books form a catalogue of all the treasures in the Grand Palace, many dating back hundreds of years. Every shelf of the small library is filled with books, every shelf, that is, save one where, on a purple silk cloth, lie a Copper Key and a Prism. If you wish to take either, or both, of these items, mark the Prism as a Backpack Item and the Copper Key as a Special Item (which you carry in your pocket) on your Action Chart. There is no exit from the library other than the marble door by which you entered. After satisfying yourself that nothing useful has been overlooked, you close the door and walk back along the corridor. When you reach the junction, you see a patrol of palace guards ascending the stairs. Without a moment’s hesitation, you run towards the east door to avoid being seen.",
+
+         events:[{
+            eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 1,
+                item : {
+                    name: "Copper Key",
+                    itemType: "Key",
+                    description: "Copper Key",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/copperkey.png"
+                }
+         },{
+            eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 2,
+                item : {
+                    name: "Prism",
+                    itemType: "UTILITY",
+                    description: "glass prism",
+                    weight: "SMALL",
+                    imageUrl: "images/shadow/items/prism.png"
+                }
+         }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 57,
+                content : "Turn to "
+            }
+         ]
+    },{    /*
+         * -- --------------------------------------------------------
+         * --  Storysection 101
+         * -- --------------------------------------------------------
+         */
+         sectionType : "STORY_SECTION",
+         sectionNr : 101,
+         book : {
+            name: "Shadow on the Sand",
+            imageUrl: "images/shadow/title.jpg",
+            author: "Joe Dever",
+            illustrator: "Gary Chalk"
+         },
+         region : {
+            name: "Habour of Barrakeesh",
+            regionType: "HARBOUR",
+            description:
+                "The harbour of Barrakeesh is deserted save for a handful of citizens clad in black, and the only sound that greets you is the toll of a funeral bell, echoing through the harbour on this day of mourning.",
+            imageUrl: "images/shadow/regions/barrakeesh_harbour.png",
+         },
+         content : "The man screams and keels over, writhing on the floor for a few moments before exhaling his last breath. Meanwhile, his partner has scrambled to his feet, forgetting his weapon in his hurry to escape along the passage. You give chase, pausing only to snatch up the discarded trident; you know you must stop him before he warns other guards. You draw back the trident and throw. It strikes him squarely in the back, pitching him forward as it makes impact. He is dead before he hits the floor. A search of the dead bodies uncovers the following items: 4 Gold Crowns 1 Dagger 1 Sword 1 Potion of Alether (Increases COMBAT SKILL by 2 points for the duration of one fight.) You may also take the Blowpipe and the remaining Sleep Dart. If you decide to keep them, mark them on your Action Chart as Backpack Items. In the robe of the dead blowpipe firer you find a small piece of parchment, on which is written today’s date and the number 67. A smile creeps across your face as you realize that this is the number that will open the bronze door. You hold your breath and twist the dial!",
+
+         events : [
+            {
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 1,
+                item : {
+                    name : "Dagger",
+                    itemType : "WEAPON",
+                    description : "knife which can also be used for combat",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/dagger.png"
+                }
+            },{
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 2,
+                item : {
+                    name : "Sword",
+                    itemType : "WEAPON",
+                    description : "Great Weapon to stab, slash or cleave your enemies. Makes great wall deco",
+                    weight : "MEDIUM",
+                    imageUrl : "images/flight/items/sword.png"
+                }
+            },{
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 3,
+                item : {
+                    name : "Potion of Alether",
+                    itemType : "POTION",
+                    description : "Increases your COMBAT SKILL by 2 points for the duration of one fight.",
+                    weight : "MEDIUM",
+                    imageUrl : "images/flight/items/sword.png"
+                }
+            },{
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 4,
+                item : {
+                    name : "Blowpipe",
+                    itemType : "WEAPON",
+                    description : "Weapon used for shooting small projectiles by fource of breath",
+                    weight : "MEDIUM",
+                    imageUrl : "images/flight/items/blowpipe.png"
+                }
+            },{
+                eventType : "ACQUIRE_ITEM_EVENT",
+                ranking : 3,
+                item : {
+                    name : "Sleep Dart",
+                    itemType : "WEAPON",
+                    description : "projectile which causes victim to fall asleep",
+                    weight : "SMALL",
+                    imageUrl : "images/flight/items/sleepdart.png"
+                }
+            }]
+
+        outcomes:[
+            {
+                outcomeType : "DEFAULT",
+                targetNr : 67,
                 content : "Turn to "
             }
          ]
